@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PY_V_APREVERSE" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_APREVERSE"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_PAYMENTS_OPENITEMSVIEW">
+      <resourceUri>ARTEC_PY_PAYMENTS_OPENITEMSVIEW</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_PAYMENTS_AP_PAYMVIEW">
+      <resourceUri>ARTEC_PY_PAYMENTS_AP_PAYMVIEW</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_PAYMENTS_AP_PAYMIVIEW">
+      <resourceUri>ARTEC_PY_PAYMENTS_AP_PAYMIVIEW</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="OPENITEMS">
+    <viewAttributes>
+        <viewAttribute id="CDPERCENT1"/>
+        <viewAttribute id="CDAMOUNT5"/>
+        <viewAttribute id="DEBITCREDITINDICATOR"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="INVOICEUNIQUEREFNO"/>
+        <viewAttribute id="CDDATE2"/>
+        <viewAttribute id="CDPERCENT5"/>
+        <viewAttribute id="ITEMTEXT"/>
+        <viewAttribute id="CPGUID"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="INVOICETYPEID"/>
+        <viewAttribute id="CDAMOUNT2"/>
+        <viewAttribute id="TRACKID"/>
+        <viewAttribute id="INVOICEDUEDATE"/>
+        <viewAttribute id="CPTYPE"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="INVOICEDOCTYPEID"/>
+        <viewAttribute id="TAXCODE"/>
+        <viewAttribute id="CDPERCENT2"/>
+        <viewAttribute id="DUEAMOUNT"/>
+        <viewAttribute id="SIDUEDATE"/>
+        <viewAttribute id="CPACCOUNTNO"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="INVOICENO"/>
+        <viewAttribute id="PAYMENTAMOUNT"/>
+        <viewAttribute id="CDDATE3"/>
+        <viewAttribute id="ACKPRCESSINGSTATUSID"/>
+        <viewAttribute id="CLEARINGDOCCOMPANYCODEID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="INVOICEDATE"/>
+        <viewAttribute id="CDAMOUNT3"/>
+        <viewAttribute id="ACCOUNTSPYBLEORRCVBL"/>
+        <viewAttribute id="CLEARINGDOCFISCALYEAR"/>
+        <viewAttribute id="PROCESSINGSTATUSID"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="FISCALYEAR"/>
+        <viewAttribute id="CDPERCENT3"/>
+        <viewAttribute id="ADJUSTMENTAOUNT"/>
+        <viewAttribute id="CLEARINGDOCNO"/>
+        <viewAttribute id="PAYMENTTERMSCODE"/>
+        <viewAttribute id="INVOICEAMOUNT"/>
+        <viewAttribute id="CDDATE4"/>
+        <viewAttribute id="ADJAMOUNTREASON"/>
+        <viewAttribute id="CLRDOCCAT"/>
+        <viewAttribute id="PAYMENTTERMS"/>
+        <viewAttribute id="ENTEREDAMT"/>
+        <viewAttribute id="CDAMOUNT4"/>
+        <viewAttribute id="AGGREGATORDIVISION"/>
+        <viewAttribute id="ADVANCEFOR"/>
+        <viewAttribute id="CDDATE1"/>
+        <viewAttribute id="TDSAMOUNT"/>
+        <viewAttribute id="CDPERCENT4"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="PYMNTFOR"/>
+        <viewAttribute id="CDAMOUNT1"/>
+        <viewAttribute id="TDSPERCENT"/>
+        <viewAttribute id="CDDATE5"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="OPENITEMSGUID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="AGGREGATORREF"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_PAYMENTS_OPENITEMSVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPENITEMSGUID" source="ID"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="PAYMENTAMOUNT"/>
+        <viewAttribute id="UTRNO"/>
+        <viewAttribute id="PYMNTGUID"/>
+        <viewAttribute id="PYMNTREMARKS"/>
+        <viewAttribute id="PYMNTCREATEDBY"/>
+        <viewAttribute id="PYMNTCPGUID"/>
+        <viewAttribute id="PYMNTCREATEDAT"/>
+        <viewAttribute id="PYMNTCREATEDON"/>
+        <viewAttribute id="PYMNTCHANGEDBY"/>
+        <viewAttribute id="PYMNTCPTYPE"/>
+        <viewAttribute id="PYMNTCHANGEDAT"/>
+        <viewAttribute id="PYMNTCPNAME"/>
+        <viewAttribute id="BENIFICIARYNAME"/>
+        <viewAttribute id="PYMNTCHANGEDON"/>
+        <viewAttribute id="PYMNTCURRENCY"/>
+        <viewAttribute id="PAYMENTNO"/>
+        <viewAttribute id="PAYMENTMETHOD"/>
+        <viewAttribute id="BENEFICIARYACCNO"/>
+        <viewAttribute id="PYMNTSOURCE"/>
+        <viewAttribute id="RUNID"/>
+        <viewAttribute id="TRACKID"/>
+        <viewAttribute id="IFSC"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="RUNDATE"/>
+        <viewAttribute id="IDOCNO"/>
+        <viewAttribute id="STATUSID"/>
+        <viewAttribute id="BANKREFERENCENO"/>
+        <viewAttribute id="ITEMDUEDATE"/>
+        <viewAttribute id="ERPDOCUMENTTYPE"/>
+        <viewAttribute id="PAYMENTGUID"/>
+        <viewAttribute id="PYMNTITEMGUID"/>
+        <viewAttribute id="CPINVOICENO"/>
+        <viewAttribute id="ERPINVOICENO"/>
+        <viewAttribute id="ERPUNIQUENO"/>
+        <viewAttribute id="ITEMTYPE"/>
+        <viewAttribute id="ITEMDATE"/>
+        <viewAttribute id="ITEMAMOUNT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_PAYMENTS_AP_PAYMVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTAMOUNT" source="PAYMENTAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UTRNO" source="UTRNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTGUID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTREMARKS" source="REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPGUID" source="CPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPTYPE" source="CPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPNAME" source="CPNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BENIFICIARYNAME" source="BENIFICIARYNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTNO" source="PAYMENTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTMETHOD" source="PAYMENTMETHOD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BENEFICIARYACCNO" source="BENEFICIARYACCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTSOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RUNID" source="RUNID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IFSC" source="IFSC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RUNDATE" source="RUNDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IDOCNO" source="IDOCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANKREFERENCENO" source="BANKREFERENCENO"/>
+      </input>
+      <input node="ARTEC_PY_PAYMENTS_AP_PAYMIVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDUEDATE" source="ITEMDUEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPDOCUMENTTYPE" source="ERPDOCUMENTTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTGUID" source="PAYMENTGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTITEMGUID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPINVOICENO" source="CPINVOICENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPINVOICENO" source="ERPINVOICENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPUNIQUENO" source="ERPUNIQUENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMTYPE" source="ITEMTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDATE" source="ITEMDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMAMOUNT" source="ITEMAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTGUID" source="PAYMENTGUID"/>
+      </input>
+    <joinAttribute name="PYMNTGUID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="rightOuter">
+    <viewAttributes>
+        <viewAttribute id="PAYMENTAMOUNT"/>
+        <viewAttribute id="UTRNO"/>
+        <viewAttribute id="PYMNTGUID"/>
+        <viewAttribute id="PYMNTREMARKS"/>
+        <viewAttribute id="PYMNTCREATEDBY"/>
+        <viewAttribute id="PYMNTCPGUID"/>
+        <viewAttribute id="PYMNTCREATEDAT"/>
+        <viewAttribute id="PYMNTCREATEDON"/>
+        <viewAttribute id="PYMNTCHANGEDBY"/>
+        <viewAttribute id="PYMNTCPTYPE"/>
+        <viewAttribute id="PYMNTCHANGEDAT"/>
+        <viewAttribute id="PYMNTCPNAME"/>
+        <viewAttribute id="BENIFICIARYNAME"/>
+        <viewAttribute id="PYMNTCHANGEDON"/>
+        <viewAttribute id="PYMNTCURRENCY"/>
+        <viewAttribute id="PAYMENTNO"/>
+        <viewAttribute id="PAYMENTMETHOD"/>
+        <viewAttribute id="BENEFICIARYACCNO"/>
+        <viewAttribute id="PYMNTSOURCE"/>
+        <viewAttribute id="RUNID"/>
+        <viewAttribute id="TRACKID"/>
+        <viewAttribute id="IFSC"/>
+        <viewAttribute id="PYMNTSOURCEREFERENCEID"/>
+        <viewAttribute id="RUNDATE"/>
+        <viewAttribute id="IDOCNO"/>
+        <viewAttribute id="STATUSID"/>
+        <viewAttribute id="BANKREFERENCENO"/>
+        <viewAttribute id="ITEMDUEDATE"/>
+        <viewAttribute id="ERPDOCUMENTTYPE"/>
+        <viewAttribute id="PAYMENTGUID"/>
+        <viewAttribute id="PYMNTITEMGUID"/>
+        <viewAttribute id="CPINVOICENO"/>
+        <viewAttribute id="ERPINVOICENO"/>
+        <viewAttribute id="ERPUNIQUENO"/>
+        <viewAttribute id="ITEMTYPE"/>
+        <viewAttribute id="ITEMDATE"/>
+        <viewAttribute id="ITEMAMOUNT"/>
+        <viewAttribute id="CDPERCENT1"/>
+        <viewAttribute id="CDAMOUNT5"/>
+        <viewAttribute id="DEBITCREDITINDICATOR"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="INVOICEUNIQUEREFNO"/>
+        <viewAttribute id="CDDATE2"/>
+        <viewAttribute id="CDPERCENT5"/>
+        <viewAttribute id="ITEMTEXT"/>
+        <viewAttribute id="CPGUID"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="INVOICETYPEID"/>
+        <viewAttribute id="CDAMOUNT2"/>
+        <viewAttribute id="OPENITEMSTRACKID"/>
+        <viewAttribute id="INVOICEDUEDATE"/>
+        <viewAttribute id="CPTYPE"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="INVOICEDOCTYPEID"/>
+        <viewAttribute id="TAXCODE"/>
+        <viewAttribute id="CDPERCENT2"/>
+        <viewAttribute id="DUEAMOUNT"/>
+        <viewAttribute id="SIDUEDATE"/>
+        <viewAttribute id="CPACCOUNTNO"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="INVOICENO"/>
+        <viewAttribute id="OPENITEMSPAYMENTAMOUNT"/>
+        <viewAttribute id="CDDATE3"/>
+        <viewAttribute id="ACKPRCESSINGSTATUSID"/>
+        <viewAttribute id="CLEARINGDOCCOMPANYCODEID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="INVOICEDATE"/>
+        <viewAttribute id="CDAMOUNT3"/>
+        <viewAttribute id="ACCOUNTSPYBLEORRCVBL"/>
+        <viewAttribute id="CLEARINGDOCFISCALYEAR"/>
+        <viewAttribute id="PROCESSINGSTATUSID"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="FISCALYEAR"/>
+        <viewAttribute id="CDPERCENT3"/>
+        <viewAttribute id="ADJUSTMENTAOUNT"/>
+        <viewAttribute id="CLEARINGDOCNO"/>
+        <viewAttribute id="PAYMENTTERMSCODE"/>
+        <viewAttribute id="INVOICEAMOUNT"/>
+        <viewAttribute id="CDDATE4"/>
+        <viewAttribute id="ADJAMOUNTREASON"/>
+        <viewAttribute id="CLRDOCCAT"/>
+        <viewAttribute id="PAYMENTTERMS"/>
+        <viewAttribute id="ENTEREDAMT"/>
+        <viewAttribute id="CDAMOUNT4"/>
+        <viewAttribute id="AGGREGATORDIVISION"/>
+        <viewAttribute id="ADVANCEFOR"/>
+        <viewAttribute id="CDDATE1"/>
+        <viewAttribute id="TDSAMOUNT"/>
+        <viewAttribute id="CDPERCENT4"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="PYMNTFOR"/>
+        <viewAttribute id="CDAMOUNT1"/>
+        <viewAttribute id="TDSPERCENT"/>
+        <viewAttribute id="CDDATE5"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="OPENITEMSGUID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="AGGREGATORREF"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTAMOUNT" source="PAYMENTAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UTRNO" source="UTRNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTGUID" source="PYMNTGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTREMARKS" source="PYMNTREMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDBY" source="PYMNTCREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPGUID" source="PYMNTCPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDAT" source="PYMNTCREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCREATEDON" source="PYMNTCREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDBY" source="PYMNTCHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPTYPE" source="PYMNTCPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDAT" source="PYMNTCHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCPNAME" source="PYMNTCPNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BENIFICIARYNAME" source="BENIFICIARYNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCHANGEDON" source="PYMNTCHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTCURRENCY" source="PYMNTCURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTNO" source="PAYMENTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTMETHOD" source="PAYMENTMETHOD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BENEFICIARYACCNO" source="BENEFICIARYACCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTSOURCE" source="PYMNTSOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RUNID" source="RUNID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IFSC" source="IFSC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTSOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RUNDATE" source="RUNDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IDOCNO" source="IDOCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANKREFERENCENO" source="BANKREFERENCENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDUEDATE" source="ITEMDUEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPDOCUMENTTYPE" source="ERPDOCUMENTTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTGUID" source="PAYMENTGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTITEMGUID" source="PYMNTITEMGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPINVOICENO" source="CPINVOICENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPINVOICENO" source="ERPINVOICENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERPUNIQUENO" source="ERPUNIQUENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMTYPE" source="ITEMTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDATE" source="ITEMDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMAMOUNT" source="ITEMAMOUNT"/>
+      </input>
+      <input node="OPENITEMS">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDPERCENT1" source="CDPERCENT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDAMOUNT5" source="CDAMOUNT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEBITCREDITINDICATOR" source="DEBITCREDITINDICATOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEUNIQUEREFNO" source="INVOICEUNIQUEREFNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDDATE2" source="CDDATE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDPERCENT5" source="CDPERCENT5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ITEMTEXT" source="ITEMTEXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICETYPEID" source="INVOICETYPEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDAMOUNT2" source="CDAMOUNT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPENITEMSTRACKID" source="TRACKID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEDUEDATE" source="INVOICEDUEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEDOCTYPEID" source="INVOICEDOCTYPEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TAXCODE" source="TAXCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDPERCENT2" source="CDPERCENT2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DUEAMOUNT" source="DUEAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SIDUEDATE" source="SIDUEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPACCOUNTNO" source="CPACCOUNTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICENO" source="INVOICENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPENITEMSPAYMENTAMOUNT" source="PAYMENTAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDDATE3" source="CDDATE3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACKPRCESSINGSTATUSID" source="ACKPRCESSINGSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCCOMPANYCODEID" source="CLEARINGDOCCOMPANYCODEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEDATE" source="INVOICEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDAMOUNT3" source="CDAMOUNT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTSPYBLEORRCVBL" source="ACCOUNTSPYBLEORRCVBL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCFISCALYEAR" source="CLEARINGDOCFISCALYEAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSINGSTATUSID" source="PROCESSINGSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISCALYEAR" source="FISCALYEAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDPERCENT3" source="CDPERCENT3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADJUSTMENTAOUNT" source="ADJUSTMENTAOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCNO" source="CLEARINGDOCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTTERMSCODE" source="PAYMENTTERMSCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEAMOUNT" source="INVOICEAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDDATE4" source="CDDATE4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADJAMOUNTREASON" source="ADJAMOUNTREASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CLRDOCCAT" source="CLRDOCCAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTTERMS" source="PAYMENTTERMS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ENTEREDAMT" source="ENTEREDAMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDAMOUNT4" source="CDAMOUNT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORDIVISION" source="AGGREGATORDIVISION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADVANCEFOR" source="ADVANCEFOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDDATE1" source="CDDATE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TDSAMOUNT" source="TDSAMOUNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDPERCENT4" source="CDPERCENT4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTFOR" source="PYMNTFOR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDAMOUNT1" source="CDAMOUNT1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TDSPERCENT" source="TDSPERCENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CDDATE5" source="CDDATE5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OPENITEMSGUID" source="OPENITEMSGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORREF" source="AGGREGATORREF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+      </input>
+    <joinAttribute name="TRACKID"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_2">
+    <attributes>
+      <attribute id="PAYMENTAMOUNT" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTAMOUNT"/>
+      </attribute>
+      <attribute id="UTRNO" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UTRNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="UTRNO"/>
+      </attribute>
+      <attribute id="PYMNTGUID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTGUID"/>
+      </attribute>
+      <attribute id="PYMNTREMARKS" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTREMARKS"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTREMARKS"/>
+      </attribute>
+      <attribute id="PYMNTCREATEDBY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCREATEDBY"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCREATEDBY"/>
+      </attribute>
+      <attribute id="PYMNTCPGUID" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCPGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCPGUID"/>
+      </attribute>
+      <attribute id="PYMNTCREATEDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCREATEDAT"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCREATEDAT"/>
+      </attribute>
+      <attribute id="PYMNTCREATEDON" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCREATEDON"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCREATEDON"/>
+      </attribute>
+      <attribute id="PYMNTCHANGEDBY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCHANGEDBY"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCHANGEDBY"/>
+      </attribute>
+      <attribute id="PYMNTCPTYPE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCPTYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCPTYPE"/>
+      </attribute>
+      <attribute id="PYMNTCHANGEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCHANGEDAT"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCHANGEDAT"/>
+      </attribute>
+      <attribute id="PYMNTCPNAME" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCPNAME"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCPNAME"/>
+      </attribute>
+      <attribute id="BENIFICIARYNAME" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BENIFICIARYNAME"/>
+        <keyMapping columnObjectName="Join_2" columnName="BENIFICIARYNAME"/>
+      </attribute>
+      <attribute id="PYMNTCHANGEDON" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCHANGEDON"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCHANGEDON"/>
+      </attribute>
+      <attribute id="PYMNTCURRENCY" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTCURRENCY"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTCURRENCY"/>
+      </attribute>
+      <attribute id="PAYMENTNO" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTNO"/>
+      </attribute>
+      <attribute id="PAYMENTMETHOD" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTMETHOD"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTMETHOD"/>
+      </attribute>
+      <attribute id="BENEFICIARYACCNO" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BENEFICIARYACCNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="BENEFICIARYACCNO"/>
+      </attribute>
+      <attribute id="PYMNTSOURCE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTSOURCE"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTSOURCE"/>
+      </attribute>
+      <attribute id="RUNID" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RUNID"/>
+        <keyMapping columnObjectName="Join_2" columnName="RUNID"/>
+      </attribute>
+      <attribute id="TRACKID" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRACKID"/>
+        <keyMapping columnObjectName="Join_2" columnName="TRACKID"/>
+      </attribute>
+      <attribute id="IFSC" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IFSC"/>
+        <keyMapping columnObjectName="Join_2" columnName="IFSC"/>
+      </attribute>
+      <attribute id="PYMNTSOURCEREFERENCEID" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTSOURCEREFERENCEID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTSOURCEREFERENCEID"/>
+      </attribute>
+      <attribute id="RUNDATE" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RUNDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="RUNDATE"/>
+      </attribute>
+      <attribute id="IDOCNO" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IDOCNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="IDOCNO"/>
+      </attribute>
+      <attribute id="STATUSID" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUSID"/>
+        <keyMapping columnObjectName="Join_2" columnName="STATUSID"/>
+      </attribute>
+      <attribute id="BANKREFERENCENO" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANKREFERENCENO"/>
+        <keyMapping columnObjectName="Join_2" columnName="BANKREFERENCENO"/>
+      </attribute>
+      <attribute id="ITEMDUEDATE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ITEMDUEDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="ITEMDUEDATE"/>
+      </attribute>
+      <attribute id="ERPDOCUMENTTYPE" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERPDOCUMENTTYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="ERPDOCUMENTTYPE"/>
+      </attribute>
+      <attribute id="PAYMENTGUID" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTGUID"/>
+      </attribute>
+      <attribute id="PYMNTITEMGUID" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTITEMGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTITEMGUID"/>
+      </attribute>
+      <attribute id="CPINVOICENO" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPINVOICENO"/>
+        <keyMapping columnObjectName="Join_2" columnName="CPINVOICENO"/>
+      </attribute>
+      <attribute id="ERPINVOICENO" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERPINVOICENO"/>
+        <keyMapping columnObjectName="Join_2" columnName="ERPINVOICENO"/>
+      </attribute>
+      <attribute id="ERPUNIQUENO" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERPUNIQUENO"/>
+        <keyMapping columnObjectName="Join_2" columnName="ERPUNIQUENO"/>
+      </attribute>
+      <attribute id="ITEMTYPE" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ITEMTYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="ITEMTYPE"/>
+      </attribute>
+      <attribute id="ITEMDATE" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ITEMDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="ITEMDATE"/>
+      </attribute>
+      <attribute id="ITEMAMOUNT" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ITEMAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="ITEMAMOUNT"/>
+      </attribute>
+      <attribute id="CDPERCENT1" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDPERCENT1"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDPERCENT1"/>
+      </attribute>
+      <attribute id="CDAMOUNT5" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDAMOUNT5"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDAMOUNT5"/>
+      </attribute>
+      <attribute id="DEBITCREDITINDICATOR" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEBITCREDITINDICATOR"/>
+        <keyMapping columnObjectName="Join_2" columnName="DEBITCREDITINDICATOR"/>
+      </attribute>
+      <attribute id="AGGREGATORID" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="Join_2" columnName="AGGREGATORID"/>
+      </attribute>
+      <attribute id="CREATEDON" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDON"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="INVOICEUNIQUEREFNO" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICEUNIQUEREFNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICEUNIQUEREFNO"/>
+      </attribute>
+      <attribute id="CDDATE2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDDATE2"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDDATE2"/>
+      </attribute>
+      <attribute id="CDPERCENT5" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDPERCENT5"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDPERCENT5"/>
+      </attribute>
+      <attribute id="ITEMTEXT" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ITEMTEXT"/>
+        <keyMapping columnObjectName="Join_2" columnName="ITEMTEXT"/>
+      </attribute>
+      <attribute id="CPGUID" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="CPGUID"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="INVOICETYPEID" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICETYPEID"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICETYPEID"/>
+      </attribute>
+      <attribute id="CDAMOUNT2" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDAMOUNT2"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDAMOUNT2"/>
+      </attribute>
+      <attribute id="OPENITEMSTRACKID" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OPENITEMSTRACKID"/>
+        <keyMapping columnObjectName="Join_2" columnName="OPENITEMSTRACKID"/>
+      </attribute>
+      <attribute id="INVOICEDUEDATE" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICEDUEDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICEDUEDATE"/>
+      </attribute>
+      <attribute id="CPTYPE" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPTYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="CPTYPE"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_2" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="INVOICEDOCTYPEID" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICEDOCTYPEID"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICEDOCTYPEID"/>
+      </attribute>
+      <attribute id="TAXCODE" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAXCODE"/>
+        <keyMapping columnObjectName="Join_2" columnName="TAXCODE"/>
+      </attribute>
+      <attribute id="CDPERCENT2" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDPERCENT2"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDPERCENT2"/>
+      </attribute>
+      <attribute id="DUEAMOUNT" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DUEAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="DUEAMOUNT"/>
+      </attribute>
+      <attribute id="SIDUEDATE" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIDUEDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="SIDUEDATE"/>
+      </attribute>
+      <attribute id="CPACCOUNTNO" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPACCOUNTNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="CPACCOUNTNO"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDON"/>
+        <keyMapping columnObjectName="Join_2" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="INVOICENO" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICENO"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICENO"/>
+      </attribute>
+      <attribute id="OPENITEMSPAYMENTAMOUNT" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OPENITEMSPAYMENTAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="OPENITEMSPAYMENTAMOUNT"/>
+      </attribute>
+      <attribute id="CDDATE3" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDDATE3"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDDATE3"/>
+      </attribute>
+      <attribute id="ACKPRCESSINGSTATUSID" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACKPRCESSINGSTATUSID"/>
+        <keyMapping columnObjectName="Join_2" columnName="ACKPRCESSINGSTATUSID"/>
+      </attribute>
+      <attribute id="CLEARINGDOCCOMPANYCODEID" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLEARINGDOCCOMPANYCODEID"/>
+        <keyMapping columnObjectName="Join_2" columnName="CLEARINGDOCCOMPANYCODEID"/>
+      </attribute>
+      <attribute id="SOURCE" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE"/>
+        <keyMapping columnObjectName="Join_2" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="INVOICEDATE" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICEDATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICEDATE"/>
+      </attribute>
+      <attribute id="CDAMOUNT3" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDAMOUNT3"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDAMOUNT3"/>
+      </attribute>
+      <attribute id="ACCOUNTSPYBLEORRCVBL" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCOUNTSPYBLEORRCVBL"/>
+        <keyMapping columnObjectName="Join_2" columnName="ACCOUNTSPYBLEORRCVBL"/>
+      </attribute>
+      <attribute id="CLEARINGDOCFISCALYEAR" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLEARINGDOCFISCALYEAR"/>
+        <keyMapping columnObjectName="Join_2" columnName="CLEARINGDOCFISCALYEAR"/>
+      </attribute>
+      <attribute id="PROCESSINGSTATUSID" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSINGSTATUSID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PROCESSINGSTATUSID"/>
+      </attribute>
+      <attribute id="SOURCEREFERENCEID" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCEREFERENCEID"/>
+        <keyMapping columnObjectName="Join_2" columnName="SOURCEREFERENCEID"/>
+      </attribute>
+      <attribute id="FISCALYEAR" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISCALYEAR"/>
+        <keyMapping columnObjectName="Join_2" columnName="FISCALYEAR"/>
+      </attribute>
+      <attribute id="CDPERCENT3" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDPERCENT3"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDPERCENT3"/>
+      </attribute>
+      <attribute id="ADJUSTMENTAOUNT" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADJUSTMENTAOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADJUSTMENTAOUNT"/>
+      </attribute>
+      <attribute id="CLEARINGDOCNO" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLEARINGDOCNO"/>
+        <keyMapping columnObjectName="Join_2" columnName="CLEARINGDOCNO"/>
+      </attribute>
+      <attribute id="PAYMENTTERMSCODE" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTTERMSCODE"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTTERMSCODE"/>
+      </attribute>
+      <attribute id="INVOICEAMOUNT" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INVOICEAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="INVOICEAMOUNT"/>
+      </attribute>
+      <attribute id="CDDATE4" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDDATE4"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDDATE4"/>
+      </attribute>
+      <attribute id="ADJAMOUNTREASON" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADJAMOUNTREASON"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADJAMOUNTREASON"/>
+      </attribute>
+      <attribute id="CLRDOCCAT" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLRDOCCAT"/>
+        <keyMapping columnObjectName="Join_2" columnName="CLRDOCCAT"/>
+      </attribute>
+      <attribute id="PAYMENTTERMS" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAYMENTTERMS"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAYMENTTERMS"/>
+      </attribute>
+      <attribute id="ENTEREDAMT" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTEREDAMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="ENTEREDAMT"/>
+      </attribute>
+      <attribute id="CDAMOUNT4" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDAMOUNT4"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDAMOUNT4"/>
+      </attribute>
+      <attribute id="AGGREGATORDIVISION" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORDIVISION"/>
+        <keyMapping columnObjectName="Join_2" columnName="AGGREGATORDIVISION"/>
+      </attribute>
+      <attribute id="ADVANCEFOR" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADVANCEFOR"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADVANCEFOR"/>
+      </attribute>
+      <attribute id="CDDATE1" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDDATE1"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDDATE1"/>
+      </attribute>
+      <attribute id="TDSAMOUNT" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDSAMOUNT"/>
+        <keyMapping columnObjectName="Join_2" columnName="TDSAMOUNT"/>
+      </attribute>
+      <attribute id="CDPERCENT4" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDPERCENT4"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDPERCENT4"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDBY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="PYMNTFOR" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNTFOR"/>
+        <keyMapping columnObjectName="Join_2" columnName="PYMNTFOR"/>
+      </attribute>
+      <attribute id="CDAMOUNT1" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDAMOUNT1"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDAMOUNT1"/>
+      </attribute>
+      <attribute id="TDSPERCENT" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDSPERCENT"/>
+        <keyMapping columnObjectName="Join_2" columnName="TDSPERCENT"/>
+      </attribute>
+      <attribute id="CDDATE5" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CDDATE5"/>
+        <keyMapping columnObjectName="Join_2" columnName="CDDATE5"/>
+      </attribute>
+      <attribute id="CURRENCY" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="OPENITEMSGUID" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OPENITEMSGUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="OPENITEMSGUID"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDAT"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="AGGREGATORREF" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORREF"/>
+        <keyMapping columnObjectName="Join_2" columnName="AGGREGATORREF"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="221.11302679000914" y="112"/>
+      
+        <rectangleSize width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="OPENITEMS" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="92.00000000000003" y="376.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="302.00000000000006" y="376.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="ARTEC_PY_PAYMENTS_AP_PAYMVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_PAYMENTS_AP_PAYMIVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="221.11302679000914" y="217"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    
+    <shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="OPENITEMS" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

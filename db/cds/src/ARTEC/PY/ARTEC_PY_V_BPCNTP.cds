@@ -1,0 +1,42 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PY_V_BPCNTP {
+      GENDERDESC          : hana.VARCHAR(40) @title: 'GenderDesc';
+      BPGUID              : String(36)       @title: 'BPGuid';
+      BPTYPE              : String(6)        @title: 'BPType';
+      CHANGEDAT           : Time             @title: 'ChangedAt';
+      CHANGEDBY           : String(32)       @title: 'ChangedBy';
+      CHANGEDON           : Date             @title: 'ChangedOn';
+      CREATEDAT           : Time             @title: 'CreatedAt';
+      CREATEDBY           : String(32)       @title: 'CreatedBy';
+      CREATEDON           : Date             @title: 'CreatedOn';
+      SOURCE              : String(10)       @title: 'Source';
+      DOB                 : Date             @title: 'DOB';
+      EMAILID             : String(255)      @title: 'EmailID';
+      GENDERID            : String(1)        @title: 'GenderID';
+  key BPCNTPRSNGUID       : String(36)       @title: 'BPCntPrsnGuid';
+      MOBILE              : String(35)       @title: 'Mobile';
+      NAME1               : String(40)       @title: 'Name1';
+      NAME2               : String(40)       @title: 'Name2';
+      PANNO               : String(40)       @title: 'PanNo';
+      POSTALCODE          : String(10)       @title: 'PostalCode';
+      SIGNINGORDER        : String(5)        @title: 'SigningOrder';
+      STATUSID            : String(6)        @title: 'StatusID';
+      CPGUID              : String(36)       @title: 'CpGuid';
+      CPTYPE              : String(6)        @title: 'CpType';
+      AUTHORIZEDSIGNATORY : String(6)        @title: 'AuthorizedSignatory';
+      DESIGNATION         : String(200)      @title: 'Designation';
+      NAMEMATCHSCORE      : String(10)       @title: 'NameMatchScore';
+      UID1                : String(10)       @title: 'UID1';
+      YOBMATCHSCORE       : String(10)       @title: 'YOBMatchScore';
+      CONTACTTYPE         : String(6)        @title: 'ContactType';
+      CALCULATEDTHRESHOLD : String(10)       @title: 'CalculatedThreshold';
+      BPREJECTIONREMARKS  : String(1000)     @title: 'BPRejectionRemarks';
+      FACILITYTYPE        : String(6)        @title: 'FacilityType';
+      ENTITYID            : String(50)       @title: 'EntityID';
+      ENTITYTYPE          : String(100)      @title: 'EntityType';
+      LEINUMBER           : String(50)       @title: 'LEINumber';
+      PARENTNAME          : String(40)       @title: 'ParentName';
+      PARENTNO            : String(36)       @title: 'ParentNo';
+      PARENTTYPE          : String(6)        @title: 'ParentType';
+};

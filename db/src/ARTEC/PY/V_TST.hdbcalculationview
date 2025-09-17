@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PY_V_TST" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_TST"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:RankView" id="RANK_1">
+      <viewAttributes>
+        <viewAttribute id="ELIGIBILITYSTATUS"/>
+        <viewAttribute id="ERRORCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="CPGUID"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="CPTYPEID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="APPLICATIONNO"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="VALIDTO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ELIGIBILITY">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPEID" source="CPTYPEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATIONNO" source="APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO" source="VALIDTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      </input>
+      <windowFunction dynamicPartitionAttributes="false">
+        <partitionViewAttributeName>CPGUID</partitionViewAttributeName>
+        <partitionViewAttributeName>CPTYPEID</partitionViewAttributeName>
+        <partitionViewAttributeName>AGGREGATORID</partitionViewAttributeName>
+        <order byViewAttributeName="CREATEDON" direction="ASC"/>
+        <rankThreshold>
+          <value>1</value>
+        </rankThreshold>
+      </windowFunction>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="ELIGIBILITY">
+      <viewAttributes>
+        <viewAttribute id="ELIGIBILITYSTATUS"/>
+        <viewAttribute id="ERRORCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="CPGUID"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="CPTYPEID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="APPLICATIONNO"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="VALIDTO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPEID" source="CPTYPEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATIONNO" source="APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO" source="VALIDTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="RANK_1">
+    <attributes>
+      <attribute id="ELIGIBILITYSTATUS" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIGIBILITYSTATUS"/>
+        <keyMapping columnObjectName="RANK_1" columnName="ELIGIBILITYSTATUS"/>
+      </attribute>
+      <attribute id="ERRORCODE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERRORCODE"/>
+        <keyMapping columnObjectName="RANK_1" columnName="ERRORCODE"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDBY"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDAT"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="ID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="RANK_1" columnName="ID"/>
+      </attribute>
+      <attribute id="CREATEDON" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATEDON"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="CPGUID" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPGUID"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CPGUID"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDBY"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CPTYPEID" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPTYPEID"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CPTYPEID"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDAT"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="AGGREGATORID" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="RANK_1" columnName="AGGREGATORID"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGEDON"/>
+        <keyMapping columnObjectName="RANK_1" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="APPLICATIONNO" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATIONNO"/>
+        <keyMapping columnObjectName="RANK_1" columnName="APPLICATIONNO"/>
+      </attribute>
+      <attribute id="SOURCE" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE"/>
+        <keyMapping columnObjectName="RANK_1" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="VALIDTO" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALIDTO"/>
+        <keyMapping columnObjectName="RANK_1" columnName="VALIDTO"/>
+      </attribute>
+      <attribute id="SOURCEREFERENCEID" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCEREFERENCEID"/>
+        <keyMapping columnObjectName="RANK_1" columnName="SOURCEREFERENCEID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="RANK_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="72" y="262"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="false" modelObjectName="ELIGIBILITY" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="91" y="353"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

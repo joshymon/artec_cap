@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PY_V_AGGRID" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" enforceSqlExecution="false" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <descriptions defaultDescription="AGGREGATOR ID"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_CONFIG_AGGR">
+      <resourceUri>ARTEC_PY_CONFIG_AGGR</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="AGGR" filterExpressionLanguage="COLUMN_ENGINE">
+      <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="NAME"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PY_CONFIG_AGGR">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME" source="NAME"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="AGGR">
+    <attributes>
+      <attribute id="AGGREGATORID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATOR ID"/>
+        <keyMapping columnObjectName="AGGR" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="AGGREGATORNAME" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATOR NAME"/>
+        <keyMapping columnObjectName="AGGR" columnName="NAME"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="AGGR" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="83" y="202"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

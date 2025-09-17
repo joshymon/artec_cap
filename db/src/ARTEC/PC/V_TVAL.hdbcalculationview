@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PC_V_TVAL" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="TYPESET TYPE VALUE"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_TYPESETS_TYPVAL">
+      <resourceUri>ARTEC_PC_TYPESETS_TYPVAL</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_TYPESETS_TYPS_T">
+      <resourceUri>ARTEC_PC_TYPESETS_TYPS_T</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="inner">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="TYPES"/>
+        <viewAttribute id="TYPESET"/>
+        <viewAttribute id="TYPE_VALUE"/>
+        <viewAttribute id="LANGUAGE"/>
+        <viewAttribute id="TYPESNAME"/>
+      
+      <viewAttribute hidden="true" id="JOIN$AGGRID$AGGRID"/>
+      <viewAttribute hidden="true" id="JOIN$TYPES$TYPES"/>
+      <viewAttribute hidden="true" id="JOIN$TYPESET$TYPESET"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PC_TYPESETS_TYPVAL">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPES" source="TYPES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPESET" source="TYPESET"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPE_VALUE" source="TYPE_VALUE"/>
+      
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGRID$AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TYPES$TYPES" source="TYPES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TYPESET$TYPESET" source="TYPESET"/>
+      </input>
+      <input node="ARTEC_PC_TYPESETS_TYPS_T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LANGUAGE" source="LANGUAGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPESNAME" source="TYPESNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGRID$AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TYPES$TYPES" source="TYPES"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TYPESET$TYPESET" source="TYPESET"/>
+      </input>
+    <joinAttribute name="JOIN$AGGRID$AGGRID"/>
+    <joinAttribute name="JOIN$TYPES$TYPES"/>
+    <joinAttribute name="JOIN$TYPESET$TYPESET"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGREGATORID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="TYPES" key="true" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPES"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPES"/>
+      </attribute>
+      <attribute id="TYPESET" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPESET"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPESET"/>
+      </attribute>
+      <attribute id="TYPEVALUE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPE_VALUE"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPE_VALUE"/>
+      </attribute>
+      <attribute id="LANGUAGE" key="true" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANGUAGE"/>
+        <keyMapping columnObjectName="Join_1" columnName="LANGUAGE"/>
+      </attribute>
+      <attribute id="TYPESNAME" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPESNAME"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPESNAME"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="87" y="196"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    
+    <shape modelObjectName="ARTEC_PC_TYPESETS_TYPVAL" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PC_TYPESETS_TYPS_T" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

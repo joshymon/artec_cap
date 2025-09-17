@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PC_V_LOGS" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_LOGS"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_LOGS_ALOG_H">
+      <resourceUri>ARTEC_PC_LOGS_ALOG_H</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_LOGS_ALOG_M">
+      <resourceUri>ARTEC_PC_LOGS_ALOG_M</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="ALDATE"/>
+        <viewAttribute id="ALMODE"/>
+        <viewAttribute id="ALPROG"/>
+        <viewAttribute id="ALTCODE"/>
+        <viewAttribute id="ALTIME"/>
+        <viewAttribute id="ALUSER"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE_REF_ID"/>
+        <viewAttribute id="CORRELATION_ID"/>
+        <viewAttribute id="EXTNUMBER"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="OBJECT"/>
+        <viewAttribute id="PROBCLASS"/>
+        <viewAttribute id="PROCESS"/>
+        <viewAttribute id="PROCESS_ID"/>
+        <viewAttribute id="PROCESS_PARAMS"/>
+        <viewAttribute id="PROCESS_REF1"/>
+        <viewAttribute id="PROCESS_REF2"/>
+        <viewAttribute id="PROCESS_REF3"/>
+        <viewAttribute id="PROCESS_REF4"/>
+        <viewAttribute id="PROCESS_REF5"/>
+        <viewAttribute id="SUBOBJECT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT_1"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY_1"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON_1"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT_1"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY_1"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON_1"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE_1"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE_REF_ID_1"/>
+        <viewAttribute id="ERR_CODE"/>
+        <viewAttribute id="ERR_MSG"/>
+        <viewAttribute id="MESSAGEID"/>
+        <viewAttribute id="MSGID"/>
+        <viewAttribute id="MSGNO"/>
+        <viewAttribute id="MSGTY"/>
+        <viewAttribute id="MSGV1"/>
+        <viewAttribute id="MSGV2"/>
+        <viewAttribute id="MSGV3"/>
+        <viewAttribute id="MSGV4"/>
+        <viewAttribute id="TIME_STAMP"/>
+        <viewAttribute id="USER_MSG"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PC_LOGS_ALOG_H">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALDATE" source="ALDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALMODE" source="ALMODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALPROG" source="ALPROG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALTCODE" source="ALTCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALTIME" source="ALTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALUSER" source="ALUSER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE_REF_ID" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORRELATION_ID" source="CORRELATION_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXTNUMBER" source="EXTNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OBJECT" source="OBJECT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROBCLASS" source="PROBCLASS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS" source="PROCESS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_ID" source="PROCESS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_PARAMS" source="PROCESS_PARAMS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_REF1" source="PROCESS_REF1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_REF2" source="PROCESS_REF2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_REF3" source="PROCESS_REF3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_REF4" source="PROCESS_REF4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_REF5" source="PROCESS_REF5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SUBOBJECT" source="SUBOBJECT"/>
+      </input>
+      <input node="ARTEC_PC_LOGS_ALOG_M">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT_1" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY_1" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON_1" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT_1" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY_1" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON_1" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE_1" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE_REF_ID_1" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERR_CODE" source="ERR_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERR_MSG" source="ERR_MSG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MESSAGEID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGID" source="MSGID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGNO" source="MSGNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGTY" source="MSGTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGV1" source="MSGV1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGV2" source="MSGV2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGV3" source="MSGV3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSGV4" source="MSGV4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TIME_STAMP" source="TIME_STAMP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_MSG" source="USER_MSG"/>
+      </input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGRID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="ALDATE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALDATE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALDATE"/>
+      </attribute>
+      <attribute id="ALMODE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALMODE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALMODE"/>
+      </attribute>
+      <attribute id="ALPROG" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALPROG"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALPROG"/>
+      </attribute>
+      <attribute id="ALTCODE" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALTCODE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALTCODE"/>
+      </attribute>
+      <attribute id="ALTIME" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALTIME"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALTIME"/>
+      </attribute>
+      <attribute id="ALUSER" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALUSER"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALUSER"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE_REF_ID" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE_REF_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE_REF_ID"/>
+      </attribute>
+      <attribute id="CORRELATION_ID" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CORRELATION_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="CORRELATION_ID"/>
+      </attribute>
+      <attribute id="EXTNUMBER" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXTNUMBER"/>
+        <keyMapping columnObjectName="Join_1" columnName="EXTNUMBER"/>
+      </attribute>
+      <attribute id="OBJECT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OBJECT"/>
+        <keyMapping columnObjectName="Join_1" columnName="OBJECT"/>
+      </attribute>
+      <attribute id="PROBCLASS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROBCLASS"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROBCLASS"/>
+      </attribute>
+      <attribute id="PROCESS" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS"/>
+      </attribute>
+      <attribute id="PROCESS_ID" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_ID"/>
+      </attribute>
+      <attribute id="PROCESS_PARAMS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_PARAMS"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_PARAMS"/>
+      </attribute>
+      <attribute id="PROCESS_REF1" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_REF1"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_REF1"/>
+      </attribute>
+      <attribute id="PROCESS_REF2" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_REF2"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_REF2"/>
+      </attribute>
+      <attribute id="PROCESS_REF3" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_REF3"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_REF3"/>
+      </attribute>
+      <attribute id="PROCESS_REF4" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_REF4"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_REF4"/>
+      </attribute>
+      <attribute id="PROCESS_REF5" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_REF5"/>
+        <keyMapping columnObjectName="Join_1" columnName="PROCESS_REF5"/>
+      </attribute>
+      <attribute id="SUBOBJECT" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBOBJECT"/>
+        <keyMapping columnObjectName="Join_1" columnName="SUBOBJECT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT_1" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDAT_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY_1" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDBY_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON_1" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDON_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT_1" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDAT_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY_1" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDBY_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON_1" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDON_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE_1" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE_1"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE_REF_ID_1" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE_REF_ID_1"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE_REF_ID_1"/>
+      </attribute>
+      <attribute id="ERR_CODE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERR_CODE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERR_CODE"/>
+      </attribute>
+      <attribute id="ERR_MSG" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERR_MSG"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERR_MSG"/>
+      </attribute>
+      <attribute id="MESSAGEID" key="true" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MESSAGEID"/>
+        <keyMapping columnObjectName="Join_1" columnName="MESSAGEID"/>
+      </attribute>
+      <attribute id="MSGID" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGID"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGID"/>
+      </attribute>
+      <attribute id="MSGNO" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGNO"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGNO"/>
+      </attribute>
+      <attribute id="MSGTY" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGTY"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGTY"/>
+      </attribute>
+      <attribute id="MSGV1" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGV1"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGV1"/>
+      </attribute>
+      <attribute id="MSGV2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGV2"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGV2"/>
+      </attribute>
+      <attribute id="MSGV3" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGV3"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGV3"/>
+      </attribute>
+      <attribute id="MSGV4" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSGV4"/>
+        <keyMapping columnObjectName="Join_1" columnName="MSGV4"/>
+      </attribute>
+      <attribute id="TIME_STAMP" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TIME_STAMP"/>
+        <keyMapping columnObjectName="Join_1" columnName="TIME_STAMP"/>
+      </attribute>
+      <attribute id="USER_MSG" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USER_MSG"/>
+        <keyMapping columnObjectName="Join_1" columnName="USER_MSG"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="83" y="237"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    
+    <shape modelObjectName="ARTEC_PC_LOGS_ALOG_H" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PC_LOGS_ALOG_M" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

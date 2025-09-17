@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="ARTEC_PY_V_APPAYM" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="ARTEC_PY_V_APPAYM"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_PAYMENTS_AP_PAYMVIEW">
+    <resourceUri>ARTEC_PY_PAYMENTS_AP_PAYMVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_PAYMENTS_AP_PAYMIVIEW">
+    <resourceUri>ARTEC_PY_PAYMENTS_AP_PAYMIVIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="TRACKID"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="BENIFICIARYNAME"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="BENEFICIARYACCNO"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="PAYMENTNO"/>
+      <viewAttribute id="IFSC"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="RUNID"/>
+      <viewAttribute id="BANKREFERENCENO"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="RUNDATE"/>
+      <viewAttribute id="UTRNO"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="PAYMENTAMOUNT"/>
+      <viewAttribute id="REMARKS"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="CURRENCY"/>
+      <viewAttribute id="INTERESTTYPE"/>
+      <viewAttribute id="IDOCNO"/>
+      <viewAttribute id="INTERESTRATE"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="INTERESTAMOUNT"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="PAYMENTMETHOD"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="ERPINVOICENO"/>
+      <viewAttribute id="ERPUNIQUENO"/>
+      <viewAttribute id="ITEMTYPE"/>
+      <viewAttribute id="ITEMDATE"/>
+      <viewAttribute id="ITEMAMOUNT"/>
+      <viewAttribute id="ITEMDUEDATE"/>
+      <viewAttribute id="ERPDOCUMENTTYPE"/>
+      <viewAttribute id="ITEMGUID"/>
+      <viewAttribute id="CPINVOICENO"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_PAYMENTS_AP_PAYMVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BENIFICIARYNAME" source="BENIFICIARYNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BENEFICIARYACCNO" source="BENEFICIARYACCNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTNO" source="PAYMENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="IFSC" source="IFSC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RUNID" source="RUNID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKREFERENCENO" source="BANKREFERENCENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RUNDATE" source="RUNDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTRNO" source="UTRNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTAMOUNT" source="PAYMENTAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REMARKS" source="REMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INTERESTTYPE" source="INTERESTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="IDOCNO" source="IDOCNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INTERESTRATE" source="INTERESTRATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INTERESTAMOUNT" source="INTERESTAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTMETHOD" source="PAYMENTMETHOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+    </input>
+    <input node="ARTEC_PY_PAYMENTS_AP_PAYMIVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERPINVOICENO" source="ERPINVOICENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERPUNIQUENO" source="ERPUNIQUENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMTYPE" source="ITEMTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDATE" source="ITEMDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMAMOUNT" source="ITEMAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMDUEDATE" source="ITEMDUEDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERPDOCUMENTTYPE" source="ERPDOCUMENTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMGUID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPINVOICENO" source="CPINVOICENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="PAYMENTGUID"/>
+    </input>
+    <joinAttribute name="ID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="TRACKID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRACKID"/>
+      <keyMapping columnObjectName="Join_1" columnName="TRACKID"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="CPTYPE" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPTYPE"/>
+    </attribute>
+    <attribute id="BENIFICIARYNAME" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BENIFICIARYNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="BENIFICIARYNAME"/>
+    </attribute>
+    <attribute id="CREATEDON" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON"/>
+    </attribute>
+    <attribute id="CPNAME" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPNAME"/>
+    </attribute>
+    <attribute id="BENEFICIARYACCNO" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BENEFICIARYACCNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="BENEFICIARYACCNO"/>
+    </attribute>
+    <attribute id="CHANGEDBY" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDBY"/>
+    </attribute>
+    <attribute id="PAYMENTNO" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAYMENTNO"/>
+    </attribute>
+    <attribute id="IFSC" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="IFSC"/>
+      <keyMapping columnObjectName="Join_1" columnName="IFSC"/>
+    </attribute>
+    <attribute id="CHANGEDAT" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDAT"/>
+    </attribute>
+    <attribute id="RUNID" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RUNID"/>
+      <keyMapping columnObjectName="Join_1" columnName="RUNID"/>
+    </attribute>
+    <attribute id="BANKREFERENCENO" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKREFERENCENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKREFERENCENO"/>
+    </attribute>
+    <attribute id="CHANGEDON" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDON"/>
+    </attribute>
+    <attribute id="RUNDATE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RUNDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="RUNDATE"/>
+    </attribute>
+    <attribute id="UTRNO" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTRNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="UTRNO"/>
+    </attribute>
+    <attribute id="SOURCE" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="PAYMENTAMOUNT" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTAMOUNT"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAYMENTAMOUNT"/>
+    </attribute>
+    <attribute id="REMARKS" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REMARKS"/>
+      <keyMapping columnObjectName="Join_1" columnName="REMARKS"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="CURRENCY" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="INTERESTTYPE" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INTERESTTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="INTERESTTYPE"/>
+    </attribute>
+    <attribute id="IDOCNO" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="IDOCNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="IDOCNO"/>
+    </attribute>
+    <attribute id="INTERESTRATE" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INTERESTRATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="INTERESTRATE"/>
+    </attribute>
+    <attribute id="ID" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ID"/>
+    </attribute>
+    <attribute id="STATUSID" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATUSID"/>
+    </attribute>
+    <attribute id="INTERESTAMOUNT" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INTERESTAMOUNT"/>
+      <keyMapping columnObjectName="Join_1" columnName="INTERESTAMOUNT"/>
+    </attribute>
+    <attribute id="AGGREGATORID" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="PAYMENTMETHOD" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTMETHOD"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAYMENTMETHOD"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="CPGUID" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPGUID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPGUID"/>
+    </attribute>
+    <attribute id="ERPINVOICENO" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERPINVOICENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERPINVOICENO"/>
+    </attribute>
+    <attribute id="ERPUNIQUENO" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERPUNIQUENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERPUNIQUENO"/>
+    </attribute>
+    <attribute id="ITEMTYPE" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ITEMTYPE"/>
+    </attribute>
+    <attribute id="ITEMDATE" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ITEMDATE"/>
+    </attribute>
+    <attribute id="ITEMAMOUNT" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMAMOUNT"/>
+      <keyMapping columnObjectName="Join_1" columnName="ITEMAMOUNT"/>
+    </attribute>
+    <attribute id="ITEMDUEDATE" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMDUEDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ITEMDUEDATE"/>
+    </attribute>
+    <attribute id="ERPDOCUMENTTYPE" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERPDOCUMENTTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERPDOCUMENTTYPE"/>
+    </attribute>
+    <attribute id="ITEMGUID" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMGUID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ITEMGUID"/>
+    </attribute>
+    <attribute id="CPINVOICENO" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPINVOICENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPINVOICENO"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="86" y="263"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

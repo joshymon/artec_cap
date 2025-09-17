@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_CFMIS_STATUS_BKP" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" application="BAS" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_CFMIS_STATUS_BKP_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_V_OPENITEMS_BKP">
+    <resourceUri>ARTEC_PY_V_OPENITEMS_BKP</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_V_OPENITEMS">
+    <resourceUri>ARTEC_PY_V_OPENITEMS</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF2VIEW">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF2VIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="OPENITEMS_CNT">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+    
+      <viewAttribute id="ACKPRCESSINGSTATUSID"/>
+    
+      <viewAttribute id="PROCESSINGSTATUSID_I"/>
+      <viewAttribute id="INVOICEAMOUNT"/>
+      <viewAttribute id="ITEMTEXT"/>
+    
+      <viewAttribute id="CREATEDON"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="TOTALRECORDCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>1</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="SENTFORAPPRLCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+    
+        <formula>if(("PROCESSINGSTATUSID_I"='000060' or "PROCESSINGSTATUSID_I"='000070' or "PROCESSINGSTATUSID_I"='000100' or "PROCESSINGSTATUSID_I"='000220' or "PROCESSINGSTATUSID_I"='000320' or "PROCESSINGSTATUSID_I"='000999'),1,0)</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="APPROVEDCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(("PROCESSINGSTATUSID_I"='000070' or "PROCESSINGSTATUSID_I"='000100' or "PROCESSINGSTATUSID_I"='000220' or "PROCESSINGSTATUSID_I"='000320' or "PROCESSINGSTATUSID_I"='000999'),1,0)</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="DEBITNOTECOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+    
+        <formula>if("INVOICEAMOUNT"&lt;0, 1, 0)</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="NOTELIGCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if("PROCESSINGSTATUSID_I"='000320', 1, 0)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="SENTTOFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(((("PROCESSINGSTATUSID_I"='000100' or "PROCESSINGSTATUSID_I"='000220' or "PROCESSINGSTATUSID_I"='000999')) and ("INVOICEAMOUNT"&gt;0)),1,0)</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="SENTTOCORPCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+    
+        <formula>if("ACKPRCESSINGSTATUSID"='000040', 1, 0)</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="PENDTOSENDTOCORP" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if("ACKPRCESSINGSTATUSID"!='000040', 1, 0)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_V_OPENITEMS_BKP"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="OPENITEMS_SCF2_CNT" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="PYMNTDOCNUMBER"/>
+      <viewAttribute id="LOANSTATUSID"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute hidden="true" id="JOIN$AGGREGATORID$AGGREGATORID"/>
+      <viewAttribute hidden="true" id="JOIN$INVOICENO$PYMNTDOCNUMBER"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="ACCPBYFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if("LOANSTATUSID"='000020', 1, 0)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="REJBYFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if("LOANSTATUSID"='000999', 1, 0)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="TECHISSUECOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if("LOANSTATUSID"='000005', 1, 0)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="DISCBYFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(("LOANSTATUSID"='000020' or "LOANSTATUSID"='000999'), 1, 0)</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_V_OPENITEMS">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$INVOICENO$PYMNTDOCNUMBER" source="INVOICENO"/>
+    </input>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF2VIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTDOCNUMBER" source="PYMNTDOCNUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOANSTATUSID" source="LOANSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$INVOICENO$PYMNTDOCNUMBER" source="PYMNTDOCNUMBER"/>
+    </input>
+    <joinAttribute name="JOIN$AGGREGATORID$AGGREGATORID"/>
+    <joinAttribute name="JOIN$INVOICENO$PYMNTDOCNUMBER"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="OPENITEMS_CNT_AGGR">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="TOTALRECORDCOUNT" aggregationType="sum"/>
+    
+      <viewAttribute id="SENTFORAPPRLCOUNT" aggregationType="sum"/>
+      <viewAttribute id="APPROVEDCOUNT" aggregationType="sum"/>
+      <viewAttribute id="DEBITNOTECOUNT" aggregationType="sum"/>
+      <viewAttribute id="NOTELIGCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTTOFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTTOCORPCOUNT" aggregationType="sum"/>
+      <viewAttribute id="PENDTOSENDTOCORP" aggregationType="sum"/>
+    
+      <viewAttribute id="CREATEDON"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="OPENITEMS_CNT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="OPENITEMS_SCF2_CNT_AGGR">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="ACCPBYFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="REJBYFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="TECHISSUECOUNT" aggregationType="sum"/>
+      <viewAttribute id="DISCBYFSCMCOUNT" aggregationType="sum"/>
+    
+      <viewAttribute id="CREATEDON"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="OPENITEMS_SCF2_CNT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="CFMIS_CNT_JOIN" cardinality="CN_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="TOTALRECORDCOUNT"/>
+      <viewAttribute id="SENTFORAPPRLCOUNT"/>
+      <viewAttribute id="APPROVEDCOUNT"/>
+      <viewAttribute id="DEBITNOTECOUNT"/>
+      <viewAttribute id="NOTELIGCOUNT"/>
+      <viewAttribute id="SENTTOFSCMCOUNT"/>
+      <viewAttribute id="SENTTOCORPCOUNT"/>
+      <viewAttribute id="PENDTOSENDTOCORP"/>
+      <viewAttribute id="ACCPBYFSCMCOUNT"/>
+      <viewAttribute id="REJBYFSCMCOUNT"/>
+      <viewAttribute id="TECHISSUECOUNT"/>
+      <viewAttribute id="DISCBYFSCMCOUNT"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute hidden="true" id="JOIN$AGGREGATORID$AGGREGATORID"/>
+      <viewAttribute hidden="true" id="JOIN$SOURCEREFERENCEID$SOURCEREFERENCEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="PENDFORAPPRLCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>"TOTALRECORDCOUNT"-"SENTFORAPPRLCOUNT"</formula>
+      </calculatedViewAttribute>
+    
+      <calculatedViewAttribute id="PENDTOSENDFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+    
+        <formula>("APPROVEDCOUNT"-"NOTELIGCOUNT")-"SENTTOFSCMCOUNT"</formula>
+    
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="SENTTOFSCMANDNOTACCPTCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>"SENTTOFSCMCOUNT"-"ACCPBYFSCMCOUNT"</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="PENDRESPFROMFSCMCOUNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>"SENTTOFSCMCOUNT"-"DISCBYFSCMCOUNT"</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="OPENITEMS_CNT_AGGR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALRECORDCOUNT" source="TOTALRECORDCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SENTFORAPPRLCOUNT" source="SENTFORAPPRLCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVEDCOUNT" source="APPROVEDCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEBITNOTECOUNT" source="DEBITNOTECOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NOTELIGCOUNT" source="NOTELIGCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SENTTOFSCMCOUNT" source="SENTTOFSCMCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SENTTOCORPCOUNT" source="SENTTOCORPCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PENDTOSENDTOCORP" source="PENDTOSENDTOCORP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SOURCEREFERENCEID$SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+    </input>
+    <input node="OPENITEMS_SCF2_CNT_AGGR">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACCPBYFSCMCOUNT" source="ACCPBYFSCMCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REJBYFSCMCOUNT" source="REJBYFSCMCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TECHISSUECOUNT" source="TECHISSUECOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISCBYFSCMCOUNT" source="DISCBYFSCMCOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SOURCEREFERENCEID$SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+    </input>
+    <joinAttribute name="JOIN$AGGREGATORID$AGGREGATORID"/>
+    <joinAttribute name="JOIN$SOURCEREFERENCEID$SOURCEREFERENCEID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:AggregationView" id="CFMIS_CNT_AGGR">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="TOTALRECORDCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTFORAPPRLCOUNT" aggregationType="sum"/>
+      <viewAttribute id="APPROVEDCOUNT" aggregationType="sum"/>
+      <viewAttribute id="DEBITNOTECOUNT" aggregationType="sum"/>
+      <viewAttribute id="NOTELIGCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTTOFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTTOCORPCOUNT" aggregationType="sum"/>
+      <viewAttribute id="PENDTOSENDTOCORP" aggregationType="sum"/>
+      <viewAttribute id="ACCPBYFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="REJBYFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="TECHISSUECOUNT" aggregationType="sum"/>
+      <viewAttribute id="DISCBYFSCMCOUNT" aggregationType="sum"/>
+    
+      <viewAttribute id="CREATEDON"/>
+    
+      <viewAttribute id="PENDFORAPPRLCOUNT" aggregationType="sum"/>
+      <viewAttribute id="PENDTOSENDFSCMCOUNT" aggregationType="sum"/>
+      <viewAttribute id="SENTTOFSCMANDNOTACCPTCOUNT" aggregationType="sum"/>
+      <viewAttribute id="PENDRESPFROMFSCMCOUNT" aggregationType="sum"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="CFMIS_CNT_JOIN"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="CFMIS_CNT_AGGR">
+  <attributes>
+    <attribute id="AGGREGATORID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="TOTALRECORDCOUNT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TOTALRECORDCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="TOTALRECORDCOUNT"/>
+    </attribute>
+    <attribute id="SENTFORAPPRLCOUNT" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SENTFORAPPRLCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="SENTFORAPPRLCOUNT"/>
+    </attribute>
+    <attribute id="APPROVEDCOUNT" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APPROVEDCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="APPROVEDCOUNT"/>
+    </attribute>
+    <attribute id="DEBITNOTECOUNT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DEBITNOTECOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="DEBITNOTECOUNT"/>
+    </attribute>
+    <attribute id="NOTELIGCOUNT" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NOTELIGCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="NOTELIGCOUNT"/>
+    </attribute>
+    <attribute id="SENTTOFSCMCOUNT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SENTTOFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="SENTTOFSCMCOUNT"/>
+    </attribute>
+    <attribute id="SENTTOCORPCOUNT" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SENTTOCORPCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="SENTTOCORPCOUNT"/>
+    </attribute>
+    <attribute id="PENDTOSENDTOCORP" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PENDTOSENDTOCORP"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="PENDTOSENDTOCORP"/>
+    </attribute>
+    <attribute id="ACCPBYFSCMCOUNT" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACCPBYFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="ACCPBYFSCMCOUNT"/>
+    </attribute>
+    <attribute id="REJBYFSCMCOUNT" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REJBYFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="REJBYFSCMCOUNT"/>
+    </attribute>
+    <attribute id="TECHISSUECOUNT" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TECHISSUECOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="TECHISSUECOUNT"/>
+    </attribute>
+    <attribute id="DISCBYFSCMCOUNT" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISCBYFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="DISCBYFSCMCOUNT"/>
+    </attribute>
+  
+    <attribute id="CREATEDON" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+  
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="CREATEDON"/>
+  
+    </attribute>
+  
+    <attribute id="PENDFORAPPRLCOUNT" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PENDFORAPPRLCOUNT"/>
+  
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="PENDFORAPPRLCOUNT"/>
+  
+    </attribute>
+    <attribute id="PENDTOSENDFSCMCOUNT" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PENDTOSENDFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="PENDTOSENDFSCMCOUNT"/>
+    </attribute>
+    <attribute id="SENTTOFSCMANDNOTACCPTCOUNT" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SENTTOFSCMANDNOTACCPTCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="SENTTOFSCMANDNOTACCPTCOUNT"/>
+    </attribute>
+    <attribute id="PENDRESPFROMFSCMCOUNT" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PENDRESPFROMFSCMCOUNT"/>
+      <keyMapping columnObjectName="CFMIS_CNT_AGGR" columnName="PENDRESPFROMFSCMCOUNT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="WAITINGTOSEND" order="20" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("TOTALRECORDCOUNT"-"SENTFORAPPRLCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="WAITINGFORAPPROVAL" order="21" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("SENTFORAPPRLCOUNT"-"APPROVEDCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="ELIGIBLEFORFSCM" order="22" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("APPROVEDCOUNT"-"DEBITNOTECOUNT"-"NOTELIGCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="WAITINGTOSENDTOFSCM" order="23" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("ELIGIBLEFORFSCM"-"SENTTOFSCMCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="ACCEPTEDREJECTEDCOUNT" order="24" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("ACCPBYFSCMCOUNT" + "REJBYFSCMCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="WAITINGFORFSCMRESPONSE" order="25" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("SENTTOFSCMCOUNT"-"ACCPBYFSCMCOUNT"-"REJBYFSCMCOUNT"-"TECHISSUECOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="ACCEPTEDREJECTEDBUTNOTDISCOUNTED" order="26" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("ACCPBYFSCMCOUNT"+"REJBYFSCMCOUNT"-"DISCBYFSCMCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="OVERALLWAITINGFORDISCOUNTINGSTATUS" order="27" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("SENTTOFSCMCOUNT"-"DISCBYFSCMCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="DEBITNOTEANDNOTELIGIBLE" order="28" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("DEBITNOTECOUNT" + "NOTELIGCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+    <calculatedAttribute id="OVERALLWAITINGTOSENDCORP" order="29" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>("TOTALRECORDCOUNT"-"SENTTOCORPCOUNT")</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="268" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="OPENITEMS_CNT" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="91" y="626"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="OPENITEMS_SCF2_CNT" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="626"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_V_OPENITEMS" modelObjectNameSpace="OPENITEMS_SCF2_CNT" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="217"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_SUPPLYCHAINFINANCE_SCF2VIEW" modelObjectNameSpace="OPENITEMS_SCF2_CNT" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="311"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="OPENITEMS_CNT_AGGR" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="91" y="501"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="OPENITEMS_SCF2_CNT_AGGR" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="308" y="501"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="CFMIS_CNT_JOIN" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="246" y="341"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="OPENITEMS_CNT_AGGR" modelObjectNameSpace="CFMIS_CNT_JOIN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="274"/>
+    </shape>
+    <shape modelObjectName="OPENITEMS_SCF2_CNT_AGGR" modelObjectNameSpace="CFMIS_CNT_JOIN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="204"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="CFMIS_CNT_AGGR" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="246" y="236"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

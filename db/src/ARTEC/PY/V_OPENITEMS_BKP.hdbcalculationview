@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_OPENITEMS_BKP" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" application="BAS" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_OPENITEMS_BKP_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_PAYMENTS_OPENITEMSVIEW">
+    <resourceUri>ARTEC_PY_PAYMENTS_OPENITEMSVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_PAYMENTS_OPENITEM_HEADERVIEW">
+    <resourceUri>ARTEC_PY_PAYMENTS_OPENITEM_HEADERVIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="OPENITEM_JOIN" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="PROCESSINGSTATUS"/>
+      <viewAttribute id="SOURCE_H"/>
+      <viewAttribute id="PROCESSINGSTATUSID_I"/>
+      <viewAttribute id="ACKPRCESSINGSTATUSID"/>
+      <viewAttribute id="ITEMTEXT"/>
+      <viewAttribute id="INVOICEAMOUNT"/>
+      <viewAttribute id="INVOICENO"/>
+      <viewAttribute id="AGGREGATORID_I"/>
+      <viewAttribute id="SOURCEREFERENCEID_H"/>
+      <viewAttribute id="CREATEDON_H"/>
+      <viewAttribute id="SOURCE_I"/>
+      <viewAttribute id="SOURCEREFERENCEID_I"/>
+      <viewAttribute id="CREATEDON_I"/>
+      <viewAttribute id="AGGREGATORID_H"/>
+      <viewAttribute hidden="true" id="JOIN$OPENITEMSHDRGUID$ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_PAYMENTS_OPENITEMSVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSINGSTATUSID_I" source="PROCESSINGSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACKPRCESSINGSTATUSID" source="ACKPRCESSINGSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ITEMTEXT" source="ITEMTEXT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INVOICEAMOUNT" source="INVOICEAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INVOICENO" source="INVOICENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID_I" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE_I" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID_I" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_I" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$OPENITEMSHDRGUID$ID" source="OPENITEMSHDRGUID"/>
+    </input>
+    <input node="ARTEC_PY_PAYMENTS_OPENITEM_HEADERVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSINGSTATUS" source="PROCESSINGSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE_H" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID_H" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_H" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID_H" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$OPENITEMSHDRGUID$ID" source="ID"/>
+    </input>
+    <joinAttribute name="JOIN$OPENITEMSHDRGUID$ID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="OPENITEM_JOIN">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="ID"/>
+    </attribute>
+    <attribute id="PROCESSINGSTATUS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROCESSINGSTATUS"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="PROCESSINGSTATUS"/>
+    </attribute>
+    <attribute id="PROCESSINGSTATUSID_I" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PROCESSINGSTATUSID"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="PROCESSINGSTATUSID_I"/>
+    </attribute>
+    <attribute id="ACKPRCESSINGSTATUSID" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ACKPRCESSINGSTATUSID"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="ACKPRCESSINGSTATUSID"/>
+    </attribute>
+  
+    <attribute id="ITEMTEXT" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ITEMTEXT"/>
+  
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="ITEMTEXT"/>
+  
+    </attribute>
+  
+    <attribute id="INVOICEAMOUNT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INVOICEAMOUNT"/>
+  
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="INVOICEAMOUNT"/>
+  
+    </attribute>
+  
+    <attribute id="INVOICENO" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INVOICENO"/>
+  
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="INVOICENO"/>
+  
+    </attribute>
+    <attribute id="SOURCE_H" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE_H"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="SOURCE_H"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID_H" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID_H"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="SOURCEREFERENCEID_H"/>
+    </attribute>
+    <attribute id="SOURCE_I" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE_1"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="SOURCE_I"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID_I" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID_1"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="SOURCEREFERENCEID_I"/>
+    </attribute>
+    <attribute id="CREATEDON_H" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_H"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="CREATEDON_H"/>
+    </attribute>
+    <attribute id="CREATEDON_I" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_1"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="CREATEDON_I"/>
+    </attribute>
+    <attribute id="AGGREGATORID_I" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID_I"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="AGGREGATORID_I"/>
+    </attribute>
+    <attribute id="AGGREGATORID_H" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID_1"/>
+      <keyMapping columnObjectName="OPENITEM_JOIN" columnName="AGGREGATORID_H"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="CREATEDON" order="8" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+        <formula>IF(ISNULL("CREATEDON_H"),"CREATEDON_I","CREATEDON_H")</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+    <calculatedAttribute id="AGGREGATORID" order="17" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="50">
+        <formula>IF(ISNULL("AGGREGATORID_H"),"AGGREGATORID_I",IF(strlen("AGGREGATORID_H")&gt;0,"AGGREGATORID_H","AGGREGATORID_I"))</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+    <calculatedAttribute id="SOURCE" order="18" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="10">
+        <formula>IF(ISNULL("SOURCE_H"),"SOURCE_I",IF(strlen("SOURCE_H")&gt;0,"SOURCE_H","SOURCE_I"))</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+    <calculatedAttribute id="SOURCEREFERENCEID" order="19" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <keyCalculation datatype="NVARCHAR" expressionLanguage="COLUMN_ENGINE" length="50">
+        <formula>IF(ISNULL("SOURCEREFERENCEID_H"),"SOURCEREFERENCEID_I",IF(strlen("SOURCEREFERENCEID_H")&gt;0,"SOURCEREFERENCEID_H","SOURCEREFERENCEID_I"))</formula>
+      </keyCalculation>
+      </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="OPENITEM_JOIN" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-25" y="181"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_PAYMENTS_OPENITEMSVIEW" modelObjectNameSpace="OPENITEM_JOIN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="16" y="16"/>
+      <rectangleSize width="289.609375"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_PAYMENTS_OPENITEM_HEADERVIEW" modelObjectNameSpace="OPENITEM_JOIN" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="423.609375" y="36"/>
+      <rectangleSize width="338.734375"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

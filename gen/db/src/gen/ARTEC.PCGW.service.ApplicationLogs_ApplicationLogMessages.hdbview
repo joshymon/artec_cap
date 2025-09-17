@@ -1,0 +1,6 @@
+VIEW ARTEC_PCGW_service_ApplicationLogs_ApplicationLogMessages AS SELECT
+  ARTEC_PC_LOGS_ALOG_MVIEW_0.ID
+FROM ARTEC_PC_LOGS_ALOG_MVIEW AS ARTEC_PC_LOGS_ALOG_MVIEW_0
+WITH ASSOCIATIONS (
+  MANY TO MANY JOIN ARTEC_PCGW_service_ApplicationLogMessages AS ApplicationLogs_ApplicationLogMessages ON (ApplicationLogs_ApplicationLogMessages.ID = ApplicationLogs_ApplicationLogMessages.ID)
+)

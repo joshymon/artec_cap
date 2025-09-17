@@ -1,0 +1,45 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PYMIS_V_PGH {
+  key ADVANCE_FOR              : String(6)      @title: 'ADVANCE_FOR';
+      AGGRID                   : String(50)     @title: 'AGGRID';
+      BALANCE_AMNT             : Decimal(15, 2) @title: 'BALANCE_AMNT';
+      CHANGE_HISTORY_CHANGEDAT : Time           @title: 'CHANGE_HISTORY_CHANGEDAT';
+      CHANGE_HISTORY_CHANGEDBY : String(32)     @title: 'CHANGE_HISTORY_CHANGEDBY';
+      CHANGE_HISTORY_CHANGEDON : Date           @title: 'CHANGE_HISTORY_CHANGEDON';
+      CHANGE_HISTORY_CREATEDAT : Time           @title: 'CHANGE_HISTORY_CREATEDAT';
+      CHANGE_HISTORY_CREATEDBY : String(32)     @title: 'CHANGE_HISTORY_CREATEDBY';
+      CHANGE_HISTORY_CREATEDON : Date           @title: 'CHANGE_HISTORY_CREATEDON';
+      CHANGE_HISTORY_SOURCE    : String(10)     @title: 'CHANGE_HISTORY_SOURCE';
+      CH_GUID                  : String(36)     @title: 'CH_GUID';
+      CLR_DOC_CAT              : String(6)      @title: 'CLR_DOC_CAT';
+      CLR_DOC_CC               : String(4)      @title: 'CLR_DOC_CC';
+      CLR_DOC_FY               : String(4)      @title: 'CLR_DOC_FY';
+      CLR_DOC_NO               : String(32)     @title: 'CLR_DOC_NO';
+      CP_ACCOUNT_NO            : String(32)     @title: 'CP_ACCOUNT_NO';
+      CP_NO                    : String(10)     @title: 'CP_NO';
+      CP_TYPE                  : String(2)      @title: 'CP_TYPE';
+      CURRENCY                 : String(5)      @title: 'CURRENCY';
+      ENTERED_AMT              : Decimal(15, 2) @title: 'ENTERED_AMT';
+      PGH_GUID                 : String(36)     @title: 'PGH_GUID';
+      PG_BANK_REF_ID           : String(50)     @title: 'PG_BANK_REF_ID';
+      PG_CATEGORY              : String(6)      @title: 'PG_CATEGORY';
+      PG_ID                    : String(10)     @title: 'PG_ID';
+      PG_NAME                  : String(60)     @title: 'PG_NAME';
+      PG_PTMNY_TYPE            : String(2)      @title: 'PG_PTMNY_TYPE';
+      PG_PYMNT_DATE            : Date           @title: 'PG_PYMNT_DATE';
+      PG_PYMNT_METHOD          : String(2)      @title: 'PG_PYMNT_METHOD';
+      PG_PYMNT_STATUS          : String(6)      @title: 'PG_PYMNT_STATUS';
+      PG_TEXT                  : String(1000)   @title: 'PG_TEXT';
+      PG_TXN_AMNT              : Decimal(15, 2) @title: 'PG_TXN_AMNT';
+      PG_TXN_DATE              : Date           @title: 'PG_TXN_DATE';
+      PG_TXN_ID                : String(50)     @title: 'PG_TXN_ID';
+      PG_TXN_MSG               : String(1000)   @title: 'PG_TXN_MSG';
+      PG_TXN_STATUS            : String(6)      @title: 'PG_TXN_STATUS';
+      PG_TXN_TIME              : Time           @title: 'PG_TXN_TIME';
+      PYMNT_AMOUNT             : Decimal(15, 2) @title: 'PYMNT_AMOUNT';
+      PYMNT_FOR                : String(6)      @title: 'PYMNT_FOR';
+      PYMNT_STATUS             : String(6)      @title: 'PYMNT_STATUS';
+      TDS_AMT                  : Decimal(15, 2) @title: 'TDS_AMT';
+      TRACK_ID                 : String(32)     @title: 'TRACK_ID';
+};

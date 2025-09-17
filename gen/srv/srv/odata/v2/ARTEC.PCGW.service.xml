@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="ARTEC.PCGW.service" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Annotation Term="Core.Links" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="PG_CAT" EntityType="ARTEC.PCGW.service.PG_CAT"/>
+        <EntitySet Name="PGPaymentCategories" EntityType="ARTEC.PCGW.service.PGPaymentCategories"/>
+        <EntitySet Name="PG_CH" EntityType="ARTEC.PCGW.service.PG_CH"/>
+        <EntitySet Name="PGPaymentConfigs" EntityType="ARTEC.PCGW.service.PGPaymentConfigs"/>
+        <EntitySet Name="PG_CS" EntityType="ARTEC.PCGW.service.PG_CS"/>
+        <EntitySet Name="PGPaymentConfigStats" EntityType="ARTEC.PCGW.service.PGPaymentConfigStats"/>
+        <EntitySet Name="PG_CPREF" EntityType="ARTEC.PCGW.service.PG_CPREF"/>
+        <EntitySet Name="PGCPReference" EntityType="ARTEC.PCGW.service.PGCPReference"/>
+        <EntitySet Name="PG_H" EntityType="ARTEC.PCGW.service.PG_H"/>
+        <EntitySet Name="PGPayments" EntityType="ARTEC.PCGW.service.PGPayments"/>
+        <EntitySet Name="PG_I" EntityType="ARTEC.PCGW.service.PG_I"/>
+        <EntitySet Name="PGPaymentItemDetails" EntityType="ARTEC.PCGW.service.PGPaymentItemDetails"/>
+        <EntitySet Name="ATST" EntityType="ARTEC.PCGW.service.ATST"/>
+        <EntitySet Name="ATST_T" EntityType="ARTEC.PCGW.service.ATST_T"/>
+        <EntitySet Name="AttributeTypesets1" EntityType="ARTEC.PCGW.service.AttributeTypesets1"/>
+        <EntitySet Name="AttributeTypesets" EntityType="ARTEC.PCGW.service.AttributeTypesets"/>
+        <EntitySet Name="ATYP" EntityType="ARTEC.PCGW.service.ATYP"/>
+        <EntitySet Name="ATYP_T" EntityType="ARTEC.PCGW.service.ATYP_T"/>
+        <EntitySet Name="AttributeTypesetTypes1" EntityType="ARTEC.PCGW.service.AttributeTypesetTypes1"/>
+        <EntitySet Name="AttributeTypesetTypes" EntityType="ARTEC.PCGW.service.AttributeTypesetTypes"/>
+        <EntitySet Name="TSET" EntityType="ARTEC.PCGW.service.TSET"/>
+        <EntitySet Name="TSET_T" EntityType="ARTEC.PCGW.service.TSET_T"/>
+        <EntitySet Name="ConfigTypesets1" EntityType="ARTEC.PCGW.service.ConfigTypesets1"/>
+        <EntitySet Name="ConfigTypesets" EntityType="ARTEC.PCGW.service.ConfigTypesets"/>
+        <EntitySet Name="TYPS" EntityType="ARTEC.PCGW.service.TYPS"/>
+        <EntitySet Name="TYPS_T" EntityType="ARTEC.PCGW.service.TYPS_T"/>
+        <EntitySet Name="ConfigTypesetTypes1" EntityType="ARTEC.PCGW.service.ConfigTypesetTypes1"/>
+        <EntitySet Name="ConfigTypesetTypes" EntityType="ARTEC.PCGW.service.ConfigTypesetTypes"/>
+        <EntitySet Name="TYPVAL" EntityType="ARTEC.PCGW.service.TYPVAL"/>
+        <EntitySet Name="ConfigTypsetTypeValues1" EntityType="ARTEC.PCGW.service.ConfigTypsetTypeValues1"/>
+        <EntitySet Name="ConfigTypsetTypeValues" EntityType="ARTEC.PCGW.service.ConfigTypsetTypeValues"/>
+        <EntitySet Name="VALHLP" EntityType="ARTEC.PCGW.service.VALHLP"/>
+        <EntitySet Name="ValueHelps" EntityType="ARTEC.PCGW.service.ValueHelps"/>
+        <EntitySet Name="ARTEC_PC_SUBSCRIPTION" EntityType="ARTEC.PCGW.service.ARTEC_PC_SUBSCRIPTION"/>
+        <EntitySet Name="ARTEC_PC_INV_H" EntityType="ARTEC.PCGW.service.ARTEC_PC_INV_H"/>
+        <EntitySet Name="ARTEC_PC_INV_I" EntityType="ARTEC.PCGW.service.ARTEC_PC_INV_I"/>
+        <EntitySet Name="ARTEC_PC_MATERIAL" EntityType="ARTEC.PCGW.service.ARTEC_PC_MATERIAL"/>
+        <EntitySet Name="ARTEC_PC_SUBSCRIBER" EntityType="ARTEC.PCGW.service.ARTEC_PC_SUBSCRIBER"/>
+        <EntitySet Name="ARTEC_PC_PG_H" EntityType="ARTEC.PCGW.service.ARTEC_PC_PG_H"/>
+        <EntitySet Name="ARTEC_PC_PG_I" EntityType="ARTEC.PCGW.service.ARTEC_PC_PG_I"/>
+        <EntitySet Name="ARTEC_PC_PG_CH" EntityType="ARTEC.PCGW.service.ARTEC_PC_PG_CH"/>
+        <EntitySet Name="ARTEC_PC_PG_CS" EntityType="ARTEC.PCGW.service.ARTEC_PC_PG_CS"/>
+        <EntitySet Name="ARTEC_PC_COND" EntityType="ARTEC.PCGW.service.ARTEC_PC_COND"/>
+        <EntitySet Name="ARTEC_PC_IRNLNK" EntityType="ARTEC.PCGW.service.ARTEC_PC_IRNLNK"/>
+        <EntitySet Name="ARTEC_PC_SUBSCR_OD" EntityType="ARTEC.PCGW.service.ARTEC_PC_SUBSCR_OD"/>
+        <EntitySet Name="ALOG_H" EntityType="ARTEC.PCGW.service.ALOG_H"/>
+        <EntitySet Name="ApplicationLogs" EntityType="ARTEC.PCGW.service.ApplicationLogs"/>
+        <EntitySet Name="ALOG_M" EntityType="ARTEC.PCGW.service.ALOG_M"/>
+        <EntitySet Name="ApplicationLogMessages" EntityType="ARTEC.PCGW.service.ApplicationLogMessages"/>
+        <EntitySet Name="ApplicationLogs_ApplicationLogMessages" EntityType="ARTEC.PCGW.service.ApplicationLogs_ApplicationLogMessages"/>
+        <EntitySet Name="DOCREP_CNFG" EntityType="ARTEC.PCGW.service.DOCREP_CNFG"/>
+        <EntitySet Name="DocumentRepConfigs" EntityType="ARTEC.PCGW.service.DocumentRepConfigs"/>
+        <EntitySet Name="DOCREP" EntityType="ARTEC.PCGW.service.DOCREP"/>
+        <EntitySet Name="DocumentRepository" EntityType="ARTEC.PCGW.service.DocumentRepository"/>
+        <EntitySet Name="EVENT_DEST" EntityType="ARTEC.PCGW.service.EVENT_DEST"/>
+        <EntitySet Name="EventDestinations" EntityType="ARTEC.PCGW.service.EventDestinations"/>
+        <EntitySet Name="MIS_SCHEDULER" EntityType="ARTEC.PCGW.service.MIS_SCHEDULER"/>
+        <EntitySet Name="MISScheduler" EntityType="ARTEC.PCGW.service.MISScheduler"/>
+        <EntitySet Name="H2H_ACF" EntityType="ARTEC.PCGW.service.H2H_ACF"/>
+        <EntitySet Name="H2HApplicationConfigs" EntityType="ARTEC.PCGW.service.H2HApplicationConfigs"/>
+        <EntitySet Name="H2H_ICF" EntityType="ARTEC.PCGW.service.H2H_ICF"/>
+        <EntitySet Name="H2HInterfaceConfigs" EntityType="ARTEC.PCGW.service.H2HInterfaceConfigs"/>
+        <EntitySet Name="MSG_LOG" EntityType="ARTEC.PCGW.service.MSG_LOG"/>
+        <EntitySet Name="CPIMessageLogs" EntityType="ARTEC.PCGW.service.CPIMessageLogs"/>
+        <EntitySet Name="APPROVAL" EntityType="ARTEC.PCGW.service.APPROVAL"/>
+        <EntitySet Name="APPROVALVIEW" EntityType="ARTEC.PCGW.service.APPROVALVIEW"/>
+        <EntitySet Name="SURVEY_DATA" EntityType="ARTEC.PCGW.service.SURVEY_DATA"/>
+        <EntitySet Name="SurveyData" EntityType="ARTEC.PCGW.service.SurveyData"/>
+        <EntitySet Name="ApplLogMessageView" EntityType="ARTEC.PCGW.service.ApplLogMessageView"/>
+        <EntitySet Name="SubscriptionSummary" EntityType="ARTEC.PCGW.service.SubscriptionSummary"/>
+        <AssociationSet Name="ApplicationLogs_ApplicationLogMessages_ApplicationLogs_ApplicationLogMessages" Association="ARTEC.PCGW.service.ApplicationLogs_ApplicationLogMessages_ApplicationLogs_ApplicationLogMessages">
+          <End Role="ApplicationLogs_ApplicationLogMessages" EntitySet="ApplicationLogs_ApplicationLogMessages"/>
+          <End Role="ApplicationLogMessages" EntitySet="ApplicationLogMessages"/>
+        </AssociationSet>
+      </EntityContainer>
+      <EntityType Name="PG_CAT">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="PG_CATEGORY"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PG_CATEGORY" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="CHK_FIN_BLOCK" Type="Edm.String" MaxLength="1"/>
+        <Property Name="BDC_POSTING" Type="Edm.String" MaxLength="1"/>
+        <Property Name="BANK_PYM_TXN_TYP" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NO_RNG_OBJ" Type="Edm.String" MaxLength="50"/>
+        <Property Name="NO_RNG_SUBOBJ" Type="Edm.String" MaxLength="50"/>
+        <Property Name="NO_RNG_FY_DEP" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TRACK_ID_PREFIX" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PYMNT_PROC_SQNCE" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PNDNG_ERP_POST" Type="Edm.String" MaxLength="2"/>
+      </EntityType>
+      <EntityType Name="PGPaymentCategories">
+        <Key>
+          <PropertyRef Name="AggregatorId"/>
+          <PropertyRef Name="PGCategoryId"/>
+        </Key>
+        <Property Name="AggregatorId" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PGCategoryId" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="BDCPostingEnabled" Type="Edm.String" MaxLength="1"/>
+        <Property Name="BankPaymentTransactionType" Type="Edm.String" MaxLength="10"/>
+        <Property Name="NumberRangeObject" Type="Edm.String" MaxLength="50"/>
+        <Property Name="NumberRangeSubObject" Type="Edm.String" MaxLength="50"/>
+        <Property Name="IsNrFiscalYearDependent" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TrackIdPrefix" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PaymProcessingSequence" Type="Edm.String" MaxLength="2"/>
+        <Property Name="ERPPostIndForPaymPending" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CheckFinanceBlock" Type="Edm.String" MaxLength="1"/>
+      </EntityType>
+      <EntityType Name="PG_CH">
+        <Key>
+          <PropertyRef Name="CH_GUID"/>
+        </Key>
+        <Property Name="CH_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PG_ID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PG_CATEGORY" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PG_NAME" Type="Edm.String" MaxLength="60"/>
+        <Property Name="MERCHANT_CODE" Type="Edm.String" MaxLength="32"/>
+        <Property Name="SCHEME_CODE" Type="Edm.String" MaxLength="32"/>
+        <Property Name="PG_PUBLIC_KEY" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="OWN_PUBLIC_KEY" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="OWN_PRIVATE_KEY" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="CLIENT_CODE" Type="Edm.String" MaxLength="50"/>
+        <Property Name="BANK_KEY" Type="Edm.String" MaxLength="15"/>
+        <Property Name="PG_PROVIDER" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PGPARAM1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PGPARAM2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PGPARAM3" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PGPARAM4" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PGPARAM5" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PG_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PYMNT_FOR" Type="Edm.String" MaxLength="6"/>
+        <Property Name="USER_REG_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ACC_STMT_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ACC_BAL_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="TOPUP_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="TXN_STS_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PG_MODULE" Type="Edm.String" MaxLength="1000"/>
+      </EntityType>
+      <EntityType Name="PGPaymentConfigs">
+        <Key>
+          <PropertyRef Name="CONFIGHEADERGUID"/>
+        </Key>
+        <Property Name="CONFIGHEADERGUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PG_CS">
+        <Key>
+          <PropertyRef Name="CS_GUID"/>
+        </Key>
+        <Property Name="CS_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="CH_GUID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PG_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PYMNT_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="PGPaymentConfigStats">
+        <Key>
+          <PropertyRef Name="CSGUID"/>
+        </Key>
+        <Property Name="CSGUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PG_CPREF">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="PG_PROVIDER"/>
+          <PropertyRef Name="CP_NO"/>
+          <PropertyRef Name="CP_TYPE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PG_PROVIDER" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CP_NO" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CP_TYPE" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="CP_DESC1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CP_DESC2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CP_DESC3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CP_DESC4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CP_DESC5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="PGCPReference">
+        <Key>
+          <PropertyRef Name="CPNO"/>
+          <PropertyRef Name="CPTYPEID"/>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="PGPROVIDER"/>
+        </Key>
+        <Property Name="CPNO" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CPTYPEID" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PGPROVIDER" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PG_H">
+        <Key>
+          <PropertyRef Name="PGH_GUID"/>
+        </Key>
+        <Property Name="PGH_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="TRACK_ID" Type="Edm.String" MaxLength="32"/>
+        <Property Name="PG_TXN_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PG_BANK_REF_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="CH_GUID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="PG_ID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PG_CATEGORY" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PG_NAME" Type="Edm.String" MaxLength="60"/>
+        <Property Name="CP_TYPE" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CP_NO" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PG_PYMNT_METHOD" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PG_PTMNY_TYPE" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CP_ACCOUNT_NO" Type="Edm.String" MaxLength="32"/>
+        <Property Name="PG_PYMNT_DATE" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="PYMNT_AMOUNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="CURRENCY" Type="Edm.String" MaxLength="5"/>
+        <Property Name="PG_TXN_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PG_PYMNT_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PYMNT_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CLR_DOC_CC" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLR_DOC_FY" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CLR_DOC_NO" Type="Edm.String" MaxLength="32"/>
+        <Property Name="TXN_ERRCD" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PG_TXN_ERRCD" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PG_TXN_MSG" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="PG_TXN_AMNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="BALANCE_AMNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="PG_TXN_DATE" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="PG_TXN_TIME" Type="Edm.Time"/>
+        <Property Name="PYMNT_FOR" Type="Edm.String" MaxLength="6"/>
+        <Property Name="ADVANCE_FOR" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CLR_DOC_CAT" Type="Edm.String" MaxLength="6"/>
+        <Property Name="ENTERED_AMT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="TDS_AMT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="PG_TEXT" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="AGGR_REF" Type="Edm.String" MaxLength="5000"/>
+        <Property Name="BATCH_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="PGPayments">
+        <Key>
+          <PropertyRef Name="PGPAYMENTGUID"/>
+        </Key>
+        <Property Name="PGPAYMENTGUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PG_I">
+        <Key>
+          <PropertyRef Name="PGI_GUID"/>
+        </Key>
+        <Property Name="PGI_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PGH_GUID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="INVOICE_TYP" Type="Edm.String" MaxLength="2"/>
+        <Property Name="INVOICE_NO" Type="Edm.String" MaxLength="32"/>
+        <Property Name="INVOICE_DATE" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="FISCAL_YEAR" Type="Edm.String" MaxLength="4"/>
+        <Property Name="INVOICE_AMOUNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="PAYMENT_AMOUNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="CURRENCY" Type="Edm.String" MaxLength="5"/>
+        <Property Name="CHEQUE_NO" Type="Edm.String" MaxLength="9"/>
+        <Property Name="CHEQUE_DATE" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="PG_PYMNT_POSTING" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PYMNT_STATUS" Type="Edm.String" MaxLength="6"/>
+        <Property Name="TDS_AMOUNT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="TDS_PERCENT" Type="Edm.Decimal" Precision="5" Scale="2"/>
+        <Property Name="TAX_CODE" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PG_ITEM_TEXT" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ENTERED_AMT" Type="Edm.Decimal" Precision="15" Scale="2"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="PGPaymentItemDetails">
+        <Key>
+          <PropertyRef Name="PGPAYMENTITEMGUID"/>
+        </Key>
+        <Property Name="PGPAYMENTITEMGUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ATST">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ATST_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TSETNAME" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="AttributeTypesets1">
+        <Key>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="AGGREGATORID"/>
+        </Key>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="AttributeTypesets">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ATYP">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ATYP_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TYPESNAME" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="AttributeTypesetTypes1">
+        <Key>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="TYPE"/>
+        </Key>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPE" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="AttributeTypesetTypes">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="TYPE"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPE" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="TSET">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="TSET_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TSETNAME" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="ConfigTypesets1">
+        <Key>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="AGGREGATORID"/>
+        </Key>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ConfigTypesets">
+        <Key>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="TYPS">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="TYPS_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="TYPESNAME" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="ConfigTypesetTypes1">
+        <Key>
+          <PropertyRef Name="TYPES"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="AGGREGATORID"/>
+        </Key>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ConfigTypesetTypes">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="TYPES"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="TYPVAL">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TYPE_VALUE" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="ConfigTypsetTypeValues1">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="TYPES"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ConfigTypsetTypeValues">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="TYPES"/>
+          <PropertyRef Name="TYPESET"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="TYPES" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TYPESET" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="VALHLP">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="MODEL_ID"/>
+          <PropertyRef Name="ENTITY_TYPE"/>
+          <PropertyRef Name="PROP_NAME"/>
+          <PropertyRef Name="PARENT_ID"/>
+          <PropertyRef Name="ID"/>
+          <PropertyRef Name="PARTNER_NO"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="MODEL_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ENTITY_TYPE" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="PROP_NAME" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="PARENT_ID" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="ID" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="PARTNER_NO" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="LOGIN_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="ID_DESCRIPTION" Type="Edm.String" MaxLength="60"/>
+        <Property Name="PARTNER_NAME" Type="Edm.String" MaxLength="35"/>
+        <Property Name="IS_DEFAULT" Type="Edm.String" MaxLength="1"/>
+        <Property Name="DEP_PROP_DEF_ID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="DEP_PROP_NAME" Type="Edm.String" MaxLength="40"/>
+        <Property Name="LBL_PARENT_ID" Type="Edm.String" MaxLength="30"/>
+        <Property Name="LBL_ID" Type="Edm.String" MaxLength="30"/>
+        <Property Name="LBL_DEP_PROP_DEF_ID" Type="Edm.String" MaxLength="30"/>
+      </EntityType>
+      <EntityType Name="ValueHelps">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="MODELID"/>
+          <PropertyRef Name="ENTITYTYPE"/>
+          <PropertyRef Name="PROPNAME"/>
+          <PropertyRef Name="PARENTID"/>
+          <PropertyRef Name="ID"/>
+          <PropertyRef Name="PARTNERNO"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="MODELID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="ENTITYTYPE" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="PROPNAME" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="PARENTID" Type="Edm.String" MaxLength="40" Nullable="false"/>
+        <Property Name="ID" Type="Edm.String" MaxLength="20" Nullable="false"/>
+        <Property Name="PARTNERNO" Type="Edm.String" MaxLength="10" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_SUBSCRIPTION">
+        <Key>
+          <PropertyRef Name="SUBSCRIPTION_GUID"/>
+        </Key>
+        <Property Name="SUBSCRIPTION_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_INV_H">
+        <Key>
+          <PropertyRef Name="INV_GUID"/>
+        </Key>
+        <Property Name="INV_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_INV_I">
+        <Key>
+          <PropertyRef Name="INV_ITEM_GUID"/>
+        </Key>
+        <Property Name="INV_ITEM_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_MATERIAL">
+        <Key>
+          <PropertyRef Name="MATERIAL_GUID"/>
+        </Key>
+        <Property Name="MATERIAL_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_SUBSCRIBER">
+        <Key>
+          <PropertyRef Name="SUBSCRIBER_GUID"/>
+        </Key>
+        <Property Name="SUBSCRIBER_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_PG_H">
+        <Key>
+          <PropertyRef Name="PGH_GUID"/>
+        </Key>
+        <Property Name="PGH_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_PG_I">
+        <Key>
+          <PropertyRef Name="PGI_GUID"/>
+        </Key>
+        <Property Name="PGI_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_PG_CH">
+        <Key>
+          <PropertyRef Name="CH_GUID"/>
+        </Key>
+        <Property Name="CH_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_PG_CS">
+        <Key>
+          <PropertyRef Name="CS_GUID"/>
+        </Key>
+        <Property Name="CS_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_COND">
+        <Key>
+          <PropertyRef Name="COND_GUID"/>
+        </Key>
+        <Property Name="COND_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_IRNLNK">
+        <Key>
+          <PropertyRef Name="IRNLNK_GUID"/>
+        </Key>
+        <Property Name="IRNLNK_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ARTEC_PC_SUBSCR_OD">
+        <Key>
+          <PropertyRef Name="SUBSCRIPTION_GUID"/>
+        </Key>
+        <Property Name="SUBSCRIPTION_GUID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ALOG_H">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="OBJECT" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SUBOBJECT" Type="Edm.String" MaxLength="50"/>
+        <Property Name="EXTNUMBER" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ALDATE" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="ALTIME" Type="Edm.Time"/>
+        <Property Name="ALUSER" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ALTCODE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ALPROG" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ALMODE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PROBCLASS" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PROCESS" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_PARAMS" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="CORRELATION_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="ApplicationLogs">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ALOG_M">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ALOGH_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="MSGTY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="MSGID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="MSGNO" Type="Edm.String" MaxLength="100"/>
+        <Property Name="MSGV1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="MSGV2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="MSGV3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="MSGV4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ERR_MSG" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="USER_MSG" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ERR_CODE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="TIME_STAMP" Type="Edm.String" MaxLength="20"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="ApplicationLogMessages">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ApplicationLogs_ApplicationLogMessages">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <NavigationProperty Name="ApplicationLogs_ApplicationLogMessages" Relationship="ARTEC.PCGW.service.ApplicationLogs_ApplicationLogMessages_ApplicationLogs_ApplicationLogMessages" FromRole="ApplicationLogs_ApplicationLogMessages" ToRole="ApplicationLogMessages"/>
+      </EntityType>
+      <EntityType Name="DOCREP_CNFG">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="REPOSITORY_NAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REPOSITORY_KEY" Type="Edm.String" MaxLength="20"/>
+        <Property Name="TENANT_ID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SOURCE_ID" Type="Edm.String" MaxLength="40"/>
+        <Property Name="REPOSITORY_TYPE" Type="Edm.String" MaxLength="6"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="DocumentRepConfigs">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="DOCREP">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="REPCNFG_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="FOLDER_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DESCRIPTION" Type="Edm.String" MaxLength="255"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="DocumentRepository">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="EVENT_DEST">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="OBJECT" Type="Edm.String" MaxLength="100"/>
+        <Property Name="EVENT" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DESTINATION" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="DESCRIPTION" Type="Edm.String" MaxLength="255"/>
+        <Property Name="DESTINATION_TYPE" Type="Edm.String" MaxLength="50"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="EventDestinations">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="MIS_SCHEDULER">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="REPORT" Type="Edm.String" MaxLength="50"/>
+        <Property Name="VARIANT_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="ISACTIVE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PERIODICITY" Type="Edm.String" MaxLength="6"/>
+        <Property Name="QUEUE_NAME" Type="Edm.String" MaxLength="50"/>
+        <Property Name="MONDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="TUESDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="WEDNESDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="THURSDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="FRIDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="SATURDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="SUNDAY" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T00_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T00_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T01_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T01_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T02_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T02_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T03_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T03_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T04_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T04_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T05_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T05_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T06_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T06_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T07_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T07_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T08_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T08_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T09_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T09_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T10_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T10_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T11_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T11_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T12_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T12_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T13_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T13_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T14_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T14_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T15_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T15_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T16_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T16_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T17_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T17_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T18_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T18_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T19_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T19_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T20_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T20_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T21_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T21_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T22_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T22_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T23_00" Type="Edm.String" MaxLength="1"/>
+        <Property Name="T23_30" Type="Edm.String" MaxLength="1"/>
+        <Property Name="INPUT" Type="Edm.String"/>
+        <Property Name="TARGET_URL" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="MISScheduler">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="H2H_ACF">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="APPLICATION_ID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SENDER_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="ENCRYPTION_KEY" Type="Edm.String" MaxLength="64"/>
+        <Property Name="FTP_HOST" Type="Edm.String" MaxLength="64"/>
+        <Property Name="FTP_USER" Type="Edm.String" MaxLength="30"/>
+        <Property Name="FTP_PASSWORD" Type="Edm.String" MaxLength="30"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="H2HApplicationConfigs">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="H2H_ICF">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="SYS_ID" Type="Edm.String" MaxLength="30"/>
+        <Property Name="APPLICATION_ID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="INTERFACE_ID" Type="Edm.String" MaxLength="6"/>
+        <Property Name="SENDER_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="COMMN_TYPE" Type="Edm.String" MaxLength="6"/>
+        <Property Name="ENCRYPTION_TYPE" Type="Edm.String" MaxLength="6"/>
+        <Property Name="ENC_FILE_PATH" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DEC_FILE_PATH" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ARC_FILE_PATH" Type="Edm.String" MaxLength="100"/>
+        <Property Name="FILE_MASK" Type="Edm.String" MaxLength="25"/>
+        <Property Name="FILE_EXTENSION" Type="Edm.String" MaxLength="10"/>
+        <Property Name="FIELD_SEPARATOR" Type="Edm.String" MaxLength="6"/>
+        <Property Name="HAS_HEADER" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ABAP_STRUCTURE" Type="Edm.String" MaxLength="30"/>
+        <Property Name="ABAP_API_NAME" Type="Edm.String" MaxLength="30"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="H2HInterfaceConfigs">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="MSG_LOG">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="CPI_MSG_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="MSG_TYPE" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SENDER_ID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="RECEIVER_ID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="SENDER_MSG_ID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="SENDER_UNIQUE_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="RECORDCOUNT" Type="Edm.Int32"/>
+        <Property Name="CORRELATION_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="COUNT1" Type="Edm.Int32"/>
+        <Property Name="COUNT2" Type="Edm.Int32"/>
+        <Property Name="COUNT3" Type="Edm.Int32"/>
+        <Property Name="COUNT4" Type="Edm.Int32"/>
+        <Property Name="COUNT5" Type="Edm.Int32"/>
+        <Property Name="COUNT6" Type="Edm.Int32"/>
+        <Property Name="COUNT7" Type="Edm.Int32"/>
+        <Property Name="COUNT8" Type="Edm.Int32"/>
+        <Property Name="COUNT9" Type="Edm.Int32"/>
+        <Property Name="STATUS" Type="Edm.String" MaxLength="20"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="CPIMessageLogs">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="APPROVAL">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="PROCESS_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="REMARKS" Type="Edm.String" MaxLength="100"/>
+        <Property Name="STATUSID" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PROCESS_REF1" Type="Edm.String"/>
+        <Property Name="PROCESS_REF2" Type="Edm.String"/>
+        <Property Name="PROCESS_REF3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF6" Type="Edm.String" MaxLength="100"/>
+        <Property Name="PROCESS_REF7" Type="Edm.String" MaxLength="200"/>
+        <Property Name="PROCESS_REF8" Type="Edm.String" MaxLength="200"/>
+        <Property Name="PROCESS_REF9" Type="Edm.String" MaxLength="200"/>
+        <Property Name="PROCESS_REF10" Type="Edm.String" MaxLength="200"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="APPROVALVIEW">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="SURVEY_DATA">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="SURVEY_ID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="SURVEY_NAME" Type="Edm.String" MaxLength="50"/>
+        <Property Name="CP_GUID" Type="Edm.String" MaxLength="40"/>
+        <Property Name="CP_TYPE" Type="Edm.String" MaxLength="2"/>
+        <Property Name="APP_NAME" Type="Edm.String" MaxLength="50"/>
+        <Property Name="REFERENCE1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE3" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE5" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE6" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE7" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE8" Type="Edm.String" MaxLength="100"/>
+        <Property Name="REFERENCE9" Type="Edm.String"/>
+        <Property Name="REFERENCE10" Type="Edm.String"/>
+        <Property Name="QUESTION1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER1_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER1_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER2_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER2_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION3" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER3_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER3_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION4" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER4_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER4_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION5" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER5_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER5_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION6" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER6_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER6_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION7" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER7_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER7_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION8" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER8_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER8_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION9" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER9_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER9_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="QUESTION10" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER10_1" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ANSWER10_2" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="SurveyData">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ApplLogMessageView">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="MESSAGE4" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ERRORMESSAGE" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="USERMESSAGE" Type="Edm.String" MaxLength="1000"/>
+        <Property Name="ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERRORCODE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="ALOGHID" Type="Edm.String" MaxLength="36"/>
+        <Property Name="TIMESTAMP" Type="Edm.String" MaxLength="20"/>
+        <Property Name="MESSAGETYPE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="MESSAGEID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="MESSAGENO" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="MESSAGE1" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="SOURCEREFERENCEID" Type="Edm.String" MaxLength="50"/>
+        <Property Name="MESSAGE2" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="MESSAGE3" Type="Edm.String" MaxLength="100"/>
+      </EntityType>
+      <EntityType Name="SubscriptionSummary">
+        <Key>
+          <PropertyRef Name="INV_NO"/>
+        </Key>
+        <Property Name="INV_NO" Type="Edm.String" MaxLength="50" Nullable="false"/>
+      </EntityType>
+      <Association Name="ApplicationLogs_ApplicationLogMessages_ApplicationLogs_ApplicationLogMessages">
+        <End Role="ApplicationLogs_ApplicationLogMessages" Type="ARTEC.PCGW.service.ApplicationLogs_ApplicationLogMessages" Multiplicity="*"/>
+        <End Role="ApplicationLogMessages" Type="ARTEC.PCGW.service.ApplicationLogMessages" Multiplicity="*"/>
+      </Association>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_CAT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_CH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_CS" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_CPREF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_H" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/PG_I" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesets/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesets/TYPESET" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Typeset"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesets/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesetTypes/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesetTypes/TYPE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Type"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesetTypes/TYPESET" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Typeset"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.AttributeTypesetTypes/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesets/TYPESET" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Typeset"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesets/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesetTypes/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesetTypes/TYPES" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Types"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesetTypes/TYPESET" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Typeset"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypesetTypes/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypsetTypeValues/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypsetTypeValues/TYPES" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Types"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypsetTypeValues/TYPESET" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Typeset"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.ConfigTypsetTypeValues/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/VALHLP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/ALOG_H" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/ALOG_M" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/DOCREP_CNFG" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/DOCREP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/EVENT_DEST" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/MIS_SCHEDULER" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/H2H_ACF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/H2H_ICF" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/MSG_LOG" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/APPROVAL" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/SURVEY_DATA" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.EntityContainer/ApplLogMessageView" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PCGW.service.SubscriptionSummary/INV_NO" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="INV_NO"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

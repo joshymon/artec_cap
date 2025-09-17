@@ -1,0 +1,45 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PC_V_SUBSCR_SUM {
+  key INV_NO          : String(50)     @title: 'INV_NO';
+      INV_DATE        : Date           @title: 'INV_DATE';
+      SOLDTO_CP_GUID  : String(32)     @title: 'SOLDTO_CP_GUID';
+      SOLDTO_CP_TYPE  : String(2)      @title: 'SOLDTO_CP_TYPE';
+      CITY            : String(35)     @title: 'CITY';
+      COUNTRY         : String(3)      @title: 'COUNTRY';
+      COUNTRY_DESC    : String(35)     @title: 'COUNTRY_DESC';
+      CREATED_AT      : Date           @title: 'CREATED_AT';
+      CREATED_BY      : String(50)     @title: 'CREATED_BY';
+      CREATED_ON      : Time           @title: 'CREATED_ON';
+      CURRENCY        : String(5)      @title: 'CURRENCY';
+      DISC_AMT        : Decimal(15, 2) @title: 'DISC_AMT';
+      DISC_PERC       : Decimal(6, 3)  @title: 'DISC_PERC';
+      DISTRICT        : String(40)     @title: 'DISTRICT';
+      EMAIL_ID        : String(241)    @title: 'EMAIL_ID';
+      GROSS_AMT       : Decimal(15, 2) @title: 'GROSS_AMT';
+      GSTN            : String(40)     @title: 'GSTN';
+      MOBILE1         : String(35)     @title: 'MOBILE1';
+      NET_AMT         : Decimal(15, 2) @title: 'NET_AMT';
+      PAID_AMT        : Decimal(15, 2) @title: 'PAID_AMT';
+      PAN             : String(40)     @title: 'PAN';
+      PAY_STATUS_ID   : String(6)      @title: 'PAY_STATUS_ID';
+      POSTAL_CODE     : String(10)     @title: 'POSTAL_CODE';
+      REASON_FOR_REJ  : String(6)      @title: 'REASON_FOR_REJ';
+      REGION          : String(3)      @title: 'REGION';
+      REGION_DESC     : String(35)     @title: 'REGION_DESC';
+      REMARKS         : String(100)    @title: 'REMARKS';
+      STATUS_ID       : String(6)      @title: 'STATUS_ID';
+      SUBSCRIBER_NAME : String(40)     @title: 'SUBSCRIBER_NAME';
+      TAX_AMT         : Decimal(15, 2) @title: 'TAX_AMT';
+      TYPE            : String(6)      @title: 'TYPE';
+      ADDRESS1        : String(35)     @title: 'ADDRESS1';
+      ADDRESS2        : String(35)     @title: 'ADDRESS2';
+      ADDRESS3        : String(35)     @title: 'ADDRESS3';
+      ADDRESS4        : String(35)     @title: 'ADDRESS4';
+      TENANTID        : String(50)     @title: 'TENANTID';
+      REF_DOC_GUID    : String(36)     @title: 'REF_DOC_GUID';
+      VALID_FROM      : Date           @title: 'VALID_FROM';
+      VALID_TO        : Date           @title: 'VALID_TO';
+      INV_GUID        : String(36)     @title: 'INV_GUID';
+      AGGREGATORID    : String(50)     @title: 'AGGREGATORID';
+};

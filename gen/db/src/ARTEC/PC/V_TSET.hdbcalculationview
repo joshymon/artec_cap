@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PC_V_TSET" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="TYPESETS"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_TYPESETS_TSET">
+      <resourceUri>ARTEC_PC_TYPESETS_TSET</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_TYPESETS_TSET_T">
+      <resourceUri>ARTEC_PC_TYPESETS_TSET_T</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="inner">
+      <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="TYPESET"/>
+        <viewAttribute id="LANGUAGE"/>
+        <viewAttribute id="TSETNAME"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PC_TYPESETS_TSET">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPESET" source="TYPESET"/>
+      </input>
+      <input node="ARTEC_PC_TYPESETS_TSET_T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LANGUAGE" source="LANGUAGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TSETNAME" source="TSETNAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPESET" source="TYPESET"/>
+      </input>
+      <joinAttribute name="AGGRID"/>
+      <joinAttribute name="TYPESET"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGREGATORID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="TYPESET" key="true" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPESET"/>
+        <keyMapping columnObjectName="Join_1" columnName="TYPESET"/>
+      </attribute>
+      <attribute id="LANGUAGE" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANGUAGE"/>
+        <keyMapping columnObjectName="Join_1" columnName="LANGUAGE"/>
+      </attribute>
+      <attribute id="NAME" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TSETNAME"/>
+        <keyMapping columnObjectName="Join_1" columnName="TSETNAME"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="false" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="86" y="194"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

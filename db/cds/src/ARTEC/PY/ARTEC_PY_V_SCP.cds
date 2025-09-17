@@ -1,0 +1,41 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PY_V_SCP {
+  key ADDRESS1                 : String(40)      @title: 'ADDRESS1';
+      ADDRESS2                 : String(40)      @title: 'ADDRESS2';
+      ADDRESS3                 : String(40)      @title: 'ADDRESS3';
+      ADDRESS4                 : String(40)      @title: 'ADDRESS4';
+      AGGRID                   : String(50)      @title: 'AGGRID';
+      CHANGE_HISTORY_CHANGEDAT : Time            @title: 'CHANGE_HISTORY_CHANGEDAT';
+      CHANGE_HISTORY_CHANGEDBY : String(32)      @title: 'CHANGE_HISTORY_CHANGEDBY';
+      CHANGE_HISTORY_CHANGEDON : Date            @title: 'CHANGE_HISTORY_CHANGEDON';
+      CHANGE_HISTORY_CREATEDAT : Time            @title: 'CHANGE_HISTORY_CREATEDAT';
+      CHANGE_HISTORY_CREATEDBY : String(32)      @title: 'CHANGE_HISTORY_CREATEDBY';
+      CHANGE_HISTORY_CREATEDON : Date            @title: 'CHANGE_HISTORY_CREATEDON';
+      CHANGE_HISTORY_SOURCE    : String(10)      @title: 'CHANGE_HISTORY_SOURCE';
+      CITY                     : String(40)      @title: 'CITY';
+      COUNTRY_DESC             : String(35)      @title: 'COUNTRY_DESC';
+      COUNTRY_ID               : String(3)       @title: 'COUNTRY_ID';
+      DATEOF_INCORPORATION     : Date            @title: 'DATEOF_INCORPORATION';
+      DISTRICT                 : String(40)      @title: 'DISTRICT';
+      EMAIL_ID                 : String(241)     @title: 'EMAIL_ID';
+      FAX_EXTN                 : String(16)      @title: 'FAX_EXTN';
+      FAX_NUMBER               : String(35)      @title: 'FAX_NUMBER';
+      GSTIN                    : String(40)      @title: 'GSTIN';
+      ID                       : String(36)      @title: 'ID';
+      LEGAL_STATUS_ID          : String(2)       @title: 'LEGAL_STATUS_ID';
+      MOBILE_NO                : String(35)      @title: 'MOBILE_NO';
+      NAME1                    : String(40)      @title: 'NAME1';
+      NAME2                    : String(40)      @title: 'NAME2';
+      NAME3                    : String(40)      @title: 'NAME3';
+      NAME4                    : String(40)      @title: 'NAME4';
+      PANNO                    : String(40)      @title: 'PANNO';
+      POSTAL_CODE              : String(10)      @title: 'POSTAL_CODE';
+      SCP_GUID                 : String(36)      @title: 'SCP_GUID';
+      SCP_TYPE                 : String(6)       @title: 'SCP_TYPE';
+      STATE_DESC               : String(35)      @title: 'STATE_DESC';
+      STATE_ID                 : String(3)       @title: 'STATE_ID';
+      TELEPHONE_EXTN           : String(16)      @title: 'TELEPHONE_EXTN';
+      TELEPHONE_NO             : String(30)      @title: 'TELEPHONE_NO';
+      CP_TYPE                  : hana.VARCHAR(6) @title: 'CP_TYPE';
+};

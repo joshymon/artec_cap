@@ -1,0 +1,1833 @@
+{
+  "hdbcalculationview": {
+    "OBJECTS": [
+      {
+        "source_fileName": "V_ATST.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_ATST.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_ATYP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_ATYP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_LOGS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_LOGS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_MSGLOGS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_MSGLOGS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_ORTY.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_ORTY.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PFEES.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_PFEES.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PGH.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_PGH.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PRRL.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_PRRL.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PRTY.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_PRTY.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_SUBSCR_SUM.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_SUBSCR_SUM.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TSET.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_TSET.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TVAL.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_TVAL.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TYPS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_TYPS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_USRPREF.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_USRPREF.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_USRPRF.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_USRPRF.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_AGGRID.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_AGGRID.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_APREVERSE.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_APREVERSE.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPCNTP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPCNTP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPHEADER.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPHEADER.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPSCF_ELIG_BP_SCF4_SCF1.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPSCF_ELIG_BP_SCF4_SCF1.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPSCF_ELIG_BP_SCF4.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPSCF_ELIG_BP_SCF4_SCF1.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPSCF_ELIG_BPCNTP_SCF4.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPSCF_ELIG_BPCNTP_SCF4.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BPSCF_ELIG2_BK2.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPSCF_ELIG2_BK2.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_CFMIS_STATUS_BKP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_CFMIS_STATUS_BKP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_CFMIS_STATUS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_CFMIS_STATUS_BKP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_COMMNBYPARTNER.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_COMMNBYPARTNER.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_COR.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_COR.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_ENHLMT.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_ENHLMT.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_ESIGNCONTRACT.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_ESIGNCONTRACT.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_ESIGNCONTRACTSIGNERS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_ESIGNCONTRACTSIGNERS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_LEADS_MIS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_LEADS_MIS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_LEADS_REPORT.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_LEADS_REPORT.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_OPENITEMS_BKP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_OPENITEMS_BKP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_OPENITEMS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_OPENITEMS_BKP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PY_CONFIGS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_PY_CONFIGS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_REFMIS.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_REFMIS.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_SCP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_SCP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_SCPBANKDATA.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_SCPBANKDATA.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TRCKID_CNT.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_TRCKID_CNT.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TRCKID_DUPL.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_TRCKID_DUPL.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_TST.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_TST.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_UACCNTBYPARTNER.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_UACCNTBYPARTNER.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_USERCUSTOMER.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_USERCUSTOMER.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_VENDOR.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_VENDOR.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ApplicationNoNumberRange.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYGW_APPLICATIONNONUMBERRANGE.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "demo.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYGW_DEMO.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "LimitIDPrefixNumberRange.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYGW_LIMITIDPREFIXNUMBERRANGE.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "TrackIDNumberRange.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYGW_TRACKIDNUMBERRANGE.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "SCF1_SCF.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYMIS_SCF1_SCF.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "SCFOnboarding.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYMIS_SCFONBOARDING.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "UserAccountsCount.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYMIS_USERACCOUNTSCOUNT.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BP.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_BPCNTP.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_PGH.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PC_V_PGH.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_SCF.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYMIS_V_SCF.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_SCF1.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PYMIS_V_SCF1.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_UACCNT.hdbcalculationview",
+        "migrated_successfully": true,
+        "migrated_fileName": "ARTEC_PY_V_UACCNTBYPARTNER.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      }
+    ]
+  },
+  "hdbtable": {
+    "OBJECTS": [
+      {
+        "source_fileName": "ARTEC_ID6_ARTERIA_SCF_ET.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_COND”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=76",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_COND”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=79",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_COND”/element:“VALID_FROM”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=91",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_COND”/element:“VALID_TO”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=92",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_INV_H”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=104",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_INV_H”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=109",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_INV_H”/element:“INV_DATE”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=119",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_INV_I”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=148",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_INV_I”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=150",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_MATERIAL”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=216",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_MATERIAL”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=218",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PARTNERS”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=234",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PARTNERS”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=238",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_CH”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=273",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_CH”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=276",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_CS”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=306",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_CS”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=309",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_H”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=325",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_H”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=335",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_H”/element:“PG_PYMNT_DATE”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=344",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_I”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=368",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_I”/element:“CHEQUE_DATE”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=370",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_I”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=372",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_PG_I”/element:“INVOICE_DATE”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=378",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIBER”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=448",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIBER”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=453",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "Extraneous ‘-’, expecting ‹Identifier›, ‘}’, ‘@’, ‘element’, ‘key’, ‘masked’, ‘virtual’",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=466",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIPTION”/element:“CHANGED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=480",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIPTION”/element:“CREATED_AT”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=485",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIPTION”/element:“VALID_FROM”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=506",
+            "file": "index.cds_1743068097011.errors.log"
+          },
+          {
+            "message": "No artifact has been found with name “DAYDATE” (in entity:“ARTEC_PC_SUBSCRIPTION”/element:“VALID_TO”)",
+            "link": "./logs/index.cds_1743068097011.errors.log#line=507",
+            "file": "index.cds_1743068097011.errors.log"
+          }
+        ],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_ID6_ARTERIA_SCF1_ET.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_COND.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_INV_H.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_INV_I.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_IRNLNK.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_MATERIAL.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PARTNERS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_CAT.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_CH.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_CS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_H.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_I.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SAMPLE.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCR_OD.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCRIBER.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCRIPTION.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.ORGTYP_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.ORGTYP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.PARTRL.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.PARTTY.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.PRRL_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Customizing.PRTY_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.DocumentRepository.DOCREP_CNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.DocumentRepository.DOCREP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Extractor.H2H_ACF.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Extractor.H2H_ICF.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Generic.CREDENTIALS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.ALOG_H.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.ALOG_M.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.MSG_LOG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Notification.EVENT_DEST.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CAT.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CH.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CPREF.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_H.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_I.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Reports.MIS_SCHEDULER.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Survey.SURVEY_DATA.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATST_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATST.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATYP_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATYP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TSET_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TSET.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TYPS_T.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TYPS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TYPVAL.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.VALHLP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Upload.UPLD_I.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Upload.UPLD.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRATH.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRLGN.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRPRT.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Workflow.APPROVAL.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.BP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.BPCNTP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.COR.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_1.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_2.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_3.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_4.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.VENDORCOR.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.AGGR_FACILITY.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.AGGR.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.DCCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.DFCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.IDCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.IFSC.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.OPCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.PFCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.RFCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.SCCNFG.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.EnhancementLimit.ENHLMT.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.ESignContract.ESIGNCAL.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.AP_PAYM.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.AP_PAYMI.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.OPENITEM_HEADER.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.OPENITEMS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.PAYM.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.PAYMI.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.CF_MIS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.LSR_1.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.SCF_DLR_OS.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF_RETRY.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF1.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF2.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF3.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF4.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.User.COMMN.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.User.UACCNT.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.SP.VisitGeo.VSTGEO.hdbtable",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Table.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      }
+    ]
+  },
+  "hdbfunction": {
+    "OBJECTS": [
+      {
+        "source_fileName": "TABLE_FUNCTION_ApplicationNoNumberRange.hdbfunction",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbfunction.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "TABLE_FUNCTION_demo.hdbfunction",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbfunction.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "TABLE_FUNCTION_LimitIDPrefixNumberRange.hdbfunction",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbfunction.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "TABLE_FUNCTION_TrackIDNumberRange.hdbfunction",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbfunction.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "TABLE_FUNCTION_UserAccountsCount.hdbfunction",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbfunction.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      }
+    ]
+  },
+  "hdbview": {
+    "OBJECTS": [
+      {
+        "source_fileName": "ARTEC_PC_COND_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_INV_H_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_INV_I.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_IRNLNK_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_MATERIAL_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_CH_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_CS_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_H_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_PG_I_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCR_OD.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCRIBER_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC_PC_SUBSCRIPTION_V.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.DocumentRepository.DOCREP_CNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.DocumentRepository.DOCREPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Extractor.H2H_ACFView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Extractor.H2H_ICFView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Generic.CREDENTIALSView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.ALOG_HView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.ALOG_MView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Logs.MSG_LOGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Notification.EVENT_DESTView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CATView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CHView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CPREFView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_CSView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_HView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.PaymentGateway.PG_IView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Reports.MIS_SCHEDULERView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Survey.SURVEY_DATAView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATSTView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.ATYPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TSETView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TYPSView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.TYPVALView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Typesets.VALHLPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Upload.UPLD_IView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Upload.UPLDView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRATHView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRLGNView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.UserMgmt.USRPRTView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PC.Workflow.APPROVALView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.BPCNTPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.BPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.CORView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_1View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_2View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_3View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCP_4View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.SCPView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.BusinessPartner.VENDORCORView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.AGGR_FACILITYView .hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.AGGRView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.DCCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.DFCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.IDCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.IFSCView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.OPCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.PFCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.RFCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Config.SCCNFGView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.EnhancementLimit.ENHLMTView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.ESignContract.ESIGNCALView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.AP_PAYMIView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.AP_PAYMView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.OPENITEM_HEADERView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.OPENITEMSView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.PAYMIView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Payments.PAYMView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.CF_MISView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.LSR_1View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.Reports.SCF_DLR_OSView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF_RETRYView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF1View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF2View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF3View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCF4View.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.SupplyChainFinance.SCFView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.User.COMMNView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.PY.User.UACCNTView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "V_BP_CNTP_DISTINCT.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      },
+      {
+        "source_fileName": "ARTEC.SP.VisitGeo.VSTGEOView.hdbview",
+        "migrated_successfully": true,
+        "migrated_fileName": "Proxy_Hdbview.cds",
+        "warnings_errors": [],
+        "filetype": "source"
+      }
+    ]
+  }
+}

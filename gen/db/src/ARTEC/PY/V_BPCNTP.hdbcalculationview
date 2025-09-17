@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PY_V_BPCNTP" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_BPCNTP"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_BPCNTP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_BPCNTP</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_BP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_BP</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <viewAttributes>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="BP_TYPE"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="DOB"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="GENDER_ID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="MOBILE"/>
+        <viewAttribute id="NAME_1"/>
+        <viewAttribute id="NAME_2"/>
+        <viewAttribute id="PAN"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="SIGNING_ORDER"/>
+        <viewAttribute id="STATUS_ID"/>
+        <viewAttribute id="CP_GUID"/>
+        <viewAttribute id="CP_TYPE"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AUTH_SIGNATORY"/>
+        <viewAttribute id="DESIGNATION"/>
+        <viewAttribute id="NAME_MATCH_SCR"/>
+        <viewAttribute id="UID1"/>
+        <viewAttribute id="YOB_MATCH_SCR"/>
+        <viewAttribute id="CNTP_TYPE"/>
+        <viewAttribute id="THRESHOLD"/>
+        <viewAttribute id="BP_REJ_REMARKS"/>
+        <viewAttribute id="FACILITY_TYPE"/>
+        <viewAttribute id="ENTITY_ID"/>
+        <viewAttribute id="ENTITY_TYPE"/>
+        <viewAttribute id="LEI_NUMBER"/>
+        <viewAttribute id="PARENT_NAME"/>
+        <viewAttribute id="PARENT_NO"/>
+        <viewAttribute id="PARENT_TYPE"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="GENDERDESC" length="40" expressionLanguage="COLUMN_ENGINE">
+          <formula>case("GENDER_ID",
+'M', 'Male',
+'F', 'Female',
+'Others')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="ARTEC_PY_BUSINESSPARTNER_BPCNTP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TYPE" source="BP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GENDER_ID" source="GENDER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_1" source="NAME_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_2" source="NAME_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTAL_CODE" source="POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SIGNING_ORDER" source="SIGNING_ORDER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUTH_SIGNATORY" source="AUTH_SIGNATORY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DESIGNATION" source="DESIGNATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME_MATCH_SCR" source="NAME_MATCH_SCR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UID1" source="UID1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="YOB_MATCH_SCR" source="YOB_MATCH_SCR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CNTP_TYPE" source="CNTP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="THRESHOLD" source="THRESHOLD"/>
+      </input>
+      <input node="ARTEC_PY_BUSINESSPARTNER_BP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REJ_REMARKS" source="BP_REJ_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FACILITY_TYPE" source="FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ENTITY_ID" source="ENTITY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ENTITY_TYPE" source="ENTITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEI_NUMBER" source="LEI_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_NAME" source="PARENT_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_NO" source="PARENT_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_TYPE" source="PARENT_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="ID"/>
+      </input>
+    <joinAttribute name="BP_ID"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="GENDERDESC" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GENDERDESC"/>
+        <keyMapping columnObjectName="Join_1" columnName="GENDERDESC"/>
+      </attribute>
+      <attribute id="BPGUID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPGUID"/>
+        <keyMapping columnObjectName="Join_1" columnName="BP_ID"/>
+      </attribute>
+      <attribute id="BPTYPE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPTYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="BP_TYPE"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED AT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED BY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED ON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDON"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED AT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED BY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDON" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED ON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDON"/>
+      </attribute>
+      <attribute id="SOURCE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE"/>
+      </attribute>
+      <attribute id="DOB" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DOB"/>
+        <keyMapping columnObjectName="Join_1" columnName="DOB"/>
+      </attribute>
+      <attribute id="EMAILID" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMAIL ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="EMAIL_ID"/>
+      </attribute>
+      <attribute id="GENDERID" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GENDER"/>
+        <keyMapping columnObjectName="Join_1" columnName="GENDER_ID"/>
+      </attribute>
+      <attribute id="BPCNTPRSNGUID" key="true" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPCNTPRSNGUID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ID"/>
+      </attribute>
+      <attribute id="MOBILE" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBILE"/>
+        <keyMapping columnObjectName="Join_1" columnName="MOBILE"/>
+      </attribute>
+      <attribute id="NAME1" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_1"/>
+      </attribute>
+      <attribute id="NAME2" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_2"/>
+      </attribute>
+      <attribute id="PANNO" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAN"/>
+        <keyMapping columnObjectName="Join_1" columnName="PAN"/>
+      </attribute>
+      <attribute id="POSTALCODE" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAL CODE"/>
+        <keyMapping columnObjectName="Join_1" columnName="POSTAL_CODE"/>
+      </attribute>
+      <attribute id="SIGNINGORDER" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SIGNING ORDER"/>
+        <keyMapping columnObjectName="Join_1" columnName="SIGNING_ORDER"/>
+      </attribute>
+      <attribute id="STATUSID" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUSID"/>
+        <keyMapping columnObjectName="Join_1" columnName="STATUS_ID"/>
+      </attribute>
+      <attribute id="CPGUID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP GUID"/>
+        <keyMapping columnObjectName="Join_1" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CPTYPE" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="AUTHORIZEDSIGNATORY" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTHORIZED SIGNATORY"/>
+        <keyMapping columnObjectName="Join_1" columnName="AUTH_SIGNATORY"/>
+      </attribute>
+      <attribute id="DESIGNATION" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DESIGNATION"/>
+        <keyMapping columnObjectName="Join_1" columnName="DESIGNATION"/>
+      </attribute>
+      <attribute id="NAMEMATCHSCORE" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME MATCH SCORE"/>
+        <keyMapping columnObjectName="Join_1" columnName="NAME_MATCH_SCR"/>
+      </attribute>
+      <attribute id="UID1" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UNIQUEIDENTIFIER1"/>
+        <keyMapping columnObjectName="Join_1" columnName="UID1"/>
+      </attribute>
+      <attribute id="YOBMATCHSCORE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YOB MATCH SCORE"/>
+        <keyMapping columnObjectName="Join_1" columnName="YOB_MATCH_SCR"/>
+      </attribute>
+      <attribute id="CONTACTTYPE" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTACT TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="CNTP_TYPE"/>
+      </attribute>
+      <attribute id="CALCULATEDTHRESHOLD" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALCULATED THRESHOLD"/>
+        <keyMapping columnObjectName="Join_1" columnName="THRESHOLD"/>
+      </attribute>
+      <attribute id="BPREJECTIONREMARKS" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPREJECTIONREMARKS"/>
+        <keyMapping columnObjectName="Join_1" columnName="BP_REJ_REMARKS"/>
+      </attribute>
+      <attribute id="FACILITYTYPE" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FACILITYTYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="FACILITY_TYPE"/>
+      </attribute>
+      <attribute id="ENTITYID" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTITY ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ENTITY_ID"/>
+      </attribute>
+      <attribute id="ENTITYTYPE" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTITY TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ENTITY_TYPE"/>
+      </attribute>
+      <attribute id="LEINUMBER" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEI NUMBER"/>
+        <keyMapping columnObjectName="Join_1" columnName="LEI_NUMBER"/>
+      </attribute>
+      <attribute id="PARENTNAME" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT NAME"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARENT_NAME"/>
+      </attribute>
+      <attribute id="PARENTNO" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT NO"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARENT_NO"/>
+      </attribute>
+      <attribute id="PARENTTYPE" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARENT_TYPE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="86" y="203"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_BPCNTP" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_BP" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

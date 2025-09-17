@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PY_V_SCP" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="SUPPLY CHAIN PARTNERS"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCP</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCP">
+    <viewAttributes>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="COUNTRY_DESC"/>
+        <viewAttribute id="COUNTRY_ID"/>
+        <viewAttribute id="DATEOF_INCORPORATION"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="FAX_EXTN"/>
+        <viewAttribute id="FAX_NUMBER"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="LEGAL_STATUS_ID"/>
+        <viewAttribute id="MOBILE_NO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="STATE_DESC"/>
+        <viewAttribute id="STATE_ID"/>
+        <viewAttribute id="TELEPHONE_EXTN"/>
+        <viewAttribute id="TELEPHONE_NO"/>
+      </viewAttributes>
+    <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="CP_TYPE" length="6" expressionLanguage="COLUMN_ENGINE">
+          <formula>case("SCP_TYPE", '000003','01','999999')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="ARTEC_PY_BUSINESSPARTNER_SCP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/></input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="SCP">
+    <attributes>
+      <attribute id="ADDRESS1" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS1"/>
+        <keyMapping columnObjectName="SCP" columnName="ADDRESS1"/>
+      </attribute>
+      <attribute id="ADDRESS2" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS2"/>
+        <keyMapping columnObjectName="SCP" columnName="ADDRESS2"/>
+      </attribute>
+      <attribute id="ADDRESS3" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS3"/>
+        <keyMapping columnObjectName="SCP" columnName="ADDRESS3"/>
+      </attribute>
+      <attribute id="ADDRESS4" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS4"/>
+        <keyMapping columnObjectName="SCP" columnName="ADDRESS4"/>
+      </attribute>
+      <attribute id="AGGRID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="SCP" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="SCP" columnName="CHANGE_HISTORY_SOURCE"/>
+      </attribute>
+      <attribute id="CITY" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY"/>
+        <keyMapping columnObjectName="SCP" columnName="CITY"/>
+      </attribute>
+      <attribute id="COUNTRY_DESC" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY_DESC"/>
+        <keyMapping columnObjectName="SCP" columnName="COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="COUNTRY_ID" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY_ID"/>
+        <keyMapping columnObjectName="SCP" columnName="COUNTRY_ID"/>
+      </attribute>
+      <attribute id="DATEOF_INCORPORATION" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATEOF_INCORPORATION"/>
+        <keyMapping columnObjectName="SCP" columnName="DATEOF_INCORPORATION"/>
+      </attribute>
+      <attribute id="DISTRICT" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISTRICT"/>
+        <keyMapping columnObjectName="SCP" columnName="DISTRICT"/>
+      </attribute>
+      <attribute id="EMAIL_ID" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMAIL_ID"/>
+        <keyMapping columnObjectName="SCP" columnName="EMAIL_ID"/>
+      </attribute>
+      <attribute id="FAX_EXTN" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_EXTN"/>
+        <keyMapping columnObjectName="SCP" columnName="FAX_EXTN"/>
+      </attribute>
+      <attribute id="FAX_NUMBER" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_NUMBER"/>
+        <keyMapping columnObjectName="SCP" columnName="FAX_NUMBER"/>
+      </attribute>
+      <attribute id="GSTIN" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSTIN"/>
+        <keyMapping columnObjectName="SCP" columnName="GSTIN"/>
+      </attribute>
+      <attribute id="ID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="SCP" columnName="ID"/>
+      </attribute>
+      <attribute id="LEGAL_STATUS_ID" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL_STATUS_ID"/>
+        <keyMapping columnObjectName="SCP" columnName="LEGAL_STATUS_ID"/>
+      </attribute>
+      <attribute id="MOBILE_NO" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBILE_NO"/>
+        <keyMapping columnObjectName="SCP" columnName="MOBILE_NO"/>
+      </attribute>
+      <attribute id="NAME1" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="SCP" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="SCP" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="SCP" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping columnObjectName="SCP" columnName="NAME4"/>
+      </attribute>
+      <attribute id="PANNO" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PANNO"/>
+        <keyMapping columnObjectName="SCP" columnName="PANNO"/>
+      </attribute>
+      <attribute id="POSTAL_CODE" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAL_CODE"/>
+        <keyMapping columnObjectName="SCP" columnName="POSTAL_CODE"/>
+      </attribute>
+      <attribute id="SCP_GUID" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_GUID"/>
+        <keyMapping columnObjectName="SCP" columnName="SCP_GUID"/>
+      </attribute>
+      <attribute id="SCP_TYPE" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_TYPE"/>
+        <keyMapping columnObjectName="SCP" columnName="SCP_TYPE"/>
+      </attribute>
+      <attribute id="STATE_DESC" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE_DESC"/>
+        <keyMapping columnObjectName="SCP" columnName="STATE_DESC"/>
+      </attribute>
+      <attribute id="STATE_ID" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE_ID"/>
+        <keyMapping columnObjectName="SCP" columnName="STATE_ID"/>
+      </attribute>
+      <attribute id="TELEPHONE_EXTN" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELEPHONE_EXTN"/>
+        <keyMapping columnObjectName="SCP" columnName="TELEPHONE_EXTN"/>
+      </attribute>
+      <attribute id="TELEPHONE_NO" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELEPHONE_NO"/>
+        <keyMapping columnObjectName="SCP" columnName="TELEPHONE_NO"/>
+      </attribute>
+      <attribute id="CP_TYPE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_TYPE"/>
+        <keyMapping columnObjectName="SCP" columnName="CP_TYPE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="SCP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="86" y="211"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

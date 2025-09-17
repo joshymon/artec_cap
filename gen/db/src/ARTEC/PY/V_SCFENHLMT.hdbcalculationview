@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="ARTEC_PY_V_SCFENHLMT" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="V_SCFENHLMT.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT">
+    <resourceUri>ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_V_SCP">
+    <resourceUri>ARTEC_PY_V_SCP</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter" cardinality="C1_N">
+    <viewAttributes>
+      <viewAttribute id="ACC_NO"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CP_GUID"/>
+      <viewAttribute id="CP_TYPE"/>
+      <viewAttribute id="CURRENCY"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="OFFER_AMT"/>
+      <viewAttribute id="SCF_STATUS_ID"/>
+      <viewAttribute id="SCF_VALID_TO"/>
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+      <viewAttribute id="ENHLMT_CURRENCY"/>
+      <viewAttribute id="ENH_PERIOD"/>
+      <viewAttribute id="ENH_TYPE"/>
+      <viewAttribute id="ENHLMT_ID"/>
+      <viewAttribute id="PROPOSD_LIMIT"/>
+      <viewAttribute id="SANCTION_LIMIT"/>
+      <viewAttribute id="ENHLMT_STATUS_ID"/>
+      <viewAttribute id="ENHLMT_VALID_FROM"/>
+      <viewAttribute id="ENHLMT_VALID_TO"/>
+      <viewAttribute id="ACCPTD_LIMIT"/>
+    
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+      <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+      <viewAttribute id="CHANGE_HISTORY_SOURCE_REF_ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="LIMIT_STATUS" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(isnull(&quot;ENH_TYPE&quot;), '000002', '000001')</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACC_NO" source="ACC_NO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_GUID" source="CP_GUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_TYPE" source="CP_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_AMT" source="OFFER_AMT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_VALID_TO" source="VALID_TO"/>
+    </input>
+    <input node="ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENH_PERIOD" source="ENH_PERIOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENH_TYPE" source="ENH_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROPOSD_LIMIT" source="PROPOSD_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SANCTION_LIMIT" source="SANCTION_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_STATUS_ID" source="STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_VALID_FROM" source="VALID_FROM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_VALID_TO" source="VALID_TO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACCPTD_LIMIT" source="ACCPTD_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE_REF_ID" source="SOURCE_REF_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="SCF_ID"/>
+    </input>
+    <joinAttribute name="AGGRID"/>
+    <joinAttribute name="ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter" cardinality="C1_1">
+    <viewAttributes>
+      <viewAttribute id="ACC_NO"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CP_GUID"/>
+      <viewAttribute id="CP_TYPE"/>
+      <viewAttribute id="CURRENCY"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="OFFER_AMT"/>
+      <viewAttribute id="SCF_STATUS_ID"/>
+      <viewAttribute id="SCF_VALID_TO"/>
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+      <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+      <viewAttribute id="ENHLMT_CURRENCY"/>
+      <viewAttribute id="ENH_PERIOD"/>
+      <viewAttribute id="ENH_TYPE"/>
+      <viewAttribute id="ENHLMT_ID"/>
+      <viewAttribute id="PROPOSD_LIMIT"/>
+      <viewAttribute id="SANCTION_LIMIT"/>
+      <viewAttribute id="ENHLMT_STATUS_ID"/>
+      <viewAttribute id="ENHLMT_VALID_FROM"/>
+      <viewAttribute id="ENHLMT_VALID_TO"/>
+      <viewAttribute id="ACCPTD_LIMIT"/>
+      <viewAttribute id="LIMIT_STATUS"/>
+      <viewAttribute id="SCP_TYPE"/>
+      <viewAttribute id="NAME4"/>
+      <viewAttribute id="NAME3"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="MOBILE_NO"/>
+      <viewAttribute id="SCP_ID"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="EMAIL_ID"/>
+      <viewAttribute id="CITY"/>
+    
+      <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+      <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+      <viewAttribute id="CHANGE_HISTORY_SOURCE_REF_ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Join_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACC_NO" source="ACC_NO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_GUID" source="CP_GUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_TYPE" source="CP_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_AMT" source="OFFER_AMT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="SCF_STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_VALID_TO" source="SCF_VALID_TO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGE_HISTORY_CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGE_HISTORY_CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CHANGE_HISTORY_CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CHANGE_HISTORY_CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CHANGE_HISTORY_CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_CURRENCY" source="ENHLMT_CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENH_PERIOD" source="ENH_PERIOD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENH_TYPE" source="ENH_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_ID" source="ENHLMT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PROPOSD_LIMIT" source="PROPOSD_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SANCTION_LIMIT" source="SANCTION_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_STATUS_ID" source="ENHLMT_STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_VALID_FROM" source="ENHLMT_VALID_FROM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENHLMT_VALID_TO" source="ENHLMT_VALID_TO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ACCPTD_LIMIT" source="ACCPTD_LIMIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LIMIT_STATUS" source="LIMIT_STATUS"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGE_HISTORY_CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="CHANGE_HISTORY_SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE_REF_ID" source="CHANGE_HISTORY_SOURCE_REF_ID"/>
+    </input>
+    <input node="ARTEC_PY_V_SCP">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE_NO" source="MOBILE_NO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAIL_ID" source="EMAIL_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_GUID" source="SCP_GUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CP_TYPE" source="CP_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+    </input>
+    <joinAttribute name="CP_GUID"/>
+    <joinAttribute name="CP_TYPE"/>
+    <joinAttribute name="AGGRID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="AccountNo" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Account No"/>
+      <keyMapping columnObjectName="Join_2" columnName="ACC_NO"/>
+    </attribute>
+    <attribute id="AggregatorID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AggregatorID"/>
+      <keyMapping columnObjectName="Join_2" columnName="AGGRID"/>
+    </attribute>
+    <attribute id="CPGuid" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CP No"/>
+      <keyMapping columnObjectName="Join_2" columnName="CP_GUID"/>
+    </attribute>
+    <attribute id="CPType" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CP Type"/>
+      <keyMapping columnObjectName="Join_2" columnName="CP_TYPE"/>
+    </attribute>
+    <attribute id="SCFCurrency" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency"/>
+      <keyMapping columnObjectName="Join_2" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="ID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCFID"/>
+      <keyMapping columnObjectName="Join_2" columnName="ID"/>
+    </attribute>
+    <attribute id="OfferAmt" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Offer Amount"/>
+      <keyMapping columnObjectName="Join_2" columnName="OFFER_AMT"/>
+    </attribute>
+    <attribute id="SCFStatusID" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Status"/>
+      <keyMapping columnObjectName="Join_2" columnName="SCF_STATUS_ID"/>
+    </attribute>
+    <attribute id="SCFValidTo" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF ValidTo"/>
+      <keyMapping columnObjectName="Join_2" columnName="SCF_VALID_TO"/>
+    </attribute>
+    <attribute id="ChangedBy" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Changed By"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+    </attribute>
+    <attribute id="ChangedOn" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Changed On"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CHANGEDON"/>
+    </attribute>
+    <attribute id="CreatedAt" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Created At"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CREATEDAT"/>
+    </attribute>
+    <attribute id="CreatedBy" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Created By"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CREATEDBY"/>
+    </attribute>
+    <attribute id="CreatedOn" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Created On"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CREATEDON"/>
+    </attribute>
+    <attribute id="ENHCurrency" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Currency"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENHLMT_CURRENCY"/>
+    </attribute>
+    <attribute id="EnhancementPeriod" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Enhancement Period"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENH_PERIOD"/>
+    </attribute>
+    <attribute id="EnhancementType" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Enhancement Type"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENH_TYPE"/>
+    </attribute>
+    <attribute id="ENHLMT_ID" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Enhancement ID"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENHLMT_ID"/>
+    </attribute>
+    <attribute id="ProposedLimit" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Proposed Limit"/>
+      <keyMapping columnObjectName="Join_2" columnName="PROPOSD_LIMIT"/>
+    </attribute>
+    <attribute id="SanctionLimit" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sanction Limit"/>
+      <keyMapping columnObjectName="Join_2" columnName="SANCTION_LIMIT"/>
+    </attribute>
+    <attribute id="ENHStatusID" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Enhancement Status"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENHLMT_STATUS_ID"/>
+    </attribute>
+    <attribute id="ValidFrom" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Valid From"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENHLMT_VALID_FROM"/>
+    </attribute>
+    <attribute id="ValidTo" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Valid To"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENHLMT_VALID_TO"/>
+    </attribute>
+    <attribute id="AcceptedLimit" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Accepted Limit"/>
+      <keyMapping columnObjectName="Join_2" columnName="ACCPTD_LIMIT"/>
+    </attribute>
+    <attribute id="LimitStatus" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Limit Status"/>
+      <keyMapping columnObjectName="Join_2" columnName="LIMIT_STATUS"/>
+    </attribute>
+    <attribute id="SCPType" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCP Type"/>
+      <keyMapping columnObjectName="Join_2" columnName="SCP_TYPE"/>
+    </attribute>
+    <attribute id="Name4" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name4"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME4"/>
+    </attribute>
+    <attribute id="Name3" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name3"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME3"/>
+    </attribute>
+    <attribute id="Name2" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name2"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME2"/>
+    </attribute>
+    <attribute id="Name1" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name1"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME1"/>
+    </attribute>
+    <attribute id="MobileNo" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Mobile No"/>
+      <keyMapping columnObjectName="Join_2" columnName="MOBILE_NO"/>
+    </attribute>
+    <attribute id="SCP_ID" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCP ID"/>
+      <keyMapping columnObjectName="Join_2" columnName="SCP_ID"/>
+    </attribute>
+    <attribute id="GSTIN" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSTIN"/>
+      <keyMapping columnObjectName="Join_2" columnName="GSTIN"/>
+    </attribute>
+    <attribute id="EmailID" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Email ID"/>
+      <keyMapping columnObjectName="Join_2" columnName="EMAIL_ID"/>
+    </attribute>
+    <attribute id="City" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="City"/>
+      <keyMapping columnObjectName="Join_2" columnName="CITY"/>
+    </attribute>
+  
+    <attribute id="ChangedAt" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Changed At"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+    </attribute>
+    <attribute id="Source" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Source"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_SOURCE"/>
+    </attribute>
+    <attribute id="SourceReferenceID" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Source Reference ID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGE_HISTORY_SOURCE_REF_ID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="38" y="191"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="162" y="183"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

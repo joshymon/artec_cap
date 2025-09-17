@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PC_V_SUBSCR_SUM" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_SUBSCR_SUM"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_INV_H">
+      <resourceUri>ARTEC_PC_INV_H</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_INV_I">
+      <resourceUri>ARTEC_PC_INV_I</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_SUBSCRIPTION">
+      <resourceUri>ARTEC_PC_SUBSCRIPTION</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+      <viewAttributes>
+        <viewAttribute id="INV_NO"/>
+        <viewAttribute id="INV_DATE"/>
+        <viewAttribute id="SOLDTO_CP_GUID"/>
+        <viewAttribute id="SOLDTO_CP_TYPE"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="COUNTRY"/>
+        <viewAttribute id="COUNTRY_DESC"/>
+        <viewAttribute id="CREATED_AT"/>
+        <viewAttribute id="CREATED_BY"/>
+        <viewAttribute id="CREATED_ON"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DISC_AMT"/>
+        <viewAttribute id="DISC_PERC"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="GROSS_AMT"/>
+        <viewAttribute id="GSTN"/>
+        <viewAttribute id="MOBILE1"/>
+        <viewAttribute id="NET_AMT"/>
+        <viewAttribute id="PAID_AMT"/>
+        <viewAttribute id="PAN"/>
+        <viewAttribute id="PAY_STATUS_ID"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="REASON_FOR_REJ"/>
+        <viewAttribute id="REGION"/>
+        <viewAttribute id="REGION_DESC"/>
+        <viewAttribute id="REMARKS"/>
+        <viewAttribute id="STATUS_ID"/>
+        <viewAttribute id="SUBSCRIBER_NAME"/>
+        <viewAttribute id="TAX_AMT"/>
+        <viewAttribute id="TYPE"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="TENANTID"/>
+        <viewAttribute id="REF_DOC_GUID"/>
+        <viewAttribute id="INV_GUID"/>
+        <viewAttribute id="AGGREGATORID"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PC_INV_H">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_NO" source="INV_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_DATE" source="INV_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTO_CP_GUID" source="SOLDTO_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTO_CP_TYPE" source="SOLDTO_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_DESC" source="COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_AT" source="CREATED_AT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_BY" source="CREATED_BY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_ON" source="CREATED_ON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISC_AMT" source="DISC_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISC_PERC" source="DISC_PERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GROSS_AMT" source="GROSS_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTN" source="GSTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_AMT" source="NET_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAID_AMT" source="PAID_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAY_STATUS_ID" source="PAY_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTAL_CODE" source="POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REASON_FOR_REJ" source="REASON_FOR_REJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGION_DESC" source="REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REMARKS" source="REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SUBSCRIBER_NAME" source="SUBSCRIBER_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TAX_AMT" source="TAX_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPE" source="TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TENANTID" source="TENANTID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_GUID" source="INV_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      </input>
+      <input node="ARTEC_PC_INV_I">
+        <mapping xsi:type="Calculation:AttributeMapping" target="REF_DOC_GUID" source="REF_DOC_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_GUID" source="INV_GUID"/>
+      </input>
+      <joinAttribute name="INV_GUID"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="inner">
+      <viewAttributes>
+        <viewAttribute id="INV_NO"/>
+        <viewAttribute id="INV_DATE"/>
+        <viewAttribute id="SOLDTO_CP_GUID"/>
+        <viewAttribute id="SOLDTO_CP_TYPE"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="COUNTRY"/>
+        <viewAttribute id="COUNTRY_DESC"/>
+        <viewAttribute id="CREATED_AT"/>
+        <viewAttribute id="CREATED_BY"/>
+        <viewAttribute id="CREATED_ON"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DISC_AMT"/>
+        <viewAttribute id="DISC_PERC"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="GROSS_AMT"/>
+        <viewAttribute id="GSTN"/>
+        <viewAttribute id="MOBILE1"/>
+        <viewAttribute id="NET_AMT"/>
+        <viewAttribute id="PAID_AMT"/>
+        <viewAttribute id="PAN"/>
+        <viewAttribute id="PAY_STATUS_ID"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="REASON_FOR_REJ"/>
+        <viewAttribute id="REGION"/>
+        <viewAttribute id="REGION_DESC"/>
+        <viewAttribute id="REMARKS"/>
+        <viewAttribute id="STATUS_ID"/>
+        <viewAttribute id="SUBSCRIBER_NAME"/>
+        <viewAttribute id="TAX_AMT"/>
+        <viewAttribute id="TYPE"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="TENANTID"/>
+        <viewAttribute id="REF_DOC_GUID"/>
+        <viewAttribute id="VALID_FROM"/>
+        <viewAttribute id="VALID_TO"/>
+        <viewAttribute id="INV_GUID"/>
+        <viewAttribute id="AGGREGATORID"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_NO" source="INV_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_DATE" source="INV_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTO_CP_GUID" source="SOLDTO_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTO_CP_TYPE" source="SOLDTO_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_DESC" source="COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_AT" source="CREATED_AT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_BY" source="CREATED_BY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATED_ON" source="CREATED_ON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISC_AMT" source="DISC_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISC_PERC" source="DISC_PERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GROSS_AMT" source="GROSS_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTN" source="GSTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NET_AMT" source="NET_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAID_AMT" source="PAID_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAY_STATUS_ID" source="PAY_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTAL_CODE" source="POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REASON_FOR_REJ" source="REASON_FOR_REJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REGION_DESC" source="REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REMARKS" source="REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SUBSCRIBER_NAME" source="SUBSCRIBER_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TAX_AMT" source="TAX_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TYPE" source="TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TENANTID" source="TENANTID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REF_DOC_GUID" source="REF_DOC_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INV_GUID" source="INV_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      </input>
+      <input node="ARTEC_PC_SUBSCRIPTION">
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALID_FROM" source="VALID_FROM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALID_TO" source="VALID_TO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REF_DOC_GUID" source="SUBSCRIPTION_GUID"/>
+      </input>
+      <joinAttribute name="REF_DOC_GUID"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_2">
+    <attributes>
+      <attribute id="INV_NO" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INV_NO"/>
+        <keyMapping columnObjectName="Join_2" columnName="INV_NO"/>
+      </attribute>
+      <attribute id="INV_DATE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INV_DATE"/>
+        <keyMapping columnObjectName="Join_2" columnName="INV_DATE"/>
+      </attribute>
+      <attribute id="SOLDTO_CP_GUID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOLDTO_CP_GUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="SOLDTO_CP_GUID"/>
+      </attribute>
+      <attribute id="SOLDTO_CP_TYPE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOLDTO_CP_TYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="SOLDTO_CP_TYPE"/>
+      </attribute>
+      <attribute id="CITY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CITY"/>
+      </attribute>
+      <attribute id="COUNTRY" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY"/>
+        <keyMapping columnObjectName="Join_2" columnName="COUNTRY"/>
+      </attribute>
+      <attribute id="COUNTRY_DESC" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY_DESC"/>
+        <keyMapping columnObjectName="Join_2" columnName="COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="CREATED_AT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED_AT"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATED_AT"/>
+      </attribute>
+      <attribute id="CREATED_BY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED_BY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATED_BY"/>
+      </attribute>
+      <attribute id="CREATED_ON" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED_ON"/>
+        <keyMapping columnObjectName="Join_2" columnName="CREATED_ON"/>
+      </attribute>
+      <attribute id="CURRENCY" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="Join_2" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="DISC_AMT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISC_AMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="DISC_AMT"/>
+      </attribute>
+      <attribute id="DISC_PERC" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISC_PERC"/>
+        <keyMapping columnObjectName="Join_2" columnName="DISC_PERC"/>
+      </attribute>
+      <attribute id="DISTRICT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISTRICT"/>
+        <keyMapping columnObjectName="Join_2" columnName="DISTRICT"/>
+      </attribute>
+      <attribute id="EMAIL_ID" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMAIL_ID"/>
+        <keyMapping columnObjectName="Join_2" columnName="EMAIL_ID"/>
+      </attribute>
+      <attribute id="GROSS_AMT" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GROSS_AMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="GROSS_AMT"/>
+      </attribute>
+      <attribute id="GSTN" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSTN"/>
+        <keyMapping columnObjectName="Join_2" columnName="GSTN"/>
+      </attribute>
+      <attribute id="MOBILE1" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBILE1"/>
+        <keyMapping columnObjectName="Join_2" columnName="MOBILE1"/>
+      </attribute>
+      <attribute id="NET_AMT" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NET_AMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="NET_AMT"/>
+      </attribute>
+      <attribute id="PAID_AMT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAID_AMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAID_AMT"/>
+      </attribute>
+      <attribute id="PAN" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAN"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAN"/>
+      </attribute>
+      <attribute id="PAY_STATUS_ID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAY_STATUS_ID"/>
+        <keyMapping columnObjectName="Join_2" columnName="PAY_STATUS_ID"/>
+      </attribute>
+      <attribute id="POSTAL_CODE" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAL_CODE"/>
+        <keyMapping columnObjectName="Join_2" columnName="POSTAL_CODE"/>
+      </attribute>
+      <attribute id="REASON_FOR_REJ" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REASON_FOR_REJ"/>
+        <keyMapping columnObjectName="Join_2" columnName="REASON_FOR_REJ"/>
+      </attribute>
+      <attribute id="REGION" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGION"/>
+        <keyMapping columnObjectName="Join_2" columnName="REGION"/>
+      </attribute>
+      <attribute id="REGION_DESC" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REGION_DESC"/>
+        <keyMapping columnObjectName="Join_2" columnName="REGION_DESC"/>
+      </attribute>
+      <attribute id="REMARKS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REMARKS"/>
+        <keyMapping columnObjectName="Join_2" columnName="REMARKS"/>
+      </attribute>
+      <attribute id="STATUS_ID" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUS_ID"/>
+        <keyMapping columnObjectName="Join_2" columnName="STATUS_ID"/>
+      </attribute>
+      <attribute id="SUBSCRIBER_NAME" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SUBSCRIBER_NAME"/>
+        <keyMapping columnObjectName="Join_2" columnName="SUBSCRIBER_NAME"/>
+      </attribute>
+      <attribute id="TAX_AMT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TAX_AMT"/>
+        <keyMapping columnObjectName="Join_2" columnName="TAX_AMT"/>
+      </attribute>
+      <attribute id="TYPE" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TYPE"/>
+        <keyMapping columnObjectName="Join_2" columnName="TYPE"/>
+      </attribute>
+      <attribute id="ADDRESS1" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS1"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADDRESS1"/>
+      </attribute>
+      <attribute id="ADDRESS2" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS2"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADDRESS2"/>
+      </attribute>
+      <attribute id="ADDRESS3" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS3"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADDRESS3"/>
+      </attribute>
+      <attribute id="ADDRESS4" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS4"/>
+        <keyMapping columnObjectName="Join_2" columnName="ADDRESS4"/>
+      </attribute>
+      <attribute id="TENANTID" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TENANTID"/>
+        <keyMapping columnObjectName="Join_2" columnName="TENANTID"/>
+      </attribute>
+      <attribute id="REF_DOC_GUID" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REF_DOC_GUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="REF_DOC_GUID"/>
+      </attribute>
+      <attribute id="VALID_FROM" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID_FROM"/>
+        <keyMapping columnObjectName="Join_2" columnName="VALID_FROM"/>
+      </attribute>
+      <attribute id="VALID_TO" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID_TO"/>
+        <keyMapping columnObjectName="Join_2" columnName="VALID_TO"/>
+      </attribute>
+      <attribute id="INV_GUID" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INV_GUID"/>
+        <keyMapping columnObjectName="Join_2" columnName="INV_GUID"/>
+      </attribute>
+      <attribute id="AGGREGATORID" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="Join_2" columnName="AGGREGATORID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="false" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="false" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="77" y="244"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="77" y="229"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

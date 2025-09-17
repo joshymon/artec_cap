@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_BPSCF_ELIG_BP_SCF4_SCF1" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_BPSCF_ELIG_BP_SCF4_SCF1_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_V_BPSCF_ELIG_BP_SCF4">
+    <resourceUri>ARTEC_PY_V_BPSCF_ELIG_BP_SCF4</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW</resourceUri>
+  </DataSource>
+  <DataSource id="SCF1VIEW_ELGB_NON_BLNK$$$$ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW$$">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BP_SCF4">
+    <viewAttributes>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="BP_ID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="AGGREGATORID_SCF4"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="ERP_CPNAME"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="CREATEDAT_BP"/>
+      <viewAttribute id="CREATEDBY_BP"/>
+      <viewAttribute id="CREATEDON_BP"/>
+      <viewAttribute id="STATUSID_SCF4"/>
+      <viewAttribute id="SERVICEPROVIDERREF"/>
+      <viewAttribute id="CHANGEDON_SCF4"/>
+      <viewAttribute id="CREATEDBY_SCF4"/>
+      <viewAttribute id="CREATEDAT_SCF4"/>
+      <viewAttribute id="VALIDTO_SCF4"/>
+      <viewAttribute id="CREATEDON_SCF4"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_SCF4"/>
+      <viewAttribute id="CHANGEDBY_SCF4"/>
+      <viewAttribute id="CHANGEDAT_SCF4"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID_SCF4"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="MOBILE2"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_V_BPSCF_ELIG_BP_SCF4"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCF1VIEW_ELGB_BLNK">
+    <viewAttributes>
+      <viewAttribute id="ID_OD"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="CPTYPEID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="APPLICATIONNO"/>
+      <viewAttribute id="VALIDTO"/>
+      <viewAttribute id="ELIGIBILITYSTATUS"/>
+      <viewAttribute id="ERRORCODE"/>
+      <viewAttribute id="ELIGIBILITYTYPEID"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_OD" source="ID"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCF1VIEW_ELGB_NON_BLNK" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+      <viewAttribute id="ID_AML"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="CPTYPEID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="VALIDTO"/>
+      <viewAttribute id="ELIGIBILITYSTATUS"/>
+      <viewAttribute id="ERRORCODE"/>
+      <viewAttribute id="ELIGIBILITYTYPEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="SCF1VIEW_ELGB_NON_BLNK$$$$ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW$$">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_AML" source="ID"/>
+    </input>
+    <filter>"ELIGIBILITYTYPEID"=='AML'</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="BP_SCF4_SCF1_ELG_BLNK" cardinality="C1_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="BP_ID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="AGGREGATORID_SCF4"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="ERP_CPNAME"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="CREATEDAT_BP"/>
+      <viewAttribute id="CREATEDBY_BP"/>
+      <viewAttribute id="CREATEDON_BP"/>
+      <viewAttribute id="STATUSID_SCF4"/>
+      <viewAttribute id="SERVICEPROVIDERREF"/>
+      <viewAttribute id="CHANGEDON_SCF4"/>
+      <viewAttribute id="CREATEDBY_SCF4"/>
+      <viewAttribute id="CREATEDAT_SCF4"/>
+      <viewAttribute id="VALIDTO_SCF4"/>
+      <viewAttribute id="CREATEDON_SCF4"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_SCF4"/>
+      <viewAttribute id="CHANGEDBY_SCF4"/>
+      <viewAttribute id="CHANGEDAT_SCF4"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID_SCF4"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="ID_OD"/>
+      <viewAttribute id="VALIDTO"/>
+      <viewAttribute id="ELIGIBILITYSTATUS"/>
+      <viewAttribute id="ERRORCODE"/>
+      <viewAttribute id="ELIGIBILITYTYPEID"/>
+      <viewAttribute hidden="true" id="JOIN$AGGREGATORID$AGGREGATORID"/>
+      <viewAttribute hidden="true" id="JOIN$CPGUID$CPGUID"/>
+      <viewAttribute hidden="true" id="JOIN$CPTYPE$CPTYPEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="BP_SCF4">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RECORDID" source="RECORDID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID_SCF4" source="AGGREGATORID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPEID" source="OBJECTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPE" source="OBJECTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORRELATIONID" source="CORRELATIONID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERP_CPNAME" source="ERP_CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_BP" source="CREATEDAT_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_BP" source="CREATEDBY_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_BP" source="CREATEDON_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID_SCF4" source="STATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICEPROVIDERREF" source="SERVICEPROVIDERREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON_SCF4" source="CHANGEDON_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_SCF4" source="CREATEDBY_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_SCF4" source="CREATEDAT_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_SCF4" source="VALIDTO_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_SCF4" source="CREATEDON_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_SCF4" source="ELIGIBILITYTYPEID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY_SCF4" source="CHANGEDBY_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT_SCF4" source="CHANGEDAT_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUSID_SCF4" source="ELIGIBILITYSTATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPGUID$CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPTYPE$CPTYPEID" source="CPTYPE"/>
+    </input>
+    <input node="SCF1VIEW_ELGB_BLNK">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_OD" source="ID_OD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO" source="VALIDTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID" source="ELIGIBILITYTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPGUID$CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPTYPE$CPTYPEID" source="CPTYPEID"/>
+    </input>
+    <joinAttribute name="JOIN$AGGREGATORID$AGGREGATORID"/>
+    <joinAttribute name="JOIN$CPGUID$CPGUID"/>
+    <joinAttribute name="JOIN$CPTYPE$CPTYPEID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="BP_ID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="AGGREGATORID_SCF4"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="ERP_CPNAME"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="CREATEDAT_BP"/>
+      <viewAttribute id="CREATEDBY_BP"/>
+      <viewAttribute id="CREATEDON_BP"/>
+      <viewAttribute id="STATUSID_SCF4"/>
+      <viewAttribute id="SERVICEPROVIDERREF"/>
+      <viewAttribute id="CHANGEDON_SCF4"/>
+      <viewAttribute id="CREATEDBY_SCF4"/>
+      <viewAttribute id="CREATEDAT_SCF4"/>
+      <viewAttribute id="VALIDTO_SCF4"/>
+      <viewAttribute id="CREATEDON_SCF4"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_SCF4"/>
+      <viewAttribute id="CHANGEDBY_SCF4"/>
+      <viewAttribute id="CHANGEDAT_SCF4"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID_SCF4"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="ID_OD"/>
+      <viewAttribute id="VALIDTO_OD"/>
+      <viewAttribute id="ELIGIBILITYSTATUS_OD"/>
+      <viewAttribute id="ERRORCODE_OD"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_OD"/>
+      <viewAttribute id="ELIGIBILITYSTATUS_AML"/>
+      <viewAttribute id="ERRORCODE_AML"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_AML"/>
+      <viewAttribute id="VALIDTO_AML"/>
+      <viewAttribute id="ID_AML"/>
+      <viewAttribute hidden="true" id="JOIN$AGGREGATORID$AGGREGATORID"/>
+      <viewAttribute hidden="true" id="JOIN$CPGUID$CPGUID"/>
+      <viewAttribute hidden="true" id="JOIN$CPTYPE$CPTYPEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="BP_SCF4_SCF1_ELG_BLNK">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RECORDID" source="RECORDID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID_SCF4" source="AGGREGATORID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPEID" source="OBJECTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPE" source="OBJECTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORRELATIONID" source="CORRELATIONID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERP_CPNAME" source="ERP_CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_BP" source="CREATEDAT_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_BP" source="CREATEDBY_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_BP" source="CREATEDON_BP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID_SCF4" source="STATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICEPROVIDERREF" source="SERVICEPROVIDERREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON_SCF4" source="CHANGEDON_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_SCF4" source="CREATEDBY_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_SCF4" source="CREATEDAT_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_SCF4" source="VALIDTO_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_SCF4" source="CREATEDON_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_SCF4" source="ELIGIBILITYTYPEID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY_SCF4" source="CHANGEDBY_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT_SCF4" source="CHANGEDAT_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUSID_SCF4" source="ELIGIBILITYSTATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_OD" source="ID_OD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_OD" source="VALIDTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS_OD" source="ELIGIBILITYSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE_OD" source="ERRORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_OD" source="ELIGIBILITYTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPGUID$CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPTYPE$CPTYPEID" source="CPTYPE"/>
+    </input>
+    <input node="SCF1VIEW_ELGB_NON_BLNK">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS_AML" source="ELIGIBILITYSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE_AML" source="ERRORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_AML" source="ELIGIBILITYTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_AML" source="VALIDTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID_AML" source="ID_AML"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPGUID$CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$CPTYPE$CPTYPEID" source="CPTYPEID"/>
+    </input>
+    <joinAttribute name="JOIN$AGGREGATORID$AGGREGATORID"/>
+    <joinAttribute name="JOIN$CPGUID$CPGUID"/>
+    <joinAttribute name="JOIN$CPTYPE$CPTYPEID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="CPGUID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPGUID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPGUID"/>
+    </attribute>
+    <attribute id="CPTYPE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPTYPE"/>
+    </attribute>
+    <attribute id="CPNAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPNAME"/>
+    </attribute>
+    <attribute id="BPID" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BP_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="BP_ID"/>
+    </attribute>
+    <attribute id="AGGREGATORID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="RECORDID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECORDID"/>
+      <keyMapping columnObjectName="Join_1" columnName="RECORDID"/>
+    </attribute>
+    <attribute id="AGGREGATORID_SCF4" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID_SCF4"/>
+    </attribute>
+    <attribute id="OBJECTTYPEID" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="OBJECTTYPEID"/>
+    </attribute>
+    <attribute id="OBJECTTYPE" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="OBJECTTYPE"/>
+    </attribute>
+    <attribute id="CORRELATIONID" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORRELATIONID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CORRELATIONID"/>
+    </attribute>
+    <attribute id="INCORPORATIONDATE" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INCORPORATIONDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="INCORPORATIONDATE"/>
+    </attribute>
+    <attribute id="LEGALSTATUS" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEGALSTATUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="LEGALSTATUS"/>
+    </attribute>
+    <attribute id="ADDRESS1" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS1"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS1"/>
+    </attribute>
+    <attribute id="ADDRESS2" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS2"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS2"/>
+    </attribute>
+    <attribute id="ADDRESS3" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS3"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS3"/>
+    </attribute>
+    <attribute id="ADDRESS4" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS4"/>
+    </attribute>
+    <attribute id="DISTRICT" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRICT"/>
+      <keyMapping columnObjectName="Join_1" columnName="DISTRICT"/>
+    </attribute>
+    <attribute id="CITY" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CITY"/>
+    </attribute>
+    <attribute id="STATEDESC" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATEDESC"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATEDESC"/>
+    </attribute>
+    <attribute id="STATE" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATE"/>
+    </attribute>
+    <attribute id="STATUSID" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATUSID"/>
+    </attribute>
+    <attribute id="PINCODE" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PINCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PINCODE"/>
+    </attribute>
+    <attribute id="ERP_CPNAME" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERP_CPNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERP_CPNAME"/>
+    </attribute>
+    <attribute id="MOBILE1" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE1"/>
+      <keyMapping columnObjectName="Join_1" columnName="MOBILE1"/>
+    </attribute>
+    <attribute id="CREATEDAT_BP" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_BP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDAT_BP"/>
+    </attribute>
+    <attribute id="CREATEDBY_BP" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_BP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDBY_BP"/>
+    </attribute>
+    <attribute id="CREATEDON_BP" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_BP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON_BP"/>
+    </attribute>
+    <attribute id="STATUSID_SCF4" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATUSID_SCF4"/>
+    </attribute>
+    <attribute id="SERVICEPROVIDERREF" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICEPROVIDERREF"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERVICEPROVIDERREF"/>
+    </attribute>
+    <attribute id="CHANGEDON_SCF4" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDON_SCF4"/>
+    </attribute>
+    <attribute id="CREATEDBY_SCF4" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDBY_SCF4"/>
+    </attribute>
+    <attribute id="CREATEDAT_SCF4" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDAT_SCF4"/>
+    </attribute>
+    <attribute id="VALIDTO_SCF4" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALIDTO_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="VALIDTO_SCF4"/>
+    </attribute>
+    <attribute id="CREATEDON_SCF4" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON_SCF4"/>
+    </attribute>
+    <attribute id="ELIGIBILITYTYPEID_SCF4" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYTYPEID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYTYPEID_SCF4"/>
+    </attribute>
+    <attribute id="CHANGEDBY_SCF4" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDBY_SCF4"/>
+    </attribute>
+    <attribute id="CHANGEDAT_SCF4" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDAT_SCF4"/>
+    </attribute>
+    <attribute id="ELIGIBILITYSTATUSID_SCF4" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYSTATUSID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYSTATUSID_SCF4"/>
+    </attribute>
+    <attribute id="CORPORATEIDENTIFICATIONNO" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORPORATEIDENTIFICATIONNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="CORPORATEIDENTIFICATIONNO"/>
+    </attribute>
+    <attribute id="GSTIN" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSTIN"/>
+      <keyMapping columnObjectName="Join_1" columnName="GSTIN"/>
+    </attribute>
+    <attribute id="PAN" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAN"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAN"/>
+    </attribute>
+    <attribute id="MOBILE2" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE2"/>
+      <keyMapping columnObjectName="Join_1" columnName="MOBILE2"/>
+    </attribute>
+    <attribute id="ID_OD" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ID_OD"/>
+    </attribute>
+    <attribute id="VALIDTO_OD" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALIDTO"/>
+      <keyMapping columnObjectName="Join_1" columnName="VALIDTO_OD"/>
+    </attribute>
+    <attribute id="ELIGIBILITYSTATUS_OD" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYSTATUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYSTATUS_OD"/>
+    </attribute>
+    <attribute id="ERRORCODE_OD" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERRORCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERRORCODE_OD"/>
+    </attribute>
+    <attribute id="ELIGIBILITYTYPEID_OD" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYTYPEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYTYPEID_OD"/>
+    </attribute>
+    <attribute id="ELIGIBILITYSTATUS_AML" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYSTATUS"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYSTATUS_AML"/>
+    </attribute>
+    <attribute id="ERRORCODE_AML" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERRORCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="ERRORCODE_AML"/>
+    </attribute>
+    <attribute id="ELIGIBILITYTYPEID_AML" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYTYPEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYTYPEID_AML"/>
+    </attribute>
+    <attribute id="VALIDTO_AML" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALIDTO"/>
+      <keyMapping columnObjectName="Join_1" columnName="VALIDTO_AML"/>
+    </attribute>
+    <attribute id="ID_AML" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ID_AML"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="328" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="BP_SCF4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="501"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="SCF1VIEW_ELGB_BLNK" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="501"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="SCF1VIEW_ELGB_NON_BLNK" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="395" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="BP_SCF4_SCF1_ELG_BLNK" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="118" y="360"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="BP_SCF4" modelObjectNameSpace="BP_SCF4_SCF1_ELG_BLNK" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="210"/>
+    </shape>
+    <shape modelObjectName="SCF1VIEW_ELGB_BLNK" modelObjectNameSpace="BP_SCF4_SCF1_ELG_BLNK" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="201"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="328" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="BP_SCF4_SCF1_ELG_BLNK" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="226"/>
+    </shape>
+    <shape modelObjectName="SCF1VIEW_ELGB_NON_BLNK" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="235"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

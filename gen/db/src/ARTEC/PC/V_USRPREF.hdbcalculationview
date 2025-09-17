@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PC_V_USRPREF" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="USER PREFERENCE"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_USERMGMT_USRLGNVIEW">
+      <resourceUri>ARTEC_PC_USERMGMT_USRLGNVIEW</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PC_USERMGMT_USRLGNVIEW">
+    <attributes>
+      <attribute id="AGGREGATORID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="AGGREGATORID"/>
+      </attribute>
+      <attribute id="APPLICATION" key="true" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="APPLICATION"/>
+      </attribute>
+      <attribute id="LOGINID" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGINID"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="LOGINID"/>
+      </attribute>
+      <attribute id="PREF1" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF1"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="PREF1"/>
+      </attribute>
+      <attribute id="PREF2" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF2"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="PREF2"/>
+      </attribute>
+      <attribute id="PREF3" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF3"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="PREF3"/>
+      </attribute>
+      <attribute id="PREF4" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF4"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="PREF4"/>
+      </attribute>
+      <attribute id="PREF5" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF5"/>
+        <keyMapping columnObjectName="USERMGMT_USRLGNVIEW" columnName="PREF5"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

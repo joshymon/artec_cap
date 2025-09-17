@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PYMIS_SCFONBOARDING" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="CUBE" enforceSqlExecution="false" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <descriptions defaultDescription="SCFONBOARDING"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_BP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_BP</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF1</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BP">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CP_GUID"/>
+        <viewAttribute id="CP_NAME"/>
+        <viewAttribute id="CP_TYPE"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="INCORP_DATE"/>
+        <viewAttribute id="LEGAL_STATUS"/>
+        <viewAttribute id="UTIL_DISTRICT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_BUSINESSPARTNER_BP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCF">
+    <viewAttributes>
+        <viewAttribute id="ACC_NO"/>
+        <viewAttribute id="ADDLN_PRD_INT_RA"/>
+        <viewAttribute id="ADDLN_TENOR_OF_P"/>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="APPLICANT_IP"/>
+        <viewAttribute id="APPLICATION_NO"/>
+        <viewAttribute id="BUSI_VINT_DEALER"/>
+        <viewAttribute id="CALL_BACK_STATUS"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CHQ_RETURN"/>
+        <viewAttribute id="CONSTITUTE_TYPE"/>
+        <viewAttribute id="CORP_RATING"/>
+        <viewAttribute id="CP_GUID"/>
+        <viewAttribute id="CP_TYPE"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DDB_ACTIVE"/>
+        <viewAttribute id="DEALER_SCOPE"/>
+        <viewAttribute id="DEALER_VEN_FLAG"/>
+        <viewAttribute id="DEF_INT_SPREAD"/>
+        <viewAttribute id="E_COMPLETE_DATE"/>
+        <viewAttribute id="E_COMPLETE_TIME"/>
+        <viewAttribute id="E_CONTRACT_ID"/>
+        <viewAttribute id="E_CUSTOMER_ID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="INTEREST_RATE_SP"/>
+        <viewAttribute id="INTEREST_SPREAD"/>
+        <viewAttribute id="LIMIT_PREFIX"/>
+        <viewAttribute id="MAX_LIMIT_PER_CO"/>
+        <viewAttribute id="MCLR6_RATE"/>
+        <viewAttribute id="OFFER_AMT"/>
+        <viewAttribute id="OFFER_TENURE"/>
+        <viewAttribute id="PAY_DELAY_12_MNT"/>
+        <viewAttribute id="PROCESSING_FEE"/>
+        <viewAttribute id="PROCESS_FEE_PERC"/>
+        <viewAttribute id="PURCH_12_MONTHS"/>
+        <viewAttribute id="RATE"/>
+        <viewAttribute id="SALES_12_MONTHS"/>
+        <viewAttribute id="STATUS_ID"/>
+        <viewAttribute id="TENOR_OF_PAYMENT"/>
+        <viewAttribute id="VALID_TO"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/></input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="BP_SCF" joinType="leftOuter">
+    <descriptions>
+      <comment text=""/>
+    </descriptions>
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="BP_CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="BP_CP_TYPE"/>
+        <viewAttribute id="BP_CP_GUID"/>
+        <viewAttribute id="BP_CP_NAME"/>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="SCF1_ELIGIBLE"/>
+        <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+        <viewAttribute id="SCF1_CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="SCF_E_COMPLETE_DATE"/>
+        <viewAttribute id="SCF_OFFER_AMT"/>
+        <viewAttribute id="SCF_PROCESSING_FEE"/>
+        <viewAttribute id="SCF_STATUS_ID"/>
+        <viewAttribute id="SCF_CURRENCY"/>
+        <viewAttribute id="BP_CHANGE_HISTORY_CREATEDBY"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="BP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGE_HISTORY_CREATEDON" source="CHANGE_HISTORY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_NAME" source="CP_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGE_HISTORY_CREATEDBY" source="CHANGE_HISTORY_CREATEDBY"/>
+      </input>
+      <input node="SCF1_SCF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_ELIGIBLE" source="SCF1_ELIGIBLE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="SCF_CALL_BACK_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CHANGE_HISTORY_CREATEDON" source="SCF1_CHANGE_HISTORY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDON" source="SCF_CHANGE_HISTORY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_DATE" source="SCF_E_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_OFFER_AMT" source="SCF_OFFER_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_PROCESSING_FEE" source="SCF_PROCESSING_FEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="SCF_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CURRENCY" source="SCF_CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="SCF1_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="SCF1_CP_TYPE"/>
+      </input>
+    <joinAttribute name="BP_CP_GUID"/>
+    <joinAttribute name="BP_CP_TYPE"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="SCF1_SCF" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="SCF1_ELIGIBLE"/>
+        <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+        <viewAttribute id="SCF1_CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="SCF_E_COMPLETE_DATE"/>
+        <viewAttribute id="SCF_OFFER_AMT"/>
+        <viewAttribute id="SCF_PROCESSING_FEE"/>
+        <viewAttribute id="SCF_STATUS_ID"/>
+        <viewAttribute id="SCF_CURRENCY"/>
+        <viewAttribute id="SCF1_CP_GUID"/>
+        <viewAttribute id="SCF1_CP_TYPE"/>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="SCF1_ID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="SCF1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_ELIGIBLE" source="ELIGIBLE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CHANGE_HISTORY_CREATEDON" source="CHANGE_HISTORY_CREATEDON"/>
+      </input>
+      <input node="SCF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="CALL_BACK_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDON" source="CHANGE_HISTORY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_DATE" source="E_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_OFFER_AMT" source="OFFER_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_PROCESSING_FEE" source="PROCESSING_FEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF1_CP_TYPE" source="CP_TYPE"/>
+      </input>
+    <joinAttribute name="SCF1_CP_GUID"/>
+    <joinAttribute name="SCF1_CP_TYPE"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCF1">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="CP_GUID"/>
+        <viewAttribute id="CP_TYPE"/>
+        <viewAttribute id="ELIGIBLE"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="APPLICATION_NO"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="ERROR_CODE"/>
+        <viewAttribute id="VALID_TO"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/></input>
+    </calculationView>
+</calculationViews>
+  <logicalModel id="BP_SCF">
+    <attributes>
+      <attribute id="AGGRID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="BP_CP_TYPE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_TYPE"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="BP_CP_TYPE"/>
+      </attribute>
+      <attribute id="BP_CP_GUID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_GUID"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="BP_CP_GUID"/>
+      </attribute>
+      <attribute id="BP_CP_NAME" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_NAME"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="BP_CP_NAME"/>
+      </attribute>
+      <attribute id="BP_ID" key="true" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ID"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="BP_ID"/>
+      </attribute>
+      <attribute id="SCF1_ELIGIBLE" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF1_ELIGIBLE"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="SCF1_ELIGIBLE"/>
+      </attribute>
+      <attribute id="SCF_CALL_BACK_STATUS" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CALL_BACK_STATUS"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="SCF_CALL_BACK_STATUS"/>
+      </attribute>
+      <attribute id="SCF_STATUS_ID" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_STATUS_ID"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="SCF_STATUS_ID"/>
+      </attribute>
+      <attribute id="SCF_CURRENCY" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CURRENCY"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="SCF_CURRENCY"/>
+      </attribute>
+      <attribute id="BP_CHANGE_HISTORY_CREATEDBY" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="BP_SCF" columnName="BP_CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures>
+      <measure id="BP_CHANGE_HISTORY_CREATEDON" order="2" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="BP_CHANGE_HISTORY_CREATEDON"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="BP_CHANGE_HISTORY_CREATEDON"/>
+      </measure>
+      <measure id="SCF1_CHANGE_HISTORY_CREATEDON" order="9" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="SCF1_CHANGE_HISTORY_CREATEDON"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="SCF1_CHANGE_HISTORY_CREATEDON"/>
+      </measure>
+      <measure id="SCF_CHANGE_HISTORY_CREATEDON" order="10" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="SCF_CHANGE_HISTORY_CREATEDON"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="SCF_CHANGE_HISTORY_CREATEDON"/>
+      </measure>
+      <measure id="SCF_E_COMPLETE_DATE" order="11" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="SCF_E_COMPLETE_DATE"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="SCF_E_COMPLETE_DATE"/>
+      </measure>
+      <measure id="SCF_OFFER_AMT" order="12" semanticType="amount" aggregationType="sum" measureType="amount">
+        <descriptions defaultDescription="SCF_OFFER_AMT"/>
+        <unitCurrencyAttribute attributeName="SCF_CURRENCY"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="SCF_OFFER_AMT"/>
+      </measure>
+      <measure id="SCF_PROCESSING_FEE" order="13" semanticType="amount" aggregationType="sum" measureType="amount">
+        <descriptions defaultDescription="SCF_PROCESSING_FEE"/>
+        <unitCurrencyAttribute attributeName="SCF_CURRENCY"/>
+        <measureMapping columnObjectName="BP_SCF" columnName="SCF_PROCESSING_FEE"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="328" y="112"/>
+      
+        <rectangleSize width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="395" y="376"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="SCF" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="302" y="536"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="BP_SCF" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="328" y="217"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="BP" modelObjectNameSpace="BP_SCF" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="SCF1_SCF" modelObjectNameSpace="BP_SCF" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="SCF1_SCF" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="118" y="376"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="SCF1" modelObjectNameSpace="SCF1_SCF" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="SCF" modelObjectNameSpace="SCF1_SCF" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="SCF1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="92" y="536"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

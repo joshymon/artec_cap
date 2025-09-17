@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PYMIS_V_PGH" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_PGH"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_PAYMENTGATEWAY_PG_H">
+      <resourceUri>ARTEC_PC_PAYMENTGATEWAY_PG_H</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PC_PAYMENTGATEWAY_PG_H">
+    <attributes>
+      <attribute id="ADVANCE_FOR" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADVANCE_FOR"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="ADVANCE_FOR"/>
+      </attribute>
+      <attribute id="AGGRID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="BALANCE_AMNT" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BALANCE_AMNT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="BALANCE_AMNT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CH_GUID" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CH_GUID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CH_GUID"/>
+      </attribute>
+      <attribute id="CLR_DOC_CAT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLR_DOC_CAT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CLR_DOC_CAT"/>
+      </attribute>
+      <attribute id="CLR_DOC_CC" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLR_DOC_CC"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CLR_DOC_CC"/>
+      </attribute>
+      <attribute id="CLR_DOC_FY" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLR_DOC_FY"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CLR_DOC_FY"/>
+      </attribute>
+      <attribute id="CLR_DOC_NO" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CLR_DOC_NO"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CLR_DOC_NO"/>
+      </attribute>
+      <attribute id="CP_ACCOUNT_NO" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_ACCOUNT_NO"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CP_ACCOUNT_NO"/>
+      </attribute>
+      <attribute id="CP_NO" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_NO"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CP_NO"/>
+      </attribute>
+      <attribute id="CP_TYPE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_TYPE"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="CURRENCY" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="ENTERED_AMT" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENTERED_AMT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="ENTERED_AMT"/>
+      </attribute>
+      <attribute id="PGH_GUID" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PGH_GUID"/>
+      </attribute>
+      <attribute id="PG_BANK_REF_ID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_BANK_REF_ID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_BANK_REF_ID"/>
+      </attribute>
+      <attribute id="PG_CATEGORY" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_CATEGORY"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_CATEGORY"/>
+      </attribute>
+      <attribute id="PG_ID" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_ID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_ID"/>
+      </attribute>
+      <attribute id="PG_NAME" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_NAME"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_NAME"/>
+      </attribute>
+      <attribute id="PG_PTMNY_TYPE" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_PTMNY_TYPE"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_PTMNY_TYPE"/>
+      </attribute>
+      <attribute id="PG_PYMNT_DATE" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_PYMNT_DATE"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_PYMNT_DATE"/>
+      </attribute>
+      <attribute id="PG_PYMNT_METHOD" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_PYMNT_METHOD"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_PYMNT_METHOD"/>
+      </attribute>
+      <attribute id="PG_PYMNT_STATUS" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_PYMNT_STATUS"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_PYMNT_STATUS"/>
+      </attribute>
+      <attribute id="PG_TEXT" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TEXT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TEXT"/>
+      </attribute>
+      <attribute id="PG_TXN_AMNT" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_AMNT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_AMNT"/>
+      </attribute>
+      <attribute id="PG_TXN_DATE" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_DATE"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_DATE"/>
+      </attribute>
+      <attribute id="PG_TXN_ID" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_ID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_ID"/>
+      </attribute>
+      <attribute id="PG_TXN_MSG" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_MSG"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_MSG"/>
+      </attribute>
+      <attribute id="PG_TXN_STATUS" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_STATUS"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_STATUS"/>
+      </attribute>
+      <attribute id="PG_TXN_TIME" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PG_TXN_TIME"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PG_TXN_TIME"/>
+      </attribute>
+      <attribute id="PYMNT_AMOUNT" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNT_AMOUNT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PYMNT_AMOUNT"/>
+      </attribute>
+      <attribute id="PYMNT_FOR" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNT_FOR"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PYMNT_FOR"/>
+      </attribute>
+      <attribute id="PYMNT_STATUS" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PYMNT_STATUS"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="PYMNT_STATUS"/>
+      </attribute>
+      <attribute id="TDS_AMT" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TDS_AMT"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="TDS_AMT"/>
+      </attribute>
+      <attribute id="TRACK_ID" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TRACK_ID"/>
+        <keyMapping columnObjectName="PAYMENTGATEWAY_PG_H" columnName="TRACK_ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,1091 @@
+{
+    "/app/src/xsjs/lib/XSUI/Services/Func.xsjs": {
+        "file_name": "Func.xsjs",
+        "file_tokens": 124,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "Multiply"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/SCF1/task.xsjs": {
+        "file_name": "task.xsjs",
+        "file_tokens": 70,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "scf1_excel"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_SCF1\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_SCF1\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/BP/task.xsjs": {
+        "file_name": "task.xsjs",
+        "file_tokens": 66,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "bp_excel"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_BP\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_BP\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/Demo1.xsjs": {
+        "file_name": "Demo1.xsjs",
+        "file_tokens": 656,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "JOB_EMAIL_ALERT"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "SELECT distinct NAME,STATUS,CAST(finished_at AS DATE) AS DATE_EXECUTED from _SYS_XS.JOB_LOG WHERE NAME NOT LIKE '%ENVIAR_MAIL' AND finished_at LIKE CONCAT(cast (now() as date),'%') AND NAME LIKE '%ARTEC_SDI%JOB%'",
+                    "type": "function",
+                    "table_name": "_SYS_XS.JOB_LOG"
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/JobAlert.xsjs": {
+        "file_name": "JobAlert.xsjs",
+        "file_tokens": 656,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "JOB_EMAIL_ALERT"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "SELECT distinct NAME,STATUS,CAST(finished_at AS DATE) AS DATE_EXECUTED from _SYS_XS.JOB_LOG WHERE NAME NOT LIKE '%ENVIAR_MAIL' AND finished_at LIKE CONCAT(cast (now() as date),'%') AND NAME LIKE '%ARTEC_SDI%JOB%'",
+                    "type": "function",
+                    "table_name": "_SYS_XS.JOB_LOG"
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/task.xsjs": {
+        "file_name": "task.xsjs",
+        "file_tokens": 70,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "uaccnt_excel"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_UACCNT\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_UACCNT\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/PG_H/task.xsjs": {
+        "file_name": "task.xsjs",
+        "file_tokens": 69,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "pg_h_excel"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_PG_H\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_PG_H\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR8.xsjs": {
+        "file_name": "NR8.xsjs",
+        "file_tokens": 220,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "connection.loadProcedure(\"ARTEC.NR.ApplcationNo::NR_PROC\")",
+                    "type": "action",
+                    "table_name": "ARTEC.NR.ApplcationNo::NR_PROC"
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR4.xsjs": {
+        "file_name": "NR4.xsjs",
+        "file_tokens": 314,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "select \"ARTEC_SDI.XSJS::AGGR01\".NEXTVAL as \"NumberRangeAGGR\" from dummy",
+                    "type": "function",
+                    "table_name": "dummy"
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR2.xsjs": {
+        "file_name": "NR2.xsjs",
+        "file_tokens": 151,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [
+                        "AggrIn"
+                    ],
+                    "name": "NumberRange"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR3.xsjs": {
+        "file_name": "NR3.xsjs",
+        "file_tokens": 139,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getIntData"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\"(?,?)",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR.xsjs": {
+        "file_name": "NR.xsjs",
+        "file_tokens": 124,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [
+                        "aggrin"
+                    ],
+                    "name": "numberrange"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "connection.loadprocedure('AGGR0MIS','ARTEC_SDI.XSJS::NR_PROC10()')",
+                    "type": "action",
+                    "table_name": "ARTEC_SDI.XSJS::NR_PROC10()"
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR1.xsjs": {
+        "file_name": "NR1.xsjs",
+        "file_tokens": 170,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "NumberRange"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\"(?,?)",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.XSJS::NR_PROC10\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR6.xsjs": {
+        "file_name": "NR6.xsjs",
+        "file_tokens": 112,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR7.xsjs": {
+        "file_name": "NR7.xsjs",
+        "file_tokens": 219,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/SCF/task.xsjs": {
+        "file_name": "task.xsjs",
+        "file_tokens": 68,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "scf_excel"
+                }
+            ],
+            "sql_queries": [
+                {
+                    "sql_query": "CALL \"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_SCF\"()",
+                    "type": "action",
+                    "table_name": "\"AGGR0MIS\".\"ARTEC_SDI.CONF::DataLoad_SCF\""
+                }
+            ]
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/mis.xsodata": {
+        "file_name": "mis.xsodata",
+        "file_tokens": 42,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/oprodcedure.xsodata": {
+        "file_name": "oprodcedure.xsodata",
+        "file_tokens": 36,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC_SDI.ODATA",
+                    "procedure_name": "demo"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/seq.xsodata": {
+        "file_name": "seq.xsodata",
+        "file_tokens": 37,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "User.UACCNT"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/CV/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 38,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PC/ApplicationNo/NR.xsjs": {
+        "file_name": "NR.xsjs",
+        "file_tokens": 219,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PCMISGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 61,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_H"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/ApplicationNo/NR.xsjs": {
+        "file_name": "NR.xsjs",
+        "file_tokens": 219,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/TrackID/NR.xsjs": {
+        "file_name": "NR.xsjs",
+        "file_tokens": 218,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/LimitIDPrefix/NR.xsjs": {
+        "file_name": "NR.xsjs",
+        "file_tokens": 220,
+        "classification": {
+            "imports": [],
+            "functions_created_in_the_file": [
+                {
+                    "input_args": [],
+                    "name": "getNumberRange"
+                }
+            ],
+            "sql_queries": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/LimitIDPrefixNumberRange.xsodata": {
+        "file_name": "LimitIDPrefixNumberRange.xsodata",
+        "file_tokens": 47,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/ApplicationNoNumberRange.xsodata": {
+        "file_name": "ApplicationNoNumberRange.xsodata",
+        "file_tokens": 45,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PYGW",
+                    "procedure_name": "ApplicationNoNumberRange"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/TrackIDNumberRange.xsodata": {
+        "file_name": "TrackIDNumberRange.xsodata",
+        "file_tokens": 45,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 3204,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "EnhancementLimit.ENHLMT"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_ENHLMT"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_SCFENHLMT"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_BPRENEWAL"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF1"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.BPCNTP"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.BP"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_BPCNTP"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_BPHEADER"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.PAYM"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.PAYMI"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.AP_PAYM"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.AP_PAYMI"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.COR"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.SCP"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.SCP_1"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "User.UACCNT"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "User.COMMN"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_USERCUSTOMER"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.AGGRView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.DCCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.OPCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.SCCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.IDCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_UACCNTBYPARTNER"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_ESIGNCONTRACTSIGNERS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_ESIGNCONTRACT"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_VENDOR"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF2"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Reports.CF_MIS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Reports.SCF_DLR_OS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF3"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.VENDORCOR"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.SCP_2"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Reports.LSR_1"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.OPENITEMS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Payments.OPENITEM_HEADER"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF_RETRY"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "ESignContract.ESIGNCAL"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.SCP_3"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.SCP_4"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.IFSC"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_REFMIS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_APREVERSE"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_LEADS_MIS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_SCPBANKDATA"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_APPAYM"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.RFCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.DFCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.PFCNFGView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF4View"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "Config.AGGR_FACILITYView"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_BPSCF_ELIG_BP_SCF4_SCF1"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_BPSCF_ELIG_BPCNTP_SCF4"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_PY_CONFIGS"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_TRCKID_DUPL"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "V_CFMIS_STATUS"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/AppicationNoNumberRange.xsodata": {
+        "file_name": "AppicationNoNumberRange.xsodata",
+        "file_tokens": 45,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PCGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 2496,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CAT"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CATView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CH"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CHView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CS"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CSView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CPREF"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_CPREFView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_H"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_HView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_I"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PaymentGateway.PG_IView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATST"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATST_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATSTView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_ATST"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATYP"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATYP_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.ATYPView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_ATYP"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TSET"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TSET_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TSETView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_TSET"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TYPS"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TYPS_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TYPSView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_TYPS"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TYPVAL"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.TYPVALView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_TVAL"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.VALHLP"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Typesets.VALHLPView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "SUBSCRIPTION_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "INV_H_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "INV_I_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "MATERIAL_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "SUBSCRIBER_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PG_H_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PG_I_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PG_CH_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "PG_CS_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "COND_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "IRLNK_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "SUBSCR_OD_V"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.ALOG_H"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.ALOG_HView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.ALOG_M"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.ALOG_MView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "DocumentRepository.DOCREP_CNFG"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "DocumentRepository.DOCREP_CNFGView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "DocumentRepository.DOCREP"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "DocumentRepository.DOCREPView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Notification.EVENT_DEST"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Notification.EVENT_DESTView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Reports.MIS_SCHEDULER"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Reports.MIS_SCHEDULERView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Extractor.H2H_ACF"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Extractor.H2H_ACFView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Extractor.H2H_ICF"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Extractor.H2H_ICFView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.MSG_LOG"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Logs.MSG_LOGView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Workflow.APPROVAL"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Workflow.APPROVALView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Survey.SURVEY_DATA"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Survey.SURVEY_DATAView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_APPLOGMSG"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_SUBSCR_SUM"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/SPGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 95,
+        "classification": {
+            "procedures_called": [],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PUGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 688,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRLGN"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRLGNView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_USRPRF"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRPRT"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRPRTView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRATH"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRATHView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_PRRL"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_ORTY"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_PRTY"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "UserMgmt.USRATHView"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "V_USRPREF"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.ORGTYP"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.ORGTYP_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.PARTRL"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.PRRL_T"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.PARTTY"
+                },
+                {
+                    "directory": "ARTEC.PC",
+                    "procedure_name": "Customizing.PRTY_T"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    },
+    "/app/src/xsjs/lib/ARTEC/PYMISGW/service.xsodata": {
+        "file_name": "service.xsodata",
+        "file_tokens": 363,
+        "classification": {
+            "procedures_called": [
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "SupplyChainFinance.SCF1"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "BusinessPartner.BP"
+                },
+                {
+                    "directory": "ARTEC.PY",
+                    "procedure_name": "User.UACCNT"
+                }
+            ],
+            "xsjslib_called": []
+        }
+    }
+}

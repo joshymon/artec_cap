@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PY_V_ENHLMT" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="TEST1"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT">
+      <resourceUri>ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_ENHANCEMENTLIMIT_ENHLMT">
+    <attributes>
+      <attribute id="ACCPTD_LIMIT" order="1" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCEPTED LIMIT"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ACCPTD_LIMIT"/>
+      </attribute>
+      <attribute id="ADDRESS1" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS1"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ADDRESS1"/>
+      </attribute>
+      <attribute id="ADDRESS2" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS2"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ADDRESS2"/>
+      </attribute>
+      <attribute id="ADDRESS3" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS3"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ADDRESS3"/>
+      </attribute>
+      <attribute id="ADDRESS4" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS4"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ADDRESS4"/>
+      </attribute>
+      <attribute id="AGGRID" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="CAANO" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENT ACCOUNTNO"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CAANO"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED AT"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED BY"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED ON"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED AT"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED BY"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDON" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED ON"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="SOURCE" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CITY" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CITY"/>
+      </attribute>
+      <attribute id="CP_GUID" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP NO"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CP_NAME" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP NAME"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CP_NAME"/>
+      </attribute>
+      <attribute id="CP_TYPE" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP TYPE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="CURRENCY" order="19" semanticType="currencyCode" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY">
+          <comment text=""/>
+        </descriptions>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="ENH_PERIOD" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENHANCEMENT PERIOD"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ENH_PERIOD"/>
+      </attribute>
+      <attribute id="ENH_TYPE" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ENHANCEMENT TYPE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ENH_TYPE"/>
+      </attribute>
+      <attribute id="ID" key="true" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ID"/>
+      </attribute>
+      <attribute id="IP_ADDRESS" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IP ADDRESS"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="IP_ADDRESS"/>
+      </attribute>
+      <attribute id="LEGAL_STATUS" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL STATUS"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="LEGAL_STATUS"/>
+      </attribute>
+      <attribute id="ODANO" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OD ACCOUNT NO"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="ODANO"/>
+      </attribute>
+      <attribute id="PAN" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAN"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="PAN"/>
+      </attribute>
+      <attribute id="PARTNER_NAMES" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER NAMES"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="PARTNER_NAMES"/>
+      </attribute>
+      <attribute id="PINCODE" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PINCODE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="PINCODE"/>
+      </attribute>
+      <attribute id="PROCESS_FEE" order="29" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSING FEE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="PROCESS_FEE"/>
+      </attribute>
+      <attribute id="PROPOSD_LIMIT" order="30" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROPOSED LIMI"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="PROPOSD_LIMIT"/>
+      </attribute>
+      <attribute id="VALID_TO" order="31" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID TO"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="VALID_TO"/>
+      </attribute>
+      <attribute id="SANCTION_LIMIT" order="32" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SANCTION LIMIT"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="SANCTION_LIMIT"/>
+      </attribute>
+      <attribute id="STATE" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="STATE"/>
+      </attribute>
+      <attribute id="STATUS_ID" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUS ID"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="STATUS_ID"/>
+      </attribute>
+      <attribute id="SCF_ID" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCFID"/>
+        <keyMapping columnObjectName="ENHANCEMENTLIMIT_ENHLMT" columnName="SCF_ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

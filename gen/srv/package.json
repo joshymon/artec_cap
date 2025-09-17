@@ -1,0 +1,72 @@
+{
+  "name": "ARTEC_CAP",
+  "version": "1.0.0",
+  "description": "A migrated CAP Project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.15.4",
+    "@cap-js/hana": "0.0.1",
+    "@sap/cds": "^8",
+    "@sap/cds-dk": "9.2.1",
+    "@sap/cds-lsp": "^8.8.1",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.9.0",
+    "sqlite3": "^5.0.2",
+    "@sap/cds-dk": "^8.8.2"
+  },
+  "scripts": {
+    "start": "cds-serve" 
+   },
+  "cds": {
+    
+    "odata": {
+      "version": "v2"
+    },
+    "requires": {
+
+    },
+    "cov2ap": {
+      "plugin": true,
+      "path": "v2"
+    },
+    "cdsc": {
+      "docs": true
+    },
+    "hana": {
+      "comments": true,
+      "deploy-format": "hdbtable"
+    },
+    "build": {
+      "target": "gen",
+      "tasks": [
+        {
+          "for": "hana",
+          "src": "db",
+          "options": {
+            "model": [
+              "srv",
+              "app",
+              "db"
+            ]
+          }
+        },
+        {
+          "for" :"nodejs",
+          "src": "srv",
+          "options": {
+            "model": [
+              "srv",
+              "app",
+              "db"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

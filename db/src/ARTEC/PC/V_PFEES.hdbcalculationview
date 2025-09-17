@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PC_V_PFEES" applyPrivilegeType="SQL_ANALYTIC_PRIVILEGE" dataCategory="CUBE" schemaVersion="2.3" defaultClient="$$client$$" visibility="reportingEnabled" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="V_PFEES"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PC_V_PGH" type="CALCULATION_VIEW">
+    <viewAttributes allViewAttributes="true"/>
+    <resourceUri>ARTEC_PC_V_PGH</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="FACT">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="TXNERRORCODE"/>
+      <viewAttribute id="TRACKID"/>
+      <viewAttribute id="TDSAMT"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="REMARKS"/>
+      <viewAttribute id="PYMNTFOR"/>
+      <viewAttribute id="PAYMENTTYPEID"/>
+      <viewAttribute id="PAYMENTSTATUSID"/>
+      <viewAttribute id="PAYMENTAMOUNT" aggregationType="sum"/>
+      <viewAttribute id="PGTXNTIME"/>
+      <viewAttribute id="PGTXNSTATUSID"/>
+      <viewAttribute id="PGTXNMESSAGE"/>
+      <viewAttribute id="PGTXNERRORCODE"/>
+      <viewAttribute id="PGTXNDATE"/>
+      <viewAttribute id="PGTXNAMOUNT"/>
+      <viewAttribute id="PGTRANSACTIONID"/>
+      <viewAttribute id="PGPAYMNETPOSTINGSTATUSID"/>
+      <viewAttribute id="PGPAYMENTMETHODID"/>
+      <viewAttribute id="PGPAYMENTGUID"/>
+      <viewAttribute id="PGPAYMENTDATE"/>
+      <viewAttribute id="PGNAME"/>
+      <viewAttribute id="PGID"/>
+      <viewAttribute id="PGCATEGORYID"/>
+      <viewAttribute id="PGBANKREFID"/>
+      <viewAttribute id="ENTEREDAMT"/>
+      <viewAttribute id="ADVANCEFOR"/>
+      <viewAttribute id="CURRENCY"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="CONFIGHEADERGUID"/>
+      <viewAttribute id="CLEARINGDOCNO"/>
+      <viewAttribute id="CLEARINGDOCFISCALYEAR"/>
+      <viewAttribute id="CLEARINGDOCCOMPANYCODEID"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="CPTYPEID"/>
+      <viewAttribute id="CPNO"/>
+      <viewAttribute id="CPACCOUNTNO"/>
+      <viewAttribute id="CLRDOCCAT"/>
+      <viewAttribute id="BALANCEAMOUNT"/>
+      <viewAttribute id="AGGREGATORREF"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PC_V_PGH">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TXNERRORCODE" source="TXNERRORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TDSAMT" source="TDSAMT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REMARKS" source="REMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PYMNTFOR" source="PYMNTFOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTTYPEID" source="PAYMENTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTSTATUSID" source="PAYMENTSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTAMOUNT" source="PAYMENTAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNTIME" source="PGTXNTIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNSTATUSID" source="PGTXNSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNMESSAGE" source="PGTXNMESSAGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNERRORCODE" source="PGTXNERRORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNDATE" source="PGTXNDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNAMOUNT" source="PGTXNAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTRANSACTIONID" source="PGTRANSACTIONID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGPAYMNETPOSTINGSTATUSID" source="PGPAYMNETPOSTINGSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGPAYMENTMETHODID" source="PGPAYMENTMETHODID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGPAYMENTGUID" source="PGPAYMENTGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGPAYMENTDATE" source="PGPAYMENTDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGNAME" source="PGNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGID" source="PGID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGCATEGORYID" source="PGCATEGORYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGBANKREFID" source="PGBANKREFID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTEREDAMT" source="ENTEREDAMT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADVANCEFOR" source="ADVANCEFOR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONFIGHEADERGUID" source="CONFIGHEADERGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCNO" source="CLEARINGDOCNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCFISCALYEAR" source="CLEARINGDOCFISCALYEAR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCCOMPANYCODEID" source="CLEARINGDOCCOMPANYCODEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPEID" source="CPTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNO" source="CPNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPACCOUNTNO" source="CPACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLRDOCCAT" source="CLRDOCCAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BALANCEAMOUNT" source="BALANCEAMOUNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORREF" source="AGGREGATORREF"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="FACT">
+  <attributes>
+    <attribute id="AGGREGATORID_1" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID_1"/>
+      <keyMapping columnObjectName="FACT" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="TXNERRORCODE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TXNERRORCODE"/>
+      <keyMapping columnObjectName="FACT" columnName="TXNERRORCODE"/>
+    </attribute>
+    <attribute id="TRACKID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRACKID"/>
+      <keyMapping columnObjectName="FACT" columnName="TRACKID"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID"/>
+      <keyMapping columnObjectName="FACT" columnName="SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="SOURCE" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="FACT" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="REMARKS" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REMARKS"/>
+      <keyMapping columnObjectName="FACT" columnName="REMARKS"/>
+    </attribute>
+    <attribute id="PYMNTFOR" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PYMNTFOR"/>
+      <keyMapping columnObjectName="FACT" columnName="PYMNTFOR"/>
+    </attribute>
+    <attribute id="PAYMENTTYPEID" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTTYPEID"/>
+      <keyMapping columnObjectName="FACT" columnName="PAYMENTTYPEID"/>
+    </attribute>
+    <attribute id="PAYMENTSTATUSID" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTSTATUSID"/>
+      <keyMapping columnObjectName="FACT" columnName="PAYMENTSTATUSID"/>
+    </attribute>
+    <attribute id="PGTXNTIME" order="12" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNTIME"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTXNTIME"/>
+    </attribute>
+    <attribute id="PGTXNSTATUSID" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNSTATUSID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTXNSTATUSID"/>
+    </attribute>
+    <attribute id="PGTXNMESSAGE" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNMESSAGE"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTXNMESSAGE"/>
+    </attribute>
+    <attribute id="PGTXNERRORCODE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNERRORCODE"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTXNERRORCODE"/>
+    </attribute>
+    <attribute id="PGTXNDATE" order="16" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNDATE"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTXNDATE"/>
+    </attribute>
+    <attribute id="PGTRANSACTIONID" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTRANSACTIONID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGTRANSACTIONID"/>
+    </attribute>
+    <attribute id="PGPAYMNETPOSTINGSTATUSID" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGPAYMNETPOSTINGSTATUSID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGPAYMNETPOSTINGSTATUSID"/>
+    </attribute>
+    <attribute id="PGPAYMENTMETHODID" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGPAYMENTMETHODID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGPAYMENTMETHODID"/>
+    </attribute>
+    <attribute id="PGPAYMENTGUID" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGPAYMENTGUID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGPAYMENTGUID"/>
+    </attribute>
+    <attribute id="PGPAYMENTDATE" order="22" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGPAYMENTDATE"/>
+      <keyMapping columnObjectName="FACT" columnName="PGPAYMENTDATE"/>
+    </attribute>
+    <attribute id="PGNAME" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGNAME"/>
+      <keyMapping columnObjectName="FACT" columnName="PGNAME"/>
+    </attribute>
+    <attribute id="PGID" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGID"/>
+    </attribute>
+    <attribute id="PGCATEGORYID" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGCATEGORYID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGCATEGORYID"/>
+    </attribute>
+    <attribute id="PGBANKREFID" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGBANKREFID"/>
+      <keyMapping columnObjectName="FACT" columnName="PGBANKREFID"/>
+    </attribute>
+    <attribute id="ADVANCEFOR" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADVANCEFOR"/>
+      <keyMapping columnObjectName="FACT" columnName="ADVANCEFOR"/>
+    </attribute>
+    <attribute id="CURRENCY" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="FACT" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="FACT" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="32" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="FACT" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="CONFIGHEADERGUID" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONFIGHEADERGUID"/>
+      <keyMapping columnObjectName="FACT" columnName="CONFIGHEADERGUID"/>
+    </attribute>
+    <attribute id="CLEARINGDOCNO" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLEARINGDOCNO"/>
+      <keyMapping columnObjectName="FACT" columnName="CLEARINGDOCNO"/>
+    </attribute>
+    <attribute id="CLEARINGDOCFISCALYEAR" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLEARINGDOCFISCALYEAR"/>
+      <keyMapping columnObjectName="FACT" columnName="CLEARINGDOCFISCALYEAR"/>
+    </attribute>
+    <attribute id="CLEARINGDOCCOMPANYCODEID" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLEARINGDOCCOMPANYCODEID"/>
+      <keyMapping columnObjectName="FACT" columnName="CLEARINGDOCCOMPANYCODEID"/>
+    </attribute>
+    <attribute id="CHANGEDON" order="37" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON"/>
+      <keyMapping columnObjectName="FACT" columnName="CHANGEDON"/>
+    </attribute>
+    <attribute id="CHANGEDBY" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY"/>
+      <keyMapping columnObjectName="FACT" columnName="CHANGEDBY"/>
+    </attribute>
+    <attribute id="CPTYPEID" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPTYPEID"/>
+      <keyMapping columnObjectName="FACT" columnName="CPTYPEID"/>
+    </attribute>
+    <attribute id="CPNO" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNO"/>
+      <keyMapping columnObjectName="FACT" columnName="CPNO"/>
+    </attribute>
+    <attribute id="CPACCOUNTNO" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPACCOUNTNO"/>
+      <keyMapping columnObjectName="FACT" columnName="CPACCOUNTNO"/>
+    </attribute>
+    <attribute id="CLRDOCCAT" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLRDOCCAT"/>
+      <keyMapping columnObjectName="FACT" columnName="CLRDOCCAT"/>
+    </attribute>
+    <attribute id="AGGREGATORREF" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORREF"/>
+      <keyMapping columnObjectName="FACT" columnName="AGGREGATORREF"/>
+    </attribute>
+    <attribute id="AGGREGATORID$local">
+      <keyMapping columnObjectName="FACT" columnName="AGGREGATORID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="TDSAMT" order="4" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="TDSAMT"/>
+      <measureMapping columnObjectName="FACT" columnName="TDSAMT"/>
+    </measure>
+    <measure id="PAYMENTAMOUNT" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PAYMENTAMOUNT"/>
+      <measureMapping columnObjectName="FACT" columnName="PAYMENTAMOUNT"/>
+    </measure>
+    <measure id="PGTXNAMOUNT" order="17" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PGTXNAMOUNT"/>
+      <measureMapping columnObjectName="FACT" columnName="PGTXNAMOUNT"/>
+    </measure>
+    <measure id="ENTEREDAMT" order="27" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="ENTEREDAMT"/>
+      <measureMapping columnObjectName="FACT" columnName="ENTEREDAMT"/>
+    </measure>
+    <measure id="CREATEDON" order="30" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="CREATEDON"/>
+      <measureMapping columnObjectName="FACT" columnName="CREATEDON"/>
+    </measure>
+    <measure id="CHANGEDAT" order="39" aggregationType="min" measureType="simple">
+      <descriptions defaultDescription="CHANGEDAT"/>
+      <measureMapping columnObjectName="FACT" columnName="CHANGEDAT"/>
+    </measure>
+    <measure id="BALANCEAMOUNT" order="44" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="BALANCEAMOUNT"/>
+      <measureMapping columnObjectName="FACT" columnName="BALANCEAMOUNT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+  <sharedDimensions>
+    <logicalJoin associatedObjectUri="ARTEC_PY_V_AGGRID">
+      <attributes>
+        <attributeRef>#AGGREGATORID$local</attributeRef>
+      </attributes>
+      <associatedAttributeNames>
+        <attributeName>AGGREGATORID</attributeName>
+      </associatedAttributeNames>
+      <properties joinType="referential" cardinality="CN_1" joinOperator="Equal"/>
+      <associatedAttributeFeatures/>
+    </logicalJoin>
+  </sharedDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="FACT" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="87" y="211"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

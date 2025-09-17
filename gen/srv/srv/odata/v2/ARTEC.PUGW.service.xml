@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="ARTEC.PUGW.service" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Annotation Term="Core.Links" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Collection>
+          <Record>
+            <PropertyValue Property="rel" String="author"/>
+            <PropertyValue Property="href" String="https://cap.cloud.sap"/>
+          </Record>
+        </Collection>
+      </Annotation>
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="USRLGN" EntityType="ARTEC.PUGW.service.USRLGN"/>
+        <EntitySet Name="UserLogins" EntityType="ARTEC.PUGW.service.UserLogins"/>
+        <EntitySet Name="UserProfiles" EntityType="ARTEC.PUGW.service.UserProfiles"/>
+        <EntitySet Name="USRPRT" EntityType="ARTEC.PUGW.service.USRPRT"/>
+        <EntitySet Name="UserPartners" EntityType="ARTEC.PUGW.service.UserPartners"/>
+        <EntitySet Name="USRATH" EntityType="ARTEC.PUGW.service.USRATH"/>
+        <EntitySet Name="UserAuthSet" EntityType="ARTEC.PUGW.service.UserAuthSet"/>
+        <EntitySet Name="PartnerRoles" EntityType="ARTEC.PUGW.service.PartnerRoles"/>
+        <EntitySet Name="OrgTypes" EntityType="ARTEC.PUGW.service.OrgTypes"/>
+        <EntitySet Name="PartnerTypes" EntityType="ARTEC.PUGW.service.PartnerTypes"/>
+        <EntitySet Name="UserProfileAuthSet" EntityType="ARTEC.PUGW.service.UserProfileAuthSet"/>
+        <EntitySet Name="UserPreferences" EntityType="ARTEC.PUGW.service.UserPreferences"/>
+        <EntitySet Name="ORGTYP" EntityType="ARTEC.PUGW.service.ORGTYP"/>
+        <EntitySet Name="ORGTYP_T" EntityType="ARTEC.PUGW.service.ORGTYP_T"/>
+        <EntitySet Name="PARTRL" EntityType="ARTEC.PUGW.service.PARTRL"/>
+        <EntitySet Name="PRRL_T" EntityType="ARTEC.PUGW.service.PRRL_T"/>
+        <EntitySet Name="PARTTY" EntityType="ARTEC.PUGW.service.PARTTY"/>
+        <EntitySet Name="PRTY_T" EntityType="ARTEC.PUGW.service.PRTY_T"/>
+      </EntityContainer>
+      <EntityType Name="USRLGN">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGIN_ID"/>
+          <PropertyRef Name="ERP_SYSTEM_ID"/>
+          <PropertyRef Name="AUTH_ORG_TYPE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGIN_ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERP_SYSTEM_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AUTH_ORG_TYPE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AUTH_ORG_VALUE" Type="Edm.String" MaxLength="32"/>
+        <Property Name="AUTH_ORG_VAL_DSC" Type="Edm.String" MaxLength="40"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="UserLogins">
+        <Key>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGINID"/>
+          <PropertyRef Name="AGGREGATORID"/>
+        </Key>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="UserProfiles">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGINID"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="USRPRT">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGIN_ID"/>
+          <PropertyRef Name="ERP_SYSTEM_ID"/>
+          <PropertyRef Name="PARTNER_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGIN_ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERP_SYSTEM_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PARTNER_ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="PARTNER_TYPE" Type="Edm.String" MaxLength="6"/>
+        <Property Name="PARTNER_NAME" Type="Edm.String" MaxLength="40"/>
+        <Property Name="IS_ACTIVE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="UserPartners">
+        <Key>
+          <PropertyRef Name="LOGINID"/>
+          <PropertyRef Name="ERPSYSTEMID"/>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="PARTNERID"/>
+          <PropertyRef Name="APPLICATION"/>
+        </Key>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERPSYSTEMID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PARTNERID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="USRATH">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGIN_ID"/>
+          <PropertyRef Name="ERP_SYSTEM_ID"/>
+          <PropertyRef Name="AUTH_ORG_TYPE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGIN_ID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERP_SYSTEM_ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AUTH_ORG_TYPE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="AUTH_ORG_VALUE" Type="Edm.String" MaxLength="32"/>
+        <Property Name="AUTH_ORG_VAL_DSC" Type="Edm.String" MaxLength="40"/>
+        <Property Name="CREATEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CREATEDAT" Type="Edm.Time"/>
+        <Property Name="CREATEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="CHANGEDBY" Type="Edm.String" MaxLength="32"/>
+        <Property Name="CHANGEDAT" Type="Edm.Time"/>
+        <Property Name="CHANGEDON" Type="Edm.DateTime" sap:display-format="Date"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SOURCE_REF_ID" Type="Edm.String" MaxLength="50"/>
+      </EntityType>
+      <EntityType Name="UserAuthSet">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGINID"/>
+          <PropertyRef Name="ERPSYSTEMID"/>
+          <PropertyRef Name="AUTHORGTYPEID"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERPSYSTEMID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AUTHORGTYPEID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PartnerRoles">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="ROLEID"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ROLEID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="OrgTypes">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="ORGTYPEID"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ORGTYPEID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PartnerTypes">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="PARTNERTYPEID"/>
+          <PropertyRef Name="LANGUAGE"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PARTNERTYPEID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="UserProfileAuthSet">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGINID"/>
+          <PropertyRef Name="ERPSYSTEMID"/>
+          <PropertyRef Name="AUTHORGTYPEID"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+        <Property Name="ERPSYSTEMID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="AUTHORGTYPEID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="UserPreferences">
+        <Key>
+          <PropertyRef Name="AGGREGATORID"/>
+          <PropertyRef Name="APPLICATION"/>
+          <PropertyRef Name="LOGINID"/>
+        </Key>
+        <Property Name="AGGREGATORID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="APPLICATION" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LOGINID" Type="Edm.String" MaxLength="36" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="ORGTYP">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="ORG_TYPE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ORG_TYPE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="DATA_TYPE" Type="Edm.String" MaxLength="4"/>
+        <Property Name="LENGTH" Type="Edm.String" MaxLength="6"/>
+      </EntityType>
+      <EntityType Name="ORGTYP_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="ORG_TYPE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ORG_TYPE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ORG_TYPE_DESC" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="PARTRL">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="ROLE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ROLE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="ROLE_CAT_ID" Type="Edm.String" MaxLength="1"/>
+      </EntityType>
+      <EntityType Name="PRRL_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="ROLE_ID"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="ROLE_ID" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ROLE_DESC" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <EntityType Name="PARTTY">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="PARTNER_TYPE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PARTNER_TYPE" Type="Edm.String" MaxLength="6" Nullable="false"/>
+      </EntityType>
+      <EntityType Name="PRTY_T">
+        <Key>
+          <PropertyRef Name="AGGRID"/>
+          <PropertyRef Name="PARTNER_TYPE"/>
+        </Key>
+        <Property Name="AGGRID" Type="Edm.String" MaxLength="50" Nullable="false"/>
+        <Property Name="PARTNER_TYPE" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="LANGUAGE" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PARTNER_TYPE_DES" Type="Edm.String" MaxLength="40"/>
+      </EntityType>
+      <Annotations Target="ARTEC.PUGW.service.EntityContainer/USRLGN" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserProfiles/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserProfiles/APPLICATION" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Application"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserProfiles/LOGINID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LoginID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.EntityContainer/USRPRT" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.EntityContainer/USRATH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerRoles/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerRoles/ROLEID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="RoleID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerRoles/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.OrgTypes/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.OrgTypes/ORGTYPEID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="OrgTypeID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.OrgTypes/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerTypes/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerTypes/PARTNERTYPEID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="PartnerTypeID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.PartnerTypes/LANGUAGE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Language"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserPreferences/AGGREGATORID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="AggregatorID"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserPreferences/APPLICATION" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="Application"/>
+      </Annotations>
+      <Annotations Target="ARTEC.PUGW.service.UserPreferences/LOGINID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Common.Label" String="LoginID"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PYMIS_V_UACCNT" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_UACCNT"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_USER_UACCNT">
+      <resourceUri>ARTEC_PY_USER_UACCNT</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_USER_UACCNT">
+    <attributes>
+      <attribute id="AGGRID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="BANK_ACCNT_NO" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANK_ACCNT_NO"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="BANK_ACCNT_NO"/>
+      </attribute>
+      <attribute id="BANK_ACCNT_STS" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANK_ACCNT_STS"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="BANK_ACCNT_STS"/>
+      </attribute>
+      <attribute id="BANK_ACCNT_TYPE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANK_ACCNT_TYPE"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="BANK_ACCNT_TYPE"/>
+      </attribute>
+      <attribute id="BANK_COUNTRY" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANK_COUNTRY"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="BANK_COUNTRY"/>
+      </attribute>
+      <attribute id="BANK_KEY" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANK_KEY"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="BANK_KEY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CORPID" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CORPID"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="CORPID"/>
+      </attribute>
+      <attribute id="DDB_ACTIVE" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DDB_ACTIVE"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="DDB_ACTIVE"/>
+      </attribute>
+      <attribute id="ID" key="true" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="ID"/>
+      </attribute>
+      <attribute id="LOGIN_ID" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGIN_ID"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="LOGIN_ID"/>
+      </attribute>
+      <attribute id="USERID" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USERID"/>
+        <keyMapping columnObjectName="USER_UACCNT" columnName="USERID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

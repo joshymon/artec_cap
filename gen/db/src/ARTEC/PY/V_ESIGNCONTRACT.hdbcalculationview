@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PY_V_ESIGNCONTRACT" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_ESIGNCONTRACT"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+    <attributes>
+      <attribute id="AGGREGATORID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="CPGUID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP GUID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CPTYPE" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPTYPE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="ID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="ID"/>
+      </attribute>
+      <attribute id="CONTRACTID" key="true" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E SIGN CONTRACT ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="E_CONTRACT_ID"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED AT"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDON" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED ON"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CREATEDON"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute id="LOGINID" order="8" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGIN ID"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="32">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="CONTRACTTYPEID" order="9" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTRACT TYPE"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="6">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="CONTRACTTYPEDESC" order="10" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTRACT TYPE DESC"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="40">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="VALIDTO" order="11" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID TO"/>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="VALIDTILL" order="12" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID TILL"/>
+        <keyCalculation datatype="TIME" expressionLanguage="COLUMN_ENGINE">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="ESIGNURL" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ESIGN URL"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="1000">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="CONTRACTURL" order="14" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONTRACT URL"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="1000">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+      <calculatedAttribute id="ISEXECUTED" order="15" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IS EXECUTED"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="1">
+          <formula>upper('')</formula>
+        </keyCalculation>
+        </calculatedAttribute>
+    </calculatedAttributes>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

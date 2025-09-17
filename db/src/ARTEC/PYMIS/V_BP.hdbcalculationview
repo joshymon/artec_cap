@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PYMIS_V_BP" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_BP"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_BP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_BP</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_BUSINESSPARTNER_BP">
+    <attributes>
+      <attribute id="AGGRID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CP_GUID" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_GUID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CP_NAME" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_NAME"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CP_NAME"/>
+      </attribute>
+      <attribute id="CP_TYPE" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_TYPE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="ID" key="true" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="ID"/>
+      </attribute>
+      <attribute id="INCORP_DATE" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INCORP_DATE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="INCORP_DATE"/>
+      </attribute>
+      <attribute id="LEGAL_STATUS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL_STATUS"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="LEGAL_STATUS"/>
+      </attribute>
+      <attribute id="UTIL_DISTRICT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UTIL_DISTRICT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_BP" columnName="UTIL_DISTRICT"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="92" y="112"/>
+      
+        <rectangleSize width="160"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

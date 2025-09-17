@@ -1,0 +1,48 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PYMIS_V_SCF {
+      ACC_NO                   : String(18)     @title: 'ACC_NO';
+      ADDLN_PRD_INT_RA         : String(50)     @title: 'ADDLN_PRD_INT_RA';
+      ADDLN_TENOR_OF_P         : String(20)     @title: 'ADDLN_TENOR_OF_P';
+      AGGRID                   : String(50)     @title: 'AGGRID';
+      APPLICANT_IP             : String(40)     @title: 'APPLICANT_IP';
+      APPLICATION_NO           : String(32)     @title: 'APPLICATION_NO';
+      BUSI_VINT_DEALER         : String(10)     @title: 'BUSI_VINT_DEALER';
+      CALL_BACK_STATUS         : String(6)      @title: 'CALL_BACK_STATUS';
+      CHANGE_HISTORY_CHANGEDAT : Time           @title: 'CHANGE_HISTORY_CHANGEDAT';
+      CHANGE_HISTORY_CHANGEDBY : String(32)     @title: 'CHANGE_HISTORY_CHANGEDBY';
+      CHANGE_HISTORY_CHANGEDON : Date           @title: 'CHANGE_HISTORY_CHANGEDON';
+      CHANGE_HISTORY_CREATEDAT : Time           @title: 'CHANGE_HISTORY_CREATEDAT';
+      CHANGE_HISTORY_CREATEDBY : String(32)     @title: 'CHANGE_HISTORY_CREATEDBY';
+      CHANGE_HISTORY_CREATEDON : Date           @title: 'CHANGE_HISTORY_CREATEDON';
+      CHANGE_HISTORY_SOURCE    : String(10)     @title: 'CHANGE_HISTORY_SOURCE';
+      CHQ_RETURN               : String(10)     @title: 'CHQ_RETURN';
+      CONSTITUTE_TYPE          : String(20)     @title: 'CONSTITUTE_TYPE';
+      CORP_RATING              : String(10)     @title: 'CORP_RATING';
+      CP_GUID                  : String(36)     @title: 'CP_GUID';
+      CP_TYPE                  : String(6)      @title: 'CP_TYPE';
+      CURRENCY                 : String(5)      @title: 'CURRENCY';
+      DDB_ACTIVE               : String(1)      @title: 'DDB_ACTIVE';
+      DEALER_SCOPE             : String(6)      @title: 'DEALER_SCOPE';
+      DEALER_VEN_FLAG          : String(6)      @title: 'DEALER_VEN_FLAG';
+      DEF_INT_SPREAD           : String(50)     @title: 'DEF_INT_SPREAD';
+      E_COMPLETE_DATE          : Date           @title: 'E_COMPLETE_DATE';
+      E_COMPLETE_TIME          : Time           @title: 'E_COMPLETE_TIME';
+      E_CONTRACT_ID            : String(32)     @title: 'E_CONTRACT_ID';
+      E_CUSTOMER_ID            : String(32)     @title: 'E_CUSTOMER_ID';
+  key ID                       : String(36)     @title: 'ID';
+      INTEREST_RATE_SP         : String(50)     @title: 'INTEREST_RATE_SP';
+      INTEREST_SPREAD          : Decimal(5, 2)  @title: 'INTEREST_SPREAD';
+      LIMIT_PREFIX             : String(32)     @title: 'LIMIT_PREFIX';
+      MAX_LIMIT_PER_CO         : Decimal(15, 2) @title: 'MAX_LIMIT_PER_CO';
+      MCLR6_RATE               : Decimal(5, 2)  @title: 'MCLR6_RATE';
+      OFFER_AMT                : Decimal(15, 2) @title: 'OFFER_AMT';
+      OFFER_TENURE             : String(5)      @title: 'OFFER_TENURE';
+      PAY_DELAY_12_MNT         : Decimal(15, 2) @title: 'PAY_DELAY_12_MNT';
+      PROCESSING_FEE           : Decimal(15, 2) @title: 'PROCESSING_FEE';
+      PROCESS_FEE_PERC         : Decimal(5, 2)  @title: 'PROCESS_FEE_PERC';
+      PURCH_12_MONTHS          : Decimal(15, 2) @title: 'PURCH_12_MONTHS';
+      RATE                     : String(10)     @title: 'RATE';
+      SALES_12_MONTHS          : Decimal(15, 2) @title: 'SALES_12_MONTHS';
+      STATUS_ID                : String(6)      @title: 'STATUS_ID';
+};

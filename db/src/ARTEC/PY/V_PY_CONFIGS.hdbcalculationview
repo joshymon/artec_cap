@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_PY_CONFIGS" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" defaultClient="$$client$$" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="V_PY_CONFIGS"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_CONFIG_IDCNFGVIEW">
+    <resourceUri>ARTEC_PY_CONFIG_IDCNFGVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_CONFIG_DFCNFGVIEW">
+    <resourceUri>ARTEC_PY_CONFIG_DFCNFGVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_CONFIG_RFCNFGVIEW">
+    <resourceUri>ARTEC_PY_CONFIG_RFCNFGVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_CONFIG_PFCNFGVIEW">
+    <resourceUri>ARTEC_PY_CONFIG_PFCNFGVIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CORPID"/>
+      <viewAttribute id="CLIENTCODE"/>
+      <viewAttribute id="PRODUCTCODE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="FACILITYTYPE" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>'VBD'</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_CONFIG_IDCNFGVIEW"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CORPID"/>
+      <viewAttribute id="CLIENTCODE"/>
+      <viewAttribute id="PRODUCTCODE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="FACILITYTYPE" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>'DFF'</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_CONFIG_DFCNFGVIEW"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CORPID"/>
+      <viewAttribute id="CLIENTCODE"/>
+      <viewAttribute id="PRODUCTCODE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="FACILITYTYPE" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>'REF'</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_CONFIG_RFCNFGVIEW"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CORPID"/>
+      <viewAttribute id="CLIENTCODE"/>
+      <viewAttribute id="PRODUCTCODE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="FACILITYTYPE" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>'PAF'</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_CONFIG_PFCNFGVIEW"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="AGGRID"/>
+      <viewAttribute id="CORPID"/>
+      <viewAttribute id="CLIENTCODE"/>
+      <viewAttribute id="PRODUCTCODE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLIENTCODE" source="CLIENTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTCODE" source="PRODUCTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+    </input>
+    <input node="Projection_2" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLIENTCODE" source="CLIENTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTCODE" source="PRODUCTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+    </input>
+    <input node="Projection_3" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLIENTCODE" source="CLIENTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTCODE" source="PRODUCTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+    </input>
+    <input node="Projection_4" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLIENTCODE" source="CLIENTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTCODE" source="PRODUCTCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Union_1">
+  <attributes>
+    <attribute id="ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Union_1" columnName="ID"/>
+    </attribute>
+    <attribute id="AGGRID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGRID"/>
+      <keyMapping columnObjectName="Union_1" columnName="AGGRID"/>
+    </attribute>
+    <attribute id="CORPID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORPID"/>
+      <keyMapping columnObjectName="Union_1" columnName="CORPID"/>
+    </attribute>
+    <attribute id="CLIENTCODE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLIENTCODE"/>
+      <keyMapping columnObjectName="Union_1" columnName="CLIENTCODE"/>
+    </attribute>
+    <attribute id="PRODUCTCODE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCTCODE"/>
+      <keyMapping columnObjectName="Union_1" columnName="PRODUCTCODE"/>
+    </attribute>
+    <attribute id="FACILITYTYPE" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FACILITYTYPE"/>
+      <keyMapping columnObjectName="Union_1" columnName="FACILITYTYPE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="474" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="406"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="722" y="406"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="512" y="406"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="406"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+  
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="474" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape></shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="ARTEC_PY_V_BPRENEWAL" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="V_BPRENEWAL.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_V_BPHEADER" >
+    <resourceUri>ARTEC_PY_V_BPHEADER</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF" >
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_V_AGGRID">
+    <resourceUri>ARTEC_PY_V_AGGRID</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="BP_SCF" joinType="leftOuter" cardinality="C1_1">
+    <viewAttributes>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="UTILDISTRICTDS"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="TESTRUN"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="LOGINID"/>
+      <viewAttribute id="LEGALSTATUSDS"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="BPGUID"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDAT"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDBY"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDON"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDAT"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDBY"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDON"/>
+      <viewAttribute id="SCF_E_COMPLETE_DATE"/>
+      <viewAttribute id="SCF_E_COMPLETE_TIME"/>
+      <viewAttribute id="SCF_E_CONTRACT_ID"/>
+      <viewAttribute id="SCF_ID"/>
+      <viewAttribute id="SCF_STATUS_ID"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+    
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="LEINUMBER"/>
+    
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="PARENTTYPE"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="RENEWAL_STATUS_ID" datatype="VARCHAR" length="6" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(isnull(&quot;SCF_STATUS_ID&quot;), 
+  case(&quot;STATUSID&quot;, 
+       '000010', '000010', 
+       '000020', '000020', 
+       '000030', '000030',        
+       'XXXXXX'), 
+   if(&quot;STATUSID&quot;='000030', 
+      if(&quot;SCF_STATUS_ID&quot;='000001' and (isnull(&quot;SCF_CALL_BACK_STATUS&quot;) or &quot;SCF_CALL_BACK_STATUS&quot;=''), 
+'000040', 
+         	if(&quot;SCF_STATUS_ID&quot;='000001' and &quot;SCF_CALL_BACK_STATUS&quot; !='000080',
+            '000060',
+            'XXXXXX'
+   )
+                  ),
+      'XXXXXX'
+     )
+  )
+</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_V_BPHEADER">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICTDS" source="UTILDISTRICTDS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TESTRUN" source="TESTRUN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSDS" source="LEGALSTATUSDS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPGUID" source="BPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPE" source="PARENTTYPE"/>
+    </input>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="CALL_BACK_STATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_DATE" source="E_COMPLETE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_TIME" source="E_COMPLETE_TIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_CONTRACT_ID" source="E_CONTRACT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CP_TYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CP_GUID"/>
+    </input>
+    <joinAttribute name="AGGREGATORID"/>
+    <joinAttribute name="CPTYPE"/>
+    <joinAttribute name="CPGUID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="AGGRID" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="UTILDISTRICTDS"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="TESTRUN"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="LOGINID"/>
+      <viewAttribute id="LEGALSTATUSDS"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="BPGUID"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDAT"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDBY"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CHANGEDON"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDAT"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDBY"/>
+      <viewAttribute id="SCF_CHANGE_HISTORY_CREATEDON"/>
+      <viewAttribute id="SCF_E_COMPLETE_DATE"/>
+      <viewAttribute id="SCF_E_COMPLETE_TIME"/>
+      <viewAttribute id="SCF_E_CONTRACT_ID"/>
+      <viewAttribute id="SCF_ID"/>
+      <viewAttribute id="SCF_STATUS_ID"/>
+      <viewAttribute id="RENEWAL_STATUS_ID"/>
+      <viewAttribute id="AGGREGATORNAME"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="LEINUMBER"/>
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="PARENTTYPE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="BP_SCF">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICTDS" source="UTILDISTRICTDS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TESTRUN" source="TESTRUN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSDS" source="LEGALSTATUSDS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPGUID" source="BPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="SCF_CALL_BACK_STATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDAT" source="SCF_CHANGE_HISTORY_CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDBY" source="SCF_CHANGE_HISTORY_CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CHANGEDON" source="SCF_CHANGE_HISTORY_CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDAT" source="SCF_CHANGE_HISTORY_CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDBY" source="SCF_CHANGE_HISTORY_CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGE_HISTORY_CREATEDON" source="SCF_CHANGE_HISTORY_CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_DATE" source="SCF_E_COMPLETE_DATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_COMPLETE_TIME" source="SCF_E_COMPLETE_TIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_E_CONTRACT_ID" source="SCF_E_CONTRACT_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ID" source="SCF_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="SCF_STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RENEWAL_STATUS_ID" source="RENEWAL_STATUS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPE" source="PARENTTYPE"/>
+    </input>
+    <input node="ARTEC_PY_V_AGGRID">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORNAME" source="AGGREGATORNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+    </input>
+    <joinAttribute name="AGGREGATORID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="AGGRID">
+  <attributes>
+    <attribute id="ADDRESS2" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS2"/>
+      <keyMapping columnObjectName="AGGRID" columnName="ADDRESS2"/>
+    </attribute>
+    <attribute id="UTILDISTRICTDS" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTILDISTRICTDS"/>
+      <keyMapping columnObjectName="AGGRID" columnName="UTILDISTRICTDS"/>
+    </attribute>
+    <attribute id="UTILDISTRICT" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTILDISTRICT"/>
+      <keyMapping columnObjectName="AGGRID" columnName="UTILDISTRICT"/>
+    </attribute>
+    <attribute id="TESTRUN" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TESTRUN"/>
+      <keyMapping columnObjectName="AGGRID" columnName="TESTRUN"/>
+    </attribute>
+    <attribute id="STATUSID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="STATUSID"/>
+    </attribute>
+    <attribute id="STATEDESC" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATEDESC"/>
+      <keyMapping columnObjectName="AGGRID" columnName="STATEDESC"/>
+    </attribute>
+    <attribute id="STATE" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATE"/>
+      <keyMapping columnObjectName="AGGRID" columnName="STATE"/>
+    </attribute>
+    <attribute id="SOURCE" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="PINCODE" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PINCODE"/>
+      <keyMapping columnObjectName="AGGRID" columnName="PINCODE"/>
+    </attribute>
+    <attribute id="PAN" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAN"/>
+      <keyMapping columnObjectName="AGGRID" columnName="PAN"/>
+    </attribute>
+    <attribute id="MOBILE2" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE2"/>
+      <keyMapping columnObjectName="AGGRID" columnName="MOBILE2"/>
+    </attribute>
+    <attribute id="MOBILE1" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE1"/>
+      <keyMapping columnObjectName="AGGRID" columnName="MOBILE1"/>
+    </attribute>
+    <attribute id="ADDRESS1" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS1"/>
+      <keyMapping columnObjectName="AGGRID" columnName="ADDRESS1"/>
+    </attribute>
+    <attribute id="LOGINID" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOGINID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="LOGINID"/>
+    </attribute>
+    <attribute id="LEGALSTATUSDS" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEGALSTATUSDS"/>
+      <keyMapping columnObjectName="AGGRID" columnName="LEGALSTATUSDS"/>
+    </attribute>
+    <attribute id="LEGALSTATUS" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEGALSTATUS"/>
+      <keyMapping columnObjectName="AGGRID" columnName="LEGALSTATUS"/>
+    </attribute>
+    <attribute id="LANDLINE1" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDLINE1"/>
+      <keyMapping columnObjectName="AGGRID" columnName="LANDLINE1"/>
+    </attribute>
+    <attribute id="INCORPORATIONDATE" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INCORPORATIONDATE"/>
+      <keyMapping columnObjectName="AGGRID" columnName="INCORPORATIONDATE"/>
+    </attribute>
+    <attribute id="GSTIN" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSTIN"/>
+      <keyMapping columnObjectName="AGGRID" columnName="GSTIN"/>
+    </attribute>
+    <attribute id="EMAILID" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="EMAILID"/>
+    </attribute>
+    <attribute id="DISTRICT" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRICT"/>
+      <keyMapping columnObjectName="AGGRID" columnName="DISTRICT"/>
+    </attribute>
+    <attribute id="CREATEDON" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CREATEDON"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="COUNTRYDESC" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRYDESC"/>
+      <keyMapping columnObjectName="AGGRID" columnName="COUNTRYDESC"/>
+    </attribute>
+    <attribute id="COUNTRY" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY"/>
+      <keyMapping columnObjectName="AGGRID" columnName="COUNTRY"/>
+    </attribute>
+    <attribute id="CITY" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CITY"/>
+    </attribute>
+    <attribute id="CHANGEDON" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CHANGEDON"/>
+    </attribute>
+    <attribute id="CHANGEDBY" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CHANGEDBY"/>
+    </attribute>
+    <attribute id="CHANGEDAT" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CHANGEDAT"/>
+    </attribute>
+    <attribute id="CPTYPE" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPTYPE"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CPTYPE"/>
+    </attribute>
+    <attribute id="CPNAME" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNAME"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CPNAME"/>
+    </attribute>
+    <attribute id="CPGUID" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPGUID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="CPGUID"/>
+    </attribute>
+    <attribute id="BPGUID" key="true" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPGUID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="BPGUID"/>
+    </attribute>
+    <attribute id="APPROVERREMARKS" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APPROVERREMARKS"/>
+      <keyMapping columnObjectName="AGGRID" columnName="APPROVERREMARKS"/>
+    </attribute>
+    <attribute id="AGGREGATORID" key="true" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="ADDRESS4" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS4"/>
+      <keyMapping columnObjectName="AGGRID" columnName="ADDRESS4"/>
+    </attribute>
+    <attribute id="ADDRESS3" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS3"/>
+      <keyMapping columnObjectName="AGGRID" columnName="ADDRESS3"/>
+    </attribute>
+    <attribute id="CallBackStatus" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Call Back Status ID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CALL_BACK_STATUS"/>
+    </attribute>
+    <attribute id="SCFChangedAt" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Changed At"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CHANGEDAT"/>
+    </attribute>
+    <attribute id="SCFChangedBy" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Changed By"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CHANGEDBY"/>
+    </attribute>
+    <attribute id="SCFChangedOn" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Changed On"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CHANGEDON"/>
+    </attribute>
+    <attribute id="SCFCreatedAt" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Created At"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CREATEDAT"/>
+    </attribute>
+    <attribute id="SCFCreatedBy" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Created By"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CREATEDBY"/>
+    </attribute>
+    <attribute id="SCFCreatedOn" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Created On"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_CHANGE_HISTORY_CREATEDON"/>
+    </attribute>
+    <attribute id="ECompleteDate" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="E Sign Completion Date"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_E_COMPLETE_DATE"/>
+    </attribute>
+    <attribute id="ECompleteTime" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="E Sign Completion Time"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_E_COMPLETE_TIME"/>
+    </attribute>
+    <attribute id="EContractID" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="E Sign Contract ID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_E_CONTRACT_ID"/>
+    </attribute>
+    <attribute id="SCFGUID" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF GUID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_ID"/>
+    </attribute>
+    <attribute id="SCFStatusID" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCF Status ID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="SCF_STATUS_ID"/>
+    </attribute>
+    <attribute id="RenewalStatusID" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Renewal Status ID"/>
+      <keyMapping columnObjectName="AGGRID" columnName="RENEWAL_STATUS_ID"/>
+    </attribute>
+    <attribute id="AGGREGATORNAME" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORNAME"/>
+      <keyMapping columnObjectName="AGGRID" columnName="AGGREGATORNAME"/>
+    </attribute>
+    <attribute id="MSME" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MSME"/>
+      <keyMapping columnObjectName="AGGRID" columnName="MSME"/>
+    </attribute></attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    <shape expanded="true" modelObjectName="BP_SCF" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="17" y="221"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="AGGRID" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="86" y="231"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

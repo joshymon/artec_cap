@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_TRCKID_DUPL" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" application="BAS" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_TRCKID_DUPL_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_V_TRCKID_CNT">
+    <resourceUri>ARTEC_PY_V_TRCKID_CNT</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PC_PAYMENTGATEWAY_PG_HVIEW">
+    <resourceUri>ARTEC_PC_PAYMENTGATEWAY_PG_HVIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="TRCKID_CNT" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="TRACKID"/>
+      <viewAttribute id="CNT"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_V_TRCKID_CNT"/>
+    <filter>"CNT"&gt;1</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="PG_H">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="TRACKID"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CPNO"/>
+      <viewAttribute id="CPACCOUNTNO"/>
+      <viewAttribute id="PGTXNSTATUSID"/>
+    
+      <viewAttribute id="CLEARINGDOCNO"/>
+      <viewAttribute id="PGPAYMENTDATE"/>
+      <viewAttribute id="PAYMENTSTATUSID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PC_PAYMENTGATEWAY_PG_HVIEW"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="TRACKID"/>
+      <viewAttribute id="CNT" aggregationType="sum"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CPNO"/>
+      <viewAttribute id="CPACCOUNTNO"/>
+      <viewAttribute id="CLEARINGDOCNO"/>
+      <viewAttribute id="PGPAYMENTDATE"/>
+      <viewAttribute id="PAYMENTSTATUSID"/>
+      <viewAttribute id="PGTXNSTATUSID"/>
+      <viewAttribute hidden="true" id="JOIN$TRACKID$TRACKID"/>
+      <viewAttribute hidden="true" id="JOIN$AGGREGATORID$AGGREGATORID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="TRCKID_CNT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TRACKID" source="TRACKID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNT" source="CNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TRACKID$TRACKID" source="TRACKID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+    </input>
+    <input node="PG_H">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNO" source="CPNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPACCOUNTNO" source="CPACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CLEARINGDOCNO" source="CLEARINGDOCNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGPAYMENTDATE" source="PGPAYMENTDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAYMENTSTATUSID" source="PAYMENTSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PGTXNSTATUSID" source="PGTXNSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$TRACKID$TRACKID" source="TRACKID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$AGGREGATORID$AGGREGATORID" source="AGGREGATORID"/>
+    </input>
+    <joinAttribute name="JOIN$TRACKID$TRACKID"/>
+    <joinAttribute name="JOIN$AGGREGATORID$AGGREGATORID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="AGGREGATORID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="TRACKID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TRACKID"/>
+      <keyMapping columnObjectName="Join_1" columnName="TRACKID"/>
+    </attribute>
+    <attribute id="CREATEDON" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON"/>
+    </attribute>
+    <attribute id="CPNO" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPNO"/>
+    </attribute>
+    <attribute id="CPACCOUNTNO" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPACCOUNTNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="CPACCOUNTNO"/>
+    </attribute>
+  
+    <attribute id="CLEARINGDOCNO" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CLEARINGDOCNO"/>
+  
+      <keyMapping columnObjectName="Join_1" columnName="CLEARINGDOCNO"/>
+  
+    </attribute>
+    <attribute id="PGPAYMENTDATE" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGPAYMENTDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PGPAYMENTDATE"/>
+    </attribute>
+    <attribute id="PAYMENTSTATUSID" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAYMENTSTATUSID"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAYMENTSTATUSID"/>
+    </attribute>
+  
+    <attribute id="PGTXNSTATUSID" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PGTXNSTATUSID"/>
+  
+      <keyMapping columnObjectName="Join_1" columnName="PGTXNSTATUSID"/>
+  
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="CNT" order="3" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="CNT"/>
+      <measureMapping columnObjectName="Join_1" columnName="CNT"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="221" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="TRCKID_CNT" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="PG_H" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="356"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="221" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="TRCKID_CNT" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="171"/>
+    </shape>
+    <shape modelObjectName="PG_H" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="162"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

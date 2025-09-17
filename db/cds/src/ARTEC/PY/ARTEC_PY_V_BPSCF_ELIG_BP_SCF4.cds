@@ -1,0 +1,46 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PY_V_BPSCF_ELIG_BP_SCF4 {
+  key CPGUID                    : String(36)  @title: 'CPGuid';
+      CPTYPE                    : String(6)   @title: 'CPType';
+      CPNAME                    : String(200) @title: 'CPName';
+      BP_ID                     : String(36)  @title: 'BP_ID';
+      AGGREGATORID              : String(50)  @title: 'AggregatorID';
+      RECORDID                  : String(36)  @title: 'RecordID';
+      AGGREGATORID_SCF4         : String(50)  @title: 'AggregatorID_SCF4';
+      OBJECTTYPEID              : String(6)   @title: 'ObjectTypeID';
+      OBJECTTYPE                : String(50)  @title: 'ObjectType';
+      CORRELATIONID             : String(50)  @title: 'CorrelationID';
+      INCORPORATIONDATE         : Date        @title: 'IncorporationDate';
+      LEGALSTATUS               : String(2)   @title: 'LegalStatus';
+      ADDRESS1                  : String(40)  @title: 'Address1';
+      ADDRESS2                  : String(40)  @title: 'Address2';
+      ADDRESS3                  : String(40)  @title: 'Address3';
+      ADDRESS4                  : String(40)  @title: 'Address4';
+      DISTRICT                  : String(40)  @title: 'District';
+      CITY                      : String(40)  @title: 'City';
+      STATEDESC                 : String(35)  @title: 'StateDesc';
+      STATE                     : String(3)   @title: 'State';
+      STATUSID                  : String(6)   @title: 'StatusID';
+      PINCODE                   : String(10)  @title: 'Pincode';
+      ERP_CPNAME                : String(200) @title: 'ERP_CPName';
+      MOBILE1                   : String(35)  @title: 'Mobile1';
+      CREATEDAT_BP              : Time        @title: 'CreatedAt_BP';
+      CREATEDBY_BP              : String(32)  @title: 'CreatedBy_BP';
+      CREATEDON_BP              : Date        @title: 'CreatedOn_BP';
+      STATUSID_SCF4             : String(6)   @title: 'StatusID_SCF4';
+      SERVICEPROVIDERREF        : LargeString @title: 'ServiceProviderRef';
+      CHANGEDON_SCF4            : Date        @title: 'ChangedOn_SCF4';
+      CREATEDBY_SCF4            : String(32)  @title: 'CreatedBy_SCF4';
+      CREATEDAT_SCF4            : Time        @title: 'CreatedAt_SCF4';
+      VALIDTO_SCF4              : Date        @title: 'ValidTo_SCF4';
+      CREATEDON_SCF4            : Date        @title: 'CreatedOn_SCF4';
+      ELIGIBILITYTYPEID_SCF4    : String(6)   @title: 'EligibilityTypeID_SCF4';
+      CHANGEDBY_SCF4            : String(32)  @title: 'ChangedBy_SCF4';
+      CHANGEDAT_SCF4            : Time        @title: 'ChangedAt_SCF4';
+      ELIGIBILITYSTATUSID_SCF4  : String(6)   @title: 'EligibilityStatusID_SCF4';
+      CORPORATEIDENTIFICATIONNO : String(30)  @title: 'CorporateIdentificationNo';
+      GSTIN                     : String(40)  @title: 'GSTIN';
+      PAN                       : String(40)  @title: 'PAN';
+      MOBILE2                   : String(35)  @title: 'Mobile2';
+};

@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PY_V_REFMIS" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_REFMIS"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCP</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCP_4">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCP_4</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_BP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_BP</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_WORKFLOW_APPROVALVIEW">
+      <resourceUri>ARTEC_PC_WORKFLOW_APPROVALVIEW</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="SCP_ADDRESS1"/>
+        <viewAttribute id="SCP_ADDRESS2"/>
+        <viewAttribute id="SCP_ADDRESS3"/>
+        <viewAttribute id="SCP_ADDRESS4"/>
+        <viewAttribute id="SCP_CHANGEDAT"/>
+        <viewAttribute id="SCP_CHANGEDBY"/>
+        <viewAttribute id="SCP_CHANGEDON"/>
+        <viewAttribute id="SCP_CREATEDAT"/>
+        <viewAttribute id="SCP_CREATEDBY"/>
+        <viewAttribute id="SCP_CREATEDON"/>
+        <viewAttribute id="SCP_SOURCE"/>
+        <viewAttribute id="SCP_SOURCE_REF_ID"/>
+        <viewAttribute id="SCP_CITY"/>
+        <viewAttribute id="SCP_COUNTRY_DESC"/>
+        <viewAttribute id="SCP_COUNTRY_ID"/>
+        <viewAttribute id="SCP_DATEOF_INCORPORATION"/>
+        <viewAttribute id="SCP_DEF_PASSWORD"/>
+        <viewAttribute id="SCP_DISTRICT"/>
+        <viewAttribute id="SCP_EMAIL_ID"/>
+        <viewAttribute id="SCP_FAX_EXTN"/>
+        <viewAttribute id="SCP_FAX_NUMBER"/>
+        <viewAttribute id="SCP_GSTIN"/>
+        <viewAttribute id="SCP_ID"/>
+        <viewAttribute id="SCP_LEGAL_STATUS_ID"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_DATE"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_TIME"/>
+        <viewAttribute id="SCP_LOGIN_ID"/>
+        <viewAttribute id="SCP_LOGIN_STATUS"/>
+        <viewAttribute id="SCP_MOBILE_NO"/>
+        <viewAttribute id="SCP_NAME1"/>
+        <viewAttribute id="SCP_NAME2"/>
+        <viewAttribute id="SCP_NAME3"/>
+        <viewAttribute id="SCP_NAME4"/>
+        <viewAttribute id="SCP_PANNO"/>
+        <viewAttribute id="SCP_POSTAL_CODE"/>
+        <viewAttribute id="SCP_REAL_TIME_CIN"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="SCP_STATE_DESC"/>
+        <viewAttribute id="SCP_STATE_ID"/>
+        <viewAttribute id="SCP_TELEPHONE_EXTN"/>
+        <viewAttribute id="SCP_TELEPHONE_NO"/>
+        <viewAttribute id="SCP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_ADDRESS1"/>
+        <viewAttribute id="BP_ADDRESS2"/>
+        <viewAttribute id="BP_ADDRESS3"/>
+        <viewAttribute id="BP_ADDRESS4"/>
+        <viewAttribute id="BP_AGGRID"/>
+        <viewAttribute id="BP_APPROVER_REMARKS"/>
+        <viewAttribute id="BP_BP_REJ_REMARKS"/>
+        <viewAttribute id="BP_CHANGEDAT"/>
+        <viewAttribute id="BP_CHANGEDBY"/>
+        <viewAttribute id="BP_CHANGEDON"/>
+        <viewAttribute id="BP_CREATEDAT"/>
+        <viewAttribute id="BP_CREATEDBY"/>
+        <viewAttribute id="BP_CREATEDON"/>
+        <viewAttribute id="BP_SOURCE"/>
+        <viewAttribute id="BP_SOURCE_REF_ID"/>
+        <viewAttribute id="BP_CIN"/>
+        <viewAttribute id="BP_CITY"/>
+        <viewAttribute id="BP_COUNTRY"/>
+        <viewAttribute id="BP_COUNTRY_DESC"/>
+        <viewAttribute id="BP_CP_GUID"/>
+        <viewAttribute id="BP_CP_NAME"/>
+        <viewAttribute id="BP_CP_TYPE"/>
+        <viewAttribute id="BP_DISTRICT"/>
+        <viewAttribute id="BP_EMAIL_ID"/>
+        <viewAttribute id="BP_ENTITY_ID"/>
+        <viewAttribute id="BP_ENTITY_TYPE"/>
+        <viewAttribute id="BP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_FBE"/>
+        <viewAttribute id="BP_GSTIN"/>
+        <viewAttribute id="BP_HFCE"/>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="BP_INCORP_DATE"/>
+        <viewAttribute id="BP_LANDLINE1"/>
+        <viewAttribute id="BP_LEGAL_STATUS"/>
+        <viewAttribute id="BP_LEI_NUMBER"/>
+        <viewAttribute id="BP_MOBILE1"/>
+        <viewAttribute id="BP_MOBILE2"/>
+        <viewAttribute id="BP_MSME"/>
+        <viewAttribute id="BP_NFBE"/>
+        <viewAttribute id="BP_PAN"/>
+        <viewAttribute id="BP_PINCODE"/>
+        <viewAttribute id="BP_REGION"/>
+        <viewAttribute id="BP_REGION_DESC"/>
+        <viewAttribute id="BP_STATUS_ID"/>
+        <viewAttribute id="BP_TBE"/>
+        <viewAttribute id="BP_TFCE"/>
+        <viewAttribute id="BP_UHFCE"/>
+        <viewAttribute id="BP_URCNO"/>
+        <viewAttribute id="BP_UTIL_DISTRICT"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_AGGRID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS1" source="SCP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS2" source="SCP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS3" source="SCP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS4" source="SCP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDAT" source="SCP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDBY" source="SCP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDON" source="SCP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDAT" source="SCP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDBY" source="SCP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDON" source="SCP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE" source="SCP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE_REF_ID" source="SCP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CITY" source="SCP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_DESC" source="SCP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_ID" source="SCP_COUNTRY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DATEOF_INCORPORATION" source="SCP_DATEOF_INCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DEF_PASSWORD" source="SCP_DEF_PASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DISTRICT" source="SCP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_EMAIL_ID" source="SCP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_EXTN" source="SCP_FAX_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_NUMBER" source="SCP_FAX_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GSTIN" source="SCP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="SCP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LEGAL_STATUS_ID" source="SCP_LEGAL_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_DATE" source="SCP_LOGIN_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_TIME" source="SCP_LOGIN_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_ID" source="SCP_LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_STATUS" source="SCP_LOGIN_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_MOBILE_NO" source="SCP_MOBILE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME1" source="SCP_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME2" source="SCP_NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME3" source="SCP_NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME4" source="SCP_NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_PANNO" source="SCP_PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_POSTAL_CODE" source="SCP_POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_REAL_TIME_CIN" source="SCP_REAL_TIME_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_DESC" source="SCP_STATE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_ID" source="SCP_STATE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_EXTN" source="SCP_TELEPHONE_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_NO" source="SCP_TELEPHONE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FACILITY_TYPE" source="SCP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="SCP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_AGGRID" source="SCP_AGGRID"/>
+      </input>
+      <input node="BP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS1" source="BP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS2" source="BP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS3" source="BP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS4" source="BP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_AGGRID" source="BP_AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_APPROVER_REMARKS" source="BP_APPROVER_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_BP_REJ_REMARKS" source="BP_BP_REJ_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDAT" source="BP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDBY" source="BP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDON" source="BP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDAT" source="BP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDBY" source="BP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDON" source="BP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE" source="BP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE_REF_ID" source="BP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CIN" source="BP_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CITY" source="BP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY" source="BP_COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY_DESC" source="BP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="BP_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_NAME" source="BP_CP_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="BP_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_DISTRICT" source="BP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_EMAIL_ID" source="BP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_ID" source="BP_ENTITY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_TYPE" source="BP_ENTITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FACILITY_TYPE" source="BP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FBE" source="BP_FBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_GSTIN" source="BP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_HFCE" source="BP_HFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_INCORP_DATE" source="BP_INCORP_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LANDLINE1" source="BP_LANDLINE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEGAL_STATUS" source="BP_LEGAL_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEI_NUMBER" source="BP_LEI_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE1" source="BP_MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE2" source="BP_MOBILE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MSME" source="BP_MSME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_NFBE" source="BP_NFBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PAN" source="BP_PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PINCODE" source="BP_PINCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION" source="BP_REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION_DESC" source="BP_REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_STATUS_ID" source="BP_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TBE" source="BP_TBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TFCE" source="BP_TFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UHFCE" source="BP_UHFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_URCNO" source="BP_URCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UTIL_DISTRICT" source="BP_UTIL_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="BP_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_AGGRID" source="BP_AGGRID"/>
+      </input>
+    <joinAttribute name="SCP_GUID"/>
+    <joinAttribute name="SCP_AGGRID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_4" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="SCP_ADDRESS1"/>
+        <viewAttribute id="SCP_ADDRESS2"/>
+        <viewAttribute id="SCP_ADDRESS3"/>
+        <viewAttribute id="SCP_ADDRESS4"/>
+        <viewAttribute id="SCP_CHANGEDAT"/>
+        <viewAttribute id="SCP_CHANGEDBY"/>
+        <viewAttribute id="SCP_CHANGEDON"/>
+        <viewAttribute id="SCP_CREATEDAT"/>
+        <viewAttribute id="SCP_CREATEDBY"/>
+        <viewAttribute id="SCP_CREATEDON"/>
+        <viewAttribute id="SCP_SOURCE"/>
+        <viewAttribute id="SCP_SOURCE_REF_ID"/>
+        <viewAttribute id="SCP_CITY"/>
+        <viewAttribute id="SCP_COUNTRY_DESC"/>
+        <viewAttribute id="SCP_COUNTRY_ID"/>
+        <viewAttribute id="SCP_DATEOF_INCORPORATION"/>
+        <viewAttribute id="SCP_DEF_PASSWORD"/>
+        <viewAttribute id="SCP_DISTRICT"/>
+        <viewAttribute id="SCP_EMAIL_ID"/>
+        <viewAttribute id="SCP_FAX_EXTN"/>
+        <viewAttribute id="SCP_FAX_NUMBER"/>
+        <viewAttribute id="SCP_GSTIN"/>
+        <viewAttribute id="SCP_ID"/>
+        <viewAttribute id="SCP_LEGAL_STATUS_ID"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_DATE"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_TIME"/>
+        <viewAttribute id="SCP_LOGIN_ID"/>
+        <viewAttribute id="SCP_LOGIN_STATUS"/>
+        <viewAttribute id="SCP_MOBILE_NO"/>
+        <viewAttribute id="SCP_NAME1"/>
+        <viewAttribute id="SCP_NAME2"/>
+        <viewAttribute id="SCP_NAME3"/>
+        <viewAttribute id="SCP_NAME4"/>
+        <viewAttribute id="SCP_PANNO"/>
+        <viewAttribute id="SCP_POSTAL_CODE"/>
+        <viewAttribute id="SCP_REAL_TIME_CIN"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="SCP_STATE_DESC"/>
+        <viewAttribute id="SCP_STATE_ID"/>
+        <viewAttribute id="SCP_TELEPHONE_EXTN"/>
+        <viewAttribute id="SCP_TELEPHONE_NO"/>
+        <viewAttribute id="SCP_FACILITY_TYPE"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_AGGRID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_BUSINESSPARTNER_SCP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE_REF_ID" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_DESC" source="COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_ID" source="COUNTRY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DATEOF_INCORPORATION" source="DATEOF_INCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DEF_PASSWORD" source="DEF_PASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_EXTN" source="FAX_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_NUMBER" source="FAX_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LEGAL_STATUS_ID" source="LEGAL_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_DATE" source="LOGIN_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_TIME" source="LOGIN_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_STATUS" source="LOGIN_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_MOBILE_NO" source="MOBILE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_POSTAL_CODE" source="POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_REAL_TIME_CIN" source="REAL_TIME_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="SCP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_DESC" source="STATE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_ID" source="STATE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_EXTN" source="TELEPHONE_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_NO" source="TELEPHONE_NO"/>
+      </input>
+      <input node="ARTEC_PY_BUSINESSPARTNER_SCP_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FACILITY_TYPE" source="FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="REF_ID"/>
+      </input>
+    <joinAttribute name="SCP_ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BP">
+    <viewAttributes>
+        <viewAttribute id="BP_ADDRESS1"/>
+        <viewAttribute id="BP_ADDRESS2"/>
+        <viewAttribute id="BP_ADDRESS3"/>
+        <viewAttribute id="BP_ADDRESS4"/>
+        <viewAttribute id="BP_AGGRID"/>
+        <viewAttribute id="BP_APPROVER_REMARKS"/>
+        <viewAttribute id="BP_BP_REJ_REMARKS"/>
+        <viewAttribute id="BP_CHANGEDAT"/>
+        <viewAttribute id="BP_CHANGEDBY"/>
+        <viewAttribute id="BP_CHANGEDON"/>
+        <viewAttribute id="BP_CREATEDAT"/>
+        <viewAttribute id="BP_CREATEDBY"/>
+        <viewAttribute id="BP_CREATEDON"/>
+        <viewAttribute id="BP_SOURCE"/>
+        <viewAttribute id="BP_SOURCE_REF_ID"/>
+        <viewAttribute id="BP_CIN"/>
+        <viewAttribute id="BP_CITY"/>
+        <viewAttribute id="BP_COUNTRY"/>
+        <viewAttribute id="BP_COUNTRY_DESC"/>
+        <viewAttribute id="BP_CP_GUID"/>
+        <viewAttribute id="BP_CP_NAME"/>
+        <viewAttribute id="BP_CP_TYPE"/>
+        <viewAttribute id="BP_DISTRICT"/>
+        <viewAttribute id="BP_EMAIL_ID"/>
+        <viewAttribute id="BP_ENTITY_ID"/>
+        <viewAttribute id="BP_ENTITY_TYPE"/>
+        <viewAttribute id="BP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_FBE"/>
+        <viewAttribute id="BP_GSTIN"/>
+        <viewAttribute id="BP_HFCE"/>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="BP_INCORP_DATE"/>
+        <viewAttribute id="BP_LANDLINE1"/>
+        <viewAttribute id="BP_LEGAL_STATUS"/>
+        <viewAttribute id="BP_LEI_NUMBER"/>
+        <viewAttribute id="BP_MOBILE1"/>
+        <viewAttribute id="BP_MOBILE2"/>
+        <viewAttribute id="BP_MSME"/>
+        <viewAttribute id="BP_NFBE"/>
+        <viewAttribute id="BP_PAN"/>
+        <viewAttribute id="BP_PINCODE"/>
+        <viewAttribute id="BP_REGION"/>
+        <viewAttribute id="BP_REGION_DESC"/>
+        <viewAttribute id="BP_STATUS_ID"/>
+        <viewAttribute id="BP_TBE"/>
+        <viewAttribute id="BP_TFCE"/>
+        <viewAttribute id="BP_UHFCE"/>
+        <viewAttribute id="BP_URCNO"/>
+        <viewAttribute id="BP_UTIL_DISTRICT"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_BUSINESSPARTNER_BP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_APPROVER_REMARKS" source="APPROVER_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_BP_REJ_REMARKS" source="BP_REJ_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE_REF_ID" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CIN" source="CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY" source="COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY_DESC" source="COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_NAME" source="CP_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_ID" source="ENTITY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_TYPE" source="ENTITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FACILITY_TYPE" source="FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FBE" source="FBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_HFCE" source="HFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_INCORP_DATE" source="INCORP_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LANDLINE1" source="LANDLINE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEGAL_STATUS" source="LEGAL_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEI_NUMBER" source="LEI_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE1" source="MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE2" source="MOBILE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MSME" source="MSME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_NFBE" source="NFBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PAN" source="PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PINCODE" source="PINCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION" source="REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION_DESC" source="REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TBE" source="TBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TFCE" source="TFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UHFCE" source="UHFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_URCNO" source="URCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UTIL_DISTRICT" source="UTIL_DISTRICT"/>
+      </input>
+    </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="SCP_ADDRESS1"/>
+        <viewAttribute id="SCP_ADDRESS2"/>
+        <viewAttribute id="SCP_ADDRESS3"/>
+        <viewAttribute id="SCP_ADDRESS4"/>
+        <viewAttribute id="SCP_CHANGEDAT"/>
+        <viewAttribute id="SCP_CHANGEDBY"/>
+        <viewAttribute id="SCP_CHANGEDON"/>
+        <viewAttribute id="SCP_CREATEDAT"/>
+        <viewAttribute id="SCP_CREATEDBY"/>
+        <viewAttribute id="SCP_CREATEDON"/>
+        <viewAttribute id="SCP_SOURCE"/>
+        <viewAttribute id="SCP_SOURCE_REF_ID"/>
+        <viewAttribute id="SCP_CITY"/>
+        <viewAttribute id="SCP_COUNTRY_DESC"/>
+        <viewAttribute id="SCP_COUNTRY_ID"/>
+        <viewAttribute id="SCP_DATEOF_INCORPORATION"/>
+        <viewAttribute id="SCP_DEF_PASSWORD"/>
+        <viewAttribute id="SCP_DISTRICT"/>
+        <viewAttribute id="SCP_EMAIL_ID"/>
+        <viewAttribute id="SCP_FAX_EXTN"/>
+        <viewAttribute id="SCP_FAX_NUMBER"/>
+        <viewAttribute id="SCP_GSTIN"/>
+        <viewAttribute id="SCP_ID"/>
+        <viewAttribute id="SCP_LEGAL_STATUS_ID"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_DATE"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_TIME"/>
+        <viewAttribute id="SCP_LOGIN_ID"/>
+        <viewAttribute id="SCP_LOGIN_STATUS"/>
+        <viewAttribute id="SCP_MOBILE_NO"/>
+        <viewAttribute id="SCP_NAME1"/>
+        <viewAttribute id="SCP_NAME2"/>
+        <viewAttribute id="SCP_NAME3"/>
+        <viewAttribute id="SCP_NAME4"/>
+        <viewAttribute id="SCP_PANNO"/>
+        <viewAttribute id="SCP_POSTAL_CODE"/>
+        <viewAttribute id="SCP_REAL_TIME_CIN"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="SCP_STATE_DESC"/>
+        <viewAttribute id="SCP_STATE_ID"/>
+        <viewAttribute id="SCP_TELEPHONE_EXTN"/>
+        <viewAttribute id="SCP_TELEPHONE_NO"/>
+        <viewAttribute id="SCP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_ADDRESS1"/>
+        <viewAttribute id="BP_ADDRESS2"/>
+        <viewAttribute id="BP_ADDRESS3"/>
+        <viewAttribute id="BP_ADDRESS4"/>
+        <viewAttribute id="BP_AGGRID"/>
+        <viewAttribute id="BP_APPROVER_REMARKS"/>
+        <viewAttribute id="BP_BP_REJ_REMARKS"/>
+        <viewAttribute id="BP_CHANGEDAT"/>
+        <viewAttribute id="BP_CHANGEDBY"/>
+        <viewAttribute id="BP_CHANGEDON"/>
+        <viewAttribute id="BP_CREATEDAT"/>
+        <viewAttribute id="BP_CREATEDBY"/>
+        <viewAttribute id="BP_CREATEDON"/>
+        <viewAttribute id="BP_SOURCE"/>
+        <viewAttribute id="BP_SOURCE_REF_ID"/>
+        <viewAttribute id="BP_CIN"/>
+        <viewAttribute id="BP_CITY"/>
+        <viewAttribute id="BP_COUNTRY"/>
+        <viewAttribute id="BP_COUNTRY_DESC"/>
+        <viewAttribute id="BP_CP_GUID"/>
+        <viewAttribute id="BP_CP_NAME"/>
+        <viewAttribute id="BP_CP_TYPE"/>
+        <viewAttribute id="BP_DISTRICT"/>
+        <viewAttribute id="BP_EMAIL_ID"/>
+        <viewAttribute id="BP_ENTITY_ID"/>
+        <viewAttribute id="BP_ENTITY_TYPE"/>
+        <viewAttribute id="BP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_FBE"/>
+        <viewAttribute id="BP_GSTIN"/>
+        <viewAttribute id="BP_HFCE"/>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="BP_INCORP_DATE"/>
+        <viewAttribute id="BP_LANDLINE1"/>
+        <viewAttribute id="BP_LEGAL_STATUS"/>
+        <viewAttribute id="BP_LEI_NUMBER"/>
+        <viewAttribute id="BP_MOBILE1"/>
+        <viewAttribute id="BP_MOBILE2"/>
+        <viewAttribute id="BP_MSME"/>
+        <viewAttribute id="BP_NFBE"/>
+        <viewAttribute id="BP_PAN"/>
+        <viewAttribute id="BP_PINCODE"/>
+        <viewAttribute id="BP_REGION"/>
+        <viewAttribute id="BP_REGION_DESC"/>
+        <viewAttribute id="BP_STATUS_ID"/>
+        <viewAttribute id="BP_TBE"/>
+        <viewAttribute id="BP_TFCE"/>
+        <viewAttribute id="BP_UHFCE"/>
+        <viewAttribute id="BP_URCNO"/>
+        <viewAttribute id="BP_UTIL_DISTRICT"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_AGGRID"/>
+        <viewAttribute id="SCF_CP_GUID"/>
+        <viewAttribute id="SCF_CP_TYPE"/>
+        <viewAttribute id="SCF_AGGRID"/>
+        <viewAttribute id="SCF_ACC_NO"/>
+        <viewAttribute id="ADDLN_PRD_INT_RA"/>
+        <viewAttribute id="ADDLN_TENOR_OF_P"/>
+        <viewAttribute id="APPLICANT_IP"/>
+        <viewAttribute id="APPLICATION_NO"/>
+        <viewAttribute id="BUSI_VINT_DEALER"/>
+        <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+        <viewAttribute id="SCF_CHANGEDAT"/>
+        <viewAttribute id="SCF_CHANGEDBY"/>
+        <viewAttribute id="SCF_CHANGEDON"/>
+        <viewAttribute id="SCF_CREATEDAT"/>
+        <viewAttribute id="SCF_CREATEDBY"/>
+        <viewAttribute id="SCF_CREATEDON"/>
+        <viewAttribute id="SCF_SOURCE"/>
+        <viewAttribute id="SCF_SOURCE_REF_ID"/>
+        <viewAttribute id="CHQ_RETURN"/>
+        <viewAttribute id="SCF_CONSTITUTE_TYPE"/>
+        <viewAttribute id="CORP_RATING"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DDB_ACTIVE"/>
+        <viewAttribute id="DEALER_SCOPE"/>
+        <viewAttribute id="DEALER_VEN_FLAG"/>
+        <viewAttribute id="DEF_INT_SPREAD"/>
+        <viewAttribute id="E_COMPLETE_DATE"/>
+        <viewAttribute id="E_COMPLETE_TIME"/>
+        <viewAttribute id="E_CONTRACT_ID"/>
+        <viewAttribute id="E_CUSTOMER_ID"/>
+        <viewAttribute id="SCF_ID"/>
+        <viewAttribute id="INTEREST_RATE_SP"/>
+        <viewAttribute id="INTEREST_SPREAD"/>
+        <viewAttribute id="LIMIT_PREFIX"/>
+        <viewAttribute id="MAX_LIMIT_PER_CO"/>
+        <viewAttribute id="MCLR6_RATE"/>
+        <viewAttribute id="OFFER_AMT"/>
+        <viewAttribute id="OFFER_TENURE"/>
+        <viewAttribute id="PAY_DELAY_12_MNT"/>
+        <viewAttribute id="PROCESSING_FEE"/>
+        <viewAttribute id="PROCESS_FEE_PERC"/>
+        <viewAttribute id="PURCH_12_MONTHS"/>
+        <viewAttribute id="RATE"/>
+        <viewAttribute id="SALES_12_MONTHS"/>
+        <viewAttribute id="SCF_STATUS_ID"/>
+        <viewAttribute id="TENOR_OF_PAYMENT"/>
+        <viewAttribute id="VALID_TO"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS1" source="SCP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS2" source="SCP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS3" source="SCP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS4" source="SCP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDAT" source="SCP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDBY" source="SCP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDON" source="SCP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDAT" source="SCP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDBY" source="SCP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDON" source="SCP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE" source="SCP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE_REF_ID" source="SCP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CITY" source="SCP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_DESC" source="SCP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_ID" source="SCP_COUNTRY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DATEOF_INCORPORATION" source="SCP_DATEOF_INCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DEF_PASSWORD" source="SCP_DEF_PASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DISTRICT" source="SCP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_EMAIL_ID" source="SCP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_EXTN" source="SCP_FAX_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_NUMBER" source="SCP_FAX_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GSTIN" source="SCP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="SCP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LEGAL_STATUS_ID" source="SCP_LEGAL_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_DATE" source="SCP_LOGIN_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_TIME" source="SCP_LOGIN_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_ID" source="SCP_LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_STATUS" source="SCP_LOGIN_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_MOBILE_NO" source="SCP_MOBILE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME1" source="SCP_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME2" source="SCP_NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME3" source="SCP_NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME4" source="SCP_NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_PANNO" source="SCP_PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_POSTAL_CODE" source="SCP_POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_REAL_TIME_CIN" source="SCP_REAL_TIME_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_DESC" source="SCP_STATE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_ID" source="SCP_STATE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_EXTN" source="SCP_TELEPHONE_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_NO" source="SCP_TELEPHONE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FACILITY_TYPE" source="SCP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS1" source="BP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS2" source="BP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS3" source="BP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS4" source="BP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_AGGRID" source="BP_AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_APPROVER_REMARKS" source="BP_APPROVER_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_BP_REJ_REMARKS" source="BP_BP_REJ_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDAT" source="BP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDBY" source="BP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDON" source="BP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDAT" source="BP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDBY" source="BP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDON" source="BP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE" source="BP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE_REF_ID" source="BP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CIN" source="BP_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CITY" source="BP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY" source="BP_COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY_DESC" source="BP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="BP_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_NAME" source="BP_CP_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="BP_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_DISTRICT" source="BP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_EMAIL_ID" source="BP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_ID" source="BP_ENTITY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_TYPE" source="BP_ENTITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FACILITY_TYPE" source="BP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FBE" source="BP_FBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_GSTIN" source="BP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_HFCE" source="BP_HFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_INCORP_DATE" source="BP_INCORP_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LANDLINE1" source="BP_LANDLINE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEGAL_STATUS" source="BP_LEGAL_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEI_NUMBER" source="BP_LEI_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE1" source="BP_MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE2" source="BP_MOBILE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MSME" source="BP_MSME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_NFBE" source="BP_NFBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PAN" source="BP_PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PINCODE" source="BP_PINCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION" source="BP_REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION_DESC" source="BP_REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_STATUS_ID" source="BP_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TBE" source="BP_TBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TFCE" source="BP_TFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UHFCE" source="BP_UHFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_URCNO" source="BP_URCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UTIL_DISTRICT" source="BP_UTIL_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="SCP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_AGGRID" source="SCP_AGGRID"/>
+      </input>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ACC_NO" source="ACC_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDLN_PRD_INT_RA" source="ADDLN_PRD_INT_RA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDLN_TENOR_OF_P" source="ADDLN_TENOR_OF_P"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICANT_IP" source="APPLICANT_IP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION_NO" source="APPLICATION_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUSI_VINT_DEALER" source="BUSI_VINT_DEALER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="CALL_BACK_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_SOURCE_REF_ID" source="SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHQ_RETURN" source="CHQ_RETURN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CONSTITUTE_TYPE" source="CONSTITUTE_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORP_RATING" source="CORP_RATING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DDB_ACTIVE" source="DDB_ACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEALER_SCOPE" source="DEALER_SCOPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEALER_VEN_FLAG" source="DEALER_VEN_FLAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEF_INT_SPREAD" source="DEF_INT_SPREAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_COMPLETE_DATE" source="E_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_COMPLETE_TIME" source="E_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_CONTRACT_ID" source="E_CONTRACT_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_CUSTOMER_ID" source="E_CUSTOMER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTEREST_RATE_SP" source="INTEREST_RATE_SP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTEREST_SPREAD" source="INTEREST_SPREAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIMIT_PREFIX" source="LIMIT_PREFIX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAX_LIMIT_PER_CO" source="MAX_LIMIT_PER_CO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MCLR6_RATE" source="MCLR6_RATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_AMT" source="OFFER_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_TENURE" source="OFFER_TENURE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAY_DELAY_12_MNT" source="PAY_DELAY_12_MNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSING_FEE" source="PROCESSING_FEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_FEE_PERC" source="PROCESS_FEE_PERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCH_12_MONTHS" source="PURCH_12_MONTHS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RATE" source="RATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_12_MONTHS" source="SALES_12_MONTHS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TENOR_OF_PAYMENT" source="TENOR_OF_PAYMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALID_TO" source="VALID_TO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_AGGRID" source="AGGRID"/>
+      </input>
+    <joinAttribute name="BP_CP_GUID"/>
+    <joinAttribute name="BP_CP_TYPE"/>
+    <joinAttribute name="BP_AGGRID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_5" joinType="leftOuter">
+    <viewAttributes>
+        <viewAttribute id="SCP_ADDRESS1"/>
+        <viewAttribute id="SCP_ADDRESS2"/>
+        <viewAttribute id="SCP_ADDRESS3"/>
+        <viewAttribute id="SCP_ADDRESS4"/>
+        <viewAttribute id="SCP_CHANGEDAT"/>
+        <viewAttribute id="SCP_CHANGEDBY"/>
+        <viewAttribute id="SCP_CHANGEDON"/>
+        <viewAttribute id="SCP_CREATEDAT"/>
+        <viewAttribute id="SCP_CREATEDBY"/>
+        <viewAttribute id="SCP_CREATEDON"/>
+        <viewAttribute id="SCP_SOURCE"/>
+        <viewAttribute id="SCP_SOURCE_REF_ID"/>
+        <viewAttribute id="SCP_CITY"/>
+        <viewAttribute id="SCP_COUNTRY_DESC"/>
+        <viewAttribute id="SCP_COUNTRY_ID"/>
+        <viewAttribute id="SCP_DATEOF_INCORPORATION"/>
+        <viewAttribute id="SCP_DEF_PASSWORD"/>
+        <viewAttribute id="SCP_DISTRICT"/>
+        <viewAttribute id="SCP_EMAIL_ID"/>
+        <viewAttribute id="SCP_FAX_EXTN"/>
+        <viewAttribute id="SCP_FAX_NUMBER"/>
+        <viewAttribute id="SCP_GSTIN"/>
+        <viewAttribute id="SCP_ID"/>
+        <viewAttribute id="SCP_LEGAL_STATUS_ID"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_DATE"/>
+        <viewAttribute id="SCP_LOGIN_COMPLETE_TIME"/>
+        <viewAttribute id="SCP_LOGIN_ID"/>
+        <viewAttribute id="SCP_LOGIN_STATUS"/>
+        <viewAttribute id="SCP_MOBILE_NO"/>
+        <viewAttribute id="SCP_NAME1"/>
+        <viewAttribute id="SCP_NAME2"/>
+        <viewAttribute id="SCP_NAME3"/>
+        <viewAttribute id="SCP_NAME4"/>
+        <viewAttribute id="SCP_PANNO"/>
+        <viewAttribute id="SCP_POSTAL_CODE"/>
+        <viewAttribute id="SCP_REAL_TIME_CIN"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="SCP_STATE_DESC"/>
+        <viewAttribute id="SCP_STATE_ID"/>
+        <viewAttribute id="SCP_TELEPHONE_EXTN"/>
+        <viewAttribute id="SCP_TELEPHONE_NO"/>
+        <viewAttribute id="SCP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_ADDRESS1"/>
+        <viewAttribute id="BP_ADDRESS2"/>
+        <viewAttribute id="BP_ADDRESS3"/>
+        <viewAttribute id="BP_ADDRESS4"/>
+        <viewAttribute id="BP_AGGRID"/>
+        <viewAttribute id="BP_APPROVER_REMARKS"/>
+        <viewAttribute id="BP_BP_REJ_REMARKS"/>
+        <viewAttribute id="BP_CHANGEDAT"/>
+        <viewAttribute id="BP_CHANGEDBY"/>
+        <viewAttribute id="BP_CHANGEDON"/>
+        <viewAttribute id="BP_CREATEDAT"/>
+        <viewAttribute id="BP_CREATEDBY"/>
+        <viewAttribute id="BP_CREATEDON"/>
+        <viewAttribute id="BP_SOURCE"/>
+        <viewAttribute id="BP_SOURCE_REF_ID"/>
+        <viewAttribute id="BP_CIN"/>
+        <viewAttribute id="BP_CITY"/>
+        <viewAttribute id="BP_COUNTRY"/>
+        <viewAttribute id="BP_COUNTRY_DESC"/>
+        <viewAttribute id="BP_CP_GUID"/>
+        <viewAttribute id="BP_CP_NAME"/>
+        <viewAttribute id="BP_CP_TYPE"/>
+        <viewAttribute id="BP_DISTRICT"/>
+        <viewAttribute id="BP_EMAIL_ID"/>
+        <viewAttribute id="BP_ENTITY_ID"/>
+        <viewAttribute id="BP_ENTITY_TYPE"/>
+        <viewAttribute id="BP_FACILITY_TYPE"/>
+        <viewAttribute id="BP_FBE"/>
+        <viewAttribute id="BP_GSTIN"/>
+        <viewAttribute id="BP_HFCE"/>
+        <viewAttribute id="BP_ID"/>
+        <viewAttribute id="BP_INCORP_DATE"/>
+        <viewAttribute id="BP_LANDLINE1"/>
+        <viewAttribute id="BP_LEGAL_STATUS"/>
+        <viewAttribute id="BP_LEI_NUMBER"/>
+        <viewAttribute id="BP_MOBILE1"/>
+        <viewAttribute id="BP_MOBILE2"/>
+        <viewAttribute id="BP_MSME"/>
+        <viewAttribute id="BP_NFBE"/>
+        <viewAttribute id="BP_PAN"/>
+        <viewAttribute id="BP_PINCODE"/>
+        <viewAttribute id="BP_REGION"/>
+        <viewAttribute id="BP_REGION_DESC"/>
+        <viewAttribute id="BP_STATUS_ID"/>
+        <viewAttribute id="BP_TBE"/>
+        <viewAttribute id="BP_TFCE"/>
+        <viewAttribute id="BP_UHFCE"/>
+        <viewAttribute id="BP_URCNO"/>
+        <viewAttribute id="BP_UTIL_DISTRICT"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_AGGRID"/>
+        <viewAttribute id="SCF_CP_GUID"/>
+        <viewAttribute id="SCF_CP_TYPE"/>
+        <viewAttribute id="SCF_AGGRID"/>
+        <viewAttribute id="SCF_ACC_NO"/>
+        <viewAttribute id="ADDLN_PRD_INT_RA"/>
+        <viewAttribute id="ADDLN_TENOR_OF_P"/>
+        <viewAttribute id="APPLICANT_IP"/>
+        <viewAttribute id="APPLICATION_NO"/>
+        <viewAttribute id="BUSI_VINT_DEALER"/>
+        <viewAttribute id="SCF_CALL_BACK_STATUS"/>
+        <viewAttribute id="SCF_CHANGEDAT"/>
+        <viewAttribute id="SCF_CHANGEDBY"/>
+        <viewAttribute id="SCF_CHANGEDON"/>
+        <viewAttribute id="SCF_CREATEDAT"/>
+        <viewAttribute id="SCF_CREATEDBY"/>
+        <viewAttribute id="SCF_CREATEDON"/>
+        <viewAttribute id="SCF_SOURCE"/>
+        <viewAttribute id="SCF_SOURCE_REF_ID"/>
+        <viewAttribute id="CHQ_RETURN"/>
+        <viewAttribute id="SCF_CONSTITUTE_TYPE"/>
+        <viewAttribute id="CORP_RATING"/>
+        <viewAttribute id="CURRENCY"/>
+        <viewAttribute id="DDB_ACTIVE"/>
+        <viewAttribute id="DEALER_SCOPE"/>
+        <viewAttribute id="DEALER_VEN_FLAG"/>
+        <viewAttribute id="DEF_INT_SPREAD"/>
+        <viewAttribute id="E_COMPLETE_DATE"/>
+        <viewAttribute id="E_COMPLETE_TIME"/>
+        <viewAttribute id="E_CONTRACT_ID"/>
+        <viewAttribute id="E_CUSTOMER_ID"/>
+        <viewAttribute id="SCF_ID"/>
+        <viewAttribute id="INTEREST_RATE_SP"/>
+        <viewAttribute id="INTEREST_SPREAD"/>
+        <viewAttribute id="LIMIT_PREFIX"/>
+        <viewAttribute id="MAX_LIMIT_PER_CO"/>
+        <viewAttribute id="MCLR6_RATE"/>
+        <viewAttribute id="OFFER_AMT"/>
+        <viewAttribute id="OFFER_TENURE"/>
+        <viewAttribute id="PAY_DELAY_12_MNT"/>
+        <viewAttribute id="PROCESSING_FEE"/>
+        <viewAttribute id="PROCESS_FEE_PERC"/>
+        <viewAttribute id="PURCH_12_MONTHS"/>
+        <viewAttribute id="RATE"/>
+        <viewAttribute id="SALES_12_MONTHS"/>
+        <viewAttribute id="SCF_STATUS_ID"/>
+        <viewAttribute id="TENOR_OF_PAYMENT"/>
+        <viewAttribute id="VALID_TO"/>
+        <viewAttribute id="PROCESSREFERENCE8"/>
+        <viewAttribute id="PROCESSREFERENCE9"/>
+        <viewAttribute id="PROCESSREFERENCE10"/>
+        <viewAttribute id="PROCESSID"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="REMARKS"/>
+        <viewAttribute id="APPROVALSTATUSID"/>
+        <viewAttribute id="PROCESSREFERENCE1"/>
+        <viewAttribute id="PROCESSREFERENCE2"/>
+        <viewAttribute id="PROCESSREFERENCE5"/>
+        <viewAttribute id="PROCESSREFERENCE4"/>
+        <viewAttribute id="PROCESSREFERENCE3"/>
+        <viewAttribute id="PROCESSREFERENCE6"/>
+        <viewAttribute id="PROCESSREFERENCE7"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="Join_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS1" source="SCP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS2" source="SCP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS3" source="SCP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ADDRESS4" source="SCP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDAT" source="SCP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDBY" source="SCP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CHANGEDON" source="SCP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDAT" source="SCP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDBY" source="SCP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CREATEDON" source="SCP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE" source="SCP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_SOURCE_REF_ID" source="SCP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_CITY" source="SCP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_DESC" source="SCP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_COUNTRY_ID" source="SCP_COUNTRY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DATEOF_INCORPORATION" source="SCP_DATEOF_INCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DEF_PASSWORD" source="SCP_DEF_PASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_DISTRICT" source="SCP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_EMAIL_ID" source="SCP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_EXTN" source="SCP_FAX_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FAX_NUMBER" source="SCP_FAX_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GSTIN" source="SCP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_ID" source="SCP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LEGAL_STATUS_ID" source="SCP_LEGAL_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_DATE" source="SCP_LOGIN_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_COMPLETE_TIME" source="SCP_LOGIN_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_ID" source="SCP_LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_LOGIN_STATUS" source="SCP_LOGIN_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_MOBILE_NO" source="SCP_MOBILE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME1" source="SCP_NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME2" source="SCP_NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME3" source="SCP_NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_NAME4" source="SCP_NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_PANNO" source="SCP_PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_POSTAL_CODE" source="SCP_POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_REAL_TIME_CIN" source="SCP_REAL_TIME_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_DESC" source="SCP_STATE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_STATE_ID" source="SCP_STATE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_EXTN" source="SCP_TELEPHONE_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TELEPHONE_NO" source="SCP_TELEPHONE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_FACILITY_TYPE" source="SCP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS1" source="BP_ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS2" source="BP_ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS3" source="BP_ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ADDRESS4" source="BP_ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_AGGRID" source="BP_AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_APPROVER_REMARKS" source="BP_APPROVER_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_BP_REJ_REMARKS" source="BP_BP_REJ_REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDAT" source="BP_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDBY" source="BP_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CHANGEDON" source="BP_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDAT" source="BP_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDBY" source="BP_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CREATEDON" source="BP_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE" source="BP_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_SOURCE_REF_ID" source="BP_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CIN" source="BP_CIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CITY" source="BP_CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY" source="BP_COUNTRY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_COUNTRY_DESC" source="BP_COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_GUID" source="BP_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_NAME" source="BP_CP_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_CP_TYPE" source="BP_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_DISTRICT" source="BP_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_EMAIL_ID" source="BP_EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_ID" source="BP_ENTITY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ENTITY_TYPE" source="BP_ENTITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FACILITY_TYPE" source="BP_FACILITY_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_FBE" source="BP_FBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_GSTIN" source="BP_GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_HFCE" source="BP_HFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="BP_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_INCORP_DATE" source="BP_INCORP_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LANDLINE1" source="BP_LANDLINE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEGAL_STATUS" source="BP_LEGAL_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_LEI_NUMBER" source="BP_LEI_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE1" source="BP_MOBILE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MOBILE2" source="BP_MOBILE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_MSME" source="BP_MSME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_NFBE" source="BP_NFBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PAN" source="BP_PAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_PINCODE" source="BP_PINCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION" source="BP_REGION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_REGION_DESC" source="BP_REGION_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_STATUS_ID" source="BP_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TBE" source="BP_TBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_TFCE" source="BP_TFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UHFCE" source="BP_UHFCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_URCNO" source="BP_URCNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_UTIL_DISTRICT" source="BP_UTIL_DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="SCP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_AGGRID" source="SCP_AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CP_GUID" source="SCF_CP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CP_TYPE" source="SCF_CP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_AGGRID" source="SCF_AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ACC_NO" source="SCF_ACC_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDLN_PRD_INT_RA" source="ADDLN_PRD_INT_RA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDLN_TENOR_OF_P" source="ADDLN_TENOR_OF_P"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICANT_IP" source="APPLICANT_IP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION_NO" source="APPLICATION_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUSI_VINT_DEALER" source="BUSI_VINT_DEALER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CALL_BACK_STATUS" source="SCF_CALL_BACK_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDAT" source="SCF_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDBY" source="SCF_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDON" source="SCF_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDAT" source="SCF_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDBY" source="SCF_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDON" source="SCF_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_SOURCE" source="SCF_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_SOURCE_REF_ID" source="SCF_SOURCE_REF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHQ_RETURN" source="CHQ_RETURN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CONSTITUTE_TYPE" source="SCF_CONSTITUTE_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORP_RATING" source="CORP_RATING"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DDB_ACTIVE" source="DDB_ACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEALER_SCOPE" source="DEALER_SCOPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEALER_VEN_FLAG" source="DEALER_VEN_FLAG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEF_INT_SPREAD" source="DEF_INT_SPREAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_COMPLETE_DATE" source="E_COMPLETE_DATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_COMPLETE_TIME" source="E_COMPLETE_TIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_CONTRACT_ID" source="E_CONTRACT_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="E_CUSTOMER_ID" source="E_CUSTOMER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_ID" source="SCF_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTEREST_RATE_SP" source="INTEREST_RATE_SP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INTEREST_SPREAD" source="INTEREST_SPREAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIMIT_PREFIX" source="LIMIT_PREFIX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAX_LIMIT_PER_CO" source="MAX_LIMIT_PER_CO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MCLR6_RATE" source="MCLR6_RATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_AMT" source="OFFER_AMT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OFFER_TENURE" source="OFFER_TENURE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAY_DELAY_12_MNT" source="PAY_DELAY_12_MNT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSING_FEE" source="PROCESSING_FEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESS_FEE_PERC" source="PROCESS_FEE_PERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PURCH_12_MONTHS" source="PURCH_12_MONTHS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RATE" source="RATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALES_12_MONTHS" source="SALES_12_MONTHS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUS_ID" source="SCF_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TENOR_OF_PAYMENT" source="TENOR_OF_PAYMENT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALID_TO" source="VALID_TO"/>
+      </input>
+      <input node="ARTEC_PC_WORKFLOW_APPROVALVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE8" source="PROCESSREFERENCE8"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE9" source="PROCESSREFERENCE9"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE10" source="PROCESSREFERENCE10"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSID" source="PROCESSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REMARKS" source="REMARKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPROVALSTATUSID" source="STATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE1" source="PROCESSREFERENCE1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE2" source="PROCESSREFERENCE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE5" source="PROCESSREFERENCE5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE4" source="PROCESSREFERENCE4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE3" source="PROCESSREFERENCE3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE6" source="PROCESSREFERENCE6"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSREFERENCE7" source="PROCESSREFERENCE7"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BP_ID" source="PROCESSID"/>
+      </input>
+    <joinAttribute name="BP_ID"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_5">
+    <attributes>
+      <attribute id="SCP_ADDRESS1" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_ADDRESS1"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_ADDRESS1"/>
+      </attribute>
+      <attribute id="SCP_ADDRESS2" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_ADDRESS2"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_ADDRESS2"/>
+      </attribute>
+      <attribute id="SCP_ADDRESS3" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_ADDRESS3"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_ADDRESS3"/>
+      </attribute>
+      <attribute id="SCP_ADDRESS4" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_ADDRESS4"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_ADDRESS4"/>
+      </attribute>
+      <attribute id="SCP_CHANGEDAT" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CHANGEDAT"/>
+      </attribute>
+      <attribute id="SCP_CHANGEDBY" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CHANGEDBY"/>
+      </attribute>
+      <attribute id="SCP_CHANGEDON" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CHANGEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CHANGEDON"/>
+      </attribute>
+      <attribute id="SCP_CREATEDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CREATEDAT"/>
+      </attribute>
+      <attribute id="SCP_CREATEDBY" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CREATEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CREATEDBY"/>
+      </attribute>
+      <attribute id="SCP_CREATEDON" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CREATEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CREATEDON"/>
+      </attribute>
+      <attribute id="SCP_SOURCE" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_SOURCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_SOURCE"/>
+      </attribute>
+      <attribute id="SCP_SOURCE_REF_ID" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_SOURCE_REF_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_SOURCE_REF_ID"/>
+      </attribute>
+      <attribute id="SCP_CITY" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_CITY"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_CITY"/>
+      </attribute>
+      <attribute id="SCP_COUNTRY_DESC" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_COUNTRY_DESC"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="SCP_COUNTRY_ID" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_COUNTRY_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_COUNTRY_ID"/>
+      </attribute>
+      <attribute id="SCP_DATEOF_INCORPORATION" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_DATEOF_INCORPORATION"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_DATEOF_INCORPORATION"/>
+      </attribute>
+      <attribute id="SCP_DEF_PASSWORD" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_DEF_PASSWORD"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_DEF_PASSWORD"/>
+      </attribute>
+      <attribute id="SCP_DISTRICT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_DISTRICT"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_DISTRICT"/>
+      </attribute>
+      <attribute id="SCP_EMAIL_ID" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_EMAIL_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_EMAIL_ID"/>
+      </attribute>
+      <attribute id="SCP_FAX_EXTN" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_FAX_EXTN"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_FAX_EXTN"/>
+      </attribute>
+      <attribute id="SCP_FAX_NUMBER" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_FAX_NUMBER"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_FAX_NUMBER"/>
+      </attribute>
+      <attribute id="SCP_GSTIN" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_GSTIN"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_GSTIN"/>
+      </attribute>
+      <attribute id="SCP_ID" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_ID"/>
+      </attribute>
+      <attribute id="SCP_LEGAL_STATUS_ID" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_LEGAL_STATUS_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_LEGAL_STATUS_ID"/>
+      </attribute>
+      <attribute id="SCP_LOGIN_COMPLETE_DATE" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_LOGIN_COMPLETE_DATE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_LOGIN_COMPLETE_DATE"/>
+      </attribute>
+      <attribute id="SCP_LOGIN_COMPLETE_TIME" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_LOGIN_COMPLETE_TIME"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_LOGIN_COMPLETE_TIME"/>
+      </attribute>
+      <attribute id="SCP_LOGIN_ID" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_LOGIN_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_LOGIN_ID"/>
+      </attribute>
+      <attribute id="SCP_LOGIN_STATUS" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_LOGIN_STATUS"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_LOGIN_STATUS"/>
+      </attribute>
+      <attribute id="SCP_MOBILE_NO" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_MOBILE_NO"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_MOBILE_NO"/>
+      </attribute>
+      <attribute id="SCP_NAME1" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_NAME1"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_NAME1"/>
+      </attribute>
+      <attribute id="SCP_NAME2" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_NAME2"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_NAME2"/>
+      </attribute>
+      <attribute id="SCP_NAME3" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_NAME3"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_NAME3"/>
+      </attribute>
+      <attribute id="SCP_NAME4" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_NAME4"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_NAME4"/>
+      </attribute>
+      <attribute id="SCP_PANNO" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_PANNO"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_PANNO"/>
+      </attribute>
+      <attribute id="SCP_POSTAL_CODE" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_POSTAL_CODE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_POSTAL_CODE"/>
+      </attribute>
+      <attribute id="SCP_REAL_TIME_CIN" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_REAL_TIME_CIN"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_REAL_TIME_CIN"/>
+      </attribute>
+      <attribute id="SCP_TYPE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_TYPE"/>
+      </attribute>
+      <attribute id="SCP_STATE_DESC" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_STATE_DESC"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_STATE_DESC"/>
+      </attribute>
+      <attribute id="SCP_STATE_ID" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_STATE_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_STATE_ID"/>
+      </attribute>
+      <attribute id="SCP_TELEPHONE_EXTN" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_TELEPHONE_EXTN"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_TELEPHONE_EXTN"/>
+      </attribute>
+      <attribute id="SCP_TELEPHONE_NO" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_TELEPHONE_NO"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_TELEPHONE_NO"/>
+      </attribute>
+      <attribute id="SCP_FACILITY_TYPE" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_FACILITY_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_FACILITY_TYPE"/>
+      </attribute>
+      <attribute id="BP_ADDRESS1" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ADDRESS1"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ADDRESS1"/>
+      </attribute>
+      <attribute id="BP_ADDRESS2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ADDRESS2"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ADDRESS2"/>
+      </attribute>
+      <attribute id="BP_ADDRESS3" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ADDRESS3"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ADDRESS3"/>
+      </attribute>
+      <attribute id="BP_ADDRESS4" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ADDRESS4"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ADDRESS4"/>
+      </attribute>
+      <attribute id="BP_AGGRID" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_AGGRID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_AGGRID"/>
+      </attribute>
+      <attribute id="BP_APPROVER_REMARKS" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_APPROVER_REMARKS"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_APPROVER_REMARKS"/>
+      </attribute>
+      <attribute id="BP_BP_REJ_REMARKS" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_BP_REJ_REMARKS"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_BP_REJ_REMARKS"/>
+      </attribute>
+      <attribute id="BP_CHANGEDAT" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CHANGEDAT"/>
+      </attribute>
+      <attribute id="BP_CHANGEDBY" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CHANGEDBY"/>
+      </attribute>
+      <attribute id="BP_CHANGEDON" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CHANGEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CHANGEDON"/>
+      </attribute>
+      <attribute id="BP_CREATEDAT" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CREATEDAT"/>
+      </attribute>
+      <attribute id="BP_CREATEDBY" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CREATEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CREATEDBY"/>
+      </attribute>
+      <attribute id="BP_CREATEDON" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CREATEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CREATEDON"/>
+      </attribute>
+      <attribute id="BP_SOURCE" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_SOURCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_SOURCE"/>
+      </attribute>
+      <attribute id="BP_SOURCE_REF_ID" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_SOURCE_REF_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_SOURCE_REF_ID"/>
+      </attribute>
+      <attribute id="BP_CIN" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CIN"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CIN"/>
+      </attribute>
+      <attribute id="BP_CITY" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CITY"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CITY"/>
+      </attribute>
+      <attribute id="BP_COUNTRY" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_COUNTRY"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_COUNTRY"/>
+      </attribute>
+      <attribute id="BP_COUNTRY_DESC" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_COUNTRY_DESC"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="BP_CP_GUID" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_GUID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CP_GUID"/>
+      </attribute>
+      <attribute id="BP_CP_NAME" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_NAME"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CP_NAME"/>
+      </attribute>
+      <attribute id="BP_CP_TYPE" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_CP_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_CP_TYPE"/>
+      </attribute>
+      <attribute id="BP_DISTRICT" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_DISTRICT"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_DISTRICT"/>
+      </attribute>
+      <attribute id="BP_EMAIL_ID" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_EMAIL_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_EMAIL_ID"/>
+      </attribute>
+      <attribute id="BP_ENTITY_ID" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ENTITY_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ENTITY_ID"/>
+      </attribute>
+      <attribute id="BP_ENTITY_TYPE" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ENTITY_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ENTITY_TYPE"/>
+      </attribute>
+      <attribute id="BP_FACILITY_TYPE" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_FACILITY_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_FACILITY_TYPE"/>
+      </attribute>
+      <attribute id="BP_FBE" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_FBE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_FBE"/>
+      </attribute>
+      <attribute id="BP_GSTIN" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_GSTIN"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_GSTIN"/>
+      </attribute>
+      <attribute id="BP_HFCE" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_HFCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_HFCE"/>
+      </attribute>
+      <attribute id="BP_ID" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_ID"/>
+      </attribute>
+      <attribute id="BP_INCORP_DATE" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_INCORP_DATE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_INCORP_DATE"/>
+      </attribute>
+      <attribute id="BP_LANDLINE1" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_LANDLINE1"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_LANDLINE1"/>
+      </attribute>
+      <attribute id="BP_LEGAL_STATUS" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_LEGAL_STATUS"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_LEGAL_STATUS"/>
+      </attribute>
+      <attribute id="BP_LEI_NUMBER" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_LEI_NUMBER"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_LEI_NUMBER"/>
+      </attribute>
+      <attribute id="BP_MOBILE1" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_MOBILE1"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_MOBILE1"/>
+      </attribute>
+      <attribute id="BP_MOBILE2" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_MOBILE2"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_MOBILE2"/>
+      </attribute>
+      <attribute id="BP_MSME" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_MSME"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_MSME"/>
+      </attribute>
+      <attribute id="BP_NFBE" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_NFBE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_NFBE"/>
+      </attribute>
+      <attribute id="BP_PAN" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_PAN"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_PAN"/>
+      </attribute>
+      <attribute id="BP_PINCODE" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_PINCODE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_PINCODE"/>
+      </attribute>
+      <attribute id="BP_REGION" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_REGION"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_REGION"/>
+      </attribute>
+      <attribute id="BP_REGION_DESC" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_REGION_DESC"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_REGION_DESC"/>
+      </attribute>
+      <attribute id="BP_STATUS_ID" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_STATUS_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_STATUS_ID"/>
+      </attribute>
+      <attribute id="BP_TBE" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_TBE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_TBE"/>
+      </attribute>
+      <attribute id="BP_TFCE" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_TFCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_TFCE"/>
+      </attribute>
+      <attribute id="BP_UHFCE" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_UHFCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_UHFCE"/>
+      </attribute>
+      <attribute id="BP_URCNO" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_URCNO"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_URCNO"/>
+      </attribute>
+      <attribute id="BP_UTIL_DISTRICT" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BP_UTIL_DISTRICT"/>
+        <keyMapping columnObjectName="Join_5" columnName="BP_UTIL_DISTRICT"/>
+      </attribute>
+      <attribute id="SCP_GUID" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_GUID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_GUID"/>
+      </attribute>
+      <attribute id="SCP_AGGRID" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_AGGRID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCP_AGGRID"/>
+      </attribute>
+      <attribute id="SCF_CP_GUID" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CP_GUID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CP_GUID"/>
+      </attribute>
+      <attribute id="SCF_CP_TYPE" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CP_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CP_TYPE"/>
+      </attribute>
+      <attribute id="SCF_AGGRID" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_AGGRID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_AGGRID"/>
+      </attribute>
+      <attribute id="SCF_ACC_NO" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_ACC_NO"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_ACC_NO"/>
+      </attribute>
+      <attribute id="ADDLN_PRD_INT_RA" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDLN_PRD_INT_RA"/>
+        <keyMapping columnObjectName="Join_5" columnName="ADDLN_PRD_INT_RA"/>
+      </attribute>
+      <attribute id="ADDLN_TENOR_OF_P" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDLN_TENOR_OF_P"/>
+        <keyMapping columnObjectName="Join_5" columnName="ADDLN_TENOR_OF_P"/>
+      </attribute>
+      <attribute id="APPLICANT_IP" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICANT_IP"/>
+        <keyMapping columnObjectName="Join_5" columnName="APPLICANT_IP"/>
+      </attribute>
+      <attribute id="APPLICATION_NO" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION_NO"/>
+        <keyMapping columnObjectName="Join_5" columnName="APPLICATION_NO"/>
+      </attribute>
+      <attribute id="BUSI_VINT_DEALER" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSI_VINT_DEALER"/>
+        <keyMapping columnObjectName="Join_5" columnName="BUSI_VINT_DEALER"/>
+      </attribute>
+      <attribute id="SCF_CALL_BACK_STATUS" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CALL_BACK_STATUS"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CALL_BACK_STATUS"/>
+      </attribute>
+      <attribute id="SCF_CHANGEDAT" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CHANGEDAT"/>
+      </attribute>
+      <attribute id="SCF_CHANGEDBY" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CHANGEDBY"/>
+      </attribute>
+      <attribute id="SCF_CHANGEDON" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CHANGEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CHANGEDON"/>
+      </attribute>
+      <attribute id="SCF_CREATEDAT" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CREATEDAT"/>
+      </attribute>
+      <attribute id="SCF_CREATEDBY" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CREATEDBY"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CREATEDBY"/>
+      </attribute>
+      <attribute id="SCF_CREATEDON" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CREATEDON"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CREATEDON"/>
+      </attribute>
+      <attribute id="SCF_SOURCE" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_SOURCE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_SOURCE"/>
+      </attribute>
+      <attribute id="SCF_SOURCE_REF_ID" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_SOURCE_REF_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_SOURCE_REF_ID"/>
+      </attribute>
+      <attribute id="CHQ_RETURN" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHQ_RETURN"/>
+        <keyMapping columnObjectName="Join_5" columnName="CHQ_RETURN"/>
+      </attribute>
+      <attribute id="SCF_CONSTITUTE_TYPE" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_CONSTITUTE_TYPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_CONSTITUTE_TYPE"/>
+      </attribute>
+      <attribute id="CORP_RATING" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CORP_RATING"/>
+        <keyMapping columnObjectName="Join_5" columnName="CORP_RATING"/>
+      </attribute>
+      <attribute id="CURRENCY" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="Join_5" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="DDB_ACTIVE" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DDB_ACTIVE"/>
+        <keyMapping columnObjectName="Join_5" columnName="DDB_ACTIVE"/>
+      </attribute>
+      <attribute id="DEALER_SCOPE" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEALER_SCOPE"/>
+        <keyMapping columnObjectName="Join_5" columnName="DEALER_SCOPE"/>
+      </attribute>
+      <attribute id="DEALER_VEN_FLAG" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEALER_VEN_FLAG"/>
+        <keyMapping columnObjectName="Join_5" columnName="DEALER_VEN_FLAG"/>
+      </attribute>
+      <attribute id="DEF_INT_SPREAD" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEF_INT_SPREAD"/>
+        <keyMapping columnObjectName="Join_5" columnName="DEF_INT_SPREAD"/>
+      </attribute>
+      <attribute id="E_COMPLETE_DATE" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_COMPLETE_DATE"/>
+        <keyMapping columnObjectName="Join_5" columnName="E_COMPLETE_DATE"/>
+      </attribute>
+      <attribute id="E_COMPLETE_TIME" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_COMPLETE_TIME"/>
+        <keyMapping columnObjectName="Join_5" columnName="E_COMPLETE_TIME"/>
+      </attribute>
+      <attribute id="E_CONTRACT_ID" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_CONTRACT_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="E_CONTRACT_ID"/>
+      </attribute>
+      <attribute id="E_CUSTOMER_ID" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_CUSTOMER_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="E_CUSTOMER_ID"/>
+      </attribute>
+      <attribute id="SCF_ID" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_ID"/>
+      </attribute>
+      <attribute id="INTEREST_RATE_SP" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTEREST_RATE_SP"/>
+        <keyMapping columnObjectName="Join_5" columnName="INTEREST_RATE_SP"/>
+      </attribute>
+      <attribute id="INTEREST_SPREAD" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTEREST_SPREAD"/>
+        <keyMapping columnObjectName="Join_5" columnName="INTEREST_SPREAD"/>
+      </attribute>
+      <attribute id="LIMIT_PREFIX" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIMIT_PREFIX"/>
+        <keyMapping columnObjectName="Join_5" columnName="LIMIT_PREFIX"/>
+      </attribute>
+      <attribute id="MAX_LIMIT_PER_CO" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAX_LIMIT_PER_CO"/>
+        <keyMapping columnObjectName="Join_5" columnName="MAX_LIMIT_PER_CO"/>
+      </attribute>
+      <attribute id="MCLR6_RATE" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCLR6_RATE"/>
+        <keyMapping columnObjectName="Join_5" columnName="MCLR6_RATE"/>
+      </attribute>
+      <attribute id="OFFER_AMT" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OFFER_AMT"/>
+        <keyMapping columnObjectName="Join_5" columnName="OFFER_AMT"/>
+      </attribute>
+      <attribute id="OFFER_TENURE" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OFFER_TENURE"/>
+        <keyMapping columnObjectName="Join_5" columnName="OFFER_TENURE"/>
+      </attribute>
+      <attribute id="PAY_DELAY_12_MNT" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAY_DELAY_12_MNT"/>
+        <keyMapping columnObjectName="Join_5" columnName="PAY_DELAY_12_MNT"/>
+      </attribute>
+      <attribute id="PROCESSING_FEE" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSING_FEE"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSING_FEE"/>
+      </attribute>
+      <attribute id="PROCESS_FEE_PERC" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_FEE_PERC"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESS_FEE_PERC"/>
+      </attribute>
+      <attribute id="PURCH_12_MONTHS" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PURCH_12_MONTHS"/>
+        <keyMapping columnObjectName="Join_5" columnName="PURCH_12_MONTHS"/>
+      </attribute>
+      <attribute id="RATE" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RATE"/>
+        <keyMapping columnObjectName="Join_5" columnName="RATE"/>
+      </attribute>
+      <attribute id="SALES_12_MONTHS" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_12_MONTHS"/>
+        <keyMapping columnObjectName="Join_5" columnName="SALES_12_MONTHS"/>
+      </attribute>
+      <attribute id="SCF_STATUS_ID" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCF_STATUS_ID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SCF_STATUS_ID"/>
+      </attribute>
+      <attribute id="TENOR_OF_PAYMENT" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TENOR_OF_PAYMENT"/>
+        <keyMapping columnObjectName="Join_5" columnName="TENOR_OF_PAYMENT"/>
+      </attribute>
+      <attribute id="VALID_TO" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VALID_TO"/>
+        <keyMapping columnObjectName="Join_5" columnName="VALID_TO"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE8" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE8"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE8"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE9" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE9"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE9"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE10" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE10"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE10"/>
+      </attribute>
+      <attribute id="PROCESSID" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSID"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSID"/>
+      </attribute>
+      <attribute id="SOURCEREFERENCEID" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCEREFERENCEID"/>
+        <keyMapping columnObjectName="Join_5" columnName="SOURCEREFERENCEID"/>
+      </attribute>
+      <attribute id="REMARKS" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="REMARKS"/>
+        <keyMapping columnObjectName="Join_5" columnName="REMARKS"/>
+      </attribute>
+      <attribute id="APPROVALSTATUSID" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPROVALSTATUSID"/>
+        <keyMapping columnObjectName="Join_5" columnName="APPROVALSTATUSID"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE1" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE1"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE1"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE2" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE2"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE2"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE5" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE5"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE5"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE4" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE4"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE4"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE3" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE3"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE3"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE6" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE6"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE6"/>
+      </attribute>
+      <attribute id="PROCESSREFERENCE7" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSREFERENCE7"/>
+        <keyMapping columnObjectName="Join_5" columnName="PROCESSREFERENCE7"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="243.4012701828858" y="112"/>
+      
+        <rectangleSize width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="222.98453709850176" y="516.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="Join_4" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="BP" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="92" y="676.9999976158142"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_SCP" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_SCP_4" modelObjectNameSpace="Join_4" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="false" modelObjectName="BP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="302.00000000000006" y="676.9999976158142"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="222.98453709850176" y="376.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_SUPPLYCHAINFINANCE_SCF" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="243.4012701828858" y="217"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    
+    <shape modelObjectName="Join_3" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PC_WORKFLOW_APPROVALVIEW" modelObjectNameSpace="Join_5" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

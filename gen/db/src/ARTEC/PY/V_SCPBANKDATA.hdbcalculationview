@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_SCPBANKDATA" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_SCPBANKDATA_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCPVIEW">
+    <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCPVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCP_3VIEW">
+    <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCP_3VIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="TELEPHONENO"/>
+      <viewAttribute id="LOGINID"/>
+      <viewAttribute id="NAME3"/>
+      <viewAttribute id="STATEID"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="NAME4"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="LOGINCOMPLETEDDATE"/>
+      <viewAttribute id="COUNTRYID"/>
+      <viewAttribute id="LOGINCOMPLETEDTIME"/>
+      <viewAttribute id="LEGALSTATUSID"/>
+      <viewAttribute id="TELEPHONEEXTN"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="DATEOFINCORPORATION"/>
+      <viewAttribute id="SCPTYPE"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="MOBILENO"/>
+      <viewAttribute id="SCPGUID"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="SCPBANKDATA_ID"/>
+      <viewAttribute id="SCPBANKDATA_CHANGEDON"/>
+      <viewAttribute id="SCPBANKDATA_SOURCE"/>
+      <viewAttribute id="REFERENCEID"/>
+      <viewAttribute id="SCPBANKDATA_SOURCEREFERENCEID"/>
+      <viewAttribute id="BANKKEY"/>
+      <viewAttribute id="BANKACCNTNO"/>
+      <viewAttribute id="BANKACCNTTYPE"/>
+      <viewAttribute id="SCPBANKDATA_CHANGEDBY"/>
+      <viewAttribute id="SCPBANKDATA_CREATEDON"/>
+      <viewAttribute id="SCPBANKDATA_CREATEDBY"/>
+      <viewAttribute id="BENEFICIARYNAME"/>
+      <viewAttribute id="SCPBANKDATA_CREATEDAT"/>
+      <viewAttribute id="BANKACCNTSTS"/>
+      <viewAttribute id="SCPBANKDATA_CHANGEDAT"/>
+      <viewAttribute id="BANKNAME"/>
+      <viewAttribute id="BANKCOUNTRY"/>
+      <viewAttribute id="CASHDISCPERCENTAGE"/>
+      <viewAttribute hidden="true" id="JOIN$ID$REFERENCEID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_BUSINESSPARTNER_SCPVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONENO" source="TELEPHONENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEID" source="STATEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDDATE" source="LOGINCOMPLETEDDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYID" source="COUNTRYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDTIME" source="LOGINCOMPLETEDTIME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSID" source="LEGALSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONEEXTN" source="TELEPHONEEXTN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DATEOFINCORPORATION" source="DATEOFINCORPORATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPTYPE" source="SCPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILENO" source="MOBILENO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="SCPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$REFERENCEID" source="ID"/>
+    </input>
+    <input node="ARTEC_PY_BUSINESSPARTNER_SCP_3VIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REFERENCEID" source="REFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKKEY" source="BANKKEY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKACCNTNO" source="BANKACCNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKACCNTTYPE" source="BANKACCNTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BENEFICIARYNAME" source="BENEFICIARYNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKACCNTSTS" source="BANKACCNTSTS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SCPBANKDATA_CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKNAME" source="BANKNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BANKCOUNTRY" source="BANKCOUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CASHDISCPERCENTAGE" source="CASHDISCPERCENTAGE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$REFERENCEID" source="REFERENCEID"/>
+    </input>
+    <joinAttribute name="JOIN$ID$REFERENCEID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="NAME1" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAME1"/>
+    </attribute>
+    <attribute id="CITY" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CITY"/>
+    </attribute>
+    <attribute id="COUNTRYDESC" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRYDESC"/>
+      <keyMapping columnObjectName="Join_1" columnName="COUNTRYDESC"/>
+    </attribute>
+    <attribute id="NAME2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME2"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAME2"/>
+    </attribute>
+    <attribute id="POSTALCODE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSTALCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSTALCODE"/>
+    </attribute>
+    <attribute id="TELEPHONENO" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TELEPHONENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="TELEPHONENO"/>
+    </attribute>
+    <attribute id="LOGINID" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOGINID"/>
+      <keyMapping columnObjectName="Join_1" columnName="LOGINID"/>
+    </attribute>
+    <attribute id="NAME3" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME3"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAME3"/>
+    </attribute>
+    <attribute id="STATEID" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATEID"/>
+    </attribute>
+    <attribute id="CHANGEDAT" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDAT"/>
+    </attribute>
+    <attribute id="NAME4" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME4"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAME4"/>
+    </attribute>
+    <attribute id="STATEDESC" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATEDESC"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATEDESC"/>
+    </attribute>
+    <attribute id="LOGINCOMPLETEDDATE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOGINCOMPLETEDDATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="LOGINCOMPLETEDDATE"/>
+    </attribute>
+    <attribute id="COUNTRYID" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRYID"/>
+      <keyMapping columnObjectName="Join_1" columnName="COUNTRYID"/>
+    </attribute>
+    <attribute id="LOGINCOMPLETEDTIME" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOGINCOMPLETEDTIME"/>
+      <keyMapping columnObjectName="Join_1" columnName="LOGINCOMPLETEDTIME"/>
+    </attribute>
+    <attribute id="LEGALSTATUSID" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEGALSTATUSID"/>
+      <keyMapping columnObjectName="Join_1" columnName="LEGALSTATUSID"/>
+    </attribute>
+    <attribute id="TELEPHONEEXTN" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TELEPHONEEXTN"/>
+      <keyMapping columnObjectName="Join_1" columnName="TELEPHONEEXTN"/>
+    </attribute>
+    <attribute id="ADDRESS1" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS1"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS1"/>
+    </attribute>
+    <attribute id="ID" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ID"/>
+    </attribute>
+    <attribute id="CHANGEDBY" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDBY"/>
+    </attribute>
+    <attribute id="ADDRESS2" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS2"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS2"/>
+    </attribute>
+    <attribute id="EMAILID" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILID"/>
+      <keyMapping columnObjectName="Join_1" columnName="EMAILID"/>
+    </attribute>
+    <attribute id="AGGREGATORID" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="CREATEDON" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON"/>
+    </attribute>
+    <attribute id="CHANGEDON" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON"/>
+      <keyMapping columnObjectName="Join_1" columnName="CHANGEDON"/>
+    </attribute>
+    <attribute id="ADDRESS3" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS3"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS3"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="DATEOFINCORPORATION" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DATEOFINCORPORATION"/>
+      <keyMapping columnObjectName="Join_1" columnName="DATEOFINCORPORATION"/>
+    </attribute>
+    <attribute id="SCPTYPE" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCPTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPTYPE"/>
+    </attribute>
+    <attribute id="SOURCE" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="ADDRESS4" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS4"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="MOBILENO" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILENO"/>
+      <keyMapping columnObjectName="Join_1" columnName="MOBILENO"/>
+    </attribute>
+    <attribute id="SCPGUID" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SCPGUID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPGUID"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="DISTRICT" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRICT"/>
+      <keyMapping columnObjectName="Join_1" columnName="DISTRICT"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_ID" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ID_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_ID"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CHANGEDON" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CHANGEDON"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_SOURCE" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_SOURCE"/>
+    </attribute>
+    <attribute id="REFERENCEID" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFERENCEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="REFERENCEID"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_SOURCEREFERENCEID" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="BANKKEY" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKKEY"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKKEY"/>
+    </attribute>
+    <attribute id="BANKACCNTNO" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKACCNTNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKACCNTNO"/>
+    </attribute>
+    <attribute id="BANKACCNTTYPE" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKACCNTTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKACCNTTYPE"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CHANGEDBY" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CHANGEDBY"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CREATEDON" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CREATEDON"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CREATEDBY" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CREATEDBY"/>
+    </attribute>
+    <attribute id="BENEFICIARYNAME" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BENEFICIARYNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="BENEFICIARYNAME"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CREATEDAT" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CREATEDAT"/>
+    </attribute>
+    <attribute id="BANKACCNTSTS" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKACCNTSTS"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKACCNTSTS"/>
+    </attribute>
+    <attribute id="SCPBANKDATA_CHANGEDAT" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT_1"/>
+      <keyMapping columnObjectName="Join_1" columnName="SCPBANKDATA_CHANGEDAT"/>
+    </attribute>
+    <attribute id="BANKNAME" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKNAME"/>
+    </attribute>
+    <attribute id="BANKCOUNTRY" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BANKCOUNTRY"/>
+      <keyMapping columnObjectName="Join_1" columnName="BANKCOUNTRY"/>
+    </attribute>
+    <attribute id="CASHDISCPERCENTAGE" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CASHDISCPERCENTAGE"/>
+      <keyMapping columnObjectName="Join_1" columnName="CASHDISCPERCENTAGE"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="85" y="185"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_SCPVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="136" y="70"/>
+      <rectangleSize width="281.623046875"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_SCP_3VIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="294.970703125"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

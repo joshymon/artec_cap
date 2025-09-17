@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_BPSCF_ELIG_BPCNTP_SCF4" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" defaultClient="$$client$$" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="V_BPSCF_ELIG_BPCNTP_SCF4"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW">
+    <resourceUri>ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="BPCNTPVIEW">
+    <viewAttributes>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="BPCNTP_ID"/>
+    
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CREATEDON_BPCNTP"/>
+      <viewAttribute id="CREATEDAT_BPCNTP"/>
+      <viewAttribute id="CREATEDBY_BPCNTP"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPCNTP_ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_BPCNTP" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_BPCNTP" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_BPCNTP" source="CREATEDBY"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="SCF4VIEW">
+    <viewAttributes>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+    
+      <viewAttribute id="STATUSID_SCF4"/>
+      <viewAttribute id="SERVICEPROVIDERREF_SCF4"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID_SCF4"/>
+      <viewAttribute id="VALIDTO_SCF4"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_SCF4"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW">
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID_SCF4" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICEPROVIDERREF_SCF4" source="SERVICEPROVIDERREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUSID_SCF4" source="ELIGIBILITYSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_SCF4" source="VALIDTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_SCF4" source="ELIGIBILITYTYPEID"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="BPCNTP_ID"/>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+    
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CREATEDON_BPCNTP"/>
+      <viewAttribute id="CREATEDAT_BPCNTP"/>
+      <viewAttribute id="CREATEDBY_BPCNTP"/>
+    
+      <viewAttribute id="STATUSID_SCF4"/>
+      <viewAttribute id="SERVICEPROVIDERREF_SCF4"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID_SCF4"/>
+      <viewAttribute id="VALIDTO_SCF4"/>
+      <viewAttribute id="ELIGIBILITYTYPEID_SCF4"/>
+      <viewAttribute hidden="true" id="JOIN$BPCNTP_ID$OBJECTTYPE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="BPCNTPVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPID" source="BPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPCNTP_ID" source="BPCNTP_ID"/>
+    
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDERID" source="GENDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_BPCNTP" source="CREATEDON_BPCNTP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_BPCNTP" source="CREATEDAT_BPCNTP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_BPCNTP" source="CREATEDBY_BPCNTP"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BPCNTP_ID$OBJECTTYPE" source="BPCNTP_ID"/>
+    </input>
+    <input node="SCF4VIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="RECORDID" source="RECORDID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPEID" source="OBJECTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPE" source="OBJECTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORRELATIONID" source="CORRELATIONID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID_SCF4" source="STATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICEPROVIDERREF_SCF4" source="SERVICEPROVIDERREF_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUSID_SCF4" source="ELIGIBILITYSTATUSID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO_SCF4" source="VALIDTO_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID_SCF4" source="ELIGIBILITYTYPEID_SCF4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BPCNTP_ID$OBJECTTYPE" source="OBJECTTYPE"/>
+    </input>
+    <joinAttribute name="JOIN$BPCNTP_ID$OBJECTTYPE"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="BPID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPID"/>
+      <keyMapping columnObjectName="Join_1" columnName="BPID"/>
+    </attribute>
+    <attribute id="PAN" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAN"/>
+      <keyMapping columnObjectName="Join_1" columnName="PAN"/>
+    </attribute>
+    <attribute id="BPCNTP_ID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPCNTP_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="BPCNTP_ID"/>
+    </attribute>
+    <attribute id="RECORDID" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECORDID"/>
+      <keyMapping columnObjectName="Join_1" columnName="RECORDID"/>
+    </attribute>
+    <attribute id="AGGREGATORID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_1" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="OBJECTTYPEID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="OBJECTTYPEID"/>
+    </attribute>
+    <attribute id="OBJECTTYPE" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPE"/>
+      <keyMapping columnObjectName="Join_1" columnName="OBJECTTYPE"/>
+    </attribute>
+    <attribute id="CORRELATIONID" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORRELATIONID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CORRELATIONID"/>
+    </attribute>
+  
+    <attribute id="NAME1" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1"/>
+  
+      <keyMapping columnObjectName="Join_1" columnName="NAME1"/>
+  
+    </attribute>
+    <attribute id="NAME2" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME2"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAME2"/>
+    </attribute>
+    <attribute id="DOB" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOB"/>
+      <keyMapping columnObjectName="Join_1" columnName="DOB"/>
+    </attribute>
+    <attribute id="MOBILE" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE"/>
+      <keyMapping columnObjectName="Join_1" columnName="MOBILE"/>
+    </attribute>
+    <attribute id="EMAILID" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILID"/>
+      <keyMapping columnObjectName="Join_1" columnName="EMAILID"/>
+    </attribute>
+    <attribute id="GENDERID" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GENDERID"/>
+      <keyMapping columnObjectName="Join_1" columnName="GENDERID"/>
+    </attribute>
+    <attribute id="POSTALCODE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSTALCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="POSTALCODE"/>
+    </attribute>
+    <attribute id="CREATEDON_BPCNTP" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_BPCNTP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDON_BPCNTP"/>
+    </attribute>
+    <attribute id="CREATEDAT_BPCNTP" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_BPCNTP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDAT_BPCNTP"/>
+    </attribute>
+    <attribute id="CREATEDBY_BPCNTP" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_BPCNTP"/>
+      <keyMapping columnObjectName="Join_1" columnName="CREATEDBY_BPCNTP"/>
+    </attribute>
+  
+    <attribute id="STATUSID_SCF4" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID_SCF4"/>
+  
+      <keyMapping columnObjectName="Join_1" columnName="STATUSID_SCF4"/>
+  
+    </attribute>
+    <attribute id="SERVICEPROVIDERREF_SCF4" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICEPROVIDERREF_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="SERVICEPROVIDERREF_SCF4"/>
+    </attribute>
+    <attribute id="ELIGIBILITYSTATUSID_SCF4" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYSTATUSID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYSTATUSID_SCF4"/>
+    </attribute>
+    <attribute id="VALIDTO_SCF4" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALIDTO_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="VALIDTO_SCF4"/>
+    </attribute>
+    <attribute id="ELIGIBILITYTYPEID_SCF4" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYTYPEID_SCF4"/>
+      <keyMapping columnObjectName="Join_1" columnName="ELIGIBILITYTYPEID_SCF4"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="BPCNTPVIEW" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-130" y="231"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="SCF4VIEW" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="320" y="246"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="116" y="181"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  
+    <shape modelObjectName="BPCNTPVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="SCF4VIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

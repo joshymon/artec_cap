@@ -1,0 +1,4 @@
+
+cds:
+  odata-v2.endpoint.path: "/calc"
+

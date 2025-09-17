@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PY_V_VENDOR" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_USERCUSTOMER"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_USERMGMT_USRPRT">
+      <resourceUri>ARTEC_PC_USERMGMT_USRPRT</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCP">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCP</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="VENDORS" joinType="inner">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="APPLICATION"/>
+        <viewAttribute id="ERP_SYSTEM_ID"/>
+        <viewAttribute id="IS_ACTIVE"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="PARTNER_ID"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="COUNTRY_DESC"/>
+        <viewAttribute id="COUNTRY_ID"/>
+        <viewAttribute id="DATEOF_INCORPORATION"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="FAX_EXTN"/>
+        <viewAttribute id="FAX_NUMBER"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="MOBILE_NO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="STATE_DESC"/>
+        <viewAttribute id="STATE_ID"/>
+        <viewAttribute id="TELEPHONE_EXTN"/>
+        <viewAttribute id="TELEPHONE_NO"/>
+        <viewAttribute id="PARTNER_TYPE"/>
+        <viewAttribute id="LEGAL_STATUS_ID"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="VENDORS_ASSIGNED_2_USER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION" source="APPLICATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERP_SYSTEM_ID" source="ERP_SYSTEM_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IS_ACTIVE" source="IS_ACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_ID" source="PARTNER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_TYPE" source="PARTNER_TYPE"/>
+      </input>
+      <input node="VENDORS_IN_SCP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGE_HISTORY_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGE_HISTORY_CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGE_HISTORY_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CHANGE_HISTORY_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CHANGE_HISTORY_CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CHANGE_HISTORY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="CHANGE_HISTORY_SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_DESC" source="COUNTRY_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_ID" source="COUNTRY_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATEOF_INCORPORATION" source="DATEOF_INCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAIL_ID" source="EMAIL_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAX_EXTN" source="FAX_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAX_NUMBER" source="FAX_NUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE_NO" source="MOBILE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTAL_CODE" source="POSTAL_CODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_GUID" source="SCP_GUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCP_TYPE" source="SCP_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATE_DESC" source="STATE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATE_ID" source="STATE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONE_EXTN" source="TELEPHONE_EXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONE_NO" source="TELEPHONE_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEGAL_STATUS_ID" source="LEGAL_STATUS_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_ID" source="SCP_GUID"/>
+      </input>
+    <joinAttribute name="AGGRID"/>
+    <joinAttribute name="PARTNER_ID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="VENDORS_ASSIGNED_2_USER" filterExpressionLanguage="COLUMN_ENGINE">
+    <descriptions>
+      <comment text=""/>
+    </descriptions>
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="APPLICATION"/>
+        <viewAttribute id="ERP_SYSTEM_ID"/>
+        <viewAttribute id="IS_ACTIVE"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="PARTNER_ID"/>
+        <viewAttribute id="PARTNER_TYPE"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PC_USERMGMT_USRPRT"/>
+    <filter>("APPLICATION"='PS' AND "PARTNER_TYPE"='000002')</filter>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="VENDORS_IN_SCP" filterExpressionLanguage="COLUMN_ENGINE">
+    <viewAttributes>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="COUNTRY_DESC"/>
+        <viewAttribute id="COUNTRY_ID"/>
+        <viewAttribute id="DATEOF_INCORPORATION"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="EMAIL_ID"/>
+        <viewAttribute id="FAX_EXTN"/>
+        <viewAttribute id="FAX_NUMBER"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="MOBILE_NO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="POSTAL_CODE"/>
+        <viewAttribute id="SCP_GUID"/>
+        <viewAttribute id="SCP_TYPE"/>
+        <viewAttribute id="STATE_DESC"/>
+        <viewAttribute id="STATE_ID"/>
+        <viewAttribute id="TELEPHONE_EXTN"/>
+        <viewAttribute id="TELEPHONE_NO"/>
+        <viewAttribute id="LEGAL_STATUS_ID"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AGGRID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PY_BUSINESSPARTNER_SCP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCE_REF_ID"/>
+      </input>
+    <filter>"SCP_TYPE"=000002</filter>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="VENDORS">
+    <attributes>
+      <attribute id="AGGREGATORID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="APPLICATION" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION"/>
+        <keyMapping columnObjectName="VENDORS" columnName="APPLICATION"/>
+      </attribute>
+      <attribute id="ERPSYSTEMID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERPSYSTEMID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ERP_SYSTEM_ID"/>
+      </attribute>
+      <attribute id="ISACTIVE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ISACTIVE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="IS_ACTIVE"/>
+      </attribute>
+      <attribute id="LOGINID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGINID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="LOGIN_ID"/>
+      </attribute>
+      <attribute id="PARTNERID" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNERID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="PARTNER_ID"/>
+      </attribute>
+      <attribute id="ADDRESS1" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS1"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ADDRESS1"/>
+      </attribute>
+      <attribute id="ADDRESS2" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS2"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ADDRESS2"/>
+      </attribute>
+      <attribute id="ADDRESS3" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS3"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ADDRESS3"/>
+      </attribute>
+      <attribute id="ADDRESS4" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS4"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ADDRESS4"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED AT"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED BY"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGED ON"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CHANGEDON"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED AT"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED BY"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDON" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CREATED ON"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_CREATEDON"/>
+      </attribute>
+      <attribute id="SOURCE" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CHANGE_HISTORY_SOURCE"/>
+      </attribute>
+      <attribute id="CITY" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY"/>
+        <keyMapping columnObjectName="VENDORS" columnName="CITY"/>
+      </attribute>
+      <attribute id="COUNTRYDESC" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY"/>
+        <keyMapping columnObjectName="VENDORS" columnName="COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="COUNTRYID" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY"/>
+        <keyMapping columnObjectName="VENDORS" columnName="COUNTRY_ID"/>
+      </attribute>
+      <attribute id="DATEOFINCORPORATION" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE OF INCORPORATION"/>
+        <keyMapping columnObjectName="VENDORS" columnName="DATEOF_INCORPORATION"/>
+      </attribute>
+      <attribute id="DISTRICT" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISTRICT"/>
+        <keyMapping columnObjectName="VENDORS" columnName="DISTRICT"/>
+      </attribute>
+      <attribute id="EMAILID" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMAIL ID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="EMAIL_ID"/>
+      </attribute>
+      <attribute id="FAXEXTN" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_EXTN"/>
+        <keyMapping columnObjectName="VENDORS" columnName="FAX_EXTN"/>
+      </attribute>
+      <attribute id="FAX" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_NUMBER"/>
+        <keyMapping columnObjectName="VENDORS" columnName="FAX_NUMBER"/>
+      </attribute>
+      <attribute id="GSTIN" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSTIN"/>
+        <keyMapping columnObjectName="VENDORS" columnName="GSTIN"/>
+      </attribute>
+      <attribute id="ID" key="true" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="ID"/>
+      </attribute>
+      <attribute id="MOBILE1" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBILE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="MOBILE_NO"/>
+      </attribute>
+      <attribute id="NAME" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME"/>
+        <keyMapping columnObjectName="VENDORS" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="VENDORS" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="VENDORS" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping columnObjectName="VENDORS" columnName="NAME4"/>
+      </attribute>
+      <attribute id="PAN" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAN"/>
+        <keyMapping columnObjectName="VENDORS" columnName="PANNO"/>
+      </attribute>
+      <attribute id="POSTALCODE" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAL CODE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="POSTAL_CODE"/>
+      </attribute>
+      <attribute id="CUSTOMERNO" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_GUID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="SCP_GUID"/>
+      </attribute>
+      <attribute id="SUPPLYCHAINPARTNERTYPE" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCP_TYPE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="SCP_TYPE"/>
+      </attribute>
+      <attribute id="REGIONDESC" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="STATE_DESC"/>
+      </attribute>
+      <attribute id="REGION" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE"/>
+        <keyMapping columnObjectName="VENDORS" columnName="STATE_ID"/>
+      </attribute>
+      <attribute id="LANDLINEEXTN" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANDLINE EXTENSION"/>
+        <keyMapping columnObjectName="VENDORS" columnName="TELEPHONE_EXTN"/>
+      </attribute>
+      <attribute id="LANDLINE" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELEPHONE NO"/>
+        <keyMapping columnObjectName="VENDORS" columnName="TELEPHONE_NO"/>
+      </attribute>
+      <attribute id="LEGALSTATUS" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL STATUS ID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="LEGAL_STATUS_ID"/>
+      </attribute>
+      <attribute id="SOURCEREFERENCEID" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOURCEREFERENCEID"/>
+        <keyMapping columnObjectName="VENDORS" columnName="SOURCEREFERENCEID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute id="LEGALSTATUSDESC" hidden="false" order="42" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL STATUS"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="40">
+          <formula>case(midstr("PAN", 4,1),
+'P', 'Proprietorship',
+'F', 'Partnership',
+'C','Company',
+'H', 'HUF',
+'Others')</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="221.11302679000914" y="112"/>
+      
+        <rectangleSize width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="VENDORS" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="221.11302679000914" y="217"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    <shape modelObjectName="VENDORS_ASSIGNED_2_USER" modelObjectNameSpace="VENDORS" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="VENDORS_IN_SCP" modelObjectNameSpace="VENDORS" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+      <shape expanded="true" modelObjectName="VENDORS_ASSIGNED_2_USER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="92.00000000000001" y="376.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+      <shape expanded="true" modelObjectName="VENDORS_IN_SCP" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="302.00000000000006" y="376.9999988079071"/>
+        <rectangleSize height="30" width="160"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PC_V_ORTY" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="AUTHORIZATION ORG TYPE"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_CUSTOMIZING_ORGTYP">
+      <resourceUri>ARTEC_PC_CUSTOMIZING_ORGTYP</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_CUSTOMIZING_ORGTYP_T">
+      <resourceUri>ARTEC_PC_CUSTOMIZING_ORGTYP_T</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_N" joinType="leftOuter">
+      <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="DATA_TYPE"/>
+        <viewAttribute id="LENGTH"/>
+        <viewAttribute id="ORG_TYPE_ID"/>
+        <viewAttribute id="LANGUAGE"/>
+        <viewAttribute id="ORG_TYPE_DESC"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PC_CUSTOMIZING_ORGTYP">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATA_TYPE" source="DATA_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LENGTH" source="LENGTH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORG_TYPE_ID" source="ORG_TYPE_ID"/>
+      </input>
+      <input node="ARTEC_PC_CUSTOMIZING_ORGTYP_T">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LANGUAGE" source="LANGUAGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORG_TYPE_DESC" source="ORG_TYPE_DESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORG_TYPE_ID" source="ORG_TYPE_ID"/>
+      </input>
+      <joinAttribute name="AGGRID"/>
+      <joinAttribute name="ORG_TYPE_ID"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGREGATORID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="DATATYPE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATA TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="DATA_TYPE"/>
+      </attribute>
+      <attribute id="LENGTH" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NO_ OF CHARACTERS"/>
+        <keyMapping columnObjectName="Join_1" columnName="LENGTH"/>
+      </attribute>
+      <attribute id="ORGTYPEID" key="true" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTH ORG TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="ORG_TYPE_ID"/>
+      </attribute>
+      <attribute id="LANGUAGE" key="true" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LANGUAGE"/>
+        <keyMapping columnObjectName="Join_1" columnName="LANGUAGE"/>
+      </attribute>
+      <attribute id="ORGTYPEDESC" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUTH ORG TYP DS"/>
+        <keyMapping columnObjectName="Join_1" columnName="ORG_TYPE_DESC"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="78" y="195"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

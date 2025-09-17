@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PYMIS_V_SCF" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_SCF"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF">
+    <attributes>
+      <attribute id="ACC_NO" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACC_NO"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="ACC_NO"/>
+      </attribute>
+      <attribute id="ADDLN_PRD_INT_RA" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDLN_PRD_INT_RA"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="ADDLN_PRD_INT_RA"/>
+      </attribute>
+      <attribute id="ADDLN_TENOR_OF_P" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDLN_TENOR_OF_P"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="ADDLN_TENOR_OF_P"/>
+      </attribute>
+      <attribute id="AGGRID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="APPLICANT_IP" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICANT_IP"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="APPLICANT_IP"/>
+      </attribute>
+      <attribute id="APPLICATION_NO" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION_NO"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="APPLICATION_NO"/>
+      </attribute>
+      <attribute id="BUSI_VINT_DEALER" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSI_VINT_DEALER"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="BUSI_VINT_DEALER"/>
+      </attribute>
+      <attribute id="CALL_BACK_STATUS" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CALL_BACK_STATUS"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CALL_BACK_STATUS"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDBY" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CHANGEDON" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDAT" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDBY" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_CREATEDON" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="CHANGE_HISTORY_SOURCE" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CHQ_RETURN" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHQ_RETURN"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CHQ_RETURN"/>
+      </attribute>
+      <attribute id="CONSTITUTE_TYPE" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONSTITUTE_TYPE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CONSTITUTE_TYPE"/>
+      </attribute>
+      <attribute id="CORP_RATING" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CORP_RATING"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CORP_RATING"/>
+      </attribute>
+      <attribute id="CP_GUID" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_GUID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CP_TYPE" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_TYPE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="CURRENCY" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="DDB_ACTIVE" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DDB_ACTIVE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="DDB_ACTIVE"/>
+      </attribute>
+      <attribute id="DEALER_SCOPE" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEALER_SCOPE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="DEALER_SCOPE"/>
+      </attribute>
+      <attribute id="DEALER_VEN_FLAG" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEALER_VEN_FLAG"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="DEALER_VEN_FLAG"/>
+      </attribute>
+      <attribute id="DEF_INT_SPREAD" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DEF_INT_SPREAD"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="DEF_INT_SPREAD"/>
+      </attribute>
+      <attribute id="E_COMPLETE_DATE" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_COMPLETE_DATE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="E_COMPLETE_DATE"/>
+      </attribute>
+      <attribute id="E_COMPLETE_TIME" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_COMPLETE_TIME"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="E_COMPLETE_TIME"/>
+      </attribute>
+      <attribute id="E_CONTRACT_ID" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_CONTRACT_ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="E_CONTRACT_ID"/>
+      </attribute>
+      <attribute id="E_CUSTOMER_ID" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="E_CUSTOMER_ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="E_CUSTOMER_ID"/>
+      </attribute>
+      <attribute id="ID" key="true" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="ID"/>
+      </attribute>
+      <attribute id="INTEREST_RATE_SP" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTEREST_RATE_SP"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="INTEREST_RATE_SP"/>
+      </attribute>
+      <attribute id="INTEREST_SPREAD" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INTEREST_SPREAD"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="INTEREST_SPREAD"/>
+      </attribute>
+      <attribute id="LIMIT_PREFIX" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIMIT_PREFIX"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="LIMIT_PREFIX"/>
+      </attribute>
+      <attribute id="MAX_LIMIT_PER_CO" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAX_LIMIT_PER_CO"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="MAX_LIMIT_PER_CO"/>
+      </attribute>
+      <attribute id="MCLR6_RATE" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MCLR6_RATE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="MCLR6_RATE"/>
+      </attribute>
+      <attribute id="OFFER_AMT" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OFFER_AMT"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="OFFER_AMT"/>
+      </attribute>
+      <attribute id="OFFER_TENURE" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OFFER_TENURE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="OFFER_TENURE"/>
+      </attribute>
+      <attribute id="PAY_DELAY_12_MNT" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAY_DELAY_12_MNT"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="PAY_DELAY_12_MNT"/>
+      </attribute>
+      <attribute id="PROCESSING_FEE" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESSING_FEE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="PROCESSING_FEE"/>
+      </attribute>
+      <attribute id="PROCESS_FEE_PERC" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROCESS_FEE_PERC"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="PROCESS_FEE_PERC"/>
+      </attribute>
+      <attribute id="PURCH_12_MONTHS" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PURCH_12_MONTHS"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="PURCH_12_MONTHS"/>
+      </attribute>
+      <attribute id="RATE" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RATE"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="RATE"/>
+      </attribute>
+      <attribute id="SALES_12_MONTHS" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_12_MONTHS"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="SALES_12_MONTHS"/>
+      </attribute>
+      <attribute id="STATUS_ID" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATUS_ID"/>
+        <keyMapping columnObjectName="SUPPLYCHAINFINANCE_SCF" columnName="STATUS_ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

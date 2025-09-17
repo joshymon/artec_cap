@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ARTEC_PY_V_BPSCF_ELIG2_BK2" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="V_BPSCF_ELIG2_BK2_HDBCALCULATIONVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ARTEC_PY_V_BP_CNTP_DISTINCT">
+    <resourceUri>ARTEC_PY_V_BP_CNTP_DISTINCT</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_BUSINESSPARTNER_BPVIEW">
+    <resourceUri>ARTEC_PY_BUSINESSPARTNER_BPVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW">
+    <resourceUri>ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW</resourceUri>
+  </DataSource>
+  <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW">
+    <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="URCREGISTRATIONDATE"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="ADDRESS1"/>
+    
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="URCACTIVITYTYPE"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="PARENTTYPEID"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="URCENTITYTYPE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="URCSECTORCODE"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="URCSUBSECTORCODE"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="LEINUMBER"/>
+      <viewAttribute id="URCDOCURL"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="ODACCOUNTNO"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="SIGNINGORDER"/>
+      <viewAttribute id="CNTPSTATUSID"/>
+      <viewAttribute id="BPTYPE"/>
+      <viewAttribute id="NAMEMATCHSCORE"/>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="YOBMATCHSCORRE"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DESIGNATION"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="UNIQUEIDENTIFIER1"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="AUTHORIZEDSIGNATORY"/>
+      <viewAttribute id="CNTPEMAILID"/>
+      <viewAttribute id="CONTACTPERSONTYPE"/>
+      <viewAttribute id="CALCULATEDTHRESHOLD"/>
+      <viewAttribute id="CNTPPAN"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CNTPID"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="CNT" datatype="INTEGER" expressionLanguage="COLUMN_ENGINE">
+        <formula>1</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="ARTEC_PY_V_BP_CNTP_DISTINCT"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="URCREGISTRATIONDATE"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="URCACTIVITYTYPE"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="PARENTTYPEID"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="ID"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="LEINUMBER"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="URCSUBSECTORCODE"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="URCDOCURL"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="ODACCOUNTNO"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="CNTPSTATUSID"/>
+      <viewAttribute id="BPTYPE"/>
+      <viewAttribute id="NAMEMATCHSCORE"/>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="YOBMATCHSCORRE"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DESIGNATION"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="UNIQUEIDENTIFIER1"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="AUTHORIZEDSIGNATORY"/>
+      <viewAttribute id="CNTPEMAILID"/>
+      <viewAttribute id="CONTACTPERSONTYPE"/>
+      <viewAttribute id="CALCULATEDTHRESHOLD"/>
+      <viewAttribute id="CNTPPAN"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CNTPID"/>
+      <viewAttribute hidden="true" id="JOIN$ID$BPID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ARTEC_PY_BUSINESSPARTNER_BPVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCREGISTRATIONDATE" source="URCREGISTRATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCACTIVITYTYPE" source="URCACTIVITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPEID" source="PARENTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSUBSECTORCODE" source="URCSUBSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCDOCURL" source="URCDOCURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ODACCOUNTNO" source="ODACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$BPID" source="ID"/>
+    </input>
+    <input node="ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPID" source="BPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPSTATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPTYPE" source="BPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEMATCHSCORE" source="NAMEMATCHSCORE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YOBMATCHSCORRE" source="YOBMATCHSCORRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESIGNATION" source="DESIGNATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEIDENTIFIER1" source="UNIQUEIDENTIFIER1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUTHORIZEDSIGNATORY" source="AUTHORIZEDSIGNATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPEMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONTACTPERSONTYPE" source="CONTACTPERSONTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALCULATEDTHRESHOLD" source="CALCULATEDTHRESHOLD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPPAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDERID" source="GENDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ID$BPID" source="BPID"/>
+    </input>
+    <joinAttribute name="JOIN$ID$BPID"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:UnionView" id="Union_1">
+    <viewAttributes>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="URCREGISTRATIONDATE"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="URCACTIVITYTYPE"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="PARENTTYPEID"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="BPGUID"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="URCENTITYTYPE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="URCSECTORCODE"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="URCSUBSECTORCODE"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="LEINUMBER"/>
+      <viewAttribute id="URCDOCURL"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="ODACCOUNTNO"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="SIGNINGORDER"/>
+      <viewAttribute id="CNTPSTATUSID"/>
+      <viewAttribute id="BPTYPE"/>
+      <viewAttribute id="NAMEMATCHSCORE"/>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="YOBMATCHSCORRE"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DESIGNATION"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="UNIQUEIDENTIFIER1"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="AUTHORIZEDSIGNATORY"/>
+      <viewAttribute id="CNTPEMAILID"/>
+      <viewAttribute id="CONTACTPERSONTYPE"/>
+      <viewAttribute id="CALCULATEDTHRESHOLD"/>
+      <viewAttribute id="CNTPPAN"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CNTPID"/>
+      <viewAttribute id="CNT"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCREGISTRATIONDATE" source="URCREGISTRATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCACTIVITYTYPE" source="URCACTIVITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPEID" source="PARENTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPGUID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCENTITYTYPE" source="URCENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSECTORCODE" source="URCSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSUBSECTORCODE" source="URCSUBSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCDOCURL" source="URCDOCURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ODACCOUNTNO" source="ODACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPID" source="BPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SIGNINGORDER" source="SIGNINGORDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPSTATUSID" source="CNTPSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPTYPE" source="BPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEMATCHSCORE" source="NAMEMATCHSCORE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YOBMATCHSCORRE" source="YOBMATCHSCORRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESIGNATION" source="DESIGNATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEIDENTIFIER1" source="UNIQUEIDENTIFIER1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUTHORIZEDSIGNATORY" source="AUTHORIZEDSIGNATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPEMAILID" source="CNTPEMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONTACTPERSONTYPE" source="CONTACTPERSONTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALCULATEDTHRESHOLD" source="CALCULATEDTHRESHOLD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPPAN" source="CNTPPAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDERID" source="GENDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPID" source="CNTPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNT" source="CNT"/>
+    </input>
+    <input node="Join_1" emptyUnionBehavior="NO_ROW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCREGISTRATIONDATE" source="URCREGISTRATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCACTIVITYTYPE" source="URCACTIVITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPEID" source="PARENTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPGUID" source="ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="URCENTITYTYPE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="URCSECTORCODE" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CPGUID" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="ADDRESS4" null="true" value=""/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SOURCE" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSUBSECTORCODE" source="URCSUBSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCDOCURL" source="URCDOCURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ODACCOUNTNO" source="ODACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPID" source="BPID"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="SIGNINGORDER" null="true" value=""/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPSTATUSID" source="CNTPSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPTYPE" source="BPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEMATCHSCORE" source="NAMEMATCHSCORE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YOBMATCHSCORRE" source="YOBMATCHSCORRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESIGNATION" source="DESIGNATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEIDENTIFIER1" source="UNIQUEIDENTIFIER1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUTHORIZEDSIGNATORY" source="AUTHORIZEDSIGNATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPEMAILID" source="CNTPEMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONTACTPERSONTYPE" source="CONTACTPERSONTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALCULATEDTHRESHOLD" source="CALCULATEDTHRESHOLD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPPAN" source="CNTPPAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDERID" source="GENDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPID" source="CNTPID"/>
+      <mapping xsi:type="Calculation:ConstantAttributeMapping" target="CNT" null="true" value=""/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="AGGREGATORID"/>
+      <viewAttribute id="URCREGISTRATIONDATE"/>
+      <viewAttribute id="STATEDESC"/>
+      <viewAttribute id="UNHGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="INCORPORATIONDATE"/>
+      <viewAttribute id="HGDFRGNCURREXPOSURE"/>
+      <viewAttribute id="CREATEDBY"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="TOTALFRGNCURREXPOSURE"/>
+      <viewAttribute id="UTILDISTRICT"/>
+      <viewAttribute id="CREATEDAT"/>
+      <viewAttribute id="COUNTRYDESC"/>
+      <viewAttribute id="ENTITYID"/>
+      <viewAttribute id="FUNDBASEDEXPOSURE"/>
+      <viewAttribute id="LEGALSTATUS"/>
+      <viewAttribute id="CREATEDON"/>
+      <viewAttribute id="PINCODE"/>
+      <viewAttribute id="PARENTNO"/>
+      <viewAttribute id="NONFUNDBASEDEXPOSURE"/>
+      <viewAttribute id="ADDRESS1"/>
+      <viewAttribute id="CHANGEDBY"/>
+      <viewAttribute id="URCACTIVITYTYPE"/>
+      <viewAttribute id="MOBILE1"/>
+      <viewAttribute id="PARENTTYPEID"/>
+      <viewAttribute id="TOTALBANKINGEXPOSURE"/>
+      <viewAttribute id="ADDRESS2"/>
+      <viewAttribute id="CHANGEDAT"/>
+      <viewAttribute id="GSTIN"/>
+      <viewAttribute id="MOBILE2"/>
+      <viewAttribute id="PARENTNAME"/>
+      <viewAttribute id="CORPORATEIDENTIFICATIONNO"/>
+      <viewAttribute id="BPGUID"/>
+      <viewAttribute id="ADDRESS3"/>
+      <viewAttribute id="CHANGEDON"/>
+      <viewAttribute id="STATUSID"/>
+      <viewAttribute id="LANDLINE1"/>
+      <viewAttribute id="URCENTITYTYPE"/>
+      <viewAttribute id="FACILITYTYPE"/>
+      <viewAttribute id="URCSECTORCODE"/>
+      <viewAttribute id="CPGUID"/>
+      <viewAttribute id="ADDRESS4"/>
+      <viewAttribute id="SOURCE"/>
+      <viewAttribute id="APPROVERREMARKS"/>
+      <viewAttribute id="EMAILID"/>
+      <viewAttribute id="ENTITYTYPE"/>
+      <viewAttribute id="BPREJECTIONREMARKS"/>
+      <viewAttribute id="URCSUBSECTORCODE"/>
+      <viewAttribute id="CPTYPE"/>
+      <viewAttribute id="DISTRICT"/>
+      <viewAttribute id="SOURCEREFERENCEID"/>
+      <viewAttribute id="MSME"/>
+      <viewAttribute id="PAN"/>
+      <viewAttribute id="LEINUMBER"/>
+      <viewAttribute id="URCDOCURL"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="UDYAMREGNO"/>
+      <viewAttribute id="CPNAME"/>
+      <viewAttribute id="ODACCOUNTNO"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="BPID"/>
+      <viewAttribute id="SIGNINGORDER"/>
+      <viewAttribute id="CNTPSTATUSID"/>
+      <viewAttribute id="BPTYPE"/>
+      <viewAttribute id="NAMEMATCHSCORE"/>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="YOBMATCHSCORRE"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="DESIGNATION"/>
+      <viewAttribute id="DOB"/>
+      <viewAttribute id="UNIQUEIDENTIFIER1"/>
+      <viewAttribute id="MOBILE"/>
+      <viewAttribute id="AUTHORIZEDSIGNATORY"/>
+      <viewAttribute id="CNTPEMAILID"/>
+      <viewAttribute id="CONTACTPERSONTYPE"/>
+      <viewAttribute id="CALCULATEDTHRESHOLD"/>
+      <viewAttribute id="CNTPPAN"/>
+      <viewAttribute id="GENDERID"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="CNTPID"/>
+      <viewAttribute id="CNT"/>
+      <viewAttribute id="CHANGEDON_1"/>
+      <viewAttribute id="RECORDID"/>
+      <viewAttribute id="OBJECTTYPEID"/>
+      <viewAttribute id="STATUSID_1"/>
+      <viewAttribute id="OBJECTTYPE"/>
+      <viewAttribute id="CORRELATIONID"/>
+      <viewAttribute id="SERVICEPROVIDERREF"/>
+      <viewAttribute id="CREATEDBY_1"/>
+      <viewAttribute id="ELIGIBILITYSTATUSID"/>
+      <viewAttribute id="VALIDTO"/>
+      <viewAttribute id="CREATEDAT_1"/>
+      <viewAttribute id="ELIGIBILITYTYPEID"/>
+      <viewAttribute id="CREATEDON_1"/>
+      <viewAttribute id="CHANGEDBY_1"/>
+      <viewAttribute id="CHANGEDAT_1"/>
+      <viewAttribute hidden="true" id="JOIN$BPGUID$CORRELATIONID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Union_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCREGISTRATIONDATE" source="URCREGISTRATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNHGDFRGNCURREXPOSURE" source="UNHGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="INCORPORATIONDATE" source="INCORPORATIONDATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HGDFRGNCURREXPOSURE" source="HGDFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALFRGNCURREXPOSURE" source="TOTALFRGNCURREXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UTILDISTRICT" source="UTILDISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYID" source="ENTITYID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FUNDBASEDEXPOSURE" source="FUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUS" source="LEGALSTATUS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PINCODE" source="PINCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNO" source="PARENTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NONFUNDBASEDEXPOSURE" source="NONFUNDBASEDEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCACTIVITYTYPE" source="URCACTIVITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE1" source="MOBILE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTTYPEID" source="PARENTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TOTALBANKINGEXPOSURE" source="TOTALBANKINGEXPOSURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE2" source="MOBILE2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PARENTNAME" source="PARENTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORPORATEIDENTIFICATIONNO" source="CORPORATEIDENTIFICATIONNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPGUID" source="BPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LANDLINE1" source="LANDLINE1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCENTITYTYPE" source="URCENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FACILITYTYPE" source="FACILITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSECTORCODE" source="URCSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPGUID" source="CPGUID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="APPROVERREMARKS" source="APPROVERREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ENTITYTYPE" source="ENTITYTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPREJECTIONREMARKS" source="BPREJECTIONREMARKS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCSUBSECTORCODE" source="URCSUBSECTORCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MSME" source="MSME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PAN" source="PAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LEINUMBER" source="LEINUMBER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="URCDOCURL" source="URCDOCURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UDYAMREGNO" source="UDYAMREGNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CPNAME" source="CPNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ODACCOUNTNO" source="ODACCOUNTNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPID" source="BPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SIGNINGORDER" source="SIGNINGORDER"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPSTATUSID" source="CNTPSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="BPTYPE" source="BPTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEMATCHSCORE" source="NAMEMATCHSCORE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="YOBMATCHSCORRE" source="YOBMATCHSCORRE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESIGNATION" source="DESIGNATION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DOB" source="DOB"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="UNIQUEIDENTIFIER1" source="UNIQUEIDENTIFIER1"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MOBILE" source="MOBILE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AUTHORIZEDSIGNATORY" source="AUTHORIZEDSIGNATORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPEMAILID" source="CNTPEMAILID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONTACTPERSONTYPE" source="CONTACTPERSONTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CALCULATEDTHRESHOLD" source="CALCULATEDTHRESHOLD"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPPAN" source="CNTPPAN"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="GENDERID" source="GENDERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNTPID" source="CNTPID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CNT" source="CNT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BPGUID$CORRELATIONID" source="BPGUID"/>
+    </input>
+    <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON_1" source="CHANGEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="RECORDID" source="RECORDID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPEID" source="OBJECTTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATUSID_1" source="STATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="OBJECTTYPE" source="OBJECTTYPE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CORRELATIONID" source="CORRELATIONID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SERVICEPROVIDERREF" source="SERVICEPROVIDERREF"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY_1" source="CREATEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUSID" source="ELIGIBILITYSTATUSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO" source="VALIDTO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT_1" source="CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYTYPEID" source="ELIGIBILITYTYPEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON_1" source="CREATEDON"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY_1" source="CHANGEDBY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT_1" source="CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BPGUID$CORRELATIONID" source="CORRELATIONID"/>
+    </input>
+    <joinAttribute name="JOIN$BPGUID$CORRELATIONID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_2">
+  <attributes>
+    <attribute id="AGGREGATORID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AGGREGATORID"/>
+      <keyMapping columnObjectName="Join_2" columnName="AGGREGATORID"/>
+    </attribute>
+    <attribute id="URCREGISTRATIONDATE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCREGISTRATIONDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCREGISTRATIONDATE"/>
+    </attribute>
+    <attribute id="STATEDESC" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATEDESC"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATEDESC"/>
+    </attribute>
+    <attribute id="UNHGDFRGNCURREXPOSURE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UNHGDFRGNCURREXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="UNHGDFRGNCURREXPOSURE"/>
+    </attribute>
+    <attribute id="INCORPORATIONDATE" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="INCORPORATIONDATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="INCORPORATIONDATE"/>
+    </attribute>
+    <attribute id="HGDFRGNCURREXPOSURE" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HGDFRGNCURREXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="HGDFRGNCURREXPOSURE"/>
+    </attribute>
+    <attribute id="CREATEDBY" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDBY"/>
+    </attribute>
+    <attribute id="COUNTRY" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY"/>
+      <keyMapping columnObjectName="Join_2" columnName="COUNTRY"/>
+    </attribute>
+    <attribute id="TOTALFRGNCURREXPOSURE" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TOTALFRGNCURREXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="TOTALFRGNCURREXPOSURE"/>
+    </attribute>
+    <attribute id="UTILDISTRICT" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UTILDISTRICT"/>
+      <keyMapping columnObjectName="Join_2" columnName="UTILDISTRICT"/>
+    </attribute>
+    <attribute id="CREATEDAT" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDAT"/>
+    </attribute>
+    <attribute id="COUNTRYDESC" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRYDESC"/>
+      <keyMapping columnObjectName="Join_2" columnName="COUNTRYDESC"/>
+    </attribute>
+    <attribute id="ENTITYID" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENTITYID"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENTITYID"/>
+    </attribute>
+    <attribute id="FUNDBASEDEXPOSURE" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FUNDBASEDEXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="FUNDBASEDEXPOSURE"/>
+    </attribute>
+    <attribute id="LEGALSTATUS" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEGALSTATUS"/>
+      <keyMapping columnObjectName="Join_2" columnName="LEGALSTATUS"/>
+    </attribute>
+    <attribute id="CREATEDON" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDON"/>
+    </attribute>
+    <attribute id="PINCODE" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PINCODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="PINCODE"/>
+    </attribute>
+    <attribute id="PARENTNO" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARENTNO"/>
+      <keyMapping columnObjectName="Join_2" columnName="PARENTNO"/>
+    </attribute>
+    <attribute id="NONFUNDBASEDEXPOSURE" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NONFUNDBASEDEXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="NONFUNDBASEDEXPOSURE"/>
+    </attribute>
+    <attribute id="ADDRESS1" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS1"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS1"/>
+    </attribute>
+    <attribute id="CHANGEDBY" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDBY"/>
+    </attribute>
+    <attribute id="URCACTIVITYTYPE" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCACTIVITYTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCACTIVITYTYPE"/>
+    </attribute>
+    <attribute id="MOBILE1" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE1"/>
+      <keyMapping columnObjectName="Join_2" columnName="MOBILE1"/>
+    </attribute>
+    <attribute id="PARENTTYPEID" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARENTTYPEID"/>
+      <keyMapping columnObjectName="Join_2" columnName="PARENTTYPEID"/>
+    </attribute>
+    <attribute id="TOTALBANKINGEXPOSURE" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TOTALBANKINGEXPOSURE"/>
+      <keyMapping columnObjectName="Join_2" columnName="TOTALBANKINGEXPOSURE"/>
+    </attribute>
+    <attribute id="ADDRESS2" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS2"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS2"/>
+    </attribute>
+    <attribute id="CHANGEDAT" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDAT"/>
+    </attribute>
+    <attribute id="GSTIN" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GSTIN"/>
+      <keyMapping columnObjectName="Join_2" columnName="GSTIN"/>
+    </attribute>
+    <attribute id="MOBILE2" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE2"/>
+      <keyMapping columnObjectName="Join_2" columnName="MOBILE2"/>
+    </attribute>
+    <attribute id="PARENTNAME" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PARENTNAME"/>
+      <keyMapping columnObjectName="Join_2" columnName="PARENTNAME"/>
+    </attribute>
+    <attribute id="CORPORATEIDENTIFICATIONNO" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORPORATEIDENTIFICATIONNO"/>
+      <keyMapping columnObjectName="Join_2" columnName="CORPORATEIDENTIFICATIONNO"/>
+    </attribute>
+    <attribute id="BPGUID" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPGUID"/>
+      <keyMapping columnObjectName="Join_2" columnName="BPGUID"/>
+    </attribute>
+    <attribute id="ADDRESS3" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS3"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS3"/>
+    </attribute>
+    <attribute id="CHANGEDON" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDON"/>
+    </attribute>
+    <attribute id="STATUSID" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATUSID"/>
+    </attribute>
+    <attribute id="LANDLINE1" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LANDLINE1"/>
+      <keyMapping columnObjectName="Join_2" columnName="LANDLINE1"/>
+    </attribute>
+    <attribute id="URCENTITYTYPE" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCENTITYTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCENTITYTYPE"/>
+    </attribute>
+    <attribute id="FACILITYTYPE" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FACILITYTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="FACILITYTYPE"/>
+    </attribute>
+    <attribute id="URCSECTORCODE" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCSECTORCODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCSECTORCODE"/>
+    </attribute>
+    <attribute id="CPGUID" order="40" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPGUID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CPGUID"/>
+    </attribute>
+    <attribute id="ADDRESS4" order="41" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS4"/>
+      <keyMapping columnObjectName="Join_2" columnName="ADDRESS4"/>
+    </attribute>
+    <attribute id="SOURCE" order="42" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCE"/>
+      <keyMapping columnObjectName="Join_2" columnName="SOURCE"/>
+    </attribute>
+    <attribute id="APPROVERREMARKS" order="43" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="APPROVERREMARKS"/>
+      <keyMapping columnObjectName="Join_2" columnName="APPROVERREMARKS"/>
+    </attribute>
+    <attribute id="EMAILID" order="44" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILID"/>
+      <keyMapping columnObjectName="Join_2" columnName="EMAILID"/>
+    </attribute>
+    <attribute id="ENTITYTYPE" order="45" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ENTITYTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="ENTITYTYPE"/>
+    </attribute>
+    <attribute id="BPREJECTIONREMARKS" order="46" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPREJECTIONREMARKS"/>
+      <keyMapping columnObjectName="Join_2" columnName="BPREJECTIONREMARKS"/>
+    </attribute>
+    <attribute id="URCSUBSECTORCODE" order="47" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCSUBSECTORCODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCSUBSECTORCODE"/>
+    </attribute>
+    <attribute id="CPTYPE" order="48" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="CPTYPE"/>
+    </attribute>
+    <attribute id="DISTRICT" order="49" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DISTRICT"/>
+      <keyMapping columnObjectName="Join_2" columnName="DISTRICT"/>
+    </attribute>
+    <attribute id="SOURCEREFERENCEID" order="50" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOURCEREFERENCEID"/>
+      <keyMapping columnObjectName="Join_2" columnName="SOURCEREFERENCEID"/>
+    </attribute>
+    <attribute id="MSME" order="51" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MSME"/>
+      <keyMapping columnObjectName="Join_2" columnName="MSME"/>
+    </attribute>
+    <attribute id="PAN" order="52" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PAN"/>
+      <keyMapping columnObjectName="Join_2" columnName="PAN"/>
+    </attribute>
+    <attribute id="LEINUMBER" order="53" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LEINUMBER"/>
+      <keyMapping columnObjectName="Join_2" columnName="LEINUMBER"/>
+    </attribute>
+    <attribute id="URCDOCURL" order="54" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="URCDOCURL"/>
+      <keyMapping columnObjectName="Join_2" columnName="URCDOCURL"/>
+    </attribute>
+    <attribute id="CITY" order="55" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY"/>
+      <keyMapping columnObjectName="Join_2" columnName="CITY"/>
+    </attribute>
+    <attribute id="UDYAMREGNO" order="56" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UDYAMREGNO"/>
+      <keyMapping columnObjectName="Join_2" columnName="UDYAMREGNO"/>
+    </attribute>
+    <attribute id="CPNAME" order="57" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CPNAME"/>
+      <keyMapping columnObjectName="Join_2" columnName="CPNAME"/>
+    </attribute>
+    <attribute id="ODACCOUNTNO" order="58" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ODACCOUNTNO"/>
+      <keyMapping columnObjectName="Join_2" columnName="ODACCOUNTNO"/>
+    </attribute>
+    <attribute id="STATE" order="59" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATE"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATE"/>
+    </attribute>
+    <attribute id="BPID" order="60" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPID"/>
+      <keyMapping columnObjectName="Join_2" columnName="BPID"/>
+    </attribute>
+    <attribute id="SIGNINGORDER" order="61" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SIGNINGORDER"/>
+      <keyMapping columnObjectName="Join_2" columnName="SIGNINGORDER"/>
+    </attribute>
+    <attribute id="CNTPSTATUSID" order="62" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CNTPSTATUSID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CNTPSTATUSID"/>
+    </attribute>
+    <attribute id="BPTYPE" order="63" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BPTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="BPTYPE"/>
+    </attribute>
+    <attribute id="NAMEMATCHSCORE" order="64" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAMEMATCHSCORE"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAMEMATCHSCORE"/>
+    </attribute>
+    <attribute id="NAME1" order="65" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME1"/>
+    </attribute>
+    <attribute id="YOBMATCHSCORRE" order="66" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="YOBMATCHSCORRE"/>
+      <keyMapping columnObjectName="Join_2" columnName="YOBMATCHSCORRE"/>
+    </attribute>
+    <attribute id="NAME2" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME2"/>
+      <keyMapping columnObjectName="Join_2" columnName="NAME2"/>
+    </attribute>
+    <attribute id="DESIGNATION" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DESIGNATION"/>
+      <keyMapping columnObjectName="Join_2" columnName="DESIGNATION"/>
+    </attribute>
+    <attribute id="DOB" order="69" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOB"/>
+      <keyMapping columnObjectName="Join_2" columnName="DOB"/>
+    </attribute>
+    <attribute id="UNIQUEIDENTIFIER1" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UNIQUEIDENTIFIER1"/>
+      <keyMapping columnObjectName="Join_2" columnName="UNIQUEIDENTIFIER1"/>
+    </attribute>
+    <attribute id="MOBILE" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MOBILE"/>
+      <keyMapping columnObjectName="Join_2" columnName="MOBILE"/>
+    </attribute>
+    <attribute id="AUTHORIZEDSIGNATORY" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUTHORIZEDSIGNATORY"/>
+      <keyMapping columnObjectName="Join_2" columnName="AUTHORIZEDSIGNATORY"/>
+    </attribute>
+    <attribute id="CNTPEMAILID" order="73" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CNTPEMAILID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CNTPEMAILID"/>
+    </attribute>
+    <attribute id="CONTACTPERSONTYPE" order="74" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONTACTPERSONTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="CONTACTPERSONTYPE"/>
+    </attribute>
+    <attribute id="CALCULATEDTHRESHOLD" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CALCULATEDTHRESHOLD"/>
+      <keyMapping columnObjectName="Join_2" columnName="CALCULATEDTHRESHOLD"/>
+    </attribute>
+    <attribute id="CNTPPAN" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CNTPPAN"/>
+      <keyMapping columnObjectName="Join_2" columnName="CNTPPAN"/>
+    </attribute>
+    <attribute id="GENDERID" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GENDERID"/>
+      <keyMapping columnObjectName="Join_2" columnName="GENDERID"/>
+    </attribute>
+    <attribute id="POSTALCODE" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSTALCODE"/>
+      <keyMapping columnObjectName="Join_2" columnName="POSTALCODE"/>
+    </attribute>
+    <attribute id="CNTPID" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CNTPID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CNTPID"/>
+    </attribute>
+    <attribute id="CNT" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CNT"/>
+      <keyMapping columnObjectName="Join_2" columnName="CNT"/>
+    </attribute>
+    <attribute id="CHANGEDON_1" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDON_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDON_1"/>
+    </attribute>
+    <attribute id="RECORDID" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RECORDID"/>
+      <keyMapping columnObjectName="Join_2" columnName="RECORDID"/>
+    </attribute>
+    <attribute id="OBJECTTYPEID" order="83" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPEID"/>
+      <keyMapping columnObjectName="Join_2" columnName="OBJECTTYPEID"/>
+    </attribute>
+    <attribute id="STATUSID_1" order="84" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATUSID_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="STATUSID_1"/>
+    </attribute>
+    <attribute id="OBJECTTYPE" order="85" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OBJECTTYPE"/>
+      <keyMapping columnObjectName="Join_2" columnName="OBJECTTYPE"/>
+    </attribute>
+    <attribute id="CORRELATIONID" order="86" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CORRELATIONID"/>
+      <keyMapping columnObjectName="Join_2" columnName="CORRELATIONID"/>
+    </attribute>
+    <attribute id="SERVICEPROVIDERREF" order="87" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERVICEPROVIDERREF"/>
+      <keyMapping columnObjectName="Join_2" columnName="SERVICEPROVIDERREF"/>
+    </attribute>
+    <attribute id="CREATEDBY_1" order="88" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDBY_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDBY_1"/>
+    </attribute>
+    <attribute id="ELIGIBILITYSTATUSID" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYSTATUSID"/>
+      <keyMapping columnObjectName="Join_2" columnName="ELIGIBILITYSTATUSID"/>
+    </attribute>
+    <attribute id="VALIDTO" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VALIDTO"/>
+      <keyMapping columnObjectName="Join_2" columnName="VALIDTO"/>
+    </attribute>
+    <attribute id="CREATEDAT_1" order="91" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDAT_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDAT_1"/>
+    </attribute>
+    <attribute id="ELIGIBILITYTYPEID" order="92" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ELIGIBILITYTYPEID"/>
+      <keyMapping columnObjectName="Join_2" columnName="ELIGIBILITYTYPEID"/>
+    </attribute>
+    <attribute id="CREATEDON_1" order="93" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATEDON_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CREATEDON_1"/>
+    </attribute>
+    <attribute id="CHANGEDBY_1" order="94" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDBY_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDBY_1"/>
+    </attribute>
+    <attribute id="CHANGEDAT_1" order="95" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CHANGEDAT_1"/>
+      <keyMapping columnObjectName="Join_2" columnName="CHANGEDAT_1"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="241" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="516"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="302" y="516"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_BPVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="273"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_BUSINESSPARTNER_BPCNTPVIEW" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="306"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Union_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="222" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="222" y="236"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Union_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="100"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PY_SUPPLYCHAINFINANCE_SCF4VIEW" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="311"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

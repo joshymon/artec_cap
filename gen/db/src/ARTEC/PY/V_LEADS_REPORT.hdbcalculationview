@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PY_V_LEADS_REPORT" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="CUBE" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection" xscCompatibilityMode="true">
+  <descriptions defaultDescription="V_LEADS_REPORT"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_SCPVIEW">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_SCPVIEW</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_SUPPLYCHAINFINANCE_SCFVIEW">
+      <resourceUri>ARTEC_PY_SUPPLYCHAINFINANCE_SCFVIEW</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_USER_UACCNTVIEW">
+      <resourceUri>ARTEC_PY_USER_UACCNTVIEW</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="SUPPLYCHAINPARTNER">
+      <viewAttributes>
+        <viewAttribute id="MOBILENO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="LOGINCOMPLETEDDATE"/>
+        <viewAttribute id="EMAILID"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="LEGALSTATUSID"/>
+        <viewAttribute id="POSTALCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="DATEOFINCORPORATION"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="STATEID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="LOGINCOMPLETEDTIME"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="STATEDESC"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="DEFAULTPASSWORD"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="COUNTRYID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="REALTIMECINDATA"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="COUNTRYDESC"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="TELEPHONENO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="TELEPHONEEXTN"/>
+        <viewAttribute id="SCPTYPE"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="FAXNUMBER"/>
+        <viewAttribute id="SCPGUID"/>
+        <viewAttribute id="LOGINID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="FAXEXTN"/>
+        <viewAttribute id="LOGINSTATUS"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="CPTYPE" length="6" expressionLanguage="COLUMN_ENGINE">
+          <formula>case("SCPTYPE", 
+	 '000003','01',
+	 '000002','60',
+	 '999999')</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="ARTEC_PY_BUSINESSPARTNER_SCPVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILENO" source="MOBILENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDDATE" source="LOGINCOMPLETEDDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSID" source="LEGALSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATEOFINCORPORATION" source="DATEOFINCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEID" source="STATEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDTIME" source="LOGINCOMPLETEDTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEFAULTPASSWORD" source="DEFAULTPASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYID" source="COUNTRYID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REALTIMECINDATA" source="REALTIMECINDATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONENO" source="TELEPHONENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONEEXTN" source="TELEPHONEEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPTYPE" source="SCPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXNUMBER" source="FAXNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="SCPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXEXTN" source="FAXEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINSTATUS" source="LOGINSTATUS"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+      <viewAttributes>
+        <viewAttribute id="MOBILENO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="LOGINCOMPLETEDDATE"/>
+        <viewAttribute id="EMAILID"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="LEGALSTATUSID"/>
+        <viewAttribute id="POSTALCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="DATEOFINCORPORATION"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="STATEID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="LOGINCOMPLETEDTIME"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="STATEDESC"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="DEFAULTPASSWORD"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="COUNTRYID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="REALTIMECINDATA"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="COUNTRYDESC"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="TELEPHONENO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="TELEPHONEEXTN"/>
+        <viewAttribute id="SCPTYPE"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="FAXNUMBER"/>
+        <viewAttribute id="SCPGUID"/>
+        <viewAttribute id="LOGINID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="FAXEXTN"/>
+        <viewAttribute id="LOGINSTATUS"/>
+        <viewAttribute id="CPTYPE"/>
+        <viewAttribute id="ELIGIBILITYSTATUS"/>
+        <viewAttribute id="ERRORCODE"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDON"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDON"/>
+        <viewAttribute id="ELIGIBILITY_APPLICATIONNO"/>
+        <viewAttribute id="ELIGIBILITY_VALIDTO"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="SUPPLYCHAINPARTNER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILENO" source="MOBILENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDDATE" source="LOGINCOMPLETEDDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSID" source="LEGALSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATEOFINCORPORATION" source="DATEOFINCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEID" source="STATEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDTIME" source="LOGINCOMPLETEDTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEFAULTPASSWORD" source="DEFAULTPASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYID" source="COUNTRYID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REALTIMECINDATA" source="REALTIMECINDATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONENO" source="TELEPHONENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONEEXTN" source="TELEPHONEEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPTYPE" source="SCPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXNUMBER" source="FAXNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="SCPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXEXTN" source="FAXEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINSTATUS" source="LOGINSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+      </input>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCF1VIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_APPLICATIONNO" source="APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_VALIDTO" source="VALIDTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="CPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPEID"/>
+      </input>
+      <joinAttribute name="SCPGUID"/>
+      <joinAttribute name="AGGREGATORID"/>
+      <joinAttribute name="CPTYPE"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="leftOuter">
+      <viewAttributes>
+        <viewAttribute id="MOBILENO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="LOGINCOMPLETEDDATE"/>
+        <viewAttribute id="EMAILID"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="LEGALSTATUSID"/>
+        <viewAttribute id="POSTALCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="DATEOFINCORPORATION"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="STATEID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="LOGINCOMPLETEDTIME"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="STATEDESC"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="DEFAULTPASSWORD"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="COUNTRYID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="REALTIMECINDATA"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="COUNTRYDESC"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="TELEPHONENO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="TELEPHONEEXTN"/>
+        <viewAttribute id="SCPTYPE"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="FAXNUMBER"/>
+        <viewAttribute id="SCPGUID"/>
+        <viewAttribute id="LOGINID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="FAXEXTN"/>
+        <viewAttribute id="LOGINSTATUS"/>
+        <viewAttribute id="CPTYPE"/>
+        <viewAttribute id="ELIGIBILITYSTATUS"/>
+        <viewAttribute id="ERRORCODE"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDON"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDON"/>
+        <viewAttribute id="ACCOUNTNO"/>
+        <viewAttribute id="CONSTITUTIONTYPE"/>
+        <viewAttribute id="PROCESSINGFEE"/>
+        <viewAttribute id="PROCESSFEEPERC"/>
+        <viewAttribute id="SCF_VALIDTO"/>
+        <viewAttribute id="APPLICATIONNO"/>
+        <viewAttribute id="SCF_CREATEDAT"/>
+        <viewAttribute id="SCF_STATUSID"/>
+        <viewAttribute id="SCF_CHANGEDON"/>
+        <viewAttribute id="CALLBACKSTATUS"/>
+        <viewAttribute id="SCF_CREATEDON"/>
+        <viewAttribute id="ECOMPLETEDATE"/>
+        <viewAttribute id="ECOMPLETETIME"/>
+        <viewAttribute id="SCF_CHANGEDAT"/>
+        <viewAttribute id="ELIGIBILITY_APPLICATIONNO"/>
+        <viewAttribute id="ELIGIBILITY_VALIDTO"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILENO" source="MOBILENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDDATE" source="LOGINCOMPLETEDDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSID" source="LEGALSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATEOFINCORPORATION" source="DATEOFINCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEID" source="STATEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDTIME" source="LOGINCOMPLETEDTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEFAULTPASSWORD" source="DEFAULTPASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYID" source="COUNTRYID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REALTIMECINDATA" source="REALTIMECINDATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONENO" source="TELEPHONENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONEEXTN" source="TELEPHONEEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPTYPE" source="SCPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXNUMBER" source="FAXNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="SCPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXEXTN" source="FAXEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINSTATUS" source="LOGINSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDAT" source="ELIGIBILITY_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDON" source="ELIGIBILITY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDAT" source="ELIGIBILITY_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDON" source="ELIGIBILITY_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_APPLICATIONNO" source="ELIGIBILITY_APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_VALIDTO" source="ELIGIBILITY_VALIDTO"/>
+      </input>
+      <input node="ARTEC_PY_SUPPLYCHAINFINANCE_SCFVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTNO" source="ACCOUNTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONSTITUTIONTYPE" source="CONSTITUTIONTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSINGFEE" source="PROCESSINGFEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSFEEPERC" source="PROCESSFEEPERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_VALIDTO" source="VALIDTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATIONNO" source="APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUSID" source="STATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CALLBACKSTATUS" source="CALLBACKSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ECOMPLETEDATE" source="ECOMPLETEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ECOMPLETETIME" source="ECOMPLETETIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="CPGUID"/>
+      </input>
+      <joinAttribute name="CPTYPE"/>
+      <joinAttribute name="AGGREGATORID"/>
+      <joinAttribute name="SCPGUID"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="leftOuter">
+      <viewAttributes>
+        <viewAttribute id="MOBILENO"/>
+        <viewAttribute id="NAME1"/>
+        <viewAttribute id="PANNO"/>
+        <viewAttribute id="LOGINCOMPLETEDDATE"/>
+        <viewAttribute id="EMAILID"/>
+        <viewAttribute id="NAME2"/>
+        <viewAttribute id="LEGALSTATUSID"/>
+        <viewAttribute id="POSTALCODE"/>
+        <viewAttribute id="CREATEDBY"/>
+        <viewAttribute id="DATEOFINCORPORATION"/>
+        <viewAttribute id="NAME3"/>
+        <viewAttribute id="ADDRESS1"/>
+        <viewAttribute id="STATEID"/>
+        <viewAttribute id="CREATEDAT"/>
+        <viewAttribute id="LOGINCOMPLETEDTIME"/>
+        <viewAttribute id="ADDRESS2"/>
+        <viewAttribute id="STATEDESC"/>
+        <viewAttribute id="CREATEDON"/>
+        <viewAttribute id="DEFAULTPASSWORD"/>
+        <viewAttribute id="ADDRESS3"/>
+        <viewAttribute id="COUNTRYID"/>
+        <viewAttribute id="ID"/>
+        <viewAttribute id="REALTIMECINDATA"/>
+        <viewAttribute id="ADDRESS4"/>
+        <viewAttribute id="COUNTRYDESC"/>
+        <viewAttribute id="CHANGEDBY"/>
+        <viewAttribute id="DISTRICT"/>
+        <viewAttribute id="TELEPHONENO"/>
+        <viewAttribute id="SOURCEREFERENCEID"/>
+        <viewAttribute id="AGGREGATORID"/>
+        <viewAttribute id="CHANGEDAT"/>
+        <viewAttribute id="CITY"/>
+        <viewAttribute id="TELEPHONEEXTN"/>
+        <viewAttribute id="SCPTYPE"/>
+        <viewAttribute id="GSTIN"/>
+        <viewAttribute id="CHANGEDON"/>
+        <viewAttribute id="FAXNUMBER"/>
+        <viewAttribute id="SCPGUID"/>
+        <viewAttribute id="LOGINID"/>
+        <viewAttribute id="SOURCE"/>
+        <viewAttribute id="NAME4"/>
+        <viewAttribute id="FAXEXTN"/>
+        <viewAttribute id="LOGINSTATUS"/>
+        <viewAttribute id="CPTYPE"/>
+        <viewAttribute id="ELIGIBILITYSTATUS"/>
+        <viewAttribute id="ERRORCODE"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CREATEDON"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDAT"/>
+        <viewAttribute id="ELIGIBILITY_CHANGEDON"/>
+        <viewAttribute id="ACCOUNTNO"/>
+        <viewAttribute id="CONSTITUTIONTYPE"/>
+        <viewAttribute id="PROCESSINGFEE"/>
+        <viewAttribute id="PROCESSFEEPERC"/>
+        <viewAttribute id="VALIDTO"/>
+        <viewAttribute id="APPLICATIONNO"/>
+        <viewAttribute id="SCF_CREATEDAT"/>
+        <viewAttribute id="SCF_STATUSID"/>
+        <viewAttribute id="SCF_CHANGEDON"/>
+        <viewAttribute id="CALLBACKSTATUS"/>
+        <viewAttribute id="SCF_CREATEDON"/>
+        <viewAttribute id="ECOMPLETEDATE"/>
+        <viewAttribute id="ECOMPLETETIME"/>
+        <viewAttribute id="SCF_CHANGEDAT"/>
+        <viewAttribute id="BANKACCNTTYPE"/>
+        <viewAttribute id="BANKACCNTSTS"/>
+        <viewAttribute id="DDBACTIVE"/>
+        <viewAttribute id="ACCOUNTLINKED_AT"/>
+        <viewAttribute id="USERID"/>
+        <viewAttribute id="ACCOUNTLINKED_ON"/>
+        <viewAttribute id="ACCOOUNTCHANGED_AT"/>
+        <viewAttribute id="ACCOUNTCHANGED_ON"/>
+        <viewAttribute id="CORPID"/>
+        <viewAttribute id="LINKEDACCOUNTNO"/>
+        <viewAttribute id="ELIGIBILITY_APPLICATIONNO"/>
+        <viewAttribute id="ELIGIBILITY_VALIDTO"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="VARCHAR" id="ACCOUNTLINKED" length="6" expressionLanguage="COLUMN_ENGINE">
+          <formula>if(isnull("LINKEDACCOUNTNO"),   
+'NO','YES'
+)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MOBILENO" source="MOBILENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME1" source="NAME1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PANNO" source="PANNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDDATE" source="LOGINCOMPLETEDDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMAILID" source="EMAILID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME2" source="NAME2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LEGALSTATUSID" source="LEGALSTATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DATEOFINCORPORATION" source="DATEOFINCORPORATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME3" source="NAME3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS1" source="ADDRESS1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEID" source="STATEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINCOMPLETEDTIME" source="LOGINCOMPLETEDTIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS2" source="ADDRESS2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="STATEDESC" source="STATEDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DEFAULTPASSWORD" source="DEFAULTPASSWORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS3" source="ADDRESS3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYID" source="COUNTRYID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="REALTIMECINDATA" source="REALTIMECINDATA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS4" source="ADDRESS4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRYDESC" source="COUNTRYDESC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISTRICT" source="DISTRICT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONENO" source="TELEPHONENO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCEREFERENCEID" source="SOURCEREFERENCEID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TELEPHONEEXTN" source="TELEPHONEEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPTYPE" source="SCPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSTIN" source="GSTIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXNUMBER" source="FAXNUMBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCPGUID" source="SCPGUID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINID" source="LOGINID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOURCE" source="SOURCE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NAME4" source="NAME4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FAXEXTN" source="FAXEXTN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGINSTATUS" source="LOGINSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPTYPE" source="CPTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITYSTATUS" source="ELIGIBILITYSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERRORCODE" source="ERRORCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDAT" source="ELIGIBILITY_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CREATEDON" source="ELIGIBILITY_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDAT" source="ELIGIBILITY_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_CHANGEDON" source="ELIGIBILITY_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTNO" source="ACCOUNTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONSTITUTIONTYPE" source="CONSTITUTIONTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSINGFEE" source="PROCESSINGFEE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROCESSFEEPERC" source="PROCESSFEEPERC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VALIDTO" source="SCF_VALIDTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATIONNO" source="APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDAT" source="SCF_CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_STATUSID" source="SCF_STATUSID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDON" source="SCF_CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CALLBACKSTATUS" source="CALLBACKSTATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CREATEDON" source="SCF_CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ECOMPLETEDATE" source="ECOMPLETEDATE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ECOMPLETETIME" source="ECOMPLETETIME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SCF_CHANGEDAT" source="SCF_CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_APPLICATIONNO" source="ELIGIBILITY_APPLICATIONNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIGIBILITY_VALIDTO" source="ELIGIBILITY_VALIDTO"/>
+      </input>
+      <input node="ARTEC_PY_USER_UACCNTVIEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANKACCNTTYPE" source="BANKACCNTTYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BANKACCNTSTS" source="BANKACCNTSTS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DDBACTIVE" source="DDBACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTLINKED_AT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USERID" source="USERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTLINKED_ON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOOUNTCHANGED_AT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTCHANGED_ON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LINKEDACCOUNTNO" source="BANKACCNTNO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGREGATORID" source="AGGREGATORID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ACCOUNTNO" source="BANKACCNTNO"/>
+      </input>
+      <joinAttribute name="AGGREGATORID"/>
+      <joinAttribute name="ACCOUNTNO"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_3">
+    <attributes>
+      <attribute id="ID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="Join_3" columnName="ID"/>
+      </attribute>
+      <attribute id="AGGREGATORID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGREGATORID"/>
+        <keyMapping columnObjectName="Join_3" columnName="AGGREGATORID"/>
+      </attribute>
+      <attribute id="SCPGUID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SCPGUID"/>
+        <keyMapping columnObjectName="Join_3" columnName="SCPGUID"/>
+      </attribute>
+      <attribute id="CPTYPE" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPTYPE"/>
+        <keyMapping columnObjectName="Join_3" columnName="CPTYPE"/>
+      </attribute>
+      <attribute id="NAME1" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="Join_3" columnName="NAME3"/>
+      </attribute>
+      <attribute id="LOGINID" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGINID"/>
+        <keyMapping columnObjectName="Join_3" columnName="LOGINID"/>
+      </attribute>
+      <attribute id="ELIGIBILITYSTATUS" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIGIBILITYSTATUS"/>
+        <keyMapping columnObjectName="Join_3" columnName="ELIGIBILITYSTATUS"/>
+      </attribute>
+      <attribute id="ACCOUNTNO" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCOUNTNO"/>
+        <keyMapping columnObjectName="Join_3" columnName="ACCOUNTNO"/>
+      </attribute>
+      <attribute id="LOGINSTATUS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGINSTATUS"/>
+        <keyMapping columnObjectName="Join_3" columnName="LOGINSTATUS"/>
+      </attribute>
+      <attribute id="LINKEDACCOUNTNO" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINKEDACCOUNTNO"/>
+        <keyMapping columnObjectName="Join_3" columnName="LINKEDACCOUNTNO"/>
+      </attribute>
+      <attribute id="ACCOUNTLINKED" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ACCOUNTLINKED"/>
+        <keyMapping columnObjectName="Join_3" columnName="ACCOUNTLINKED"/>
+      </attribute>
+      <attribute id="BANKACCNTTYPE" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BANKACCNTTYPE"/>
+        <keyMapping columnObjectName="Join_3" columnName="BANKACCNTTYPE"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes>
+      <calculatedAttribute id="LEADSTATUSID" hidden="false" order="13" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEADSTATUSID"/>
+        <keyCalculation datatype="VARCHAR" expressionLanguage="COLUMN_ENGINE" length="1">
+          <formula>if(isnull("LOGINSTATUS"),'000000'  ,
+case("LOGINSTATUS", 
+		'000005','000010',
+		'000020','000020',
+		'000025','000020',
+		'000030','000020',
+		'000040','000020',
+		'000050','000020',
+		'000010','000030',
+		'000060','000040',
+		'XXXXXX')
+)</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+      <calculatedAttribute id="CURRENTDATE" hidden="false" order="17" semanticType="empty" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENTDATE"/>
+        <keyCalculation datatype="DATE" expressionLanguage="COLUMN_ENGINE">
+          <formula>now()</formula>
+        </keyCalculation>
+      </calculatedAttribute>
+    </calculatedAttributes>
+    <baseMeasures>
+      <measure id="VALIDTO" order="11" aggregationType="min" measureType="simple">
+        <descriptions defaultDescription="VALIDTO"/>
+        <measureMapping columnObjectName="Join_3" columnName="VALIDTO"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="SUPPLYCHAINPARTNER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="-17" y="359"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="-11" y="358"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="false" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="-11" y="256"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="87" y="190"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

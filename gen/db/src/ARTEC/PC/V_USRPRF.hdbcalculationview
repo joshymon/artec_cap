@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0" id="ARTEC_PC_V_USRPRF" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="USER PROFILE"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_USERMGMT_USRLGN">
+      <resourceUri>ARTEC_PC_USERMGMT_USRLGN</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PC_CUSTOMIZING_PARTRL">
+      <resourceUri>ARTEC_PC_CUSTOMIZING_PARTRL</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+    <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="APPLICATION"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="ERP_LOGIN_ID"/>
+        <viewAttribute id="ROLE_ID"/>
+        <viewAttribute id="LOGIN_NAME"/>
+        <viewAttribute id="IS_ACTIVE"/>
+        <viewAttribute id="USER_FUNCTION1"/>
+        <viewAttribute id="USER_FUNCTION2"/>
+        <viewAttribute id="PREF1"/>
+        <viewAttribute id="PREF2"/>
+        <viewAttribute id="PREF3"/>
+        <viewAttribute id="PREF4"/>
+        <viewAttribute id="PREF5"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CHANGEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDAT"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDBY"/>
+        <viewAttribute id="CHANGE_HISTORY_CREATEDON"/>
+        <viewAttribute id="CHANGE_HISTORY_SOURCE"/>
+        <viewAttribute id="ROLE_CAT_ID"/>
+      </viewAttributes>
+    <calculatedViewAttributes/>
+      <input node="ARTEC_PC_USERMGMT_USRLGN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION" source="APPLICATION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERP_LOGIN_ID" source="ERP_LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ROLE_ID" source="ROLE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_NAME" source="LOGIN_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IS_ACTIVE" source="IS_ACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_FUNCTION1" source="USER_FUNCTION1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_FUNCTION2" source="USER_FUNCTION2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PREF1" source="PREF1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PREF2" source="PREF2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PREF3" source="PREF3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PREF4" source="PREF4"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PREF5" source="PREF5"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDAT" source="CHANGEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDBY" source="CHANGEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CHANGEDON" source="CHANGEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDAT" source="CREATEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDBY" source="CREATEDBY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_CREATEDON" source="CREATEDON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHANGE_HISTORY_SOURCE" source="SOURCE"/>
+      </input>
+      <input node="ARTEC_PC_CUSTOMIZING_PARTRL">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ROLE_CAT_ID" source="ROLE_CAT_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ROLE_ID" source="ROLE_ID"/>
+      </input>
+    <joinAttribute name="AGGRID"/>
+    <joinAttribute name="ROLE_ID"/>
+  </calculationView>
+</calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGREGATORID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="APPLICATION" key="true" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION"/>
+        <keyMapping columnObjectName="Join_1" columnName="APPLICATION"/>
+      </attribute>
+      <attribute id="LOGINID" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGIN_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="LOGIN_ID"/>
+      </attribute>
+      <attribute id="ERPLOGINID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERP_LOGIN_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERP_LOGIN_ID"/>
+      </attribute>
+      <attribute id="ROLEID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROLE_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ROLE_ID"/>
+      </attribute>
+      <attribute id="LOGINNAME" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGIN_NAME"/>
+        <keyMapping columnObjectName="Join_1" columnName="LOGIN_NAME"/>
+      </attribute>
+      <attribute id="ISACTIVE" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IS_ACTIVE"/>
+        <keyMapping columnObjectName="Join_1" columnName="IS_ACTIVE"/>
+      </attribute>
+      <attribute id="USERFUNCTION1ID" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USER_FUNCTION1"/>
+        <keyMapping columnObjectName="Join_1" columnName="USER_FUNCTION1"/>
+      </attribute>
+      <attribute id="USERFUNCTION2ID" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USER_FUNCTION2"/>
+        <keyMapping columnObjectName="Join_1" columnName="USER_FUNCTION2"/>
+      </attribute>
+      <attribute id="PREF1" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF1"/>
+        <keyMapping columnObjectName="Join_1" columnName="PREF1"/>
+      </attribute>
+      <attribute id="PREF2" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF2"/>
+        <keyMapping columnObjectName="Join_1" columnName="PREF2"/>
+      </attribute>
+      <attribute id="PREF3" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF3"/>
+        <keyMapping columnObjectName="Join_1" columnName="PREF3"/>
+      </attribute>
+      <attribute id="PREF4" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF4"/>
+        <keyMapping columnObjectName="Join_1" columnName="PREF4"/>
+      </attribute>
+      <attribute id="PREF5" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PREF5"/>
+        <keyMapping columnObjectName="Join_1" columnName="PREF5"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CHANGEDON"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDON" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_CREATEDON"/>
+      </attribute>
+      <attribute id="SOURCE" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="Join_1" columnName="CHANGE_HISTORY_SOURCE"/>
+      </attribute>
+      <attribute id="ROLECATID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ROLE_CAT_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ROLE_CAT_ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="74" y="208"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    
+    <shape modelObjectName="ARTEC_PC_USERMGMT_USRLGN" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ARTEC_PC_CUSTOMIZING_PARTRL" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

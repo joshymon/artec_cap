@@ -1,0 +1,41 @@
+@cds.persistence.exists
+@cds.persistence.calcview
+entity ARTEC_PY_V_LEADS_MIS {
+  key ID                       : String(36)        @title: 'ID';
+      AGGREGATORID             : String(50)        @title: 'AggregatorId';
+      SCPGUID                  : String(36)        @title: 'SCPGuid';
+      CPTYPEID                 : hana.VARCHAR(6)   @title: 'CPTypeID';
+      NAME1                    : String(40)        @title: 'Name1';
+      NAME2                    : String(40)        @title: 'Name2';
+      MOBILENO                 : String(35)        @title: 'MobileNo';
+      EMAILID                  : String(241)       @title: 'EmailID';
+      SCF_ACCOUNTNO            : String(18)        @title: 'SCF_AccountNo';
+      SCF_STATUSID             : String(6)         @title: 'SCF_StatusID';
+      ELIGIBILITYSTATUS        : String(6)         @title: 'EligibilityStatus';
+      ELIGIBILITY_VALIDTO      : Date              @title: 'Eligibility_ValidTo';
+      BANKACCNTTYPE            : String(6)         @title: 'BankAccntType';
+      BANKACCNTSTS             : String(6)         @title: 'BankAccntSts';
+      USERACCOUNTS_DDBACTIVE   : String(1)         @title: 'UserAccounts_DDBActive';
+      LINKEDACCOUNTNO          : String(18)        @title: 'LinkedAccountNo';
+      ACCOUNTLINKED            : hana.VARCHAR(6)   @title: 'AccountLinked';
+      SCF_CALLBACKSTATUS       : String(6)         @title: 'SCF_CallBackStatus';
+      LOGINSTATUS              : String(6)         @title: 'LoginStatus';
+      CORSTATUSID              : hana.VARCHAR(6)   @title: 'CORStatusID';
+      PREELIGIBILITYSTATUSID   : hana.VARCHAR(6)   @title: 'PreEligibilityStatusID';
+      SANCTIONSTATUSID         : hana.VARCHAR(6)   @title: 'SanctionStatusID';
+      ONBOARDINGSTATUSID       : hana.VARCHAR(6)   @title: 'OnboardingStatusID';
+      ACLINKEDSTATUSID         : hana.VARCHAR(6)   @title: 'AcLinkedStatusID';
+      LEADSTATUSID             : hana.VARCHAR(6)   @title: 'LeadStatusID';
+      LEADSTATUSDESC           : hana.VARCHAR(255) @title: 'LeadStatusDesc';
+      CORSTATUSDESC            : hana.VARCHAR(255) @title: 'CORStatusDesc';
+      PREELIGIBILITYSTATUSDESC : hana.VARCHAR(255) @title: 'PreEligibilityStatusDesc';
+      SANCTIONSTATUSDESC       : hana.VARCHAR(255) @title: 'SanctionStatusDesc';
+      ONBOARDINGSTATUSDESC     : hana.VARCHAR(255) @title: 'OnboardingStatusDesc';
+      ACLINKEDSTATUSDESC       : hana.VARCHAR(255) @title: 'AcLinkedStatusDesc';
+      STATEID                  : String(3)         @title: 'StateID';
+      STATEDESC                : String(35)        @title: 'StateDesc';
+      LEADCREATEDAT            : Time              @title: 'LeadCreatedAt';
+      LEADCREATEDON            : Date              @title: 'LeadCreatedOn';
+      LEADCHANGEDAT            : Time              @title: 'LeadChangedAt';
+      LEADCHANGEDON            : Date              @title: 'LeadChangedOn';
+};

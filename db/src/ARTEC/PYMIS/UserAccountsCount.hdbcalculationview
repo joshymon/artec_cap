@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="ARTEC_PYMIS_USERACCOUNTSCOUNT" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" scriptParametersCaseSensitive="true" xscCompatibilityMode="true">
+  <descriptions defaultDescription="USERACCOUNTS"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="TABLE_FUNCTION_USERACCOUNTSCOUNT" type="TABLE_FUNCTION">
+      <resourceUri>ARTEC_PYMIS_TABLE_FUNCTION_USERACCOUNTSCOUNT</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="TABLE_FUNCTION_USERACCOUNTSCOUNT">
+    <descriptions/>
+    <attributes>
+      <attribute id="AGGRID" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="TABLE_FUNCTION_USERACCOUNTSCOUNT" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="LOGIN_ID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions/>
+        <keyMapping columnObjectName="TABLE_FUNCTION_USERACCOUNTSCOUNT" columnName="LOGIN_ID"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="CAA_COUNT" order="3" aggregationType="sum" measureType="simple">
+        <descriptions/>
+        <measureMapping columnObjectName="TABLE_FUNCTION_USERACCOUNTSCOUNT" columnName="CAA_COUNT"/>
+      </measure>
+      <measure id="CFSODA_COUNT" order="4" aggregationType="sum" measureType="simple">
+        <descriptions/>
+        <measureMapping columnObjectName="TABLE_FUNCTION_USERACCOUNTSCOUNT" columnName="CFSODA_COUNT"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

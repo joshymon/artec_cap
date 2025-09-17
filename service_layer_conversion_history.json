@@ -1,0 +1,208 @@
+{
+    "/app/src/xsjs/lib/XSUI/Services/Func.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/XSUI/Services/handlers/Func.js",
+            "/app/dst/srv/xsjs/lib/XSUI/Services/custom-service.js",
+            "/app/dst/srv/xsjs/lib/XSUI/Services/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/SCF1/task.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF1/handlers/task.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF1/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF1/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/BP/task.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/BP/handlers/task.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/BP/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/BP/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/Demo1.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/UACCNT/handlers/Demo1.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/JobAlert.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/UACCNT/handlers/JobAlert.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/UACCNT/task.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/UACCNT/handlers/task.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/UACCNT/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/UACCNT/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/PG_H/task.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/PG_H/handlers/task.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/PG_H/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/PG_H/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR8.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR8.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR4.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR4.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR2.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR2.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR3.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR3.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR1.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR1.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR6.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR6.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/XSJS/NR7.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/handlers/NR7.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/XSJS/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/SCF/task.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF/handlers/task.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/SCF/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/mis.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/oprodcedure.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/ODATA/seq.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/ODATA/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC_SDI/CV/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/CV/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC_SDI/CV/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PC/ApplicationNo/NR.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PC/ApplicationNo/handlers/NR.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/PC/ApplicationNo/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/PC/ApplicationNo/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PCMISGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PCMISGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PCMISGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/ApplicationNo/NR.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/ApplicationNo/handlers/NR.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/ApplicationNo/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/ApplicationNo/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/TrackID/NR.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/TrackID/handlers/NR.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/TrackID/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/TrackID/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/NR/LimitIDPrefix/NR.xsjs": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/LimitIDPrefix/handlers/NR.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/LimitIDPrefix/custom-service.js",
+            "/app/dst/srv/xsjs/lib/ARTEC/NR/LimitIDPrefix/custom-service.cds"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/LimitIDPrefixNumberRange.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/ApplicationNoNumberRange.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/TrackIDNumberRange.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYGW/AppicationNoNumberRange.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PCGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PCGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PCGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/SPGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/SPGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/SPGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PUGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PUGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PUGW/service.js"
+        ]
+    },
+    "/app/src/xsjs/lib/ARTEC/PYMISGW/service.xsodata": {
+        "destination_path": [
+            "/app/dst/srv/xsjs/lib/ARTEC/PYMISGW/service.cds",
+            "/app/dst/srv/xsjs/lib/ARTEC/PYMISGW/service.js"
+        ]
+    }
+}

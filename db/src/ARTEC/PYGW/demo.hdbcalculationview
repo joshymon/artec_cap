@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:Variable="http://www.sap.com/ndb/BiModelVariable.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PYGW_DEMO" applyPrivilegeType="NONE" defaultClient="$$client$$" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Projection" scriptParametersCaseSensitive="true" xscCompatibilityMode="true">
+  <descriptions defaultDescription="TRACKIDNUMBERRANGE"/>
+  <localVariables>
+    <variable id="IP_1" parameter="true">
+      <descriptions/>
+      <variableProperties datatype="NVARCHAR" length="25" mandatory="true">
+        <valueDomain type="empty"/>
+        <selection type="SingleValue"/>
+        <defaultRange/>
+      </variableProperties>
+    </variable>
+  </localVariables>
+  <variableMappings>
+    <mapping xsi:type="Variable:VariableMapping" dataSource="#TABLE_FUNCTION_DEMO">
+      <targetVariable name="IP_1" resourceUri="ARTEC_PYGW_TABLE_FUNCTION_DEMO"/>
+      <localVariable>#IP_1</localVariable>
+    </mapping>
+  </variableMappings>
+  <dataSources>
+    <DataSource id="TABLE_FUNCTION_DEMO" type="TABLE_FUNCTION">
+      <resourceUri>ARTEC_PYGW_TABLE_FUNCTION_DEMO</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews/>
+  <logicalModel id="TABLE_FUNCTION_DEMO">
+    <descriptions/>
+    <attributes/>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="NUMBERRANGETRACKID" order="1" aggregationType="sum" measureType="simple">
+        <descriptions/>
+        <measureMapping columnObjectName="TABLE_FUNCTION_DEMO" columnName="NUMBERRANGETRACKID"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+        <rectangleSize/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

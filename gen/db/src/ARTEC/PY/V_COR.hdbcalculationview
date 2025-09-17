@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="3.0" id="ARTEC_PY_V_COR" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_CUSTOMER"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PY_BUSINESSPARTNER_COR">
+      <resourceUri>ARTEC_PY_BUSINESSPARTNER_COR</resourceUri>
+    </DataSource>
+  </dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+  <logicalModel id="ARTEC_PY_BUSINESSPARTNER_COR">
+    <attributes>
+      <attribute id="ADDRESS1" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS1"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="ADDRESS1"/>
+      </attribute>
+      <attribute id="ADDRESS2" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS2"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="ADDRESS2"/>
+      </attribute>
+      <attribute id="ADDRESS3" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS3"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="ADDRESS3"/>
+      </attribute>
+      <attribute id="ADDRESS4" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ADDRESS4"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="ADDRESS4"/>
+      </attribute>
+      <attribute id="AGGREGATORID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="CHANGEDAT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDAT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CHANGEDAT"/>
+      </attribute>
+      <attribute id="CHANGEDBY" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDBY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CHANGEDBY"/>
+      </attribute>
+      <attribute id="CHANGEDON" order="8" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CHANGEDON"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CHANGEDON"/>
+      </attribute>
+      <attribute id="CREATEDAT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDAT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CREATEDAT"/>
+      </attribute>
+      <attribute id="CREATEDBY" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDBY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CREATEDBY"/>
+      </attribute>
+      <attribute id="CREATEDON" order="11" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_CREATEDON"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CREATEDON"/>
+      </attribute>
+      <attribute id="SOURCE" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHANGE_HISTORY_SOURCE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="SOURCE"/>
+      </attribute>
+      <attribute id="CITY" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CITY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CITY"/>
+      </attribute>
+      <attribute id="COUNTRYDESC" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY_DESC"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="COUNTRY_DESC"/>
+      </attribute>
+      <attribute id="COUNTRYID" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COUNTRY_ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="COUNTRY_ID"/>
+      </attribute>
+      <attribute id="CUSTOMERNO" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUSTOMERNO"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CP_GUID"/>
+      </attribute>
+      <attribute id="CP_TYPE" hidden="true" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CP_TYPE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CP_TYPE"/>
+      </attribute>
+      <attribute id="CURRENCY" hidden="true" order="18" semanticType="currencyCode" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CURRENCY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="CURRENCY"/>
+      </attribute>
+      <attribute id="DATEOF_INCORPORATION" hidden="true" order="19" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATEOF_INCORPORATION"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="DATEOF_INCORPORATION"/>
+      </attribute>
+      <attribute id="DATE_OF_ASSOCIATION" hidden="true" order="20" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DATE_OF_ASSOCIATION"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="DATE_OF_ASSOCIATION"/>
+      </attribute>
+      <attribute id="DISTRICT" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISTRICT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="DISTRICT"/>
+      </attribute>
+      <attribute id="EMAILID" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMAIL_ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="EMAIL_ID"/>
+      </attribute>
+      <attribute id="FAX_EXTN" hidden="true" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_EXTN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="FAX_EXTN"/>
+      </attribute>
+      <attribute id="FAX" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FAX_NUMBER"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="FAX_NUMBER"/>
+      </attribute>
+      <attribute id="GSTIN" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSTIN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="GSTIN"/>
+      </attribute>
+      <attribute id="ID" key="true" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="ID"/>
+      </attribute>
+      <attribute id="LEGALSTATUSDESC" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL_STATUS_DESC"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="LEGAL_STATUS_DESC"/>
+      </attribute>
+      <attribute id="LEGALSTATUS" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LEGAL_STATUS_ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="LEGAL_STATUS_ID"/>
+      </attribute>
+      <attribute id="MOBILE1" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MOBILE_NO"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="MOBILE_NO"/>
+      </attribute>
+      <attribute id="NAME" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME1"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NAME1"/>
+      </attribute>
+      <attribute id="NAME2" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME2"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NAME2"/>
+      </attribute>
+      <attribute id="NAME3" hidden="true" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME3"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NAME3"/>
+      </attribute>
+      <attribute id="NAME4" hidden="true" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NAME4"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NAME4"/>
+      </attribute>
+      <attribute id="NO_OF_CHQ_BOUNCE" hidden="true" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NO_OF_CHQ_BOUNCE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NO_OF_CHQ_BOUNCE"/>
+      </attribute>
+      <attribute id="NO_OF_OVERDUE_INSTANCES" hidden="true" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NO_OF_OVERDUE_INSTANCES"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NO_OF_OVERDUE_INSTANCES"/>
+      </attribute>
+      <attribute id="NO_OF_OVERDUE_RELEASE" hidden="true" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NO_OF_OVERDUE_RELEASE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NO_OF_OVERDUE_RELEASE"/>
+      </attribute>
+      <attribute id="NO_OF_PAYMENTS" hidden="true" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NO_OF_PAYMENTS"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="NO_OF_PAYMENTS"/>
+      </attribute>
+      <attribute id="PAN" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PANNO"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PANNO"/>
+      </attribute>
+      <attribute id="PARTNER1DOB" hidden="true" order="39" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER1DOB"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER1DOB"/>
+      </attribute>
+      <attribute id="PARTNER1NAME" hidden="true" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER1NAME"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER1NAME"/>
+      </attribute>
+      <attribute id="PARTNER1PAN" hidden="true" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER1PAN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER1PAN"/>
+      </attribute>
+      <attribute id="PARTNER2DOB" hidden="true" order="42" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER2DOB"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER2DOB"/>
+      </attribute>
+      <attribute id="PARTNER2NAME" hidden="true" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER2NAME"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER2NAME"/>
+      </attribute>
+      <attribute id="PARTNER2PAN" hidden="true" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER2PAN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER2PAN"/>
+      </attribute>
+      <attribute id="PARTNER3DOB" hidden="true" order="45" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER3DOB"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER3DOB"/>
+      </attribute>
+      <attribute id="PARTNER3NAME" hidden="true" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER3NAME"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER3NAME"/>
+      </attribute>
+      <attribute id="PARTNER3PAN" hidden="true" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER3PAN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER3PAN"/>
+      </attribute>
+      <attribute id="PARTNER4DOB" hidden="true" order="48" semanticType="date" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER4DOB"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER4DOB"/>
+      </attribute>
+      <attribute id="PARTNER4NAME" hidden="true" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER4NAME"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER4NAME"/>
+      </attribute>
+      <attribute id="PARTNER4PAN" hidden="true" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER4PAN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="PARTNER4PAN"/>
+      </attribute>
+      <attribute id="POSTALCODE" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POSTAL_CODE"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="POSTAL_CODE"/>
+      </attribute>
+      <attribute id="RECOMMENDED_LIMIT" hidden="true" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RECOMMENDED_LIMIT"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="RECOMMENDED_LIMIT"/>
+      </attribute>
+      <attribute id="SALES_GROSS_AMT" hidden="true" order="53" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_GROSS_AMT"/>
+        <unitCurrencyAttribute attributeName="CURRENCY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="SALES_GROSS_AMT"/>
+      </attribute>
+      <attribute id="SALES_NET_AMT" hidden="true" order="54" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_NET_AMT"/>
+        <unitCurrencyAttribute attributeName="CURRENCY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="SALES_NET_AMT"/>
+      </attribute>
+      <attribute id="SALES_TAX_AMT" hidden="true" order="55" semanticType="amount" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SALES_TAX_AMT"/>
+        <unitCurrencyAttribute attributeName="CURRENCY"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="SALES_TAX_AMT"/>
+      </attribute>
+      <attribute id="REGIONDESC" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE_DESC"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="STATE_DESC"/>
+      </attribute>
+      <attribute id="REGION" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="STATE_ID"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="STATE_ID"/>
+      </attribute>
+      <attribute id="TELEPHONE_EXTN" hidden="true" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELEPHONE_EXTN"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="TELEPHONE_EXTN"/>
+      </attribute>
+      <attribute id="LANDLINE" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TELEPHONE_NO"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="TELEPHONE_NO"/>
+      </attribute>
+      <attribute id="YEARSOF_ASSOCIATION" hidden="true" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="YEARSOF_ASSOCIATION"/>
+        <keyMapping columnObjectName="BUSINESSPARTNER_COR" columnName="YEARSOF_ASSOCIATION"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+<layout>
+  <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+    </shapes>
+</layout>
+</Calculation:scenario>

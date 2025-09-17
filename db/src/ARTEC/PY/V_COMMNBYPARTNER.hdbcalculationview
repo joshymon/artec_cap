@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.3" id="ARTEC_PY_V_COMMNBYPARTNER" applyPrivilegeType="NONE" defaultClient="$$client$$" dataCategory="DIMENSION" dimensionType="STANDARD" enforceSqlExecution="false" outputViewType="Projection">
+  <descriptions defaultDescription="V_USRREGBYPARTNER"/>
+  <localVariables/>
+  <variableMappings/>
+  <dataSources>
+    <DataSource id="ARTEC_PC_USERMGMT_USRPRT">
+      <resourceUri>ARTEC_PC_USERMGMT_USRPRT</resourceUri>
+    </DataSource>
+    <DataSource id="ARTEC_PY_USER_COMMN">
+      <resourceUri>ARTEC_PY_USER_COMMN</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="CUSTOMER_ASSIGNED_TO_PARTNER" filterExpressionLanguage="COLUMN_ENGINE">
+      <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="ERP_SYSTEM_ID"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="PARTNER_ID"/>
+        <viewAttribute id="PARTNER_NAME"/>
+        <viewAttribute id="PARTNER_TYPE"/>
+        <viewAttribute id="APPLICATION"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PC_USERMGMT_USRPRT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERP_SYSTEM_ID" source="ERP_SYSTEM_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_ID" source="PARTNER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_NAME" source="PARTNER_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_TYPE" source="PARTNER_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION" source="APPLICATION"/>
+      </input>
+      <filter>("APPLICATION"='PD' AND "PARTNER_TYPE"='000003')</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner">
+      <viewAttributes>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="ERP_SYSTEM_ID"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="PARTNER_ID"/>
+        <viewAttribute id="PARTNER_NAME"/>
+        <viewAttribute id="PARTNER_TYPE"/>
+        <viewAttribute id="APPLICATION"/>
+        <viewAttribute id="ALIASID"/>
+        <viewAttribute id="CORPID"/>
+        <viewAttribute id="USERID"/>
+        <viewAttribute id="USER_REGID"/>
+        <viewAttribute id="USER_REG_STATUS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="CUSTOMER_ASSIGNED_TO_PARTNER">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERP_SYSTEM_ID" source="ERP_SYSTEM_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_ID" source="PARTNER_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_NAME" source="PARTNER_NAME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARTNER_TYPE" source="PARTNER_TYPE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APPLICATION" source="APPLICATION"/>
+      </input>
+      <input node="USER_BANK_REGISTRATION">
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALIASID" source="ALIASID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USERID" source="USERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_REGID" source="USER_REGID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_REG_STATUS" source="USER_REG_STATUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+      </input>
+      <joinAttribute name="AGGRID"/>
+      <joinAttribute name="LOGIN_ID"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="USER_BANK_REGISTRATION">
+      <viewAttributes>
+        <viewAttribute id="ALIASID"/>
+        <viewAttribute id="CORPID"/>
+        <viewAttribute id="USERID"/>
+        <viewAttribute id="USER_REGID"/>
+        <viewAttribute id="USER_REG_STATUS"/>
+        <viewAttribute id="AGGRID"/>
+        <viewAttribute id="LOGIN_ID"/>
+        <viewAttribute id="ID"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="ARTEC_PY_USER_COMMN">
+        <mapping xsi:type="Calculation:AttributeMapping" target="AGGRID" source="AGGRID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ALIASID" source="ALIASID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CORPID" source="CORPID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ID" source="ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LOGIN_ID" source="LOGIN_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USERID" source="USERID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_REGID" source="USER_REGID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USER_REG_STATUS" source="USER_REG_STATUS"/>
+      </input>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_1">
+    <attributes>
+      <attribute id="AGGRID" key="true" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AGGRID"/>
+        <keyMapping columnObjectName="Join_1" columnName="AGGRID"/>
+      </attribute>
+      <attribute id="ERP_SYSTEM_ID" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERP_SYSTEM_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ERP_SYSTEM_ID"/>
+      </attribute>
+      <attribute id="LOGIN_ID" key="true" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LOGIN_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="LOGIN_ID"/>
+      </attribute>
+      <attribute id="PARTNER_ID" key="true" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_ID"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARTNER_ID"/>
+      </attribute>
+      <attribute id="PARTNER_NAME" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_NAME"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARTNER_NAME"/>
+      </attribute>
+      <attribute id="PARTNER_TYPE" key="true" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARTNER_TYPE"/>
+        <keyMapping columnObjectName="Join_1" columnName="PARTNER_TYPE"/>
+      </attribute>
+      <attribute id="APPLICATION" key="true" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APPLICATION"/>
+        <keyMapping columnObjectName="Join_1" columnName="APPLICATION"/>
+      </attribute>
+      <attribute id="ALIASID" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ALIASID"/>
+        <keyMapping columnObjectName="Join_1" columnName="ALIASID"/>
+      </attribute>
+      <attribute id="CORPID" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CORPID"/>
+        <keyMapping columnObjectName="Join_1" columnName="CORPID"/>
+      </attribute>
+      <attribute id="USERID" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USERID"/>
+        <keyMapping columnObjectName="Join_1" columnName="USERID"/>
+      </attribute>
+      <attribute id="USER_REGID" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USER_REGID"/>
+        <keyMapping columnObjectName="Join_1" columnName="USER_REGID"/>
+      </attribute>
+      <attribute id="USER_REG_STATUS" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USER_REG_STATUS"/>
+        <keyMapping columnObjectName="Join_1" columnName="USER_REG_STATUS"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <baseMeasures/>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="40" y="85"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CUSTOMER_ASSIGNED_TO_PARTNER" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="37" y="263"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="214" y="203"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+      <shape expanded="true" modelObjectName="USER_BANK_REGISTRATION" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="226" y="276"/>
+        <rectangleSize height="30" width="140"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

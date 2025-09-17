@@ -1,0 +1,57 @@
+@cds.persistence.exists 
+@cds.persistence.calcview 
+Entity ARTEC_PY_V_BPRENEWAL {
+        ADDRESS2: String(40)  @title: 'ADDRESS2: ADDRESS2' ; 
+        UTILDISTRICTDS: String(40)  @title: 'UTILDISTRICTDS: UTILDISTRICTDS' ; 
+        UTILDISTRICT: String(36)  @title: 'UTILDISTRICT: UTILDISTRICT' ; 
+        TESTRUN: String(1)  @title: 'TESTRUN: TESTRUN' ; 
+        STATUSID: String(6)  @title: 'STATUSID: STATUSID' ; 
+        STATEDESC: String(35)  @title: 'STATEDESC: STATEDESC' ; 
+        STATE: String(3)  @title: 'STATE: STATE' ; 
+        SOURCE: String(10)  @title: 'SOURCE: SOURCE' ; 
+        PINCODE: String(10)  @title: 'PINCODE: PINCODE' ; 
+        PAN: String(40)  @title: 'PAN: PAN' ; 
+        MOBILE2: String(35)  @title: 'MOBILE2: MOBILE2' ; 
+        MOBILE1: String(35)  @title: 'MOBILE1: MOBILE1' ; 
+        ADDRESS1: String(40)  @title: 'ADDRESS1: ADDRESS1' ; 
+        LOGINID: String(32)  @title: 'LOGINID: LOGINID' ; 
+        LEGALSTATUSDS: String(40)  @title: 'LEGALSTATUSDS: LEGALSTATUSDS' ; 
+        LEGALSTATUS: String(2)  @title: 'LEGALSTATUS: LEGALSTATUS' ; 
+        LANDLINE1: String(35)  @title: 'LANDLINE1: LANDLINE1' ; 
+        INCORPORATIONDATE: Date  @title: 'INCORPORATIONDATE: INCORPORATIONDATE' ; 
+        GSTIN: String(40)  @title: 'GSTIN: GSTIN' ; 
+        EMAILID: String(255)  @title: 'EMAILID: EMAILID' ; 
+        DISTRICT: String(40)  @title: 'DISTRICT: DISTRICT' ; 
+        CREATEDON: Date  @title: 'CREATEDON: CREATEDON' ; 
+        CREATEDBY: String(32)  @title: 'CREATEDBY: CREATEDBY' ; 
+        CREATEDAT: Time  @title: 'CREATEDAT: CREATEDAT' ; 
+        COUNTRYDESC: String(35)  @title: 'COUNTRYDESC: COUNTRYDESC' ; 
+        COUNTRY: String(3)  @title: 'COUNTRY: COUNTRY' ; 
+        CITY: String(40)  @title: 'CITY: CITY' ; 
+        CHANGEDON: Date  @title: 'CHANGEDON: CHANGEDON' ; 
+        CHANGEDBY: String(32)  @title: 'CHANGEDBY: CHANGEDBY' ; 
+        CHANGEDAT: Time  @title: 'CHANGEDAT: CHANGEDAT' ; 
+        CPTYPE: String(6)  @title: 'CPTYPE: CPTYPE' ; 
+        CPNAME: String(200)  @title: 'CPNAME: CPNAME' ; 
+        CPGUID: String(36)  @title: 'CPGUID: CPGUID' ; 
+key     BPGUID: String(36)  @title: 'BPGUID: BPGUID' ; 
+        APPROVERREMARKS: String(255)  @title: 'APPROVERREMARKS: APPROVERREMARKS' ; 
+key     AGGREGATORID: String(50)  @title: 'AGGREGATORID: AGGREGATORID' ; 
+        ADDRESS4: String(40)  @title: 'ADDRESS4: ADDRESS4' ; 
+        ADDRESS3: String(40)  @title: 'ADDRESS3: ADDRESS3' ; 
+        CallBackStatus: String(6)  @title: 'CallBackStatus: Call Back Status ID' ; 
+        SCFChangedAt: Time  @title: 'SCFChangedAt: SCF Changed At' ; 
+        SCFChangedBy: String(32)  @title: 'SCFChangedBy: SCF Changed By' ; 
+        SCFChangedOn: Date  @title: 'SCFChangedOn: SCF Changed On' ; 
+        SCFCreatedAt: Time  @title: 'SCFCreatedAt: SCF Created At' ; 
+        SCFCreatedBy: String(32)  @title: 'SCFCreatedBy: SCF Created By' ; 
+        SCFCreatedOn: Date  @title: 'SCFCreatedOn: SCF Created On' ; 
+        ECompleteDate: Date  @title: 'ECompleteDate: E Sign Completion Date' ; 
+        ECompleteTime: Time  @title: 'ECompleteTime: E Sign Completion Time' ; 
+        EContractID: String(32)  @title: 'EContractID: E Sign Contract ID' ; 
+        SCFGUID: String(36)  @title: 'SCFGUID: SCF GUID' ; 
+        SCFStatusID: String(6)  @title: 'SCFStatusID: SCF Status ID' ; 
+        RenewalStatusID: String(6)  @title: 'RenewalStatusID: Renewal Status ID' ; 
+        AGGREGATORNAME: String(50)  @title: 'AGGREGATORNAME: AGGREGATORNAME' ; 
+        MSME: String(10)  @title: 'MSME: MSME' ; 
+}

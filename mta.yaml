@@ -49,4 +49,4 @@ resources:
       service: hana
       service-plan: hdi-shared
       config:
-        schema: AGGR0008_1
+        schema: AGGR0008_2

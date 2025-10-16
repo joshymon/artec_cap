@@ -20,7 +20,7 @@
     "@sap/cds-dk": "^8.8.2"
   },
   "scripts": {
-    "start": "cds-serve" 
+    "start":  "cds-serve"
    },
   "cds": {
     
